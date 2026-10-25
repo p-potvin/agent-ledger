@@ -3,7 +3,611 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-10-22 23:21 - vault-raggae (formerly nvidia-rag, NVIDIA RAG, NVIDIA RAG Ingestion, NVIDIA RAG Blueprint)</strong> <code>verification</code> - Picked up HANDOFF-20261022-MOMENTS. Read handoff, README, AGENTS, router. Checked live jobs at Thu, 22 Oct 2026 23:20: gateway v0.10.0 healthy; Moments pass on F:\amd\Models 50/...</summary>
+<summary><strong>2026-10-25 12:28 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>commands</code> - Ran the ledger sync early at the operator&#39;s prompt: AgentLedgerSync last ran 23 Oct 01:07 and next runs 27 Oct, so events since 23 Oct were only on the PC and not on the dashboard.</summary>
+
+- Kind: commands
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: agent
+  Permissions: bypass (network: Windows 11 workstation)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-25 12:28 (TZ: Eastern Standard Time)
+  ```
+- Summary: Ran the ledger sync early at the operator's prompt: AgentLedgerSync last ran 23 Oct 01:07 and next runs 27 Oct, so events since 23 Oct were only on the PC and not on the dashboard.
+- Commands:
+  - `scripts/sync-agent-ledger.ps1`
+- Git: repo=panopticam, branch=main, head=ce03d25
+
+</details>
+
+<details>
+<summary><strong>2026-10-25 12:28 - panopticam</strong> <code>code-change</code> - v0.73.4 (Sun, 25 Oct 2026): the PC vision worker had been down since 22 Oct 10:27 because its launcher hung on the output pipe after a crash. Start-VisionWorker.ps1 now waits on...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 workstation + Panopticam hosts over Tailscale)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell, Edit, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-10-25 12:28 (TZ: Eastern Standard Time)
+  ```
+- Summary: v0.73.4 (Sun, 25 Oct 2026): the PC vision worker had been down since 22 Oct 10:27 because its launcher hung on the output pipe after a crash. Start-VisionWorker.ps1 now waits on the process and restarts a dead or hung worker (log silent 20 min); tested by killing it (back in 30 s). Health: memory:api hysteresis 3000/2700 MB (it flapped ~40 mails a day against the 30 cap); a silent-worker warning also goes to Telegram with what to run. Switch prepared: deploy/switch-to-greencloud.sh check|go|rollback (check passes), deploy/db-backup.py, VPN and vision tower staged on greencloud-panopticam (stopped), greencloud dispatcher deploys every host in panopticam-hosts. Moments offload resumed (2-5 Oct done on 22 Oct).
+- Commands:
+  - `Restart-VisionWorker.ps1`
+  - `bash deploy/switch-to-greencloud.sh check`
+  - `git push origin main`
+- Files:
+  - `vision/Start-VisionWorker.ps1`
+  - `backend/src/panopticam/health.py`
+  - `deploy/switch-to-greencloud.sh`
+  - `deploy/db-backup.py`
+  - `deploy/dispatch-greencloud.sh`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=ce03d25
+
+</details>
+
+<details>
+<summary><strong>2026-10-24 04:08 - vaultwares-docs (formerly tmp-app)</strong> <code>documentation</code> - Docs: panopticam.vaultwares.ca added to the split-DNS host list (tailscale.mdx); network-map machines (ovh-panopticam, greencloud-panopticam) and the Panopticam service row upda...</summary>
+
+- Kind: documentation
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 workstation)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, Write, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-10-24 04:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: Docs: panopticam.vaultwares.ca added to the split-DNS host list (tailscale.mdx); network-map machines (ovh-panopticam, greencloud-panopticam) and the Panopticam service row updated (was stale vps-ovhcloud); services-inventory Panopticam row; host-inventory section for greencloud-panopticam. Diagnosed the operator's 502: OVH restart during the deploy of de8493d (~2.5 min DB load), not the proxy; 200 since.
+- Commands:
+  - `git push origin main (vaultwares-docs)`
+- Files:
+  - `docs-content/operations/tailscale.mdx`
+  - `docs-content/operations/network-map.mdx`
+  - `docs-content/operations/services-inventory.mdx`
+  - `docs-content/operations/host-inventory.mdx`
+- Git: repo=panopticam, branch=main, head=de8493d
+
+</details>
+
+<details>
+<summary><strong>2026-10-24 04:03 - panopticam</strong> <code>code-change</code> - panopticam.vaultwares.ca live: Let&#39;s Encrypt cert (webroot) on greencloud-vps, nginx vhost tailnet-only (public 403) proxying over TLS to the serving host via one include (snipp...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 workstation + greencloud-vps + OVH over Tailscale)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-10-24 04:03 (TZ: Eastern Standard Time)
+  ```
+- Summary: panopticam.vaultwares.ca live: Let's Encrypt cert (webroot) on greencloud-vps, nginx vhost tailnet-only (public 403) proxying over TLS to the serving host via one include (snippets/panopticam-upstream.conf, now OVH; switch = edit it), dnsmasq host-record for split DNS. OVH PANOPTICAM_PUBLIC_URL set to it (restart ~145 s), standby env.live too, config default; vhost copied to deploy/greencloud/.
+- Commands:
+  - `certbot certonly --webroot -d panopticam.vaultwares.ca`
+  - `dnsmasq host-record + restart`
+  - `sed PUBLIC_URL + systemctl restart panopticam on OVH`
+- Files:
+  - `deploy/greencloud/panopticam.vaultwares.ca.conf`
+  - `deploy/greencloud/panopticam-upstream.conf`
+  - `backend/src/panopticam/config.py`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=de8493d
+
+</details>
+
+<details>
+<summary><strong>2026-10-24 03:54 - panopticam</strong> <code>commands</code> - Panopticam standby on greencloud-panopticam (100.105.177.10): cloned with OVH&#39;s read-only deploy key; rsynced media/datasets/harvest from OVH over the tailnet (~33 GB) plus a 6....</summary>
+
+- Kind: commands
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 workstation + greencloud-panopticam + ovh-panopticam over Tailscale)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-10-24 03:54 (TZ: Eastern Standard Time)
+  ```
+- Summary: Panopticam standby on greencloud-panopticam (100.105.177.10): cloned with OVH's read-only deploy key; rsynced media/datasets/harvest from OVH over the tailnet (~33 GB) plus a 6.7 GB online SQLite backup; quiet env (no Telegram/HF/mail/zipper keys, harvest/socials/stills off, clip sampling 0), full env kept as panopticam.env.live; nginx + tailscale cert, web build, uv venv, service enabled. Live: CB/CS/SC/CAM4 OK; BongaCams 403 and Flirt4Free empty from the Kansas City, Missouri IP. Switch list in STATE to-do X. OVH still serves.
+- Commands:
+  - `rsync from ovh over tailscale ssh`
+  - `sqlite3 online backup on OVH`
+  - `tailscale cert`
+  - `systemctl enable --now panopticam`
+- Files:
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=0731d5b
+
+</details>
+
+<details>
+<summary><strong>2026-10-24 03:19 - panopticam</strong> <code>commands</code> - Prepared new server greencloud-panopticam (72.18.214.90 / tailnet 100.105.177.10; Ubuntu 26.04, 4 vCPU EPYC-Milan, 7.7 GB, 60 GB): ubuntu user with sudo + key, hostname, base pa...</summary>
+
+- Kind: commands
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 workstation + greencloud-panopticam over Tailscale)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-10-24 03:19 (TZ: Eastern Standard Time)
+  ```
+- Summary: Prepared new server greencloud-panopticam (72.18.214.90 / tailnet 100.105.177.10; Ubuntu 26.04, 4 vCPU EPYC-Milan, 7.7 GB, 60 GB): ubuntu user with sudo + key, hostname, base packages (git nginx ffmpeg sqlite3 build-essential ufw unattended-upgrades rsync) + uv, ufw denies all incoming except tailscale0 and 41641/udp, PermitRootLogin no (Tailscale SSH is on and governs tailnet logins). CPU parity with OVH confirmed. One listing call each to CB and CamSoda: both 200 JSON. Production not moved; plan in STATE to-do X awaiting operator OK.
+- Commands:
+  - `ssh root@100.105.177.10 (setup)`
+  - `ufw default deny incoming; ufw allow in on tailscale0`
+  - `one curl_cffi probe each: CB room list, CamSoda browse`
+- Files:
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=f4aae8f
+
+</details>
+
+<details>
+<summary><strong>2026-10-23 20:22 - panopticam</strong> <code>plan</code> - Answered the operator&#39;s idea of using the free HF Space CPU for PC-side jobs (reels, ffmpeg/AV1, embeddings). Advised against: those jobs take the adult cam clips as input, so t...</summary>
+
+- Kind: plan
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: chat
+  Permissions: bypass (network: Windows 11 workstation)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-10-23 20:22 (TZ: Eastern Standard Time)
+  ```
+- Summary: Answered the operator's idea of using the free HF Space CPU for PC-side jobs (reels, ffmpeg/AV1, embeddings). Advised against: those jobs take the adult cam clips as input, so the clips would sit on HF (same content-policy risk to the clopeux account). Embeddings run faster on the PC GPU than on 2 vCPU. The AV1 archive is the only heavy PC CPU job and it is already throttled. Gave rough Pi 5 CPU expectations and the catches of Oracle's free ARM VM. Nothing built.
+- Git: repo=panopticam, branch=main, head=f2c57d5
+
+</details>
+
+<details>
+<summary><strong>2026-10-23 20:13 - panopticam</strong> <code>plan</code> - Assessed moving Panopticam to a Hugging Face Space (cpu-basic + bucket). Read HF docs: Docker Spaces need PRO; custom domains only on public/protected Spaces (not private); 50 G...</summary>
+
+- Kind: plan
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: chat
+  Permissions: bypass (network: Windows 11 workstation)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): hf_fs, Agent(web-fetch)
+  MCP servers accessed (this reply): huggingface
+  Time: 2026-10-23 20:13 (TZ: Eastern Standard Time)
+  ```
+- Summary: Assessed moving Panopticam to a Hugging Face Space (cpu-basic + bucket). Read HF docs: Docker Spaces need PRO; custom domains only on public/protected Spaces (not private); 50 GB ephemeral disk, buckets mounted via hf-mount (not fit for a live SQLite WAL); cpu-basic sleeps after 48 h without visits; restart on every push; Dev Mode SSH is PRO. HF content policy restricts sexual content without explicit consent, third-party privacy violations, and proxies/tunnels to bypass restrictions. Recommended against moving it; nothing built.
+- Git: repo=panopticam, branch=main, head=f2c57d5
+
+</details>
+
+<details>
+<summary><strong>2026-10-23 19:13 - vault-monitor (formerly vault-monitor vaultwares-pipelines)</strong> <code>general</code> - Built a Dashboard artifact &#39;VaultWares Chronos - 7-month evolution&#39; from the timeline-evolution data: extracted days/keyframes/projects/models/solo CSVs from src/features/timeli...</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): Artifact
+  MCP servers accessed (this reply): Bash
+  Time: 2026-10-23 19:13 (TZ: Eastern Standard Time)
+  ```
+- Summary: Built a Dashboard artifact 'VaultWares Chronos - 7-month evolution' from the timeline-evolution data: extracted days/keyframes/projects/models/solo CSVs from src/features/timeline-evolution/timelineData.json, uploaded them as dashboard sources, and wrote a d3 page (running-total chart with milestone pins, daily bars with peak callout, 14-day rolling work-mix stack, keystroke/pointer telemetry, repo leaderboard, milestone rail, model roster and solo-dev benchmark tables). No repo files changed.
+- Commands:
+  - `src/pages/TimelineEvolutionPage.tsx`
+- Files:
+  - `src/features/timeline-evolution/timelineData.json`
+- Plan: `ArtifactData`
+- Git: repo=vault-monitor, branch=main, head=388c8bc
+
+</details>
+
+<details>
+<summary><strong>2026-10-23 18:29 - shared-tube (formerly Prom-King/shared-tube, Prom-King/shared-tube + vaultwares-pipelines, Prom-King/shared-tube + vaultwares-api, Prom-King/shared-tube + vaultwares-mcp, Prom-King/shared-tube + vaultwares-docs, Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs, shared-tube + brume2, tube-sites, tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa, Prom-King Keep2Share &amp; ShareVerge Pipeline, Prom-King &amp; VaultWares API, Monitoring and Prom-King tube operations)</strong> <code>verification</code> - Investigated greencloud traffic surge on media apps, prom-king.xyz, and theitguyde.com; traced to automated qa_runner testing via Tor proxy</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-23 18:29 (TZ: Eastern Standard Time)
+  ```
+- Summary: Investigated greencloud traffic surge on media apps, prom-king.xyz, and theitguyde.com; traced to automated qa_runner testing via Tor proxy
+- Git: repo=shared-tube, branch=main, head=4d3ad3b
+
+</details>
+
+<details>
+<summary><strong>2026-10-23 17:29 - vault-raggae (formerly nvidia-rag, NVIDIA RAG, NVIDIA RAG Ingestion, NVIDIA RAG Blueprint)</strong> <code>commands</code> - Fri 23 Oct 2026 ~17:40: imported 5 Panopticam action heads (PR #3 merged) and retagged 289,593 windows (521,559 tags); heads fire broadly on library windows (toy_buzzing 44%, mo...</summary>
+
+- Kind: commands
+- Actor: bash scripts/models-chain.sh
+- Agent Header:
+  ```text
+  Agent: bash scripts/models-chain.sh (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-23 17:29 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fri 23 Oct 2026 ~17:40: imported 5 Panopticam action heads (PR #3 merged) and retagged 289,593 windows (521,559 tags); heads fire broadly on library windows (toy_buzzing 44%, moaning 24% >= 0.5), likely uncalibrated. Tested NeMo-Speech.cpp: HTTP server 76x realtime with rnnt_right_context -1 (vs ~31x audio.cpp), CLI --stream 7x; 2060 unsupported by the build (no sm_75). Operator said not to optimise now; nothing changed in scripts. Restarted gateway between passes: v0.11.0 live (dupes 145,663 groups). Resumed models chain detached (audio.cpp, no separation, -SkipExisting).
+- Commands:
+  - `python -m app.moments.heads import-actions`
+- Files:
+  - `python -m app.moments.heads retag`
+- Plan: `scripts\Restart-Gateway.ps1`
+- Git: repo=vault-raggae, branch=main, head=bfd5829
+
+</details>
+
+<details>
+<summary><strong>2026-10-23 15:04 - vault-raggae</strong> <code>code-change</code> - Committed and pushed at operator&#39;s request: vault-cacophony a38b0a0 (separation opt-in, 3 files only; untracked cacophony_output etc. left alone) and vault-raggae bfd5829 v0.11....</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-23 15:04 (TZ: Eastern Standard Time)
+  ```
+- Summary: Committed and pushed at operator's request: vault-cacophony a38b0a0 (separation opt-in, 3 files only; untracked cacophony_output etc. left alone) and vault-raggae bfd5829 v0.11.0 (duplicates page + finder, Panopticam action-head import/retag, models-chain without separation). Live gateway still not restarted: /v1/dupes 404 until a restart after the models chain.
+- Commands:
+  - `git push origin main (vault-cacophony)`
+- Files:
+  - `git push origin main (vault-raggae)`
+- Git: repo=vault-raggae, branch=main, head=bfd5829
+
+</details>
+
+<details>
+<summary><strong>2026-10-23 12:53 - vault-cacophony</strong> <code>code-change</code> - Operator: separation off by default. Start-SubtitlesAudioCpp.ps1 gains -Separate (opt-in BS-RoFormer/htdemucs); -NoSeparate kept as a no-op-compatible override; Start-Translatio...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-23 12:53 (TZ: Eastern Standard Time)
+  ```
+- Summary: Operator: separation off by default. Start-SubtitlesAudioCpp.ps1 gains -Separate (opt-in BS-RoFormer/htdemucs); -NoSeparate kept as a no-op-compatible override; Start-TranslationPipeline.ps1 passes --no-separate unless -Separate; README example updated. Parse-checked both scripts; switch logic tested (default off, -Separate on, -NoSeparate wins). Uncommitted. The running raggae models chain (already loaded, -NoSeparate) is unaffected.
+- Commands:
+  - `scripts/Start-TranslationPipeline.ps1`
+- Files:
+  - `scripts/Start-SubtitlesAudioCpp.ps1`
+- Plan: `README.md`
+- Git: repo=vault-raggae, branch=main, head=8b7525e
+
+</details>
+
+<details>
+<summary><strong>2026-10-23 12:24 - vault-raggae</strong> <code>commands</code> - Operator asked to stop BS-RoFormer separation. Stopped the models-chain ASR run (Start-SubtitlesAudioCpp.ps1, separation on, 65/881 videos; its chain shell was already gone) and...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-23 12:24 (TZ: Eastern Standard Time)
+  ```
+- Summary: Operator asked to stop BS-RoFormer separation. Stopped the models-chain ASR run (Start-SubtitlesAudioCpp.ps1, separation on, 65/881 videos; its chain shell was already gone) and audiocpp_cli. scripts/models-chain.sh now passes -NoSeparate -SkipExisting (appends to asr-models.log); restarted the chain Fri 23 Oct 2026 12:30: ASR without separation, then transcripts ingest --embed and moments --said-only. vault-cacophony's own default (separation on) unchanged.
+- Commands:
+  - `Stop-Process 159740 423408`
+- Files:
+  - `scripts/models-chain.sh`
+- Plan: `bash scripts/models-chain.sh`
+- Git: repo=vault-raggae, branch=main, head=8b7525e
+
+</details>
+
+<details>
+<summary><strong>2026-10-23 10:32 - vault-raggae</strong> <code>commands</code> - Moments pass finished overnight (2,328/2,329 videos, 289,387 windows). Nemotron ASR step had failed at once (&#39;missing&#39; model: GGUF lives in %LOCALAPPDATA%\\VaultWares\\models); ...</summary>
+
+- Kind: commands
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: code
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-10-23 10:32 (TZ: Eastern Standard Time)
+  ```
+- Summary: Moments pass finished overnight (2,328/2,329 videos, 289,387 windows). Nemotron ASR step had failed at once ('missing' model: GGUF lives in %LOCALAPPDATA%\\VaultWares\\models); vault-cacophony Start-SubtitlesAudioCpp.ps1 now falls back to that store (d718385); tested on one video (31.5 s); list cleaned to 881; chain re-run (ASR -> transcripts ingest -> moments said refresh). Files Index rebuilt C: after journal gap, syncing. Handoff updated.
+- Commands:
+  - `scripts/models-chain.sh`
+- Files:
+  - `vault-cacophony/scripts/Start-SubtitlesAudioCpp.ps1`
+  - `docs/HANDOFF-20261022-MOMENTS.md`
+- Git: repo=vault-raggae, branch=main, head=8b7525e
+
+</details>
+
+<details>
+<summary><strong>2026-10-23 10:27 - vaultwares-decompile (formerly deconstructed-website-a-la-mode)</strong> <code>code-change</code> - Added &#39;vw censor-words&#39; to vault-commander: dictionary-based word censoring for video/audio. New cli/Start-CensorWords.ps1 + cli/utils/whisperx_censor.py. Takes a dictionary (on...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: DeepSeek V4 Flash High
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-decompile  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-23 10:27 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added 'vw censor-words' to vault-commander: dictionary-based word censoring for video/audio. New cli/Start-CensorWords.ps1 + cli/utils/whisperx_censor.py. Takes a dictionary (one word/line, or CSV/TSV first column, case-insensitive, header skipped) and word timestamps either from a whisper-words JSON (-WordsFile) or in-process WhisperX (reuses whisperx_words helpers incl. cleanup). ffmpeg mutes each flagged interval (volume=0:enable) and mixes in (part of) a sound clip (default ChiefKeefSounds\YesSirClean.ac3, -SoundDuration slice) via asplit/atrim/adelay/amix normalize=0/alimiter; video stream-copied, audio re-encoded per container. Output is <name>_censored.<ext> beside source; source never modified. Registered in vw-commands.ps1 (Media Pipeline). Verified: video+words-file path (aac+h264, duration preserved, censored interval matches clip head by volumedetect -8.4dB vs source -20.6dB), lossless wav path, in-process ASR path on cuda, CSV header skip, no-match case exits 0 without writing.
+- Git: repo=vaultwares-decompile, branch=main, head=818bb7c
+
+</details>
+
+<details>
+<summary><strong>2026-10-23 09:05 - vaultwares-decompile</strong> <code>code-change</code> - Extended &#39;vw whisper-words&#39;: batch support + end-of-run cleanup. -Input now accepts a directory (new -Recurse, -Extensions, -SkipExisting; -Output acts as a collection dir in ba...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: DeepSeek V4 Flash High
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-decompile  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-23 09:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: Extended 'vw whisper-words': batch support + end-of-run cleanup. -Input now accepts a directory (new -Recurse, -Extensions, -SkipExisting; -Output acts as a collection dir in batch mode, mirroring better-subtitles). Worker refactored: load_pipeline loaded once and shared across files via process_file(); added cleanup() that releases ASR/alignment model refs, gc.collect() and torch.cuda.empty_cache() at the end of a batch or single file (-NoCleanup disables). Fixed missing 'import gc'. Verified: 2-file batch (wrote both, cleanup, exit 0), -SkipExisting skips, single-file CPU and CUDA float16 runs end with cleanup, vw whisper-words -h lists new params.
+- Git: repo=vaultwares-decompile, branch=main, head=818bb7c
+
+</details>
+
+<details>
+<summary><strong>2026-10-23 08:27 - shared-tube</strong> <code>verification</code> - Completed catalog deduplication merge: 9,472 duplicate title clusters consolidated, 15,058 redundant rows soft-disabled, 0 duplicate clusters remaining</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-23 08:27 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed catalog deduplication merge: 9,472 duplicate title clusters consolidated, 15,058 redundant rows soft-disabled, 0 duplicate clusters remaining
+- Git: repo=shared-tube, branch=main, head=4d3ad3b
+
+</details>
+
+<details>
+<summary><strong>2026-10-23 08:21 - shared-tube</strong> <code>code-change</code> - Committed and pushed duplicate title deduplication to shared-tube and vaultwares-api main; launched live database merge runner</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-23 08:21 (TZ: Eastern Standard Time)
+  ```
+- Summary: Committed and pushed duplicate title deduplication to shared-tube and vaultwares-api main; launched live database merge runner
+- Git: repo=shared-tube, branch=main, head=4d3ad3b
+
+</details>
+
+<details>
+<summary><strong>2026-10-23 08:10 - vaultwares-decompile</strong> <code>code-change</code> - Added &#39;vw whisper-words&#39; to vault-commander: WhisperX word-level timestamp wrapper. New cli/Start-WhisperWords.ps1 entrypoint + cli/utils/whisperx_words.py worker (VAD -&gt; batche...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: DeepSeek V4 Flash High
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-decompile  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-23 08:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added 'vw whisper-words' to vault-commander: WhisperX word-level timestamp wrapper. New cli/Start-WhisperWords.ps1 entrypoint + cli/utils/whisperx_words.py worker (VAD -> batched faster-whisper ASR -> wav2vec2 alignment; JSON/SRT/VTT/TSV/TXT output). Swappable ASR model: whisper sizes, local ctranslate2 dirs, or HF repo ids -- transformers-format fine-tunes (e.g. zuazo/whisper-tiny-es) auto-downloaded and converted to ctranslate2, paired with -Language. Registered in vw-commands.ps1 (Media Pipeline). Installed whisperx 3.8.6 + faster-whisper + ctranslate2 + nltk + pyannote-audio into shared vault-cacophony\.venv (no torch download; fixed mismatched torchvision 0.23.0+cu129 -> 0.28.0+cu126 there). Verified: wav/mp4 ingest, CPU int8 + CUDA float16, es fine-tune with es alignment, full vw dispatch run.
+- Git: repo=vaultwares-decompile, branch=main, head=818bb7c
+
+</details>
+
+<details>
+<summary><strong>2026-10-23 07:49 - shared-tube</strong> <code>code-change</code> - Built duplicate video title queue and merge engine: FastAPI endpoints, UI modal, and CLI merge script</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-23 07:49 (TZ: Eastern Standard Time)
+  ```
+- Summary: Built duplicate video title queue and merge engine: FastAPI endpoints, UI modal, and CLI merge script
+- Git: repo=shared-tube, branch=main, head=783901e
+
+</details>
+
+<details>
+<summary><strong>2026-10-23 02:52 - vault-raggae</strong> <code>code-change</code> - v0.11.0 (uncommitted): Panopticam action heads as moment tags - draft PR Prom-King/panopticam#3 (GET /api/vision/actions/heads, v0.73.3); raggae heads import-actions + retag (ac...</summary>
+
+- Kind: code-change
+- Actor: app/moments/heads.py
+- Agent Header:
+  ```text
+  Agent: app/moments/heads.py (role: main)
+  Model: claude-opus-5-5
+  Thinking: app/edits.py
+  Mode: code
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): web/src/pages/Dupes.tsx
+  MCP servers accessed (this reply): docs/HANDOFF-20261022-MOMENTS.md
+  Time: 2026-10-23 02:52 (TZ: Eastern Standard Time)
+  ```
+- Summary: v0.11.0 (uncommitted): Panopticam action heads as moment tags - draft PR Prom-King/panopticam#3 (GET /api/vision/actions/heads, v0.73.3); raggae heads import-actions + retag (act:<name> tags, featurize parity). Duplicates: app/files/dupes.py (exact oshash, near phash<=8 bits on the 2060 in tiles, star groups not chains), /v1/dupes + /v1/edit/dupes keep|hide|reopen|move (.vw-duplicates rename, audited, undoable), panel Duplicates page with gallery filter. Finder run Fri 23 Oct 02:46: 145,663 groups, 4,173 outside galleries = 56.8 GB. Live gateway not restarted (Moments pass writes through it). 104 tests pass.
+- Commands:
+  - `python -m app.files.dupes find`
+- Files:
+  - `app/files/dupes.py`
+- Plan: `gh pr create --draft (panopticam)`
+- Git: repo=vault-raggae, branch=main, head=6700f07
+
+</details>
+
+<details>
+<summary><strong>2026-10-23 01:44 - vaultwares-decompile</strong> <code>plan</code> - vaultwares-decompile: inspected git history and stash@{0} after main history squash; confirmed all Rust crates and provenance changes are intact in commit c553a6d + stash@{0}, a...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Argon Medium
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-decompile  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-23 01:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: vaultwares-decompile: inspected git history and stash@{0} after main history squash; confirmed all Rust crates and provenance changes are intact in commit c553a6d + stash@{0}, and prepared architectural critique on what is still missing from the SPA deconstruction pipeline.
+- Git: repo=vaultwares-decompile, branch=main, head=818bb7c
+
+</details>
+
+<details>
+<summary><strong>2026-10-23 01:28 - vaultwares-decompile</strong> <code>general</code> - vaultwares-decompile: reviewed post-squash repo state (blueprints/ gitignored in PR #13) and prepared Flirt4Free extraction postmortem plus safe non-adult external SPA target op...</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Argon Medium
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-decompile  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-23 01:28 (TZ: Eastern Standard Time)
+  ```
+- Summary: vaultwares-decompile: reviewed post-squash repo state (blueprints/ gitignored in PR #13) and prepared Flirt4Free extraction postmortem plus safe non-adult external SPA target options for next iteration.
+- Git: repo=vaultwares-decompile, branch=main, head=818bb7c
+
+</details>
+
+<details>
+<summary><strong>2026-10-22 23:21 - vault-raggae</strong> <code>verification</code> - Picked up HANDOFF-20261022-MOMENTS. Read handoff, README, AGENTS, router. Checked live jobs at Thu, 22 Oct 2026 23:20: gateway v0.10.0 healthy; Moments pass on F:\amd\Models 50/...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -901,7 +1505,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-10-21 14:46 - shared-tube (formerly Prom-King/shared-tube, Prom-King/shared-tube + vaultwares-pipelines, Prom-King/shared-tube + vaultwares-api, Prom-King/shared-tube + vaultwares-mcp, Prom-King/shared-tube + vaultwares-docs, Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs, shared-tube + brume2, tube-sites, tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa, Prom-King Keep2Share &amp; ShareVerge Pipeline, Prom-King &amp; VaultWares API, Monitoring and Prom-King tube operations)</strong> <code>code-change</code> - Commit and push v0.3.57 to main: seek preview sprite aspect ratio fix and WebVTT cue synchronization</summary>
+<summary><strong>2026-10-21 14:46 - shared-tube</strong> <code>code-change</code> - Commit and push v0.3.57 to main: seek preview sprite aspect ratio fix and WebVTT cue synchronization</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -3090,7 +3694,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-10-17 12:17 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>commands</code> - Pushed sanitized agent-ledger to origin/main (commit 36a6c5c1)</summary>
+<summary><strong>2026-10-17 12:17 - agent-ledger</strong> <code>commands</code> - Pushed sanitized agent-ledger to origin/main (commit 36a6c5c1)</summary>
 
 - Kind: commands
 - Actor: AI Agent
@@ -3831,7 +4435,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-10-15 11:15 - vaultwares-decompile (formerly deconstructed-website-a-la-mode)</strong> <code>code-change</code> - vaultwares-decompile: completed provenance-safe live extraction hardening and regenerated LiveStreamProvider blueprint. Third-party CDN code from cdn5.vscdns.com is included onl...</summary>
+<summary><strong>2026-10-15 11:15 - vaultwares-decompile</strong> <code>code-change</code> - vaultwares-decompile: completed provenance-safe live extraction hardening and regenerated LiveStreamProvider blueprint. Third-party CDN code from cdn5.vscdns.com is included onl...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -4769,7 +5373,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-10-13 05:39 - vault-monitor (formerly vault-monitor vaultwares-pipelines)</strong> <code>code-change</code> - Integrate authentic CAD budget and cognitive context into evolution timeline, increment version to v2.4.8, commit and push to main</summary>
+<summary><strong>2026-10-13 05:39 - vault-monitor</strong> <code>code-change</code> - Integrate authentic CAD budget and cognitive context into evolution timeline, increment version to v2.4.8, commit and push to main</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -6265,270 +6869,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-10-09 22:38 - vault-cacophony</strong> <code>verification</code> - Tested Open sidebar button click event handling in Chrome</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 22:38 (TZ: Eastern Standard Time)
-  ```
-- Summary: Tested Open sidebar button click event handling in Chrome
-- Git: repo=vault-cacophony, branch=main, head=229d9de
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 22:37 - vault-cacophony</strong> <code>code-change</code> - Added Chrome sidePanel support in manifest and popup with fallback, verified sidebar rendering in Chrome</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 22:37 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added Chrome sidePanel support in manifest and popup with fallback, verified sidebar rendering in Chrome
-- Git: repo=vault-cacophony, branch=main, head=229d9de
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 21:53 - vault-cacophony</strong> <code>verification</code> - Validated Chrome extension popup rendering and captured visual proof</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 21:53 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated Chrome extension popup rendering and captured visual proof
-- Git: repo=vault-cacophony, branch=main, head=229d9de
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 21:51 - vault-cacophony</strong> <code>code-change</code> - Added PNG icons and dual MV3 background service_worker/scripts for Chrome and Firefox in python-zipper extension</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 21:51 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added PNG icons and dual MV3 background service_worker/scripts for Chrome and Firefox in python-zipper extension
-- Git: repo=vault-cacophony, branch=main, head=229d9de
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 20:48 - vault-cacophony</strong> <code>verification</code> - Verified .gitignore ignore rules, Python CLI script parsing, and live PR #26 state</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 20:48 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified .gitignore ignore rules, Python CLI script parsing, and live PR #26 state
-- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=6bec13e
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 20:47 - vault-cacophony</strong> <code>code-change</code> - Deleted local.README.md, excluded VSS in .gitignore, merged origin/main into feature branch, pushed, and opened PR #26</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 20:47 (TZ: Eastern Standard Time)
-  ```
-- Summary: Deleted local.README.md, excluded VSS in .gitignore, merged origin/main into feature branch, pushed, and opened PR #26
-- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=6bec13e
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 20:42 - vault-cacophony</strong> <code>verification</code> - Audited vault-cacophony git status, branches, commits, PRs, and dirty working tree in preparation for review</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 20:42 (TZ: Eastern Standard Time)
-  ```
-- Summary: Audited vault-cacophony git status, branches, commits, PRs, and dirty working tree in preparation for review
-- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=bbb833c
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 20:37 - vault-cacophony</strong> <code>verification</code> - Pushed decoupled deploy script to main and verified sync to OVH and Greencloud</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 20:37 (TZ: Eastern Standard Time)
-  ```
-- Summary: Pushed decoupled deploy script to main and verified sync to OVH and Greencloud
-- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=bbb833c
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 20:34 - vault-cacophony</strong> <code>code-change</code> - Removed OVH peer dispatch from qa-automation deploy script for standalone greencloud CI</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 20:34 (TZ: Eastern Standard Time)
-  ```
-- Summary: Removed OVH peer dispatch from qa-automation deploy script for standalone greencloud CI
-- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=bbb833c
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 20:31 - vault-cacophony</strong> <code>code-change</code> - Fixed and verified qa-automation CI webhook pipeline on greencloud; killed 2576 defunct zombie processes</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 20:31 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed and verified qa-automation CI webhook pipeline on greencloud; killed 2576 defunct zombie processes
-- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=bbb833c
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 20:16 - vault-cacophony</strong> <code>verification</code> - Queried resource metrics (RAM, CPU, Disk) across OVHCloud, GreenCloud, and Panopticam VPS</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 20:16 (TZ: Eastern Standard Time)
-  ```
-- Summary: Queried resource metrics (RAM, CPU, Disk) across OVHCloud, GreenCloud, and Panopticam VPS
-- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=bbb833c
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 19:46 - vault-cacophony</strong> <code>verification</code> - Diagnosed 80GB Windows.db growth: confirmed Windows Search Indexer indexing git/embedding repos vs Everything</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 19:46 (TZ: Eastern Standard Time)
-  ```
-- Summary: Diagnosed 80GB Windows.db growth: confirmed Windows Search Indexer indexing git/embedding repos vs Everything
-- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=bbb833c
-
-</details>
-
-<details>
 <summary><strong>2026-10-09 13:52 - panopticam</strong> <code>code-change</code> - Scheduled loop run (Fri, 09 Oct 2026 12:40-14:00). v0.50.0 Moments &#39;Similar&#39;: PC sends EmbeddingGemma 2 picture+sound vectors + toy-by-sound score to VPS hourly (/api/vision/mom...</summary>
 
 - Kind: code-change
@@ -6620,67 +6960,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-10-09 12:13 - vaultwares-adk (formerly vaultwares-agentciation)</strong> <code>code-change</code> - Autofix p-potvin/vaultwares-adk#32 review: setup-model-pollers.ps1 and setup-run-spool-drain.ps1 now Stop + Unregister the pre-move root copy before the \VaultWares\ one (9c010a...</summary>
-
-- Kind: code-change
-- Actor: claude-code
-- Agent Header:
-  ```text
-  Agent: claude-code (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: code
-  Permissions: bypass (network: Windows 11 workstation (local))
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: feat/vision-lab
-  Tools used (this reply): Bash, PowerShell, gh
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 12:13 (TZ: Eastern Standard Time)
-  ```
-- Summary: Autofix p-potvin/vaultwares-adk#32 review: setup-model-pollers.ps1 and setup-run-spool-drain.ps1 now Stop + Unregister the pre-move root copy before the \VaultWares\ one (9c010af). Folder-missing finding answered without change: verified Register-ScheduledTask -TaskPath creates a missing folder (probe task in \zz-probe-folder\, removed). Replied + resolved 4 threads; temp clone deleted.
-- Commands:
-  - `git commit/push chore/task-folders`
-  - `gh api replies + resolveReviewThread`
-- Files:
-  - `scripts/setup-model-pollers.ps1`
-  - `scripts/setup-run-spool-drain.ps1`
-- Git: repo=shared-tube, branch=feat/vision-lab, head=5d75ccd
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 12:11 - shared-tube + 7 repos (task folders)</strong> <code>code-change</code> - Restarted 11 running tasks under their new folders (killed orphaned trees, Start-ScheduledTask -TaskPath; Start without -TaskPath fails). -TaskPath PRs: health-ledger#14, vaultw...</summary>
-
-- Kind: code-change
-- Actor: claude-code
-- Agent Header:
-  ```text
-  Agent: claude-code (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: code
-  Permissions: bypass (network: Windows 11 workstation (local))
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: feat/vision-lab
-  Tools used (this reply): Bash, PowerShell, gh, WebSearch, Claude_Browser
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 12:11 (TZ: Eastern Standard Time)
-  ```
-- Summary: Restarted 11 running tasks under their new folders (killed orphaned trees, Start-ScheduledTask -TaskPath; Start without -TaskPath fails). -TaskPath PRs: health-ledger#14, vaultwares-epg#1, qa-automation#8, vault-music#4, vaultwares-adk#32, agent-ledger#22, vaultwares-docs#33 (dirty repos via temp clones, deleted). Fixed puller pgrep self-match (never exited; SigLIP waiter blocked). Built EmbeddingGemma lab features (mmlab.py + lab.html): multimodal search + image search, moments (gemma-moments), chapters, sound tags, For you (Stash ratings read-only), collections, Teach, identities (gemma-identities), tag ideas; Store per-thread SQLite connections (fixes InterfaceError races). gemma_queue.ps1 chains identities -> moments -> cam identities. Commit 5d75ccd.
-- Commands:
-  - `Start-ScheduledTask -TaskPath`
-  - `gh pr create x7`
-  - `tubevision gemma-identities/gemma-moments`
-  - `gemma_queue.ps1`
-- Files:
-  - `vision/src/tubevision/mmlab.py`
-  - `vision/src/tubevision/lab.html`
-  - `vision/src/tubevision/gemma.py`
-  - `vision/src/tubevision/store.py`
-  - `G:\TubeLab\jobs\gemma_queue.ps1`
-- Git: repo=shared-tube, branch=feat/vision-lab, head=5d75ccd
-
-</details>
-
-<details>
 <summary><strong>2026-10-09 10:58 - shared-tube + Windows tasks</strong> <code>code-change</code> - Moved scheduled tasks into folders (export XML, re-register, unregister; running processes unaffected): \tubevision\ (Tube Lab, Publish Previews, + new logon tasks Tube Lab Pull...</summary>
 
 - Kind: code-change
@@ -6709,115 +6988,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `G:\TubeLab\jobs\siglip_after_pull.ps1`
   - `vision/HANDOFF.md`
 - Git: repo=shared-tube, branch=feat/vision-lab, head=f4b1fa7
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 10:40 - shared-tube</strong> <code>code-change</code> - After PC restart (+RTX 2060): restarted PC pullers (died with reboot; OVH site-preview download finished 90,172 ok). Added EmbeddingGemma 2 support to tubevision via Panopticam&#39;...</summary>
-
-- Kind: code-change
-- Actor: claude-code
-- Agent Header:
-  ```text
-  Agent: claude-code (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: code
-  Permissions: bypass (network: Windows 11 workstation (local))
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: feat/vision-lab
-  Tools used (this reply): Bash, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 10:40 (TZ: Eastern Standard Time)
-  ```
-- Summary: After PC restart (+RTX 2060): restarted PC pullers (died with reboot; OVH site-preview download finished 90,172 ok). Added EmbeddingGemma 2 support to tubevision via Panopticam's embed server (127.0.0.1:8791): gemma.py (picture+sound vectors, mm_looks/mm_failures, A/B-first order, resumable), model-aware probes (--model/--dim, stored as model@dim), probes-compare. Smoke test 8 videos ok. Started G:\TubeLab\jobs\gemma_embed.ps1 (full run, A/B 14,667 first, ~0.3 v/s) and siglip_after_pull.ps1 (waits for puller, SigLIP on 3060 pinned by UUID). Commits 146e914, 6e43dde on feat/vision-lab.
-- Commands:
-  - `tubevision gemma-embed`
-  - `Start-Process pull_previews.sh / pull_spliced.sh`
-  - `siglip_after_pull.ps1`
-- Files:
-  - `vision/src/tubevision/gemma.py`
-  - `vision/src/tubevision/probes.py`
-  - `vision/src/tubevision/store.py`
-  - `G:\TubeLab\jobs\gemma_embed.ps1`
-  - `G:\TubeLab\jobs\siglip_after_pull.ps1`
-- Git: repo=shared-tube, branch=feat/vision-lab, head=6e43dde
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 10:07 - panopticam</strong> <code>code-change</code> - Fri 09 Oct 2026: shared EmbeddingGemma 2 server (panopticam/embed, 127.0.0.1:8791) resident on the RTX 2060 as logon task &#39;Prom-King Embed Server&#39;; 70 vision tokens/frame (Turin...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 10:07 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fri 09 Oct 2026: shared EmbeddingGemma 2 server (panopticam/embed, 127.0.0.1:8791) resident on the RTX 2060 as logon task 'Prom-King Embed Server'; 70 vision tokens/frame (Turing bf16 memory); ingest helpers moved to the 3060 after a sysmem overflow; every embedding recorded as a vaultwares-adk ModelRun for vault-monitor; hourly moments batch + self-labelled toy-by-sound probe in the worker (first run 120 moments, 0 errors). Researched llama.cpp/vLLM/ONNX serving and offloading. v0.49.1.
-- Files:
-  - `embed/server.py`
-  - `embed/README.md`
-  - `vision/moments_embed.py`
-  - `vision/gpu.py`
-- Git: repo=panopticam, branch=main, head=bf01bc1
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 07:11 - panopticam</strong> <code>code-change</code> - Fri 09 Oct 2026: merges as background jobs (202 + polling, VPS side always applied); PANOPTICAM_GPU pins GPU helpers to the RTX 2060 (vision.env set); renamed 00000-&gt;infiniti, 1...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam\vision\experiments  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 07:11 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fri 09 Oct 2026: merges as background jobs (202 + polling, VPS side always applied); PANOPTICAM_GPU pins GPU helpers to the RTX 2060 (vision.env set); renamed 00000->infiniti, 111111->meganstar01; reboot readiness checked (autologon + logon task). EmbeddingGemma 2 quantization: bitsandbytes int8/nf4 cut weights but not peak VRAM and break the audio tower (cos 0.83/0.71); keep bf16 (2 GB peak), per-batch on the 2060. v0.48.2.
-- Git: repo=panopticam, branch=main, head=b55ac2f
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 07:10 - shared-tube</strong> <code>code-change</code> - health-ledger back on main after PR #13 merge (fa36018), TokenJoker restarted. Created Windows task &#39;Tube Lab Publish Previews&#39; (operator-approved): every 6 h runs G:\TubeLab\jo...</summary>
-
-- Kind: code-change
-- Actor: claude-code
-- Agent Header:
-  ```text
-  Agent: claude-code (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: code
-  Permissions: bypass (network: Windows 11 workstation (local))
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: feat/vision-lab
-  Tools used (this reply): Bash, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 07:10 (TZ: Eastern Standard Time)
-  ```
-- Summary: health-ledger back on main after PR #13 merge (fa36018), TokenJoker restarted. Created Windows task 'Tube Lab Publish Previews' (operator-approved): every 6 h runs G:\TubeLab\jobs\publish_previews.ps1 = tubevision publish-previews --send, BelowNormal, IgnoreNew, 30 min limit, log G:\TubeLab\jobs\publish_previews.log. First run 564 switched, 0 errors (1,133 live). HANDOFF 27ff3f9.
-- Commands:
-  - `Register-ScheduledTask 'Tube Lab Publish Previews'`
-  - `git switch main (health-ledger)`
-- Files:
-  - `G:\TubeLab\jobs\publish_previews.ps1`
-  - `vision/HANDOFF.md`
-- Git: repo=shared-tube, branch=feat/vision-lab, head=27ff3f9
 
 </details>
 
@@ -6866,412 +7036,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-10-09 06:23 - miniville</strong> <code>documentation</code> - miniville: cleared a markdownlint MD041 warning. The warning was on data/narrative_day451.md, a throwaway input file I had created to feed narrate-write --file; the prose is alr...</summary>
-
-- Kind: documentation
-- Actor: workstation
-- Agent Header:
-  ```text
-  Agent: workstation (role: main)
-  Model: SWE-2 Max
-  Thinking: medium
-  Mode: agent
-  Permissions: unknown (network: local Windows workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 06:23 (TZ: Eastern Standard Time)
-  ```
-- Summary: miniville: cleared a markdownlint MD041 warning. The warning was on data/narrative_day451.md, a throwaway input file I had created to feed narrate-write --file; the prose is already persisted in the narratives table (day 451, source=agent, 1864 chars), so I deleted the scratch file (data/ is fully gitignored and nothing under it is tracked). Confirmed the narrative is still stored. Added a note to AGENTS.md: narrate-write reads stdin, so agents should pipe prose in rather than leaving a loose .md under data/ that trips MD041. Committed/pushed f14d3ae.
-- Commands:
-  - `git check-ignore -v data/narrative_day451.md`
-  - `python -m miniville.cli narrate-write --day 451`
-  - `git push origin autodev`
-- Files:
-  - `AGENTS.md`
-- Git: repo=miniville, branch=autodev, head=f14d3ae
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 06:23 - miniville</strong> <code>verification</code> - miniville: ran the live world on v0.15 (Days 411-539, tick 20112 -&gt; 25872). The press-power arc played out for real: the council carried rent to 1.15 on Day 420 (legitimate moti...</summary>
-
-- Kind: verification
-- Actor: workstation
-- Agent Header:
-  ```text
-  Agent: workstation (role: main)
-  Model: SWE-2 Max
-  Thinking: high
-  Mode: agent
-  Permissions: unknown (network: local Windows workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 06:23 (TZ: Eastern Standard Time)
-  ```
-- Summary: miniville: ran the live world on v0.15 (Days 411-539, tick 20112 -> 25872). The press-power arc played out for real: the council carried rent to 1.15 on Day 420 (legitimate motion), opinion then turned and the business-owned Gazette's campaign killed the next rise 0-5 on Day 450 (press_influence), and on Day 480 carried a rent cut back to 1.10 5-0 (press_influence, paper backing its own line). Opinion at Day 539: rent -0.76, levy -0.43, min_wage -0.29, dividend -0.07, pension +0.33 (pension is the one lever where the town's material interest still beats the paper). Readership 215, credibility 1.0, 51 Gazette editions, moods healthy (627 content / 4 miserable), 0 future-dated rows. Composed and stored an in-session prose narrative for Day 451 (source=agent, 1865 chars). 207 tests pass. Resume pointer now Day 540. Committed/pushed 2d6d361.
-- Commands:
-  - `python -m miniville.cli run --ticks 2880`
-  - `python -m miniville.cli digest --day 451`
-  - `python -m miniville.cli narrate-write --day 451 --file data/narrative_day451.md`
-  - `python -m pytest -q`
-  - `git push origin autodev`
-- Files:
-  - `docs/STATE.md`
-  - `data/miniville.db`
-- Git: repo=miniville, branch=autodev, head=2d6d361
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 06:10 - miniville</strong> <code>code-change</code> - miniville: repaired the live-world contamination from the 2026-10-05 probe, with operator approval. Backed up data/miniville.db to backups/miniville-t019680-pre-repair.db (WAL-s...</summary>
-
-- Kind: code-change
-- Actor: workstation
-- Agent Header:
-  ```text
-  Agent: workstation (role: main)
-  Model: SWE-2 Max
-  Thinking: high
-  Mode: agent
-  Permissions: unknown (network: local Windows workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 06:10 (TZ: Eastern Standard Time)
-  ```
-- Summary: miniville: repaired the live-world contamination from the 2026-10-05 probe, with operator approval. Backed up data/miniville.db to backups/miniville-t019680-pre-repair.db (WAL-safe snapshot), deleted the 17 stray future-dated events (ids 70802-70818) and 17 stray motions (ids 11-27), and reset the two probe-touched levers to what the town's own surviving motions imply: levy_rate 0.05, rent_multiplier 1.10 (dividend_share 0.20 was already legitimate). No newspaper_claims referenced the deleted events. Verified: 0 future-dated rows, cli status quiet, max event tick 19676 <= clock. Ran the world Days 411-419 after the repair; the +10% rent was absorbed cleanly (weekly rent-day distress fell from 18-19 households at rent 1.00 to 11-15 at rent 1.10, one downsize, 628 content). 207 tests pass. Live world now at Day 419, tick 20112. Committed/pushed db78bb8.
-- Commands:
-  - `python -m pytest -q`
-  - `python -m miniville.cli run --ticks 192`
-  - `python -m miniville.cli run --ticks 240`
-  - `python -m miniville.cli status`
-  - `git push origin autodev`
-- Files:
-  - `docs/STATE.md`
-  - `docs/AGENT_SYNC.md`
-  - `data/miniville.db`
-  - `backups/miniville-t019680-pre-repair.db`
-- Git: repo=miniville, branch=autodev, head=db78bb8
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 06:08 - miniville</strong> <code>verification</code> - miniville: traced the live ledger&#39;s 17 stray future-dated rows to their cause and added a guard. The agent-ledger entry for the v0.11 politics session (20261005-065506-349-miniv...</summary>
-
-- Kind: verification
-- Actor: workstation
-- Agent Header:
-  ```text
-  Agent: workstation (role: main)
-  Model: SWE-2 Max
-  Thinking: high
-  Mode: agent
-  Permissions: unknown (network: local Windows workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 06:08 (TZ: Eastern Standard Time)
-  ```
-- Summary: miniville: traced the live ledger's 17 stray future-dated rows to their cause and added a guard. The agent-ledger entry for the v0.11 politics session (20261005-065506-349-miniville-28d3fcfc, 2026-10-05 06:55, head 41c9ce1) lists scripts/_motion_sweep.py among its commands; that probe opened data/miniville.db directly and swept 24 months of future motions into it. Effects: (1) 17 motion events (ids 70802-70818) and 17 motions rows (ids 11-27) dated ticks 22080-50880 (days 460-1060) while the clock is at tick 19680 (day 410); (2) the probe also set the policy levers via set_meta, so the live world runs on levy_rate 0.03 and rent_multiplier 1.00, while the town's own surviving motions imply levy 0.05 (day-370 raise rejected) and rent 1.10 (days 220/250 raises carried, 310/390 rejected); dividend 0.20 is explained by the real day-360 motion. Added: cli status prints a 'ledger/clock mismatch' warning when any event is dated after the clock (tests/test_cli.py, 2 new tests), and scripts/_motion_sweep.py now snapshots the live DB and runs on the copy. 207 tests. Documented root cause and the two cleanup options in STATE.md; deletion of live rows deferred pending operator approval (destructive). Pushed 3c3c781.
-- Commands:
-  - `python -m pytest -q`
-  - `python -m miniville.cli status`
-  - `git push origin autodev`
-- Files:
-  - `src/miniville/cli.py`
-  - `tests/test_cli.py`
-  - `scripts/_motion_sweep.py`
-  - `docs/STATE.md`
-- Git: repo=miniville, branch=autodev, head=3c3c781
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 05:46 - miniville</strong> <code>code-change</code> - miniville v0.15 (workstation): the press gets power. New src/miniville/press.py gives the Gazette readers (55% of adults x credibility, so a caught lie shrinks the audience) and...</summary>
-
-- Kind: code-change
-- Actor: workstation
-- Agent Header:
-  ```text
-  Agent: workstation (role: main)
-  Model: SWE-2 Max
-  Thinking: high
-  Mode: agent
-  Permissions: unknown (network: local Windows workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 05:46 (TZ: Eastern Standard Time)
-  ```
-- Summary: miniville v0.15 (workstation): the press gets power. New src/miniville/press.py gives the Gazette readers (55% of adults x credibility, so a caught lie shrinks the audience) and gives the town an opinion on each council lever in [-1,1], moved weekly by the town's own conditions (unemployment, pensioners, empty purse, rent arrears) plus the paper's editorial line scaled by its reach. politics._votes_yes now weighs opinion against the district's interest (lean +/-1, opinion up to +/-1.5); consider_motion detects when opinion changed the outcome, stores support/press_swing, and emits a press_influence ledger event. newspaper.py prints readership in the masthead and moved POLICY_PREFERENCE into press.py; engine.py calls press.update weekly; db.py adds the opinion table and newspapers.readers, motions.support, motions.press_swing; ui/server.py exposes opinion+press on /api/council and readers on /api/newspaper; Council tab shows reach/credibility/line and opinion bars, Gazette shows readership. 205 tests (tests/test_press.py new). Soak_check --run 365 --tag v15 on a copy from tick 19680: 11/11 invariants, 8 press_influence swings (business-owned Gazette drove rent opinion to -1.00; rises failed 0-5, cuts carried 5-0). Patchright UI check: Council + Gazette render, 0 console errors. Committed/pushed 0e6ebd3, e419e04. Also found 17 stray future-dated motion rows in the live ledger (past probe swept politics.due over future days into the live DB); flagged, awaiting operator OK to delete.
-- Commands:
-  - `python -m pytest -q`
-  - `python scripts/soak_check.py --run 365 --tag v15 --source data/miniville.db`
-  - `python -m miniville.cli --db data/soak-v15.db serve --port 8799`
-  - `patchright-cli open http://127.0.0.1:8799`
-  - `git push origin autodev`
-- Files:
-  - `src/miniville/press.py`
-  - `src/miniville/politics.py`
-  - `src/miniville/newspaper.py`
-  - `src/miniville/engine.py`
-  - `src/miniville/db.py`
-  - `src/miniville/ui/server.py`
-  - `src/miniville/ui/static/app.js`
-  - `src/miniville/ui/static/index.html`
-  - `src/miniville/ui/static/style.css`
-  - `tests/test_press.py`
-  - `tests/test_ui.py`
-  - `docs/STATE.md`
-  - `docs/DESIGN.md`
-  - `docs/AGENT_SYNC.md`
-- Git: repo=miniville, branch=autodev, head=e419e04
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 05:27 - shared-tube + health-ledger</strong> <code>code-change</code> - Token Joker (health-ledger PR #13, branch feat/token-joker-refresh running on clopeux): new jwt_file check (exp + /auth/me probe) and refresh: block (ssh mint via ops/mint-promk...</summary>
-
-- Kind: code-change
-- Actor: claude-code
-- Agent Header:
-  ```text
-  Agent: claude-code (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: code
-  Permissions: bypass (network: Windows 11 workstation (local))
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: feat/vision-lab
-  Tools used (this reply): Bash, PowerShell, gh
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 05:27 (TZ: Eastern Standard Time)
-  ```
-- Summary: Token Joker (health-ledger PR #13, branch feat/token-joker-refresh running on clopeux): new jwt_file check (exp + /auth/me probe) and refresh: block (ssh mint via ops/mint-promking-token.py at 7 days left or on rejection, atomic write, token_refresh events, values never logged); promking-admin-token added; live refresh verified (not_after 8 Nov), task restarted, pass ok. Spliced previews live: publish-previews --send switched 569 videos (1 test + 500 + 68, 0 errors); verified fxv page uses new clip, API streams from lab (~0.2s warm), Range 206, fallback 302 when clip missing on PC. 166/569 have external fallback, 403 were pruned fetcher clips. HANDOFF updated (271facb).
-- Commands:
-  - `tubevision publish-previews --send`
-  - `node --test scripts/token-joker.test.mjs`
-  - `Stop/Start-ScheduledTask HealthLedgerTokenJoker`
-- Files:
-  - `health-ledger/scripts/token-joker.mjs`
-  - `health-ledger/tokens.yaml`
-  - `health-ledger/ops/mint-promking-token.py`
-  - `vision/HANDOFF.md`
-- Git: repo=shared-tube, branch=feat/vision-lab, head=271facb
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 04:23 - miniville</strong> <code>verification</code> - miniville: logged the Claude Code cloud session&#39;s owed v0.14 ledger entry (its VM has no record-agent-change.ps1) as an attributed ledger event, and cleared the ledger-debt note...</summary>
-
-- Kind: verification
-- Actor: workstation
-- Agent Header:
-  ```text
-  Agent: workstation (role: main)
-  Model: SWE-2 Max
-  Thinking: high
-  Mode: agent
-  Permissions: unknown (network: local Windows workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 04:23 (TZ: Eastern Standard Time)
-  ```
-- Summary: miniville: logged the Claude Code cloud session's owed v0.14 ledger entry (its VM has no record-agent-change.ps1) as an attributed ledger event, and cleared the ledger-debt note in docs/STATE.md. Then verified v0.14 on the real town and ran it live: soak_check.py --run 365 --tag v14live (copy from tick 19248) holds 11/11 invariants with 0 municipal deficits (money -0.2%/y, unemployment 12.5%->6.6%, commercial pay/take 0.84x, 4 closures 1.4/y, 60% one-off ties, 110 rivalries, 1.0% miserable/hungry, 250 events/day). The feared pension deficits never appeared; rent+levy inflow covers ~87 pensioners. Took a WAL-safe backup (backups/miniville-t019248-pre-v014.db), let the live world migrate (8 of 17 venues got resident owners, ema_revenue seeded from all-time takings) and ran Days 402-410: 0 deficits, purse 145.7k -> 212.4k, 2 new estates. 198 tests pass. Updated STATE.md resume pointer to Day 411 and AGENT_SYNC.md; committed/pushed b78e6b9.
-- Commands:
-  - `python -m pytest -q`
-  - `python scripts/soak_check.py --run 365 --tag v14live --source data/miniville.db`
-  - `python -m miniville.cli run --ticks 96`
-  - `python -m miniville.cli run --ticks 336`
-  - `python -m miniville.cli status`
-  - `git push origin autodev`
-- Files:
-  - `docs/STATE.md`
-  - `docs/AGENT_SYNC.md`
-  - `data/miniville.db`
-  - `backups/miniville-t019248-pre-v014.db`
-- Git: repo=miniville, branch=autodev, head=b78e6b9
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 04:08 - shared-tube</strong> <code>commands</code> - Minted a promking admin JWT for the lab publisher on OVH with vaultwares-api&#39;s own _create_access_token (secret from /opt/vaultwares-api/.env, never printed): user 8 (operator&#39;s...</summary>
-
-- Kind: commands
-- Actor: claude-code
-- Agent Header:
-  ```text
-  Agent: claude-code (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: code
-  Permissions: bypass (network: Windows 11 workstation (local))
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: feat/vision-lab
-  Tools used (this reply): Bash, PowerShell, AskUserQuestion
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 04:08 (TZ: Eastern Standard Time)
-  ```
-- Summary: Minted a promking admin JWT for the lab publisher on OVH with vaultwares-api's own _create_access_token (secret from /opt/vaultwares-api/.env, never printed): user 8 (operator's choice), 30-day TTL (operator's choice), written to Prom-King\.access\promking_admin_token.txt (outside any git repo). Verified with one GET https://api.vaultwares.ca/api/promking/auth/me -> id 8, admin. HANDOFF updated (3d31630 on feat/vision-lab).
-- Commands:
-  - `ssh ubuntu@100.67.25.118 python _create_access_token (stdout -> token file)`
-  - `curl /api/promking/auth/me`
-- Files:
-  - `Prom-King\.access\promking_admin_token.txt`
-  - `vision/HANDOFF.md`
-- Git: repo=shared-tube, branch=feat/vision-lab, head=3d31630
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 04:02 - shared-tube + vaultwares-api</strong> <code>code-change</code> - Addressed Devin reviews on Prom-King/shared-tube#5 (37e8094: probeStream true/false/null, never delete caller-supplied outputPath, test temp cleanup, short-video capture offsets...</summary>
-
-- Kind: code-change
-- Actor: claude-code
-- Agent Header:
-  ```text
-  Agent: claude-code (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: code
-  Permissions: bypass (network: Windows 11 workstation (local))
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: feat/vision-lab
-  Tools used (this reply): Bash, PowerShell, gh
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 04:02 (TZ: Eastern Standard Time)
-  ```
-- Summary: Addressed Devin reviews on Prom-King/shared-tube#5 (37e8094: probeStream true/false/null, never delete caller-supplied outputPath, test temp cleanup, short-video capture offsets) and p-potvin/vaultwares-api#91 (f6d2bfe: remote previews store keyed by video_id, revert only where preview_url still equals recorded clip, require_admin on batch/remote-previews + revert, cooldown on mid-stream drop, generator kills ffmpeg on timeout + per-attempt temp files with os.replace, short-video offsets). Replied on all 8 threads. promking pytest 84/84, vitest media-cache 12/12. feat/vision-lab ec28b43: publish-previews sends admin bearer from .access\\promking_admin_token.txt.
-- Commands:
-  - `pytest -k promking`
-  - `vitest run src/media-cache`
-  - `gh api pulls/comments/replies`
-- Files:
-  - `shared/src/media-cache/audio-preview.ts`
-  - `app/routers/promking/media/remote.py`
-  - `app/routers/promking/media/generator.py`
-  - `app/routers/promking/videos.py`
-- Git: repo=shared-tube, branch=feat/vision-lab, head=ec28b43
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 03:56 - shared-tube + vaultwares-api</strong> <code>code-change</code> - Spliced previews on tube sites, external side. shared-tube PR #5 (fix/keep-generated-previews, v0.3.56): pruner never deletes generated:true clips; fetcher/backfill mark clips g...</summary>
-
-- Kind: code-change
-- Actor: claude-code
-- Agent Header:
-  ```text
-  Agent: claude-code (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: code
-  Permissions: bypass (network: Windows 11 workstation (local))
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: feat/vision-lab
-  Tools used (this reply): Bash, PowerShell, gh
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 03:56 (TZ: Eastern Standard Time)
-  ```
-- Summary: Spliced previews on tube sites, external side. shared-tube PR #5 (fix/keep-generated-previews, v0.3.56): pruner never deletes generated:true clips; fetcher/backfill mark clips generated + fallbackUrl; generateAudioPreviewClip rejects output without video stream. vaultwares-api PR #91 (feat/promking-remote-previews, v0.1.37): first commit = media WIP live on OVH since 5 Oct but uncommitted (byte-identical to prod); /media/cache/<hash> streams from lab over tailnet, 30s cooldown, 302 to original preview (data/media-remote.sqlite), POST /videos/batch/remote-previews + /revert; 79/79 promking tests. Lab (feat/vision-lab): GET /cache/<hash> verified from OVH, lab restarted; tubevision publish-previews (dry run default, not sent).
-- Commands:
-  - `gh pr create (x2)`
-  - `pytest -k promking`
-  - `vitest run src/media-cache`
-- Files:
-  - `shared/src/media-cache/pruner.ts`
-  - `app/routers/promking/media/remote.py`
-  - `vision/src/tubevision/publish.py`
-- Git: repo=shared-tube, branch=feat/vision-lab, head=ebcfd91
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 03:55 - miniville</strong> <code>code-change</code> - miniville v0.14 (cloud session, Claude Code; shipped on autodev, merged to main as PR #3). Year-long soaks on a synthetic 612-resident town found: the dead kept their wallets (s...</summary>
-
-- Kind: code-change
-- Actor: cloud (Claude Code)
-- Agent Header:
-  ```text
-  Agent: cloud (Claude Code) (role: main)
-  Model: Claude Opus 5.5
-  Thinking: high
-  Mode: agent
-  Permissions: unknown (network: cloud VM (Devin container))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 03:55 (TZ: Eastern Standard Time)
-  ```
-- Summary: miniville v0.14 (cloud session, Claude Code; shipped on autodev, merged to main as PR #3). Year-long soaks on a synthetic 612-resident town found: the dead kept their wallets (savings frozen out of circulation); retirees had no income (70 of 105 broke households were retirees); Flats->Flats downsizing every fortnight; downsized households left children behind; ~700 random moves/yr ignoring rent; no council for two years in a fresh town (hence 0 rivalries); venues overstaffed for their takings; failed businesses minted money; soak.py --mortality-scale never worked (env set after import). Built: mortality estate settlement spouse->household->purse (estates_v1); weekly town pension from the purse (policy pension, default 0.50 median working week); enterprise.py (resident owners, owner draws, buying closed venues, founding, owners answer debts, inheritance); housing.py (affordability-driven moves, finite homes); crime.py (hardship theft, Town Hall catch chance, cells, Gazette blotter); jobs staffing cap for venues in the red, shed posts to public services; economy_days.total_money_cents for conservation; map tinted by district wealth; scripts/synth_personas.py for cloud soaks. soak_check now uses enterprise.is_commercial. 198 tests; 11/11 invariants on the synthetic soak.
-- Commands:
-  - `python -m pytest -q`
-  - `python scripts/soak.py --days 365 --tag v14`
-  - `python scripts/soak_check.py data/soak-v14.db`
-- Files:
-  - `src/miniville/enterprise.py`
-  - `src/miniville/housing.py`
-  - `src/miniville/crime.py`
-  - `src/miniville/mortality.py`
-  - `src/miniville/economy.py`
-  - `src/miniville/jobs.py`
-  - `src/miniville/db.py`
-  - `scripts/synth_personas.py`
-  - `scripts/soak.py`
-  - `scripts/soak_check.py`
-  - `tests/test_enterprise.py`
-  - `tests/test_housing.py`
-  - `tests/test_crime.py`
-  - `docs/STATE.md`
-  - `docs/ECONOMY.md`
-- Git: repo=miniville, branch=autodev, head=34892aa
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 03:41 - shared-tube</strong> <code>handoff</code> - Handoff written: vision/HANDOFF.md (commit on feat/vision-lab). Running: OVH site-preview downloader (28k/90k, ~2.8/s) + PC puller; OVH spliced 7x1.5s preview backfill (gen_spli...</summary>
-
-- Kind: handoff
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: feat/vision-lab
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 03:41 (TZ: Eastern Standard Time)
-  ```
-- Summary: Handoff written: vision/HANDOFF.md (commit on feat/vision-lab). Running: OVH site-preview downloader (28k/90k, ~2.8/s) + PC puller; OVH spliced 7x1.5s preview backfill (gen_spliced.mts reusing shared-tube fetcher extractor/generator, nice 19, 2 jobs, ~13 days, rejects audio-only clips; found pornxp renditions that are audio-only and main's generator fallback saving audio-only files) + PC puller into G:\TubeLab\spliced. Pending PRs: vaultwares-api media route PC fallback, pruner keep generated, generator video check, bulk preview_url endpoint. EmbeddingGemma 2 (multimodal, D:\HuggingFace\embeddinggemma-2) exploration noted.
-- Git: repo=shared-tube, branch=feat/vision-lab, head=945f64e
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 03:29 - qa-automation</strong> <code>code-change</code> - Cut qa_runner footprint on vps-ovhcloud: docker cpus 1.5 + cpu_shares 256 (applied live with docker update; host idle 3.6% -&gt; 38%), --mute-audio; 3 concurrent sessions kept (com...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\docs  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 03:29 (TZ: Eastern Standard Time)
-  ```
-- Summary: Cut qa_runner footprint on vps-ovhcloud: docker cpus 1.5 + cpu_shares 256 (applied live with docker update; host idle 3.6% -> 38%), --mute-audio; 3 concurrent sessions kept (commit 8a842cf). Created webhook CI like shared-tube: scripts/deploy-qa-automation.sh (greencloud dispatches to OVH; checkout /srv/repos/Prom-King/qa-automation, rsync tracked files into /opt/qa-automation without --delete, rebuild only on image/entrypoint changes, status.json, self-update re-exec); added Prom-King/qa-automation target to /etc/vw-webhookd/config.yml (backup kept), restarted vw-webhookd; pre-created OVH script file owned ubuntu. Verified end-to-end with push a9059f3. Flagged tracked Portable-Tor-Proxy-Rotator/control-password.txt.
-- Git: repo=docs, branch=main, head=dd97025
-
-</details>
-
-<details>
 <summary><strong>2026-10-09 00:55 - shared-tube</strong> <code>commands</code> - Started fetching 90,433 tube site previews (MediaDatabase-matched first) on OVH at &lt;=4 req/s (~3.4/s, ~650 KB each, ~58 GB) with a PC puller every 3 min into G:\TubeLab\clips (O...</summary>
 
 - Kind: commands
@@ -7294,38 +7058,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-10-09 00:36 - panopticam</strong> <code>code-change</code> - Fri 09 Oct 2026: qa_runner on the Prom-King VPS stopped again (operator: pause 3 more days), transient qa-runner-resume.timer starts it Mon 12 Oct 04:30 UTC. Heard upgraded to w...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: agent
-  Permissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
-  Tools used (this reply): Bash, Edit, PowerShell, hf_fs
-  MCP servers accessed (this reply): huggingface
-  Time: 2026-10-09 00:36 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fri 09 Oct 2026: qa_runner on the Prom-King VPS stopped again (operator: pause 3 more days), transient qa-runner-resume.timer starts it Mon 12 Oct 04:30 UTC. Heard upgraded to whisper-small int8 (onnx-community) with KV-cache decoding (decoder_with_past) in vision/speech.py; tower picks it when installed; benched 19 live clips: base 1.5 s vs small int8 ~3.5 s/clip, better text. Models in /var/lib/panopticam/models/tower/whisper-small (int8 only). v0.48.0 deployed, verified new transcripts arriving.
-- Commands:
-  - `docker stop qa_runner`
-  - `systemd-run --on-calendar=2026-10-12 04:30 UTC docker start qa_runner`
-  - `curl huggingface whisper-small onnx`
-  - `git push origin main`
-- Files:
-  - `vision/speech.py`
-  - `vision/worker.py`
-  - `docs/STATE.md`
-- Plan: ` `
-- Git: repo=panopticam, branch=main, head=8e5b9c2
-
-</details>
-
-<details>
 <summary><strong>2026-10-09 00:35 - shared-tube</strong> <code>code-change</code> - MediaDatabase tube title run had finished Wed 07 Oct 07:19 (unreported until now): 102,340 answered with raw kept, 67,136 matched (66%), 91.7% performer agreement over 66,605. P...</summary>
 
 - Kind: code-change
@@ -7344,213 +7076,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   ```
 - Summary: MediaDatabase tube title run had finished Wed 07 Oct 07:19 (unreported until now): 102,340 answered with raw kept, 67,136 matched (66%), 91.7% performer agreement over 66,605. Probes now also train on MediaDatabase tags (9,220 labelled looks): 28/80 visual categories usable at P>=0.8 (was 9); excluded non-visual and cam-library tags. Experiments not kept: JoyTag features (slightly worse), top-2-frame MIL (+0.02-0.04 AP). Commit c55d60f pushed; lab probes reloaded.
 - Git: repo=shared-tube, branch=feat/vision-lab, head=c55d60f
-
-</details>
-
-<details>
-<summary><strong>2026-10-09 00:19 - panopticam</strong> <code>code-change</code> - Follow-up (Fri 09 Oct 2026): Ask maps bedroom/bathroom/living room/kitchen/studio to the sticky place label (outdoors/car stay visual: no live room has them as usual place); fix...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: agent
-  Permissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
-  Tools used (this reply): Bash, Edit, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-10-09 00:19 (TZ: Eastern Standard Time)
-  ```
-- Summary: Follow-up (Fri 09 Oct 2026): Ask maps bedroom/bathroom/living room/kitchen/studio to the sticky place label (outdoors/car stay visual: no live room has them as usual place); fixed doubled subject. Memory check: 11 h uptime RSS 1.45 GB, 553k tracked objects (no runaway); top room-keyed list dict is a transient in a thread (forecast history); full GC every <=18 s causes ~1 s loop stalls. Set PANOPTICAM_GC_THRESHOLD=20000,20,50 in /etc/panopticam/panopticam.env (backup .bak-20261009), restarted. v0.47.1 pushed.
-- Commands:
-  - `sudo tee -a /etc/panopticam/panopticam.env`
-  - `sudo systemctl restart panopticam`
-  - `git push origin main`
-- Files:
-  - `web/src/ask.ts`
-  - `web/src/state.ts`
-  - `web/src/components/Browse.tsx`
-  - `docs/STATE.md`
-- Plan: ` `
-- Git: repo=panopticam, branch=main, head=ce136c3
-
-</details>
-
-<details>
-<summary><strong>2026-10-08 13:06 - panopticam</strong> <code>code-change</code> - Scheduled loop run (Thu 08 Oct 2026). Committed the night session&#39;s uncommitted I:/FDrive import-root + GPU reindex work (running on PC since 00:45). Fixed PC reverse tunnel out...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: agent
-  Permissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
-  Tools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser
-  MCP servers accessed (this reply): Claude_Browser
-  Time: 2026-10-08 13:06 (TZ: Eastern Standard Time)
-  ```
-- Summary: Scheduled loop run (Thu 08 Oct 2026). Committed the night session's uncommitted I:/FDrive import-root + GPU reindex work (running on PC since 00:45). Fixed PC reverse tunnel outage 03:36-12:45 (Tailscale SSH on VPS held a dead -R 9096 forward): tunnel rotates 9096/9097/9098, backend _TunnelPorts transport follows (v0.45.2). New Ask box: web/src/ask.ts parses a sentence into Browse filters (language, hair, glasses, habits, sites, age, viewers, states, pinned actions, sort, says ...), rest to SigLIP; /api/rooms said= filter (v0.46.0). New alert trigger 'match' from the Ask box (Alert me), re-run each minute (v0.47.0), verified live with a throwaway rule then deleted. Heap debug names dict holders. STATE.md updated with session log + operator to-do 7.
-- Commands:
-  - `python deploy/bump.py`
-  - `git push origin main`
-  - `vision/Restart-VisionWorker.ps1`
-- Files:
-  - `web/src/ask.ts`
-  - `web/src/components/Browse.tsx`
-  - `backend/src/panopticam/alerts.py`
-  - `backend/src/panopticam/app.py`
-  - `vision/recordings.py`
-  - `docs/STATE.md`
-- Plan: ` `
-- Git: repo=panopticam, branch=main, head=0bb0738
-
-</details>
-
-<details>
-<summary><strong>2026-10-07 13:21 - vault-cacophony</strong> <code>verification</code> - Built upstream NeMo-Speech.cpp v0.2.0 in sibling tree with S2S and CUDA 13.3</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-07 13:21 (TZ: Eastern Standard Time)
-  ```
-- Summary: Built upstream NeMo-Speech.cpp v0.2.0 in sibling tree with S2S and CUDA 13.3
-- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=bbb833c
-
-</details>
-
-<details>
-<summary><strong>2026-10-07 13:12 - panopticam</strong> <code>code-change</code> - Panopticam v0.44.1-0.45.1 (Wed, 07 Oct 2026 16:40-17:30 UTC). Heard: tower Whisper-base now transcribes clips with clear speech (greedy, in-house BPE detok, ~1.7 s CPU/clip, pac...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: agent
-  Permissions: bypass (network: Windows 11 workstation (local) + OVH Prom-King VPS via tailnet)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
-  Tools used (this reply): Bash, Edit, Write, Claude_Browser
-  MCP servers accessed (this reply): none
-  Time: 2026-10-07 13:12 (TZ: Eastern Standard Time)
-  ```
-- Summary: Panopticam v0.44.1-0.45.1 (Wed, 07 Oct 2026 16:40-17:30 UTC). Heard: tower Whisper-base now transcribes clips with clear speech (greedy, in-house BPE detok, ~1.7 s CPU/clip, pacing unchanged); OVH keeps 7 days of lines in table heard + FTS5, drops low-logprob/loops/hallucinations; junk text no longer counts for language. New Heard page (#/heard, g h), room panel lines, /api/heard, alert trigger 'said' (phrase). Settled talkers re-heard every 30 min at lowest priority. GC diagnostics: /api/debug/heap gc stats + list owners, PANOPTICAM_GC_THRESHOLD knob; tracked objects grew 180k->539k in 9 h, re-check pending. vocab.json fetched to VPS model dir. STATE.md updated.
-- Commands:
-  - `git push origin main (x4)`
-  - `ssh ubuntu@100.114.3.121 tx_probe timing`
-- Files:
-  - `vision/speech.py`
-  - `backend/src/panopticam/speech.py`
-  - `backend/src/panopticam/alerts.py`
-  - `web/src/components/Heard.tsx`
-  - `docs/STATE.md`
-- Git: repo=panopticam, branch=main, head=fec967d
-
-</details>
-
-<details>
-<summary><strong>2026-10-07 12:20 - vault-cacophony</strong> <code>verification</code> - Inspected build-s2s, build-cuda, and vcpkg configurations for safe isolated v0.2.0 build</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-07 12:20 (TZ: Eastern Standard Time)
-  ```
-- Summary: Inspected build-s2s, build-cuda, and vcpkg configurations for safe isolated v0.2.0 build
-- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=bbb833c
-
-</details>
-
-<details>
-<summary><strong>2026-10-07 11:29 - vault-cacophony</strong> <code>verification</code> - Fetched upstream-nemo remote (NVIDIA/NeMo-Speech.cpp) up to v0.2.0 (8642eaa) and analyzed diff against vendored tree</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-07 11:29 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fetched upstream-nemo remote (NVIDIA/NeMo-Speech.cpp) up to v0.2.0 (8642eaa) and analyzed diff against vendored tree
-- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=bbb833c
-
-</details>
-
-<details>
-<summary><strong>2026-10-07 09:28 - miniville</strong> <code>code-change</code> - Shipped Council &amp; Politics Observer UI panel: added dedicated Council tab in web UI (district representation table with click-through, policy levers highlighting deviations, ele...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-07 09:28 (TZ: Eastern Standard Time)
-  ```
-- Summary: Shipped Council & Politics Observer UI panel: added dedicated Council tab in web UI (district representation table with click-through, policy levers highlighting deviations, election countdown, recent motions with vote breakdown & badges, active boycotts, influential town figures). Enriched /api/council, automated test test_council_endpoint, 168 tests pass, browser verified with screenshot, pushed eb15f90 to autodev.
-- Git: repo=miniville, branch=autodev, head=eb15f90
-
-</details>
-
-<details>
-<summary><strong>2026-10-07 07:46 - miniville</strong> <code>code-change</code> - Continued Miniville session: advanced live sim Day 401 (tick 19200-&gt;19248), wrote in-session Day 401 narrative, fixed events.describe &#39;None:&#39; prefix on life_event without agent ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-07 07:46 (TZ: Eastern Standard Time)
-  ```
-- Summary: Continued Miniville session: advanced live sim Day 401 (tick 19200->19248), wrote in-session Day 401 narrative, fixed events.describe 'None:' prefix on life_event without agent ID, updated STATE.md and AGENT_SYNC.md, 167 tests pass, pushed fbfaa60 to autodev.
-- Git: repo=miniville, branch=autodev, head=fbfaa60
 
 </details>
 
@@ -9271,7 +8796,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-01 07:43 - vaultwares-docs (formerly tmp-app)</strong> <code>code-change,commands</code> - Added an explicit renamed-projects table to docs (agent-ledger schema page) so the old&#226;†’new project name mapping is visible in vaultwares-docs. Regenerated page resources so th...</summary>
+<summary><strong>2026-06-01 07:43 - vaultwares-docs</strong> <code>code-change,commands</code> - Added an explicit renamed-projects table to docs (agent-ledger schema page) so the old&#226;†’new project name mapping is visible in vaultwares-docs. Regenerated page resources so th...</summary>
 
 - Kind: code-change,commands
 - Actor: AI Agent
@@ -18577,7 +18102,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 18:54 - vaultwares-adk</strong> <code>general</code> - Answered Columbo&#39;s 6 interview questions for the vaultwares-themes recipe. Q1 (crypto-vault): intentional &#226;€” VaultWares treats client-side encryption as UX contract, but could ...</summary>
+<summary><strong>2026-05-20 18:54 - vaultwares-adk (formerly vaultwares-agentciation)</strong> <code>general</code> - Answered Columbo&#39;s 6 interview questions for the vaultwares-themes recipe. Q1 (crypto-vault): intentional &#226;€” VaultWares treats client-side encryption as UX contract, but could ...</summary>
 
 - Kind: general
 - Actor: AI Agent

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261023-125337-233-vault-cacophony-b01d9d82",
+    "createdAt":  "2026-10-23T16:53:37.2331766Z",
+    "createdAtLocal":  "2026-10-23 12:53",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-23 12:53 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows 11 local (Clopeux-Desktop)",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Operator: separation off by default. Start-SubtitlesAudioCpp.ps1 gains -Separate (opt-in BS-RoFormer/htdemucs); -NoSeparate kept as a no-op-compatible override; Start-TranslationPipeline.ps1 passes --no-separate unless -Separate; README example updated. Parse-checked both scripts; switch logic tested (default off, -Separate on, -NoSeparate wins). Uncommitted. The running raggae models chain (already loaded, -NoSeparate) is unaffected.",
+    "commands":  [
+                     "scripts/Start-TranslationPipeline.ps1"
+                 ],
+    "files":  [
+                  "scripts/Start-SubtitlesAudioCpp.ps1"
+              ],
+    "planPath":  "README.md",
+    "contentHash":  "b01d9d822da31f21f979b3e1265fcc793b64f857a44521bf8615f5f84dfeae67",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "8b7525e",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261023-090515-428-vaultwares-decompile-8ad86ef7",
+    "createdAt":  "2026-10-23T13:05:15.4281123Z",
+    "createdAtLocal":  "2026-10-23 09:05",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-decompile",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: DeepSeek V4 Flash High\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-decompile  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-23 09:05 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "DeepSeek V4 Flash High",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-decompile",
+    "summary":  "Extended \u0027vw whisper-words\u0027: batch support + end-of-run cleanup. -Input now accepts a directory (new -Recurse, -Extensions, -SkipExisting; -Output acts as a collection dir in batch mode, mirroring better-subtitles). Worker refactored: load_pipeline loaded once and shared across files via process_file(); added cleanup() that releases ASR/alignment model refs, gc.collect() and torch.cuda.empty_cache() at the end of a batch or single file (-NoCleanup disables). Fixed missing \u0027import gc\u0027. Verified: 2-file batch (wrote both, cleanup, exit 0), -SkipExisting skips, single-file CPU and CUDA float16 runs end with cleanup, vw whisper-words -h lists new params.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "8ad86ef7d111e0b6c1993c50d3f4222a8b5cbc7827d05838966ec126cdfc3543",
+    "git":  {
+                "repo":  "vaultwares-decompile",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-decompile",
+                "branch":  "main",
+                "head":  "818bb7c",
+                "hasChanges":  true
+            }
+}

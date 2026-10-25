@@ -1,0 +1,47 @@
+{
+  "id": "20261024-031909-792-panopticam-ff855f70",
+  "createdAt": "2026-10-24T07:19:09.7924356Z",
+  "createdAtLocal": "2026-10-24 03:19",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation + greencloud-panopticam over Tailscale)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-24 03:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation + greencloud-panopticam over Tailscale",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Prepared new server greencloud-panopticam (72.18.214.90 / tailnet 100.105.177.10; Ubuntu 26.04, 4 vCPU EPYC-Milan, 7.7 GB, 60 GB): ubuntu user with sudo + key, hostname, base packages (git nginx ffmpeg sqlite3 build-essential ufw unattended-upgrades rsync) + uv, ufw denies all incoming except tailscale0 and 41641/udp, PermitRootLogin no (Tailscale SSH is on and governs tailnet logins). CPU parity with OVH confirmed. One listing call each to CB and CamSoda: both 200 JSON. Production not moved; plan in STATE to-do X awaiting operator OK.",
+  "commands": [
+    "ssh root@100.105.177.10 (setup)",
+    "ufw default deny incoming; ufw allow in on tailscale0",
+    "one curl_cffi probe each: CB room list, CamSoda browse"
+  ],
+  "files": [
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "ff855f70bff114cc281569e741ead783c5d6aba309f0fbe6c4779bfa66695d1c",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "f4aae8f",
+    "hasChanges": true
+  }
+}

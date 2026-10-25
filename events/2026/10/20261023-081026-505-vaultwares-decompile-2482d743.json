@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261023-081026-505-vaultwares-decompile-2482d743",
+    "createdAt":  "2026-10-23T12:10:26.5058318Z",
+    "createdAtLocal":  "2026-10-23 08:10",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-decompile",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: DeepSeek V4 Flash High\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-decompile  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-23 08:10 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "DeepSeek V4 Flash High",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-decompile",
+    "summary":  "Added \u0027vw whisper-words\u0027 to vault-commander: WhisperX word-level timestamp wrapper. New cli/Start-WhisperWords.ps1 entrypoint + cli/utils/whisperx_words.py worker (VAD -\u003e batched faster-whisper ASR -\u003e wav2vec2 alignment; JSON/SRT/VTT/TSV/TXT output). Swappable ASR model: whisper sizes, local ctranslate2 dirs, or HF repo ids -- transformers-format fine-tunes (e.g. zuazo/whisper-tiny-es) auto-downloaded and converted to ctranslate2, paired with -Language. Registered in vw-commands.ps1 (Media Pipeline). Installed whisperx 3.8.6 + faster-whisper + ctranslate2 + nltk + pyannote-audio into shared vault-cacophony\\.venv (no torch download; fixed mismatched torchvision 0.23.0+cu129 -\u003e 0.28.0+cu126 there). Verified: wav/mp4 ingest, CPU int8 + CUDA float16, es fine-tune with es alignment, full vw dispatch run.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "2482d743b0a0455bf145e613e2a7f62da751ee75531b5fa1439b67fe7b8c7327",
+    "git":  {
+                "repo":  "vaultwares-decompile",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-decompile",
+                "branch":  "main",
+                "head":  "818bb7c",
+                "hasChanges":  true
+            }
+}

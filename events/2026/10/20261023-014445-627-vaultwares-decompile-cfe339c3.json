@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261023-014445-627-vaultwares-decompile-cfe339c3",
+    "createdAt":  "2026-10-23T05:44:45.6270881Z",
+    "createdAtLocal":  "2026-10-23 01:44",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-decompile",
+    "kind":  "plan",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 4 Argon Medium\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-decompile  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-23 01:44 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 4 Argon Medium",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-decompile",
+    "summary":  "vaultwares-decompile: inspected git history and stash@{0} after main history squash; confirmed all Rust crates and provenance changes are intact in commit c553a6d + stash@{0}, and prepared architectural critique on what is still missing from the SPA deconstruction pipeline.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "cfe339c32414b98be72241411ca141c91c6811218db56f1b2694a4b51f8c8b4e",
+    "git":  {
+                "repo":  "vaultwares-decompile",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-decompile",
+                "branch":  "main",
+                "head":  "818bb7c",
+                "hasChanges":  true
+            }
+}

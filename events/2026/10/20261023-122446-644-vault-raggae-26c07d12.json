@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261023-122446-644-vault-raggae-26c07d12",
+    "createdAt":  "2026-10-23T16:24:46.6441004Z",
+    "createdAtLocal":  "2026-10-23 12:24",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "commands",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-23 12:24 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows 11 local (Clopeux-Desktop)",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Operator asked to stop BS-RoFormer separation. Stopped the models-chain ASR run (Start-SubtitlesAudioCpp.ps1, separation on, 65/881 videos; its chain shell was already gone) and audiocpp_cli. scripts/models-chain.sh now passes -NoSeparate -SkipExisting (appends to asr-models.log); restarted the chain Fri 23 Oct 2026 12:30: ASR without separation, then transcripts ingest --embed and moments --said-only. vault-cacophony\u0027s own default (separation on) unchanged.",
+    "commands":  [
+                     "Stop-Process 159740 423408"
+                 ],
+    "files":  [
+                  "scripts/models-chain.sh"
+              ],
+    "planPath":  "bash scripts/models-chain.sh",
+    "contentHash":  "26c07d126a464451ff4643ac15960c0ace09d5a6b99081ea83dd5d4383838c1c",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "8b7525e",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "20261025-122848-225-agent-ledger-7cd65262",
+  "createdAt": "2026-10-25T16:28:48.2255420Z",
+  "createdAtLocal": "2026-10-25 12:28",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-25 12:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Ran the ledger sync early at the operator's prompt: AgentLedgerSync last ran 23 Oct 01:07 and next runs 27 Oct, so events since 23 Oct were only on the PC and not on the dashboard.",
+  "commands": [
+    "scripts/sync-agent-ledger.ps1"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "7cd65262f266d370b0587fd362befc22480cd19a2c9a4ba8ec94e172573db4c8",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "ce03d25",
+    "hasChanges": true
+  }
+}

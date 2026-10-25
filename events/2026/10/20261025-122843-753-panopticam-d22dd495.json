@@ -1,0 +1,54 @@
+{
+  "id": "20261025-122843-753-panopticam-d22dd495",
+  "createdAt": "2026-10-25T16:28:43.7535384Z",
+  "createdAtLocal": "2026-10-25 12:28",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation + Panopticam hosts over Tailscale)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-25 12:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation + Panopticam hosts over Tailscale",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "v0.73.4 (Sun, 25 Oct 2026): the PC vision worker had been down since 22 Oct 10:27 because its launcher hung on the output pipe after a crash. Start-VisionWorker.ps1 now waits on the process and restarts a dead or hung worker (log silent 20 min); tested by killing it (back in 30 s). Health: memory:api hysteresis 3000/2700 MB (it flapped ~40 mails a day against the 30 cap); a silent-worker warning also goes to Telegram with what to run. Switch prepared: deploy/switch-to-greencloud.sh check|go|rollback (check passes), deploy/db-backup.py, VPN and vision tower staged on greencloud-panopticam (stopped), greencloud dispatcher deploys every host in panopticam-hosts. Moments offload resumed (2-5 Oct done on 22 Oct).",
+  "commands": [
+    "Restart-VisionWorker.ps1",
+    "bash deploy/switch-to-greencloud.sh check",
+    "git push origin main"
+  ],
+  "files": [
+    "vision/Start-VisionWorker.ps1",
+    "backend/src/panopticam/health.py",
+    "deploy/switch-to-greencloud.sh",
+    "deploy/db-backup.py",
+    "deploy/dispatch-greencloud.sh",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "d22dd495cef6d1aa94e3482f48ed9198a66ed5e6afd015b6376260892cdb44f1",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "ce03d25",
+    "hasChanges": true
+  }
+}

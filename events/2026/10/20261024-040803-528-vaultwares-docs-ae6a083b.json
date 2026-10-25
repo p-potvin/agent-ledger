@@ -1,0 +1,49 @@
+{
+  "id": "20261024-040803-528-vaultwares-docs-ae6a083b",
+  "createdAt": "2026-10-24T08:08:03.5281002Z",
+  "createdAtLocal": "2026-10-24 04:08",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "documentation",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, Write, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-24 04:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Docs: panopticam.vaultwares.ca added to the split-DNS host list (tailscale.mdx); network-map machines (ovh-panopticam, greencloud-panopticam) and the Panopticam service row updated (was stale vps-ovhcloud); services-inventory Panopticam row; host-inventory section for greencloud-panopticam. Diagnosed the operator's 502: OVH restart during the deploy of de8493d (~2.5 min DB load), not the proxy; 200 since.",
+  "commands": [
+    "git push origin main (vaultwares-docs)"
+  ],
+  "files": [
+    "docs-content/operations/tailscale.mdx",
+    "docs-content/operations/network-map.mdx",
+    "docs-content/operations/services-inventory.mdx",
+    "docs-content/operations/host-inventory.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "ae6a083b999a31b7b88edc9b8352fe409985ec386ca25ac09ccf4dcfae7cedf2",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "de8493d",
+    "hasChanges": true
+  }
+}

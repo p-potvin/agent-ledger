@@ -1,0 +1,44 @@
+﻿{
+    "id":  "20261023-025259-055-vault-raggae-24d10c2f",
+    "createdAt":  "2026-10-23T06:52:59.0551457Z",
+    "createdAtLocal":  "2026-10-23 02:52",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change",
+    "actor":  "app/moments/heads.py",
+    "agentHeader":  "Agent: app/moments/heads.py (role: main)\r\nModel: claude-opus-5-5\r\nThinking: app/edits.py\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): web/src/pages/Dupes.tsx\r\nMCP servers accessed (this reply): docs/HANDOFF-20261022-MOMENTS.md\r\nTime: 2026-10-23 02:52 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "app/edits.py",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows 11 local (Clopeux-Desktop)",
+                    "toolsUsed":  "web/src/pages/Dupes.tsx",
+                    "mcpServersAccessed":  "docs/HANDOFF-20261022-MOMENTS.md"
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "v0.11.0 (uncommitted): Panopticam action heads as moment tags - draft PR Prom-King/panopticam#3 (GET /api/vision/actions/heads, v0.73.3); raggae heads import-actions + retag (act:\u003cname\u003e tags, featurize parity). Duplicates: app/files/dupes.py (exact oshash, near phash\u003c=8 bits on the 2060 in tiles, star groups not chains), /v1/dupes + /v1/edit/dupes keep|hide|reopen|move (.vw-duplicates rename, audited, undoable), panel Duplicates page with gallery filter. Finder run Fri 23 Oct 02:46: 145,663 groups, 4,173 outside galleries = 56.8 GB. Live gateway not restarted (Moments pass writes through it). 104 tests pass.",
+    "commands":  [
+                     "python -m app.files.dupes find"
+                 ],
+    "files":  [
+                  "app/files/dupes.py"
+              ],
+    "planPath":  "gh pr create --draft (panopticam)",
+    "contentHash":  "24d10c2fe22731ad0e0654dc866f8da77b21280d9f3a65c55992788171a669cc",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "6700f07",
+                "hasChanges":  true
+            }
+}

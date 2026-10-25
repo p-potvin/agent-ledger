@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261023-172939-614-vault-raggae-fbfc2457",
+    "createdAt":  "2026-10-23T21:29:39.6143935Z",
+    "createdAtLocal":  "2026-10-23 17:29",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "commands",
+    "actor":  "bash scripts/models-chain.sh",
+    "agentHeader":  "Agent: bash scripts/models-chain.sh (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-23 17:29 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows 11 local (Clopeux-Desktop)",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Fri 23 Oct 2026 ~17:40: imported 5 Panopticam action heads (PR #3 merged) and retagged 289,593 windows (521,559 tags); heads fire broadly on library windows (toy_buzzing 44%, moaning 24% \u003e= 0.5), likely uncalibrated. Tested NeMo-Speech.cpp: HTTP server 76x realtime with rnnt_right_context -1 (vs ~31x audio.cpp), CLI --stream 7x; 2060 unsupported by the build (no sm_75). Operator said not to optimise now; nothing changed in scripts. Restarted gateway between passes: v0.11.0 live (dupes 145,663 groups). Resumed models chain detached (audio.cpp, no separation, -SkipExisting).",
+    "commands":  [
+                     "python -m app.moments.heads import-actions"
+                 ],
+    "files":  [
+                  "python -m app.moments.heads retag"
+              ],
+    "planPath":  "scripts\\Restart-Gateway.ps1",
+    "contentHash":  "fbfc24573114f595992beed87393661ebf8530869324904306361228a6fbec53",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "bfd5829",
+                "hasChanges":  false
+            }
+}
