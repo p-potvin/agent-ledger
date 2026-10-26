@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261026-025733-344-vault-cacophony-0521e67c",
+    "createdAt":  "2026-10-26T06:57:33.3442307Z",
+    "createdAtLocal":  "2026-10-26 02:57",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: SWE-2 High\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-26 02:57 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "SWE-2 High",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Fish Audio S2 Pro integration completed for vault-cacophony: discovered reference WAVs and sidecars, wired fish_audio through TTS/orchestrator/UI, preserved prosody tags, added HF retry/fallback, rebuilt UI, and salvaged the 18 completed stems into fish_all_voices_ui master/manifest/transcript. Verified 24kHz stereo, 108.61s, 5 speakers, no ramblers, max concurrency 2, max overlap 0.199s.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "0521e67cd66572266ab858f92dd4db37cd0fbd16b0f0c98196bda4656618238e",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "main",
+                "head":  "a38b0a0",
+                "hasChanges":  true
+            }
+}

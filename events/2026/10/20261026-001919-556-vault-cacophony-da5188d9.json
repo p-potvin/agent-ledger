@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261026-001919-556-vault-cacophony-da5188d9",
+    "createdAt":  "2026-10-26T04:19:19.5566536Z",
+    "createdAtLocal":  "2026-10-26 00:19",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: DeepSeek V4 Flash High\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-26 00:19 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "DeepSeek V4 Flash High",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Created \\VaultWares\\Cacophony UI Server scheduled task (NO trigger, manual start only; conhost --headless, ExecutionTimeLimit Zero, IgnoreNew, Priority 7; same model as Enrichment Gateway) via scripts\\Register-CacophonyUITask.ps1 with supervisor launcher scripts\\Start-CacophonyUIServer.ps1 (mutex, port-8753 check, restart-on-exit, rapid-exit give-up, logs %LOCALAPPDATA%\\VaultWares\\cacophony\\). Tested launcher end-to-end (server came up on 8753, log written) then left port free + task Ready. HF model dropdown: ui_server MODEL_PRESETS already had the two :cheapest models; rewrote App.jsx HF model field from input+datalist to a strict select fed by /api/options; rebuilt dist; verified /api/options returns exactly [\u0027openai/gpt-oss-120b:cheapest\u0027,\u0027openai/gpt-oss-20b:cheapest\u0027] default 120b:cheapest.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "da5188d94b8abe4a9903c1a66bafb6ca7a7da4739e1d8cd9bb2472eec59722bf",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "main",
+                "head":  "a38b0a0",
+                "hasChanges":  true
+            }
+}

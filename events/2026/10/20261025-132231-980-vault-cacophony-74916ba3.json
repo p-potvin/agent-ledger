@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261025-132231-980-vault-cacophony-74916ba3",
+    "createdAt":  "2026-10-25T17:22:31.9807635Z",
+    "createdAtLocal":  "2026-10-25 13:22",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: DeepSeek V4 Flash High\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-25 13:22 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "DeepSeek V4 Flash High",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Added --script story support to cacophony orchestrator (new \u0027station\u0027 orbital-habitat CO2 anomaly story; testbench kept as default), normalized unicode subscript/superscript digits in hf_brain._clean_speech_text (cp1252-safe console/TTS), and ran a new 8-turn 4-speaker interleaved test: HF Inference LLM openai/gpt-oss-120b:cheapest, pre-made Magpie voices Aria/Jason/John/Sofia, background ramblers on. Output cacophony_output/station_run: 38.62s stereo master, 8 stems, barge-in 0.133s, max 2 concurrent, worst pairwise overlap 0.198s.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "74916ba3f3f9f39dcd8bbabb305711d217a58cb694c7b1b7e53f8be022572967",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "main",
+                "head":  "a38b0a0",
+                "hasChanges":  true
+            }
+}

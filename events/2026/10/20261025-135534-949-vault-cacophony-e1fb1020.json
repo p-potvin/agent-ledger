@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261025-135534-949-vault-cacophony-e1fb1020",
+    "createdAt":  "2026-10-25T17:55:34.9497772Z",
+    "createdAtLocal":  "2026-10-25 13:55",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: DeepSeek V4 Flash High\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-25 13:55 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "DeepSeek V4 Flash High",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Added Kokoro TTS support + voice cloning to cacophony pipeline: downloaded kokoro-82m-f16 backbone + 12 English voice packs (af_heart/af_bella/af_nicole/af_sarah/am_michael/am_fenrir/am_puck/am_adam/bf_emma/bf_isabella/bm_george/bm_lewis) from simonfxr/kokoro.cpp-GGUF into ~/.cache/crispasr; tts_engine.py now has kokoro backend (--backend kokoro -m --voice pack.gguf), per-call engine_type override, and cosyvoice cloning now passes --no-spoken-disclaimer --accept-marking-responsibility; orchestrator.py: Persona gains engine+voice_pack_gguf fields, --num-speakers supports 5, added CLOPEUX persona cloned from clopeux-voice-samples1 via cosyvoice3-tts, 5-speaker choreography entries, fixed misleading engine print. Ran 5-speaker station script (12 turns, gpt-oss-120b:cheapest, no ramblers): cacophony_output/kokoro_voices_run 65.3s stereo, barge-in 0.118s, max 2 concurrent, worst overlap 0.197s, all 5 voices present.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "e1fb10207463d0d1a6ac35fbe11b7c1f001fe94938a20823435be2f93d6c5d05",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "main",
+                "head":  "a38b0a0",
+                "hasChanges":  true
+            }
+}

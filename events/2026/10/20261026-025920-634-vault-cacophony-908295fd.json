@@ -1,0 +1,46 @@
+﻿{
+    "id":  "20261026-025920-634-vault-cacophony-908295fd",
+    "createdAt":  "2026-10-26T06:59:20.6344482Z",
+    "createdAtLocal":  "2026-10-26 02:59",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: SWE-2 High\r\nThinking: high\r\nMode: code\r\nPermissions: restricted (network: local Windows workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): \u0027read\u0027,\u0027edit\u0027,\u0027exec\u0027,\u0027todo_write\u0027\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-26 02:59 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "SWE-2 High",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "restricted",
+                    "network":  "local Windows workstation",
+                    "toolsUsed":  "\u0027read\u0027,\u0027edit\u0027,\u0027exec\u0027,\u0027todo_write\u0027",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Integrated Fish Audio S2 Pro into the cacophony pipeline and UI: discovered voices-store/sample reference WAVs with sidecar text, wired voice_ref_wav/voice_ref_text payloads, preserved Fish prosody tags, removed first-sentence truncation, added bounded HF retry plus fallback turns, launched orchestrator unbuffered on port 8753, and salvaged the 18 completed Fish stems into a compiled master run. Verification: Python compile passed, Vite build passed, /api/options exposed fish_audio and 7 refs, and the salvaged master validated as 24kHz stereo, 108.61s, 18 turns, 5 speakers, no ramblers, max concurrency 2, max pairwise overlap 0.199s.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "\u0027scripts/cacophony/hf_brain.py\u0027,\u0027scripts/cacophony/tts_engine.py\u0027,\u0027scripts/cacophony/orchestrator.py\u0027,\u0027scripts/cacophony/ui_server.py\u0027,\u0027cacophony-ui/src/App.jsx\u0027,\u0027cacophony-ui/vite.config.js\u0027,\u0027cacophony_output/fish_all_voices_ui/cacophony_master.wav\u0027"
+              ],
+    "planPath":  "",
+    "contentHash":  "908295fd079350656dfd8b3c4b2f2c38ebe1a0fba53f9091d738495d98fc8e2e",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "main",
+                "head":  "a38b0a0",
+                "hasChanges":  true
+            }
+}

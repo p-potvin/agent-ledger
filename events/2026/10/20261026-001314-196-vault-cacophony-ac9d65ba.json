@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261026-001314-196-vault-cacophony-ac9d65ba",
+    "createdAt":  "2026-10-26T04:13:14.1961045Z",
+    "createdAtLocal":  "2026-10-26 00:13",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: DeepSeek V4 Flash High\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-26 00:13 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "DeepSeek V4 Flash High",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Wired the Cacophony web UI end-to-end: (1) orchestrator.py gained --personas-json per-persona overrides, persona_presets() helper (single source of truth), preset_voice field; (2) new scripts/cacophony/ui_server.py - stdlib ThreadingHTTPServer on :8753 serving cacophony-ui/dist, /api/options (scripts/models/engines/kokoro packs/magpie baked/cosyvoice refs+baked/persona defaults), POST /api/start (spawns orchestrator subprocess with UI config incl. per-persona voice mapping), GET /api/events SSE with heartbeat + snapshot replay (done event on refresh), GET /api/file for outputs; (3) rewrote cacophony-ui/src/App.jsx as full control panel: script+seed, HF model w/ presets, tts engine, speakers, turns/duration/rt60/ramblers/gpu/out-dir, per-persona engine+voice pickers (kokoro packs/magpie baked/cosyvoice clone refs), live console, transcript, audio player, download links; (4) npm run build regenerated dist; vite dev proxy updated to 8753; added scripts/Start-CacophonyUI.ps1. Verified end-to-end: 2-3 turn runs via API completed (code 0), SSE streamed 26 lines + done, refresh replay works, /api/file serves wav. Note: port 8750 was occupied by an unrelated python service (PID 40544), so the user changed the default to 8753. Cleaned up orphaned ui_server test processes.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "ac9d65bae7b877d9fa2fa04976c20559f3b28bc543dd042ec989fcbddb861122",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "main",
+                "head":  "a38b0a0",
+                "hasChanges":  true
+            }
+}

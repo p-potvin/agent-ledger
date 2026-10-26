@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261026-020904-101-vault-cacophony-7bb5d466",
+    "createdAt":  "2026-10-26T06:09:04.1017883Z",
+    "createdAtLocal":  "2026-10-26 02:09",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 4 Argon Medium\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-26 02:09 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 4 Argon Medium",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Investigated Fish Audio Drama 3, voices-store/softwaredev-30yomale-drama3.wav (9.85s 44.1kHz mono, transcribed via parakeet), and open-source prosody/tag-controllable TTS options in audio.cpp + CrispASR. Found: (1) fishaudio/drama-3 is open-weights on HF (35B-A3B MoE, fish-audio-research-license) with Jmica/Drama-3-GGUF (15.9-23.9 GiB) and pentacoxian-dev/drama3-small-GGUF (9.74 GiB IQ3_XXS for 12GB VRAM, needs audio.cpp commit 9277495a + patch); (2) local audio.cpp/audiocpp_cli.exe already compiles fish_audio (Fish Audio S2 Pro Q8_0 GGUF, 6.32 GB on audio-cpp/audio.cpp-gguf, inline tags + zero-shot WAV cloning), higgs_audio_tts (5.10 GB Q8_0, inline emotion/style/pause/SFX control + cloning), index_tts2 / index_tts2.5 (3.50 GB Q8_0, decoupled emotion_text/emotion_alpha + cloning), dramabox (18.9 GB), and vevo2 (already local 3.24 GB, prosody_ref + style_ref); (3) CrispASR compiles orpheus (inline \u003claugh\u003e/\u003csigh\u003e/\u003cgasp\u003e tags), dia ([S1]/[S2] + (laughs)/(sighs)), qwen3-tts (--instruct style control), and cosyvoice3-tts (already cached, honors [breath]/[sigh]/[laughter] tags + clones softwaredev-30yomale-drama3.wav cleanly); (4) hf_brain.py currently strips all (...) and [...] tags and truncates every LLM turn to sentences[0], killing pauses, fillers, and multi-clause prosody.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "7bb5d466a7a079971971654edf6ec382a0e21894b91e178bb5f43f6e2ed14c64",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "main",
+                "head":  "a38b0a0",
+                "hasChanges":  true
+            }
+}

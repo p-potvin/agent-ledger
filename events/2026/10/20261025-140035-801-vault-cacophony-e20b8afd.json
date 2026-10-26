@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261025-140035-801-vault-cacophony-e20b8afd",
+    "createdAt":  "2026-10-25T18:00:35.8016530Z",
+    "createdAtLocal":  "2026-10-25 14:00",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: DeepSeek V4 Flash High\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-25 14:00 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "DeepSeek V4 Flash High",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Ran testbench seed script with the new Kokoro + clopeux-clone voices: --script testbench --engine-type kokoro --num-speakers 5 --turns 12 --model openai/gpt-oss-120b:cheapest. Output cacophony_output/kokoro_testbench_run: 54.5s stereo master, 12 turns, 0 background, barge-in 0.162s, max 2 concurrent, worst pairwise overlap 0.197s, all 5 speakers. Story: line-four frequency bleed investigation with CLOPEUX ordering a calibrated baseline.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "e20b8afd41d38884ccf3255094633725dc2a00f00a0eb07de70b491ce7aceb07",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "main",
+                "head":  "a38b0a0",
+                "hasChanges":  true
+            }
+}
