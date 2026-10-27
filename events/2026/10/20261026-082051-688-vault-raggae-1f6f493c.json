@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261026-082051-688-vault-raggae-1f6f493c",
+    "createdAt":  "2026-10-26T12:20:51.6884988Z",
+    "createdAtLocal":  "2026-10-26 08:20",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-26 08:20 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows 11 local (Clopeux-Desktop)",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Status review Mon 26 Oct. gateway.log: only benign asyncio ConnectionResetError since Fri restart. Found and fixed: transcripts ingest --embed returned before ingesting (chain\u0027s 727 new subtitles never ingested) - catch-up ingest+embed+said-refresh running detached; media-sync re-reported 2 missing masters and 94 gone gallery identity folders every hour - now reported once, folders get missing_since. ASR: 740/881 Models videos subtitled; rest no audio/no speech/run died on Write-Host when detached. Commit 3248008 (local, not pushed). Pre-existing test failure test_transcripts::test_routes (health counts in background).",
+    "commands":  [
+                     "app/files/records/sync.py"
+                 ],
+    "files":  [
+                  "app/transcripts/ingest.py"
+              ],
+    "planPath":  "docs/HANDOFF-20261022-MOMENTS.md",
+    "contentHash":  "1f6f493c36456cd9551f6ee599594275432e85c2d2da1d88685a96689d67781c",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "3248008",
+                "hasChanges":  false
+            }
+}

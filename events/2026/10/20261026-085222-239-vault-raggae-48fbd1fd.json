@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261026-085222-239-vault-raggae-48fbd1fd",
+    "createdAt":  "2026-10-26T12:52:22.2395519Z",
+    "createdAtLocal":  "2026-10-26 08:52",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "plan",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae\\web\\src  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-26 08:52 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows 11 local (Clopeux-Desktop)",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae\\web\\src",
+    "summary":  "Pushed 3248008. Operator set priorities (UI speed, free G:/I: + quarantine dupes, file-name index, FDrive, gallery reorg; ASR separator candidates low priority) - saved to memory roadmap-after-dupes. Measured panel slowness: exact COUNT queries (catalog count 28 s, media count 14 s), /stats 23 s, /moments/summary 4 s; paged data \u003c0.1 s. Recommendation: keep React, fix backend counts/aggregates and stream counts after data; Tauri does not fix slow queries. Awaiting operator choice.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "48fbd1fd0bdee45bfdd7db75e9c2635c6eeab4548e58ec8fe6608654307002fe",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "3248008",
+                "hasChanges":  false
+            }
+}

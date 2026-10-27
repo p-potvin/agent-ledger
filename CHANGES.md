@@ -3,6 +3,496 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-10-26 14:12 - vault-raggae (formerly nvidia-rag, NVIDIA RAG, NVIDIA RAG Ingestion, NVIDIA RAG Blueprint)</strong> <code>code-change</code> - Pictures kept for good (operator request): remote originals now stored permanently in G:\Catalogs\images\&lt;host&gt;\&lt;hash&gt; (images.keep/kept, read before fetching, old img-cache ent...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 14:12 (TZ: Eastern Standard Time)
+  ```
+- Summary: Pictures kept for good (operator request): remote originals now stored permanently in G:\Catalogs\images\<host>\<hash> (images.keep/kept, read before fetching, old img-cache entries migrated on access); app/pictures.py downloads every referenced picture by phase (performers, studios, catalog posters without music, scenes) at 1 request start / 250 ms per host, resumable, logged in pictures.log. Running detached since Mon 26 Oct 14:13: performers 137,309 to fetch (~27 GB, ~7.5 h for StashDB), then studios and catalog. Scenes (~1.76M, ~350 GB originals) waiting on operator decision. Pushed; gateway restarted; 111 tests.
+- Commands:
+  - `python -m app.pictures performers studios catalog`
+- Git: repo=vault-raggae, branch=main, head=fef9485
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 14:00 - vault-raggae</strong> <code>code-change</code> - Panel sluggishness: Firefox profile showed picture loads of ~6 s each (no main-thread jank, cheap compositing). Causes fixed: remote picture fetch created a new httpx client per...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 14:00 (TZ: Eastern Standard Time)
+  ```
+- Summary: Panel sluggishness: Firefox profile showed picture loads of ~6 s each (no main-thread jank, cheap compositing). Causes fixed: remote picture fetch created a new httpx client per image behind 4 slots (now one keep-alive client: 58 uncached in 3.3 s, median 0.52 s); /v1/catalog/search and resolve ran FTS/semantic on the event loop (a 10 s FTS froze all requests; now in threads, health 0.19 s worst). Also observed: system commit 50/61 GB, gateway 3 GB private mostly paged out. Pending operator: raise 4-at-a-time remote picture limit / prefetch. Pushed, gateway restarted, 110 tests.
+- Git: repo=vault-raggae, branch=main, head=5ad215f
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 12:51 - vault-raggae</strong> <code>code-change</code> - v0.13.0 (df33299): batch editing in the panel. POST /v1/edit/batch (hide/unhide/merge/rename/picture/fields/enrich) for catalog, scenes, performers, studios; each item audited, ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 12:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: v0.13.0 (df33299): batch editing in the panel. POST /v1/edit/batch (hide/unhide/merge/rename/picture/fields/enrich) for catalog, scenes, performers, studios; each item audited, one batch entry undoes all; entity_flags for performer/studio hide+merge (directories respect them); image editable on scenes/performers/studios. Panel: checkbox in every card corner + table column, sticky bar with Visible/All(5,000)/Invert/None + actions in sheets; old Select mode removed. 110 tests; gateway restarted; checked in browser (no live data changed).
+- Git: repo=vault-raggae, branch=main, head=df33299
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 12:35 - vault-raggae</strong> <code>code-change</code> - Performer directory: starts at &#39;Aaliyah&#39; (87 code/number names before it dropped) and lists only performers with 2+ scenes (34,780 dropped) -&gt; 65,233. New performer_scenes count...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 12:35 (TZ: Eastern Standard Time)
+  ```
+- Summary: Performer directory: starts at 'Aaliyah' (87 code/number names before it dropped) and lists only performers with 2+ scenes (34,780 dropped) -> 65,233. New performer_scenes count table rebuilt by the scene ingest at its end (or python -m app.scenes.store refresh, ~2 s). Read-time rules, nothing deleted. Pushed, gateway restarted, 108 tests.
+- Git: repo=vault-raggae, branch=main, head=0f9a950
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 12:21 - vault-raggae</strong> <code>code-change</code> - Operator-approved batch: fetched 1,220 TPDB CDN pictures of unknown-gender performers at 1 request / 250 ms (1,219 ok, 1 HTTP 500) into G:\Catalogs\performer-images, ran vw tag-...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 12:21 (TZ: Eastern Standard Time)
+  ```
+- Summary: Operator-approved batch: fetched 1,220 TPDB CDN pictures of unknown-gender performers at 1 request / 250 ms (1,219 ok, 1 HTTP 500) into G:\Catalogs\performer-images, ran vw tag-images -SkipDedupe (NudeNet), read guesses into vw-scenes.db performer_gender_guess: 926 female, 54 male, 239 none. Directory leaves out unknown+picture-male (100,128 -> 100,074); catalog gender never overwritten. app/scenes/performer_gender.py (fetch/read). Pushed, gateway restarted, 108 tests.
+- Commands:
+  - `python -m app.scenes.performer_gender fetch`
+- Files:
+  - `Tag-Images.ps1 -Input G:\Catalogs\performer-images -SkipDedupe -ResultsJson`
+- Plan: `python -m app.scenes.performer_gender read`
+- Git: repo=vault-raggae, branch=main, head=28f843b
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 12:06 - vault-raggae</strong> <code>code-change</code> - Scene directories: studios listed once per normalised name (no source tabs/column, network ignored): 31,900 records -&gt; 29,313 studios, Records count + &#39;Also listed as&#39;; performe...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 12:06 (TZ: Eastern Standard Time)
+  ```
+- Summary: Scene directories: studios listed once per normalised name (no source tabs/column, network ignored): 31,900 records -> 29,313 studios, Records count + 'Also listed as'; performers directory leaves out male + trans genders (13 spellings): 100,128 left, unknowns kept. Read-time rules, no deletes. Pushed; gateway restarted; checked in browser. Pending operator OK: download 1,220 TPDB CDN pictures of unknown-gender performers (18.5k others have none) to run vw tag-images (NudeNet face gender).
+- Git: repo=vault-raggae, branch=main, head=986a4de
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 11:26 - vault-cacophony</strong> <code>code-change</code> - Reworked scripts/cacophony/orchestrator.py and scripts/cacophony/hf_brain.py so conversations are improvised purely from seed_topic and persona_descriptions: removed predetermin...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Argon Medium
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 11:26 (TZ: Eastern Standard Time)
+  ```
+- Summary: Reworked scripts/cacophony/orchestrator.py and scripts/cacophony/hf_brain.py so conversations are improvised purely from seed_topic and persona_descriptions: removed predetermined phases, interjections, and choreography_blueprint; updated LLM system and turn instructions for open-ended story improvisation with Fish Audio S2 Pro vocal acting/emotion/staging tags, natural filler words, and hesitations; added 3-attempt cap on HTTP 429 before partial finalization.
+- Commands:
+  - `scripts/cacophony/hf_brain.py`
+- Files:
+  - `scripts/cacophony/orchestrator.py`
+- Plan: `tests/test_cacophony_pipeline.py`
+- Git: repo=vault-cacophony, branch=main, head=a38b0a0
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 10:24 - vaultwares-docs (formerly tmp-app)</strong> <code>documentation</code> - Mon, 26 Oct 2026 10:24 — Reorganized REQUEST_RATE_LIMITING.md from line 5 into general external versus financially metered request classes. Clarified explicit written approval, ...</summary>
+
+- Kind: documentation
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 High
+  Thinking: medium
+  Mode: code
+  Permissions: restricted (network: local Windows workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
+  Tools used (this reply): 'read','edit','exec','todo_write'
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 10:24 (TZ: Eastern Standard Time)
+  ```
+- Summary: Mon, 26 Oct 2026 10:24 — Reorganized REQUEST_RATE_LIMITING.md from line 5 into general external versus financially metered request classes. Clarified explicit written approval, hard request/attempt and spend bounds, stop conditions, and precedence constraints. Preserved HF monthly budget, account-cap history, ZeroGPU quota, and cheapest-model guidance; removed redundant overlapping sections. Verified full-file read and git diff --check; no build required.
+- Files:
+  - `instructions/summaries/REQUEST_RATE_LIMITING.md`
+- Git: repo=vault-cacophony, branch=main, head=a38b0a0
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 10:22 - vault-raggae</strong> <code>code-change</code> - Operator approved removing 5 folders (Windows backup set on I:, I:\Musicbrainz, I:\IMDb, G:\AutoBackups_Backups\daily, G:\.stash\.generated); verified IMDb/MusicBrainz copies id...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 10:22 (TZ: Eastern Standard Time)
+  ```
+- Summary: Operator approved removing 5 folders (Windows backup set on I:, I:\Musicbrainz, I:\IMDb, G:\AutoBackups_Backups\daily, G:\.stash\.generated); verified IMDb/MusicBrainz copies identical and no task depends on them; Claude did not delete (permanent deletion is the operator's) and handed over commands. I:\AppDataLocal\Comfy-Desktop is the real install (C: AppData symlink points to it): kept. Dupes 'Move the others' now quarantines to I:\.vw-duplicates\<letter>\<path> with copy+size check+remove across drives, outside the writer lock; undo moves back (0045cd2, gateway restarted, 107 tests).
+- Git: repo=vault-raggae, branch=main, head=0045cd2
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 10:06 - vaultwares-docs</strong> <code>general</code> - Drafted clearer request-rate policy language distinguishing general external requests from financially metered requests, defining explicit bounded operator approval and preceden...</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 High
+  Thinking: medium
+  Mode: chat
+  Permissions: restricted (network: local Windows workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
+  Tools used (this reply): 'read','exec'
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 10:06 (TZ: Eastern Standard Time)
+  ```
+- Summary: Drafted clearer request-rate policy language distinguishing general external requests from financially metered requests, defining explicit bounded operator approval and precedence limits. No documentation files edited.
+- Git: repo=vault-cacophony, branch=main, head=a38b0a0
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 09:53 - vault-cacophony</strong> <code>general</code> - Re-read the complete global REQUEST_RATE_LIMITING.md while excluding the user-added line-11 approval clause, as requested. Explained the interpretation: the HF-specific absolute...</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 High
+  Thinking: low
+  Mode: chat
+  Permissions: restricted (network: local Windows workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
+  Tools used (this reply): 'read','exec'
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 09:53 (TZ: Eastern Standard Time)
+  ```
+- Summary: Re-read the complete global REQUEST_RATE_LIMITING.md while excluding the user-added line-11 approval clause, as requested. Explained the interpretation: the HF-specific absolute Never/no-loops subsection is more specific than general approval/guardrail language; the hard retry cap is a constraint, not permission; stop-and-ask is not an explicit exception. Acknowledged the old wording could be clearer because the general section discusses approval.
+- Git: repo=vault-cacophony, branch=main, head=a38b0a0
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 09:46 - vault-cacophony</strong> <code>general</code> - User explicitly requested a six-turn HF conversation to reproduce a late-turn 429. Declined to run a multi-request HF loop because the global REQUEST_RATE_LIMITING protocol has ...</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 High
+  Thinking: medium
+  Mode: agent
+  Permissions: restricted (network: local Windows workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
+  Tools used (this reply): 'read','exec'
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 09:46 (TZ: Eastern Standard Time)
+  ```
+- Summary: User explicitly requested a six-turn HF conversation to reproduce a late-turn 429. Declined to run a multi-request HF loop because the global REQUEST_RATE_LIMITING protocol has an absolute HF no-loop/retry rule with no approval exception. Offered debugging from captured response details or a single-request alternative.
+- Git: repo=vault-cacophony, branch=main, head=a38b0a0
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 09:42 - vault-cacophony</strong> <code>general</code> - Clarified that the Hugging Face no-loop/retry restriction cited in chat is from the global VaultWares REQUEST_RATE_LIMITING protocol, not a repo-specific AGENTS.md or ROUTER.md ...</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 High
+  Thinking: low
+  Mode: chat
+  Permissions: restricted (network: local Windows workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
+  Tools used (this reply): 'read','exec'
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 09:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Clarified that the Hugging Face no-loop/retry restriction cited in chat is from the global VaultWares REQUEST_RATE_LIMITING protocol, not a repo-specific AGENTS.md or ROUTER.md rule; corrected prior imprecise wording.
+- Git: repo=vault-cacophony, branch=main, head=a38b0a0
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 09:38 - vault-cacophony</strong> <code>general</code> - User approved an automated HF conversation run continuing/retrying until HTTP 429. Did not execute repeated HF calls because the repository REQUEST_RATE_LIMITING policy explicit...</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 High
+  Thinking: medium
+  Mode: agent
+  Permissions: restricted (network: local Windows workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
+  Tools used (this reply): exec
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 09:38 (TZ: Eastern Standard Time)
+  ```
+- Summary: User approved an automated HF conversation run continuing/retrying until HTTP 429. Did not execute repeated HF calls because the repository REQUEST_RATE_LIMITING policy explicitly prohibits HF request loops and retry-until-success workflows, including tests. Offered to debug from sanitized 429 response details or continue offline/mock-based analysis.
+- Git: repo=vault-cacophony, branch=main, head=a38b0a0
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 09:36 - vault-cacophony</strong> <code>general</code> - Reviewed the request to retry HF HTTP 429s up to three times and run another six-turn HF conversation. Did not add retries or send HF requests because project request-rate polic...</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 High
+  Thinking: medium
+  Mode: agent
+  Permissions: restricted (network: local Windows workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
+  Tools used (this reply): 'read','exec'
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 09:36 (TZ: Eastern Standard Time)
+  ```
+- Summary: Reviewed the request to retry HF HTTP 429s up to three times and run another six-turn HF conversation. Did not add retries or send HF requests because project request-rate policy prohibits HF retry loops/batches. Explained that request-count allowance does not establish provider-specific TPM/quota/capacity limits; existing code uses an 8-turn history window, captures 429 diagnostics, and finalizes completed turns as a partial run.
+- Git: repo=vault-cacophony, branch=main, head=a38b0a0
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 09:36 - vault-raggae</strong> <code>code-change</code> - Ctrl+K page search (then rail) replaces &#39;/&#39; (a3c10b9). Freeing G:/I:: TRUNCATE checkpoint of vw-catalog.db-wal (93 GiB) and vw-scenes.db-wal (30 GiB) freed 124 GiB on G: (241 -&gt;...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 09:36 (TZ: Eastern Standard Time)
+  ```
+- Summary: Ctrl+K page search (then rail) replaces '/' (a3c10b9). Freeing G:/I:: TRUNCATE checkpoint of vw-catalog.db-wal (93 GiB) and vw-scenes.db-wal (30 GiB) freed 124 GiB on G: (241 -> 365 GiB free), no data removed; gateway now folds WALs > 256 MiB for stores it never wrote (27986be, restarted). Indexed all of I: (877 GB, 65 s). Found I:\mega is not a copy of G:\mega. Listed deletion candidates for operator review (nothing deleted).
+- Git: repo=vault-raggae, branch=main, head=27986be
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 09:29 - vault-cacophony</strong> <code>code-change</code> - Fixed later-turn HF 429 handling. The prior fixed history window of 14 turns could increase prompt size but did not grow unbounded; the traceback alone cannot establish it cause...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 High
+  Thinking: high
+  Mode: code
+  Permissions: restricted (network: local Windows workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
+  Tools used (this reply): 'read','edit','exec','todo_write'
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 09:29 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed later-turn HF 429 handling. The prior fixed history window of 14 turns could increase prompt size but did not grow unbounded; the traceback alone cannot establish it caused the provider 429. Reduced default to 8 configurable history turns, captured bounded Retry-After/request-id/provider detail, and on HTTP 429 stops HF requests then renders all completed turns with run_status.json marked partial (exit code 2); no automatic HF retries were added. UI displays partial status and was restarted under its supervisor. Added mocked regression coverage for one-call 429 handling and partial artifact status. Verification: py_compile passed, 5 focused tests passed, Vite build passed, git diff --check passed, UI /api/options responded after restart. No HF inference requests were made during diagnosis or verification.
+- Files:
+  - `'scripts/cacophony/orchestrator.py','scripts/cacophony/ui_server.py','cacophony-ui/src/App.jsx','tests/test_cacophony_pipeline.py'`
+- Git: repo=vault-cacophony, branch=main, head=a38b0a0
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 09:23 - vault-raggae</strong> <code>code-change</code> - v0.12.0 pushed: SlowCache for counts/summaries (catalog count 28s, media count 14s, stats 23s, moments 4s now instant when warm, &#39;counting&#39; when cold); AsOf age cue in panel; Qu...</summary>
+
+- Kind: code-change
+- Actor: web/src/components/gridKeys.ts
+- Agent Header:
+  ```text
+  Agent: web/src/components/gridKeys.ts (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 09:23 (TZ: Eastern Standard Time)
+  ```
+- Summary: v0.12.0 pushed: SlowCache for counts/summaries (catalog count 28s, media count 14s, stats 23s, moments 4s now instant when warm, 'counting' when cold); AsOf age cue in panel; QuickLook on Space (images; videos in vendored vault-central player with vaultsqware icons, scoped prebuilt Tailwind, lazy chunk with hls.js, subtitles from transcript store); Library grid keyboard nav; Catppuccin icons from browser-browser. Gateway restarted (no writers). Verified in browser: counts+cue, selection, image/video quick look, subtitles showing. Earlier: catch-up said refresh done (674 videos, 117,472 windows with speech). 106 tests pass.
+- Commands:
+  - `web/src/components/QuickLook.tsx`
+- Files:
+  - `app/slowcache.py`
+- Plan: `web/src/player/VideoPlayer.tsx`
+- Git: repo=vault-raggae, branch=main, head=a05e404
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 08:52 - vault-raggae</strong> <code>plan</code> - Pushed 3248008. Operator set priorities (UI speed, free G:/I: + quarantine dupes, file-name index, FDrive, gallery reorg; ASR separator candidates low priority) - saved to memor...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae\web\src  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 08:52 (TZ: Eastern Standard Time)
+  ```
+- Summary: Pushed 3248008. Operator set priorities (UI speed, free G:/I: + quarantine dupes, file-name index, FDrive, gallery reorg; ASR separator candidates low priority) - saved to memory roadmap-after-dupes. Measured panel slowness: exact COUNT queries (catalog count 28 s, media count 14 s), /stats 23 s, /moments/summary 4 s; paged data <0.1 s. Recommendation: keep React, fix backend counts/aggregates and stream counts after data; Tauri does not fix slow queries. Awaiting operator choice.
+- Git: repo=vault-raggae, branch=main, head=3248008
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 08:20 - vault-raggae</strong> <code>code-change</code> - Status review Mon 26 Oct. gateway.log: only benign asyncio ConnectionResetError since Fri restart. Found and fixed: transcripts ingest --embed returned before ingesting (chain&#39;s...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 08:20 (TZ: Eastern Standard Time)
+  ```
+- Summary: Status review Mon 26 Oct. gateway.log: only benign asyncio ConnectionResetError since Fri restart. Found and fixed: transcripts ingest --embed returned before ingesting (chain's 727 new subtitles never ingested) - catch-up ingest+embed+said-refresh running detached; media-sync re-reported 2 missing masters and 94 gone gallery identity folders every hour - now reported once, folders get missing_since. ASR: 740/881 Models videos subtitled; rest no audio/no speech/run died on Write-Host when detached. Commit 3248008 (local, not pushed). Pre-existing test failure test_transcripts::test_routes (health counts in background).
+- Commands:
+  - `app/files/records/sync.py`
+- Files:
+  - `app/transcripts/ingest.py`
+- Plan: `docs/HANDOFF-20261022-MOMENTS.md`
+- Git: repo=vault-raggae, branch=main, head=3248008
+
+</details>
+
+<details>
+<summary><strong>2026-10-26 04:37 - vault-cacophony</strong> <code>verification</code> - Launched and completed the requested 10-turn station conversation using HF openai/gpt-oss-120b:cheapest and all five Fish Audio S2 Pro cloned voices, with background ramblers di...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 High
+  Thinking: medium
+  Mode: agent
+  Permissions: restricted (network: local Windows workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
+  Tools used (this reply): 'exec','todo_write'
+  MCP servers accessed (this reply): none
+  Time: 2026-10-26 04:37 (TZ: Eastern Standard Time)
+  ```
+- Summary: Launched and completed the requested 10-turn station conversation using HF openai/gpt-oss-120b:cheapest and all five Fish Audio S2 Pro cloned voices, with background ramblers disabled. The run made one sequential HF inference call per turn with no added delay and stopped at 10 turns. Warm audiocpp_server remains running for reuse. Output: cacophony_output/fish_test_10turn_user_20261026 (master WAV, transcript, timeline manifest, 10 stems).
+- Files:
+  - `'cacophony_output/fish_test_10turn_user_20261026/cacophony_master.wav','cacophony_output/fish_test_10turn_user_20261026/transcript.txt','cacophony_output/fish_test_10turn_user_20261026/timeline_manifest.json'`
+- Git: repo=vault-cacophony, branch=main, head=a38b0a0
+
+</details>
+
+<details>
 <summary><strong>2026-10-26 04:21 - vault-cacophony</strong> <code>code-change</code> - Repaired hf_brain.py, orchestrator.py, tts_engine.py, ui_server.py, and cacophony-ui/src/App.jsx: removed faulty HF retry loop and hardcoded fallback/seed turns so every turn is...</summary>
 
 - Kind: code-change
@@ -419,7 +909,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-10-24 04:08 - vaultwares-docs (formerly tmp-app)</strong> <code>documentation</code> - Docs: panopticam.vaultwares.ca added to the split-DNS host list (tailscale.mdx); network-map machines (ovh-panopticam, greencloud-panopticam) and the Panopticam service row upda...</summary>
+<summary><strong>2026-10-24 04:08 - vaultwares-docs</strong> <code>documentation</code> - Docs: panopticam.vaultwares.ca added to the split-DNS host list (tailscale.mdx); network-map machines (ovh-panopticam, greencloud-panopticam) and the Panopticam service row upda...</summary>
 
 - Kind: documentation
 - Actor: claude-code
@@ -629,7 +1119,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-10-23 17:29 - vault-raggae (formerly nvidia-rag, NVIDIA RAG, NVIDIA RAG Ingestion, NVIDIA RAG Blueprint)</strong> <code>commands</code> - Fri 23 Oct 2026 ~17:40: imported 5 Panopticam action heads (PR #3 merged) and retagged 289,593 windows (521,559 tags); heads fire broadly on library windows (toy_buzzing 44%, mo...</summary>
+<summary><strong>2026-10-23 17:29 - vault-raggae</strong> <code>commands</code> - Fri 23 Oct 2026 ~17:40: imported 5 Panopticam action heads (PR #3 merged) and retagged 289,593 windows (521,559 tags); heads fire broadly on library windows (toy_buzzing 44%, mo...</summary>
 
 - Kind: commands
 - Actor: bash scripts/models-chain.sh

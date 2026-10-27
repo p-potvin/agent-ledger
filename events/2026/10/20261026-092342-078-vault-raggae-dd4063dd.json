@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261026-092342-078-vault-raggae-dd4063dd",
+    "createdAt":  "2026-10-26T13:23:42.0783834Z",
+    "createdAtLocal":  "2026-10-26 09:23",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change",
+    "actor":  "web/src/components/gridKeys.ts",
+    "agentHeader":  "Agent: web/src/components/gridKeys.ts (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-26 09:23 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows 11 local (Clopeux-Desktop)",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "v0.12.0 pushed: SlowCache for counts/summaries (catalog count 28s, media count 14s, stats 23s, moments 4s now instant when warm, \u0027counting\u0027 when cold); AsOf age cue in panel; QuickLook on Space (images; videos in vendored vault-central player with vaultsqware icons, scoped prebuilt Tailwind, lazy chunk with hls.js, subtitles from transcript store); Library grid keyboard nav; Catppuccin icons from browser-browser. Gateway restarted (no writers). Verified in browser: counts+cue, selection, image/video quick look, subtitles showing. Earlier: catch-up said refresh done (674 videos, 117,472 windows with speech). 106 tests pass.",
+    "commands":  [
+                     "web/src/components/QuickLook.tsx"
+                 ],
+    "files":  [
+                  "app/slowcache.py"
+              ],
+    "planPath":  "web/src/player/VideoPlayer.tsx",
+    "contentHash":  "dd4063ddab68ac799abd630d48da1a9b0d91ca5544d06be796942002c2a86f9b",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "a05e404",
+                "hasChanges":  false
+            }
+}

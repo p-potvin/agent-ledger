@@ -1,0 +1,46 @@
+﻿{
+    "id":  "20261026-043705-348-vault-cacophony-36cfe1e7",
+    "createdAt":  "2026-10-26T08:37:05.3482650Z",
+    "createdAtLocal":  "2026-10-26 04:37",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: SWE-2 High\r\nThinking: medium\r\nMode: agent\r\nPermissions: restricted (network: local Windows workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): \u0027exec\u0027,\u0027todo_write\u0027\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-26 04:37 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "SWE-2 High",
+                    "thinking":  "medium",
+                    "mode":  "agent",
+                    "permissions":  "restricted",
+                    "network":  "local Windows workstation",
+                    "toolsUsed":  "\u0027exec\u0027,\u0027todo_write\u0027",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Launched and completed the requested 10-turn station conversation using HF openai/gpt-oss-120b:cheapest and all five Fish Audio S2 Pro cloned voices, with background ramblers disabled. The run made one sequential HF inference call per turn with no added delay and stopped at 10 turns. Warm audiocpp_server remains running for reuse. Output: cacophony_output/fish_test_10turn_user_20261026 (master WAV, transcript, timeline manifest, 10 stems).",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "\u0027cacophony_output/fish_test_10turn_user_20261026/cacophony_master.wav\u0027,\u0027cacophony_output/fish_test_10turn_user_20261026/transcript.txt\u0027,\u0027cacophony_output/fish_test_10turn_user_20261026/timeline_manifest.json\u0027"
+              ],
+    "planPath":  "",
+    "contentHash":  "36cfe1e7d024fe78e6db91ef39b95e091aa41ee0471aadc277e63c736f69c6a8",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "main",
+                "head":  "a38b0a0",
+                "hasChanges":  true
+            }
+}

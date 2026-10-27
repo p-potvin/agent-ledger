@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261026-125133-950-vault-raggae-568c56c8",
+    "createdAt":  "2026-10-26T16:51:33.9505785Z",
+    "createdAtLocal":  "2026-10-26 12:51",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-26 12:51 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows 11 local (Clopeux-Desktop)",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "v0.13.0 (df33299): batch editing in the panel. POST /v1/edit/batch (hide/unhide/merge/rename/picture/fields/enrich) for catalog, scenes, performers, studios; each item audited, one batch entry undoes all; entity_flags for performer/studio hide+merge (directories respect them); image editable on scenes/performers/studios. Panel: checkbox in every card corner + table column, sticky bar with Visible/All(5,000)/Invert/None + actions in sheets; old Select mode removed. 110 tests; gateway restarted; checked in browser (no live data changed).",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "568c56c8b6f3d2bf512496bbb40aa17ef1ed5d29a0377d794af1bde4e54cdf8f",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "df33299",
+                "hasChanges":  false
+            }
+}

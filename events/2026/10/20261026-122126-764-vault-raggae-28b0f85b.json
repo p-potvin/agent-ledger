@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261026-122126-764-vault-raggae-28b0f85b",
+    "createdAt":  "2026-10-26T16:21:26.7640850Z",
+    "createdAtLocal":  "2026-10-26 12:21",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-26 12:21 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows 11 local (Clopeux-Desktop)",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Operator-approved batch: fetched 1,220 TPDB CDN pictures of unknown-gender performers at 1 request / 250 ms (1,219 ok, 1 HTTP 500) into G:\\Catalogs\\performer-images, ran vw tag-images -SkipDedupe (NudeNet), read guesses into vw-scenes.db performer_gender_guess: 926 female, 54 male, 239 none. Directory leaves out unknown+picture-male (100,128 -\u003e 100,074); catalog gender never overwritten. app/scenes/performer_gender.py (fetch/read). Pushed, gateway restarted, 108 tests.",
+    "commands":  [
+                     "python -m app.scenes.performer_gender fetch"
+                 ],
+    "files":  [
+                  "Tag-Images.ps1 -Input G:\\Catalogs\\performer-images -SkipDedupe -ResultsJson"
+              ],
+    "planPath":  "python -m app.scenes.performer_gender read",
+    "contentHash":  "28b0f85bc242daa0db65b959b84516f72ef7db719cd4ef7c34b908ae9ab377ed",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "28f843b",
+                "hasChanges":  false
+            }
+}
