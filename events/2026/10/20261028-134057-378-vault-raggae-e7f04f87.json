@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261028-134057-378-vault-raggae-e7f04f87",
+    "createdAt":  "2026-10-28T17:40:57.3780844Z",
+    "createdAtLocal":  "2026-10-28 13:40",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-codex-vocal-habits-bridge\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-28 13:40 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Books split build finished ok: True (41,666,206 books to vw-books.db, 6,164,726 items + FTS in vw-catalog.new.db). Swap not run; left for the new chat per HANDOFF-20261028.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "e7f04f8722d469d4d1e59f7b902ad0c104763b16fec66f5dfd4508a505051240",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "vw-codex-vocal-habits-bridge",
+                "head":  "bf84f68",
+                "hasChanges":  false
+            }
+}

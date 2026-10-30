@@ -1,0 +1,50 @@
+{
+  "id": "20261028-074040-770-general-tasks-0bf43263",
+  "createdAt": "2026-10-28T11:40:40.7706882Z",
+  "createdAtLocal": "2026-10-28 07:40",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation over Tailscale to OVH/GreenCloud VPSes)\r\nCWD: C:\\Users\\Administrator\\AppData\\Roaming\\Claude\\scratch-workspaces\\cb823631-edad-4de3-bcbd-3eed4baa1a47\\82589444-1492-4497-8e71-bd355e0888be\\scratch-2026-10-28-498f4d  Branch: n/a\r\nTools used (this reply): Bash, PowerShell, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-28 07:40 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation over Tailscale to OVH/GreenCloud VPSes",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": "none"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\AppData\\Roaming\\Claude\\scratch-workspaces\\cb823631-edad-4de3-bcbd-3eed4baa1a47\\82589444-1492-4497-8e71-bd355e0888be\\scratch-2026-10-28-498f4d",
+  "summary": "Deployed a self-hosted SimpleLogin email-alias instance (upstream v4.83.2) on vps-ovhcloud. Alias domain sl.vaultwares.ca (apex vaultwares.ca left on ProtonMail); MX hostname mx1.vaultwares.ca. Built the image in-house because Docker Hub simplelogin/app is abandoned since 2022; built on the idle greencloud-panopticam and shipped over the tailnet. Stack: /opt/simplelogin docker-compose (sl-app, sl-email, sl-job-runner, sl-db on 127.0.0.1:5434) plus host Postfix 3.8.6 on 0.0.0.0:25. Anti-spam hold for the testing phase: transport_maps routes every non-allowlisted destination to a frozen slhold transport (defer_transports), so outbound mail is parked in the deferred queue and nothing is transmitted; plus per-destination rate limits and reject_unauth_destination. Verified inbound 25 publicly reachable, full inbound pipeline (external SMTP to alias to email_handler to held outbound), admin login and dashboard. Fixed a latent tailnet DNS fault: dnsmasq local=/vaultwares.ca/ masked the apex MX from every tailnet host, so Postfix could not resolve ProtonMail delivery; added mx-host entries. Registered in health-ledger services.yaml. Public DNS records and OVH rDNS remain for the user; outbound stays held until then. Did not publish a runbook to vaultwares-docs because that repo is public.",
+  "commands": [
+    "docker build -t vw-simplelogin:4.83.2 .",
+    "docker compose up -d",
+    "alembic upgrade head",
+    "postconf -e 'defer_transports = slhold'",
+    "ufw allow 25/tcp"
+  ],
+  "files": [
+    "/opt/simplelogin/docker-compose.yml",
+    "/opt/simplelogin/simplelogin.env",
+    "/etc/postfix/main.cf",
+    "/etc/postfix/sl-outbound-policy",
+    "/etc/nginx/sites-enabled/sl.vaultwares.ca.conf",
+    "/etc/dnsmasq.d/vaultwares-tailnet.conf",
+    "/opt/health-ledger/services.yaml"
+  ],
+  "planPath": "",
+  "contentHash": "0bf43263cefd257ea3ab8f555e94d4a6c01fde375c85d8fff7c7aa463ab2174a",
+  "git": null
+}

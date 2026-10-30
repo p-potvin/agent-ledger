@@ -1,0 +1,52 @@
+{
+  "id": "20261028-213500-497-vaultwares-docs-8cc0f4f2",
+  "createdAt": "2026-10-29T01:35:00.4974026Z",
+  "createdAtLocal": "2026-10-28 21:35",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local + SSH to greencloud/OVH/greencloud-panopticam)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: docs/simplelogin-pointer\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-28 21:35 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local + SSH to greencloud/OVH/greencloud-panopticam",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+  "summary": "Phase 3 (vwdeploy cannot become root). greencloud: removed vwdeploy NOPASSWD ALL (moved to /etc/sudoers.d.bak), rewrote /etc/sudoers.d/vwdeploy to exact restarts + root-owned wrappers (vw-qa-runtime, vw-deploy-vault-warden, vw-git-askpass), dropped tech-oracle unit-install sudo; verified sudo -n true/bash/docker denied and wrappers work. OVH + greencloud-panopticam: installed vw-ssh-dispatch forced-command, greencloud scripts now send verb+SHA only; OVH key restricted but Tailscale SSH bypasses authorized_keys. Found Tailscale SSH policy grants root to all p-potvin devices and all servers without check. qa-automation change committed on local branch security/qa-deploy-no-root (not pushed).",
+  "commands": [
+    "visudo -c",
+    "sudo -l -U vwdeploy",
+    "tailscale debug netmap"
+  ],
+  "files": [
+    "SECURITY-REMEDIATION-PLAN.md",
+    "/etc/sudoers.d/vwdeploy",
+    "/usr/local/sbin/vw-qa-runtime",
+    "/usr/local/sbin/vw-deploy-vault-warden",
+    "/usr/local/sbin/vw-ssh-dispatch",
+    "Prom-King/qa-automation/scripts/deploy-qa-automation.sh"
+  ],
+  "planPath": "",
+  "contentHash": "8cc0f4f23ec00b130700b97c163d4ac1a390da49663ec9cf1160671b799fada3",
+  "git": {
+    "repo": "vaultwares-docs",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+    "branch": "docs/simplelogin-pointer",
+    "head": "60dae6e",
+    "hasChanges": false
+  }
+}

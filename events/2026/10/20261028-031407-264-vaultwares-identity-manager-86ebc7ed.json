@@ -1,0 +1,47 @@
+{
+  "id": "20261028-031407-264-vaultwares-identity-manager-86ebc7ed",
+  "createdAt": "2026-10-28T07:14:07.2649305Z",
+  "createdAtLocal": "2026-10-28 03:14",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-identity-manager",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: Claude Sonnet 4.5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-identity-manager  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-28 03:14 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Claude Sonnet 4.5",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-identity-manager",
+  "summary": "Feature: recovery-kit restore path. Wired restoreFromRecoveryKit (was crypto-only, no caller) through a new RESTORE_FROM_KIT background message: parse kit, preserve existing deviceId or mint one, verify both secret halves open under the recovered master key BEFORE overwriting local state, rebuild keychain, re-wrap PIN, cache master key, reset lock timer, update badge. New shared KitRestorePanel (console/warm variants) mounted on the vault unlock screen, vault Settings (reload-on-success), and a new onboarding restore step with a welcome link. EN+QC strings added. E2E verified (throwaway script, deleted): enroll > item > kit > break keychain > shell > wrong PIN rejected with no state change > correct PIN restores > original item decrypts > create works. Typecheck clean, all suites green (16/16, 40/40, 36/36, 33/33), build 2.1.5 packaged. TODO gap removed; qa-matrix scenario 25 added",
+  "commands": [],
+  "files": [
+    "src/background/index.ts",
+    "src/crypto/recovery.ts",
+    "src/vault/KitRestorePanel.tsx",
+    "src/vault/App.tsx",
+    "src/onboarding/App.tsx",
+    "src/i18n/strings.ts",
+    "TODO.md",
+    "docs/qa-matrix.md"
+  ],
+  "planPath": "",
+  "contentHash": "86ebc7ed59c5ee06283bf5397cde793f4244dc34e67f9a370e41f1c0d4eb8460",
+  "git": {
+    "repo": "vaultwares-identity-manager",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-identity-manager",
+    "branch": "main",
+    "head": "98537e2",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "20261028-163426-831-vaultwares-docs-72feb64a",
+  "createdAt": "2026-10-28T20:34:26.8312481Z",
+  "createdAtLocal": "2026-10-28 16:34",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: docs/simplelogin-pointer\r\nTools used (this reply): Bash, PowerShell, Edit, gh, ssh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-28 16:34 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "gh",
+      "ssh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+  "summary": "Security remediation pass 1: made vaultwares-docs private; outside and inside read-only port/firewall/sudo/backup audit of desktop and both VPSes; removed the desktop dispatch step from the health-ledger deploy script on greencloud (backup kept in /root); drafted a local desktop hardening script (dry-run default) for the user to run. Findings kept in the git-excluded local plan file, not here.",
+  "commands": [],
+  "files": [
+    "SECURITY-REMEDIATION-PLAN.md",
+    "harden-clopeux-desktop.ps1",
+    "greencloud deploy-health-ledger.sh"
+  ],
+  "planPath": "",
+  "contentHash": "72feb64ad7bc8460f71f470341835981ba9ec71e8690060af959e1078c4d2358",
+  "git": {
+    "repo": "vaultwares-docs",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+    "branch": "docs/simplelogin-pointer",
+    "head": "60dae6e",
+    "hasChanges": false
+  }
+}

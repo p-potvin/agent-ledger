@@ -1,0 +1,51 @@
+{
+  "id": "20261028-013927-807-vaultwares-identity-manager-31ee575f",
+  "createdAt": "2026-10-28T05:39:27.8079754Z",
+  "createdAtLocal": "2026-10-28 01:39",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-identity-manager",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: Claude Sonnet 4.5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-identity-manager  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-28 01:39 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Claude Sonnet 4.5",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-identity-manager",
+  "summary": "Roadmap pass: identities sync via existing batch protocol (fullSync routes by envelope.itemType, identity CRUD enqueues, tombstones propagate, PWA skips identity envelopes); test gates extended with Proton ZIP fixture, synthetic passkey msgpack fixture with WebCrypto ES256 sign/verify, CSV export round-trip (40/40); QA matrix doc; i18n retrofit of popup, onboarding, and vault UI (EN+QC) incl. strength labels",
+  "commands": [],
+  "files": [
+    "src/api/sync-queue.ts",
+    "src/background/index.ts",
+    "src/mobile/session.ts",
+    "src/vault/App.tsx",
+    "test/import-parsers.mjs",
+    "docs/qa-matrix.md",
+    "src/i18n/strings.ts",
+    "src/utils/password-generator.ts",
+    "src/popup/App.tsx",
+    "src/onboarding/App.tsx",
+    "ROADMAP.md",
+    "TODO.md"
+  ],
+  "planPath": "",
+  "contentHash": "31ee575f17340644ae7bc58c1d9ef91a9caed4a5b40d5f43e8234626447cbd4d",
+  "git": {
+    "repo": "vaultwares-identity-manager",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-identity-manager",
+    "branch": "main",
+    "head": "98537e2",
+    "hasChanges": true
+  }
+}

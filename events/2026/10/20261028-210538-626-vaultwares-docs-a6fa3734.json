@@ -1,0 +1,46 @@
+{
+  "id": "20261028-210538-626-vaultwares-docs-a6fa3734",
+  "createdAt": "2026-10-29T01:05:38.6262399Z",
+  "createdAtLocal": "2026-10-28 21:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: docs/simplelogin-pointer\r\nTools used (this reply): PowerShell, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-28 21:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+  "summary": "Clopeux-Desktop hardening: added VW-Hardening firewall rules blocking tailnet servers from admin TCP ports, UDP 7-19 and SMB 445 (OVH keeps 445 for the rclone mover); revoked Everyone on all non-admin SMB shares, Administrator Full kept, old ACLs exported to ProgramData\\vw-hardening\\shares-20261028.csv. Verified from greencloud and OVH.",
+  "commands": [
+    "New-NetFirewallRule -Group VW-Hardening",
+    "Revoke-SmbShareAccess Everyone"
+  ],
+  "files": [
+    "SECURITY-REMEDIATION-PLAN.md"
+  ],
+  "planPath": "",
+  "contentHash": "a6fa373457b24483ee464f17bfcde3bf301f62d2178ac8d623dac60f7d6ca594",
+  "git": {
+    "repo": "vaultwares-docs",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+    "branch": "docs/simplelogin-pointer",
+    "head": "60dae6e",
+    "hasChanges": false
+  }
+}

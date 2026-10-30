@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261027-155137-985-shared-tube-8024312b",
+    "createdAt":  "2026-10-27T19:51:37.9859833Z",
+    "createdAtLocal":  "2026-10-27 15:51",
+    "timezone":  "Eastern Standard Time",
+    "project":  "shared-tube",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Claude Sonnet 4.5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-27 15:51 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude Sonnet 4.5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared",
+    "summary":  "Added watchporn.to fetcher source (listing+detail+flashvars qualities, uploadedAt field); registered in sources/index; www canonicalization; flashvars fallback in all 3 stream proxies; engine per-item bounded concurrency pool (default 8); ffmpeg splice rewritten to sequential stream-copy segments + single concat encode with reconnect_on_http_error (fixes DDoS-Guard 503 burst); capturesCount 7-\u003e4",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "8024312bd47ee89838b58572f8f2a655a76d57eb4f6f7aedf656ee6022ac83db",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "main",
+                "head":  "4d3ad3b",
+                "hasChanges":  true
+            }
+}

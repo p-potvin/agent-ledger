@@ -1,0 +1,44 @@
+﻿{
+    "id":  "20261028-161330-292-vaultwares-docs-4470d9d3",
+    "createdAt":  "2026-10-28T20:13:30.2925176Z",
+    "createdAtLocal":  "2026-10-28 16:13",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-docs",
+    "kind":  "plan",
+    "actor":  "claude-code",
+    "agentHeader":  "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: docs/simplelogin-pointer\r\nTools used (this reply): Bash\r\nMCP servers accessed (this reply): gh\r\nTime: 2026-10-28 16:13 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "low",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows 11 local (Clopeux-Desktop)",
+                    "toolsUsed":  "Bash",
+                    "mcpServersAccessed":  "gh"
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+    "summary":  "Drafted local-only security remediation plan after reviewing an external audit of the public vaultwares-docs repo: repo visibility, tailnet re-binding, deploy-user privilege reduction, encrypted backups, secret rotation, repo footprint sweep. Plan file and audit bundle git-excluded; no host changes made.",
+    "commands":  [
+                     "Write"
+                 ],
+    "files":  [
+                  "SECURITY-REMEDIATION-PLAN.md (git-excluded)"
+              ],
+    "planPath":  "PowerShell",
+    "contentHash":  "4470d9d3ddb0473944b21f2395215c759b2267668a29fae4c2ea6c8d0ef84814",
+    "git":  {
+                "repo":  "vaultwares-docs",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+                "branch":  "docs/simplelogin-pointer",
+                "head":  "60dae6e",
+                "hasChanges":  false
+            }
+}

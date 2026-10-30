@@ -1,0 +1,49 @@
+{
+  "id": "20261028-205435-362-vaultwares-docs-e884bb1d",
+  "createdAt": "2026-10-29T00:54:35.3626891Z",
+  "createdAtLocal": "2026-10-28 20:54",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop) + SSH to greencloud/OVH)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: docs/simplelogin-pointer\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-28 20:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop) + SSH to greencloud/OVH",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+  "summary": "Security remediation: removed open gluetun-proton proxy on OVH (8889/8890, in use by unknown internet IPs; config moved to /opt/vw-protonvpn.retired-20261028). Stopped orphaned qa_wireproxy SOCKS 1085 on greencloud (restart=no). Added persistent vw-docker-user-drop.service on both VPSes (DOCKER-USER drop NEW from public iface). Disabled plaintext vw-backup.timer on both hosts pending age encryption. Verified externally: proxies closed, 80/443/25 and public sites still up, tailnet ports reachable. Confirmed desktop msrdc.exe is WSLg (local hv-socket), not a remote login.",
+  "commands": [
+    "docker compose down (/opt/vw-protonvpn)",
+    "docker stop qa_wireproxy",
+    "systemctl enable --now vw-docker-user-drop.service",
+    "systemctl disable --now vw-backup.timer"
+  ],
+  "files": [
+    "SECURITY-REMEDIATION-PLAN.md",
+    "/etc/systemd/system/vw-docker-user-drop.service"
+  ],
+  "planPath": "",
+  "contentHash": "e884bb1dc4c2f23d581e6e3a86f43d0d577a8aaeef88d0126bd08fb579c9af3d",
+  "git": {
+    "repo": "vaultwares-docs",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+    "branch": "docs/simplelogin-pointer",
+    "head": "60dae6e",
+    "hasChanges": false
+  }
+}

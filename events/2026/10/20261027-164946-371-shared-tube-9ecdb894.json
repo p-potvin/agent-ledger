@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261027-164946-371-shared-tube-9ecdb894",
+    "createdAt":  "2026-10-27T20:49:46.3714303Z",
+    "createdAtLocal":  "2026-10-27 16:49",
+    "timezone":  "Eastern Standard Time",
+    "project":  "shared-tube",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Claude Sonnet 4.5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-27 16:49 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude Sonnet 4.5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Built standalone PrivadoVPN preview pool: 10 gluetun containers (distinct countries) + tinyproxy sidecars on OVH (gluetun\u0027s own proxy sends chunked CONNECT response that breaks ffmpeg\u0027s TLS tunnel); vpn-preview-pool.ts fans jobs across 10 egress IPs with parallel segment copies per worker and local audio probe; vpn-preview-test.ts benchmarked watchporn: 10/10 previews in ~54s wall (vs ~63s serial each); ffmpeg proxying via http_proxy env var (6.1 gnutls rejects -proxy CLI option); captures 4x2.5s committed earlier as 0e6e515",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "9ecdb894ca5b12a085f788bf27f36968fd7b87d2306743fd6722098edfce42aa",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "main",
+                "head":  "9dcf8e7",
+                "hasChanges":  false
+            }
+}

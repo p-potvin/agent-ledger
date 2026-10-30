@@ -1,0 +1,46 @@
+{
+  "id": "20261028-040801-647-vaultwares-identity-manager-4a711880",
+  "createdAt": "2026-10-28T08:08:01.6477814Z",
+  "createdAtLocal": "2026-10-28 04:08",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-identity-manager",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: Claude Sonnet 4.5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-identity-manager  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-28 04:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Claude Sonnet 4.5",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-identity-manager",
+  "summary": "Bugfix: popup starvation on unlock + popup always showing 0 matches. (1) Root cause of the badge/matches breakage in Chromium SW: handleGetPageMatches and two save-prompt handlers used dynamic import('../utils/domain'), which webpack serves as a JSONP chunk needing document - a service worker has none, so match requests hung and the badge never showed a count. Replaced with a static top-level import. (2) Popup now resolves the active tab via a new GET_ACTIVE_TAB background message instead of its own chrome.tabs.query, which is unreliable on Firefox popups (badge-side identical query is proven) - fixes popup showing 0 matches while the badge shows the count. (3) Argon2id moved off the background event loop: new kdf-worker bundle + deriveKeyFromPinAsync client with inline fallback; verified worker round-trip (32-byte key). (4) UNLOCK single-flight: identical concurrent requests share one derivation, different PINs serialize (two concurrent UNLOCKs 3.3s -> 1.9s). (5) Popup shows 'Deriving key...' (EN/QC) and disables the button while deriving. Verified via throwaway Playwright probe (deleted): badge '2' with site focused, popup flow returns 2 matches, worker engages. Typecheck clean, all suites green (16/16, 40/40, 36/36, 33/33), build 2.1.6 packaged with kdf-worker.js",
+  "commands": [],
+  "files": [
+    "src/background/index.ts",
+    "src/popup/App.tsx",
+    "src/crypto/keychain.ts",
+    "src/crypto/kdf-async.ts",
+    "src/workers/kdf-worker.ts",
+    "src/i18n/strings.ts",
+    "webpack.config.js"
+  ],
+  "planPath": "",
+  "contentHash": "4a711880e4d53333003deda7347ef696e569a26bf2ab9f3315d3862f0cdedef6",
+  "git": {
+    "repo": "vaultwares-identity-manager",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-identity-manager",
+    "branch": "main",
+    "head": "98537e2",
+    "hasChanges": true
+  }
+}

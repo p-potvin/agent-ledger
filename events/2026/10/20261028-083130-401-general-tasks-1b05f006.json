@@ -1,0 +1,56 @@
+{
+  "id": "20261028-083130-401-general-tasks-1b05f006",
+  "createdAt": "2026-10-28T12:31:30.4011154Z",
+  "createdAtLocal": "2026-10-28 08:31",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation over Tailscale to OVH/GreenCloud VPSes)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\simplelogin  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-28 08:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation over Tailscale to OVH/GreenCloud VPSes",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": "none"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\simplelogin",
+  "summary": "Swept pending changes across four repos. panopticam: fast-forwarded the mail burst-folding fix onto main, added the raggae_sql _post timeout fix, bumped 0.73.4 to 0.73.5, gitignored *.bak (the 244KB onlyfans-to-follow.html.bak backup artefact was NOT committed); 250 tests pass; pushed to main as one deploy. Found and fixed a real deploy bug: the webhook dispatcher ran ssh without -n inside a while-read loop, so ssh ate the remaining lines of panopticam-hosts and only the first host was ever deployed while rc stayed 0 -- greencloud-panopticam had silently missed every deploy since 25 Oct and sat on v0.73.3. Patched the live script on greencloud-vps, deployed the standby directly (both hosts now v0.73.5 active), and committed the repo copy on branch fix/dispatcher-deploys-every-host rather than main to avoid a second restart. vault-raggae: committed the /v1/voices read-only view, 111 tests pass, PR #2. vault-cacophony (PUBLIC repo): fast-forwarded to origin/main, committed 23 files of pipeline/UI/tests/deploy source, gitignored cacophony_output (170MB), cacophony_test_run and voices-store; flagged in the PR that voices-store is a runtime input not an artefact so a fresh clone lacks reference voices; 14 tests pass, PR #28. ColONEL-KFC was already clean, nothing to sweep. Deleted the Uptime Kuma data dir as authorised. SimpleLogin outbound hold deliberately left in place per user request.",
+  "commands": [
+    "git push origin main",
+    "gh pr create",
+    "ssh -n ubuntu@100.105.177.10 bash /srv/panopticam/deploy/deploy.sh",
+    "rm -rf /srv/vw-media/config/uptime-kuma/data",
+    "pytest -q"
+  ],
+  "files": [
+    "deploy/dispatch-greencloud.sh",
+    "/var/www/deploy-scripts/deploy-panopticam.sh",
+    "backend/src/panopticam/__init__.py",
+    "vision/raggae_sql.py",
+    "app/voices.py",
+    "scripts/cacophony/",
+    ".gitignore"
+  ],
+  "planPath": "",
+  "contentHash": "1b05f006975e12325f9fa9c351cc492c2066d1ac483c54c3e113820a2188bb6c",
+  "git": {
+    "repo": "simplelogin",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/simplelogin",
+    "branch": "main",
+    "head": "a685bcb",
+    "hasChanges": true
+  }
+}

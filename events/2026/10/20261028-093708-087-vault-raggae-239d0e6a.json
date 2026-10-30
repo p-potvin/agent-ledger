@@ -1,0 +1,54 @@
+{
+  "id": "20261028-093708-087-vault-raggae-239d0e6a",
+  "createdAt": "2026-10-28T13:37:08.0878880Z",
+  "createdAtLocal": "2026-10-28 09:37",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-codex-vocal-habits-bridge\r\nTools used (this reply): Bash, PowerShell, pytest, ssh, docker\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-28 09:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "pytest",
+      "ssh",
+      "docker"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Scene-catalog ingest now rate-limits per network exit instead of per source (v0.14.0, commit 260e947): new Exit class (one httpx client + one limiter each), Source.open() probes both PrivadoVPN proxy fleets and keeps the first SCENES_MAX_EXITS (10) that answer, _send picks the least busy exit per attempt so a 429 backs off that exit alone; ingest batches scale by exits but never exceed one window of pages. Started this PC's local Docker fleet (D:\\prom-king\\privado-vpn-fleet, 10/10 workers, 10 distinct egress IPs) and verified real TPDB + StashDB pages through it at 40 starts/s. VPS fleet is up but unreachable from here (no ufw rule for 18888-18897). Enlarged the C: USN journal 64MB->1GB and I: 32MB->1GB (same journal IDs, no gap). Docs: AGENTS.md rate rule, README, Sync-Scenes.ps1. Tests 114 pass (2 new). Books split build still running.",
+  "commands": [
+    "fsutil usn createjournal m=1073741824 a=134217728 C:",
+    "D:\\prom-king\\privado-vpn-fleet\\Start-PrivadoVpnFleet.ps1 -Count 10",
+    ".venv\\Scripts\\python.exe -m pytest -q"
+  ],
+  "files": [
+    "app/scenes/sources.py",
+    "app/scenes/ingest.py",
+    "app/config.py",
+    "AGENTS.md",
+    "tests/test_scenes.py"
+  ],
+  "planPath": "",
+  "contentHash": "239d0e6abf788a61aeb079dfa3cd35bd43cabcd553db215749767da78ce11092",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-codex-vocal-habits-bridge",
+    "head": "260e947",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261028-100240-330-vault-cacophony-e72b4ffa",
+    "createdAt":  "2026-10-28T14:02:40.3302647Z",
+    "createdAtLocal":  "2026-10-28 10:02",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Claude Opus 4.6\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-codex-vocal-habits-bridge\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-28 10:02 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude Opus 4.6",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Added direct persona answering mode (--answering-mode) with streaming token generation and inline prosody tags ([sigh], [sarcastic], [laughter], [confirmation-en]), sanitizing for OmniVoice and Fish Audio",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "e72b4ffa7bfc12af058b79b3a7566cde6ad53070df9700aa00637c8d1c99e859",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "vw-codex-vocal-habits-bridge",
+                "head":  "b5715e4",
+                "hasChanges":  true
+            }
+}

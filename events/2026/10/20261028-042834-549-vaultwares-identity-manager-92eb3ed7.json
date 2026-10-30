@@ -1,0 +1,45 @@
+{
+  "id": "20261028-042834-549-vaultwares-identity-manager-92eb3ed7",
+  "createdAt": "2026-10-28T08:28:34.5493899Z",
+  "createdAtLocal": "2026-10-28 04:28",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-identity-manager",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: Claude Sonnet 4.5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-identity-manager  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-28 04:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Claude Sonnet 4.5",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-identity-manager",
+  "summary": "Scale fixes for a 1650-item vault (sluggishness + ~2GB RAM). Root cause: handleGetPageMatches decrypted EVERY login on EVERY match request (badge updates fire per navigation) just to read login.url for ranking - 1650 x (SLH-DSA verify + ML-KEM decapsulate + decrypt) per badge update = seconds of CPU and hundreds of MB of garbage per navigation. Fixes: (1) match scoring now reads only cleartext envelope metadata (domain + new metadata.url field added to VaultItemMetadata/VaultEnvelope types, populated by withNormalizedLoginUrl in CREATE_ITEM/UPDATE_ITEM so new items keep exact-host ranking; old items fall back to registrable-domain scoring, which produced the badge counts the user confirmed correct); only actual matches get decrypted. (2) New GET_ITEM_COUNT message - the popup stat card used to call GET_ITEMS (decrypt-all) just to read .length on every popup open. (3) Encrypted-items cache in utils/storage.ts (write-then-swap, invalidated on save/delete/replaceAll) - the 21MB one-key blob no longer deserializes per handler call. (4) unlimitedStorage permission - Chrome caps storage.local at 10MB and a real 1650-item vault is ~21MB. Measured with a throwaway Playwright scale probe (deleted): 1650 realistic envelopes (21MB blob): per-navigation badge pass 472ms -> 2ms warm, GET_PAGE_MATCHES 485ms -> 1ms warm, GET_ITEM_COUNT 144ms -> 0ms. Typecheck clean, all suites green (16/16, 40/40, 36/36, 33/33), build 2.1.7 packaged",
+  "commands": [],
+  "files": [
+    "src/background/index.ts",
+    "src/popup/App.tsx",
+    "src/utils/storage.ts",
+    "src/types/vault.ts",
+    "src/types/crypto.ts",
+    "manifest.json"
+  ],
+  "planPath": "",
+  "contentHash": "92eb3ed75db90fd9773caf41eb37290c268f88f9f6661c61438e1f628d6bf6b5",
+  "git": {
+    "repo": "vaultwares-identity-manager",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-identity-manager",
+    "branch": "main",
+    "head": "98537e2",
+    "hasChanges": true
+  }
+}

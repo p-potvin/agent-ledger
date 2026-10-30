@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261028-225755-641-vaultwares-docs-f7272c55",
+    "createdAt":  "2026-10-29T02:57:55.6410769Z",
+    "createdAtLocal":  "2026-10-28 22:57",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-docs",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: docs/simplelogin-pointer\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-28 22:57 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+    "summary":  "Tailscale SSH disabled on vps-ovhcloud, greencloud-vps, greencloud-panopticam (auto-revert timers, cancelled after key login verified). Desktop key added to ubuntu@OVH, root@greencloud, ubuntu@panopticam; vwdeploy key pinned to vw-ssh-dispatch on panopticam; greencloud PermitRootLogin prohibit-password. Verified dispatcher denial (rc 126) and an end-to-end health-ledger deploy. Public 22 closed. ovh-panopticam (retiring) left with Tailscale SSH on.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "f7272c55e8cab3acf5a28ef6ce9199d6b85087bb3efc98295b39d7cc95f37a09",
+    "git":  {
+                "repo":  "vaultwares-docs",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+                "branch":  "docs/simplelogin-pointer",
+                "head":  "60dae6e",
+                "hasChanges":  false
+            }
+}

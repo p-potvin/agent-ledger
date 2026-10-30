@@ -1,0 +1,46 @@
+{
+  "id": "20261028-210933-504-vaultwares-docs-2b83bafd",
+  "createdAt": "2026-10-29T01:09:33.5042067Z",
+  "createdAtLocal": "2026-10-28 21:09",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local + SSH to OVH)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: docs/simplelogin-pointer\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-28 21:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local + SSH to OVH",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+  "summary": "After the user changed the desktop Administrator password: confirmed OVH proton_pc SMB remote now fails auth, removed the stored (old) password from the proton_pc section of OVH ubuntu and root rclone.conf, shredded the temporary backups. SAB mover keeps working via gdrive (desktop target only used in a July test).",
+  "commands": [
+    "rclone lsd proton_pc:",
+    "strip pass from [proton_pc]"
+  ],
+  "files": [
+    "SECURITY-REMEDIATION-PLAN.md"
+  ],
+  "planPath": "",
+  "contentHash": "2b83bafdc3422b692d356c71db60663499daa41a6f190e59dc494b3e4681bd7e",
+  "git": {
+    "repo": "vaultwares-docs",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+    "branch": "docs/simplelogin-pointer",
+    "head": "60dae6e",
+    "hasChanges": false
+  }
+}

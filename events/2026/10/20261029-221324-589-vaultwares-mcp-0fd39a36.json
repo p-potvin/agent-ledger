@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261029-221324-589-vaultwares-mcp-0fd39a36",
+    "createdAt":  "2026-10-30T02:13:24.5897687Z",
+    "createdAtLocal":  "2026-10-29 22:13",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-mcp",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: docs/security-phase6\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-29 22:13 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+    "summary":  "MCP: merged bearer auth to main and removed credit/web-fetch/shell tools (VaultWares/vaultwares-mcp 6f817be), deployed to OVH (21 tools). Added TOOL_CREATION protocol (docs PR #36). Moved shared-tube egress (greencloud privado-egress on 127.0.0.1:8889) and comet-vpn from Proton to Privado; removed the Proton container. Updated all pinned images on 3 hosts incl. jackett; fixed comet healthcheck. Stripped Jira from webhookd and docs (PR #36, review comments addressed). Open: Proton Mail Bridge still carries health-ledger alarms.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "0fd39a3641d6ac48fba09e73ca0dbf0d6e82ecf0b15c3d35dbd3c074557039b2",
+    "git":  {
+                "repo":  "vaultwares-docs",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+                "branch":  "docs/security-phase6",
+                "head":  "9691661",
+                "hasChanges":  false
+            }
+}

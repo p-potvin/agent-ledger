@@ -1,0 +1,50 @@
+{
+  "id": "20261028-081303-362-simplelogin-5a77bfaa",
+  "createdAt": "2026-10-28T12:13:03.3628639Z",
+  "createdAtLocal": "2026-10-28 08:13",
+  "timezone": "Eastern Standard Time",
+  "project": "simplelogin",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation over Tailscale to OVH/GreenCloud VPSes)\r\nCWD: C:\\Users\\Administrator\\AppData\\Roaming\\Claude\\scratch-workspaces\\cb823631-edad-4de3-bcbd-3eed4baa1a47\\82589444-1492-4497-8e71-bd355e0888be\\scratch-2026-10-28-498f4d  Branch: n/a\r\nTools used (this reply): Bash, PowerShell, Edit, ToolSearch, change_directory\r\nMCP servers accessed (this reply): ccd_directory\r\nTime: 2026-10-28 08:13 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation over Tailscale to OVH/GreenCloud VPSes",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "ToolSearch",
+      "change_directory"
+    ],
+    "mcpServersAccessed": "ccd_directory"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\AppData\\Roaming\\Claude\\scratch-workspaces\\cb823631-edad-4de3-bcbd-3eed4baa1a47\\82589444-1492-4497-8e71-bd355e0888be\\scratch-2026-10-28-498f4d",
+  "summary": "Finished SimpleLogin bring-up and three related jobs. Verified all six Porkbun records live and rDNS 51.79.55.113 -> mx1.vaultwares.ca forward-confirmed; issued a Let's Encrypt cert for sl+mx1 (certbot standalone needed --http-01-address 51.79.55.113 because nginx holds the tailnet IP's port 80) and pointed nginx and Postfix STARTTLS at it. Confirmed DKIM signing (d=sl.vaultwares.ca, s=dkim) by inspecting the held queue message and matched the published TXT against the on-disk private key. Outbound hold deliberately left in place. Fixed panopticam alert flooding: health.py evaluates ~45 checks per tick and mail.py sent one email per notice, so one incident produced 10-20 emails and burned the 30/day cap; mail.py now folds a burst into one digest email the way notify.py already does for Telegram, and the cap counts emails. 250 backend tests pass. Committed on branch fix/mail-burst-folding, not pushed. Removed Uptime Kuma for good (container, image, nginx vhost, dnsmasq records; data kept at /srv/vw-media/config/uptime-kuma/data) which freed 208 MiB and closed a 0.0.0.0:3001 publish plus a docker.sock mount. Added a one-line docs pointer on branch docs/simplelogin-pointer. Created private repo p-potvin/simplelogin with the sanitised config. PR 2855 upstream is only a devcontainer, not relevant.",
+  "commands": [
+    "certbot certonly --standalone --http-01-address 51.79.55.113 -d sl.vaultwares.ca -d mx1.vaultwares.ca",
+    "pytest -q",
+    "docker compose down",
+    "gh repo create p-potvin/simplelogin --private"
+  ],
+  "files": [
+    "backend/src/panopticam/mail.py",
+    "backend/tests/test_mail.py",
+    "docs-content/operations/services-inventory.mdx",
+    "/etc/dnsmasq.d/vaultwares-tailnet.conf",
+    "README.md",
+    "postfix/main.cf"
+  ],
+  "planPath": "",
+  "contentHash": "5a77bfaae050f059da746f8453303b8463bb36e1dd6c6e700ff2dde7d0e41c6b",
+  "git": null
+}

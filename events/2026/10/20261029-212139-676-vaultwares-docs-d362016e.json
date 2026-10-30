@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261029-212139-676-vaultwares-docs-d362016e",
+    "createdAt":  "2026-10-30T01:21:39.6768876Z",
+    "createdAtLocal":  "2026-10-29 21:21",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-docs",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: docs/simplelogin-pointer\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-29 21:21 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+    "summary":  "Phase 6: removed WebDAV; vaultwares-mcp bearer auth (branch security/mcp-bearer-auth, deployed to OVH, loopback bind, Claude Code + Antigravity configured); gluetun control servers bound to loopback on all 15 (already deny-all); pinned registry images to running digests on 3 hosts + monthly vw-image-updates timer; Postfix relay 554, VRFY off, rate/error limits; Jira sync removed from webhookd and archived. Findings: Proton still used by shared-tube and comet; vw-secretsd mostly 404s; MCP fetch/shell tool risk.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "d362016e3cef7fe858101118754c702cd8b3e0995e89279196159fdf3032f75b",
+    "git":  {
+                "repo":  "vaultwares-docs",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+                "branch":  "docs/simplelogin-pointer",
+                "head":  "60dae6e",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261028-091759-059-vault-raggae-d14d653a",
+    "createdAt":  "2026-10-28T13:17:59.0599361Z",
+    "createdAtLocal":  "2026-10-28 09:17",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "handoff",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-codex-vocal-habits-bridge\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-28 09:17 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows 11 local (Clopeux-Desktop)",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Handoff written and pushed: docs/HANDOFF-20261028.md (7d573b2), supersedes HANDOFF-20261022-MOMENTS. Running: books split build (detached, split-books.log) - next chat must check ok and swap with the gateway task stopped. Next in order: run fsutil journal (approved), adult titles from TPDB/StashDB not IMDb (keep adult separate; check movie \u0027video\u0027 titleType), TPDB/StashDB ingest at 10x via shared-tube VPN tunnel (approved), pictures from disk first (TubeLab ~100k thumbnails), posters min 1,000 votes, hide shared-tube/TubeLab performer noise after confirming source. Memory updated (roadmap, proxy pool). No other work done this turn.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "d14d653a488d396c3c5597ec05db7ebf0a5c57776cc9602db2f8f8220b5003bf",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "vw-codex-vocal-habits-bridge",
+                "head":  "7d573b2",
+                "hasChanges":  false
+            }
+}

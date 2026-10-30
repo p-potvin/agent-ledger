@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261028-084711-496-vault-raggae-3387bc20",
+    "createdAt":  "2026-10-28T12:47:11.4962167Z",
+    "createdAtLocal":  "2026-10-28 08:47",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-codex-vocal-habits-bridge\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-28 08:47 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows 11 local (Clopeux-Desktop)",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Wed 28 Oct: (1) movie/TV are unique IMDb titles (TV = series/miniseries/specials, 439k, 47k with \u003e=100 votes); poster lookup scope proposal \u003e=100 votes (~218k), pending OK. (2) Books split building: app/catalog/split_books.py copies 41.7M OpenLibrary books to vw-books.db and a compact vw-catalog.new.db (rowids kept, FTS rebuilt); swap after, old file kept. (3) shared-tube 10-VPN proxy pool noted in memory; catalog API limits stay per source. (4) Files index: MFT-based gap recovery instead of 1 h rebuild, denied folders skipped, sync loop survives errors + watchdog, task hourly trigger re-registered and restarted (198fbbc). Cause: follower quiet Fri 15:00-Mon 03:05, 64 MB C: journal wrapped. (5) Pollution: adult catalog = IMDb adult titles (360 dup pairs); performer noise from TPDB clip stores/handles; shared-tube never writes raggae stores. Picture download done: 94,378 pictures 15.6 GB.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "3387bc2042fdd4a9026badabccc4a2a36105be0f7fc466ea20c0fb65b9c5f617",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "vw-codex-vocal-habits-bridge",
+                "head":  "198fbbc",
+                "hasChanges":  false
+            }
+}
