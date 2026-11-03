@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261101-071928-424-qa-automation-0ed73763",
+    "createdAt":  "2026-11-01T12:19:28.4241175Z",
+    "createdAtLocal":  "2026-11-01 07:19",
+    "timezone":  "Eastern Standard Time",
+    "project":  "qa-automation",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 4 Argon\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-01 07:19 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 4 Argon",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
+    "summary":  "Switched all qa-automation runners and Docker configs from Tor to PrivadoVPN fleet, fixed Greencloud/OVH deploy pipeline and .dockerignore, verified PrivadoVPN runs on OVH and Greencloud, and added 11th exit-rotating PrivadoVPN container (vpn10/proxy10) on local machine controlled via .env",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "0ed73763f718ddeb8e130779e34d7f46586feae84bed001c6bec0013cb7280a3",
+    "git":  {
+                "repo":  "qa-automation",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/qa-automation",
+                "branch":  "main",
+                "head":  "b37d226",
+                "hasChanges":  false
+            }
+}

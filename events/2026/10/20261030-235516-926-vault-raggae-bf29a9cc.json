@@ -1,0 +1,48 @@
+{
+  "id": "20261030-235516-926-vault-raggae-bf29a9cc",
+  "createdAt": "2026-10-31T03:55:16.9265825Z",
+  "createdAtLocal": "2026-10-30 23:55",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "documentation,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Bash, Write, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-30 23:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Scheduled run vault-raggae-catalog-progression: created docs/STATE.md + docs/state/{ROADMAP,SATELLITES,SESSIONS,ARCHITECTURE-REVIEW-20261030}.md; AGENTS.md points to STATE. Verified books split swapped (catalog 43.7->7.25 GB), gateway v0.14.0 healthy, scene ingest unscheduled. Measured panel latency from /v1/stats: server-side tails (p95 5-38 s), 0 panel requests in 48h; recommended Rust read service then Tauri shell, keep SQLite+React. Left uncommitted: branch vw-codex-vocal-habits-bridge (6 unpushed commits) and untracked app/scenes/thumbs.py belong to another session. 9 operator asks in STATE.md.",
+  "commands": [
+    "curl /v1/health",
+    "curl /v1/stats?hours=168",
+    "curl /v1/catalog/search x3"
+  ],
+  "files": [
+    "vault-raggae/docs/STATE.md",
+    "vault-raggae/docs/state/ARCHITECTURE-REVIEW-20261030.md",
+    "vault-raggae/docs/state/ROADMAP.md",
+    "vault-raggae/docs/state/SATELLITES.md",
+    "vault-raggae/docs/state/SESSIONS.md",
+    "vault-raggae/AGENTS.md"
+  ],
+  "planPath": "",
+  "contentHash": "bf29a9cc2a0f71392bc7c16d16205cbfb424cc6c1565b8c0fdaae232ad38d44f",
+  "git": null
+}

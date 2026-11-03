@@ -1,0 +1,49 @@
+{
+  "id": "20261031-202027-312-vault-raggae-a689f122",
+  "createdAt": "2026-11-01T00:20:27.3122122Z",
+  "createdAtLocal": "2026-10-31 20:20",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "documentation,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-sidecar-report\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-31 20:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Sidecar dry run finished over all media roots (read-only scan.py via Report-Sidecars.ps1; fixed drive-root quoting bug that made F:/G: scan nothing): 978,365 masters, 56,919 without sidecar, 748 with two to merge, 4 ambiguous, 5,263 stem-named. Docs updated; PR #11 opened (also closes A7).",
+  "commands": [
+    "Report-Sidecars.ps1",
+    "gh pr create"
+  ],
+  "files": [
+    "scripts/Report-Sidecars.ps1",
+    "docs/STATE.md",
+    "docs/state/SESSIONS.md"
+  ],
+  "planPath": "",
+  "contentHash": "a689f122f0e474602ed0995ef97f7781bd713add693805903e9caabf81e4f28f",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-sidecar-report",
+    "head": "a028994",
+    "hasChanges": true
+  }
+}

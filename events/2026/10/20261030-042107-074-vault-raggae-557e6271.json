@@ -1,0 +1,50 @@
+{
+  "id": "20261030-042107-074-vault-raggae-557e6271",
+  "createdAt": "2026-10-30T08:21:07.0745867Z",
+  "createdAtLocal": "2026-10-30 04:21",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-codex-vocal-habits-bridge\r\nTools used (this reply): PowerShell, Bash, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-30 04:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Books swap done: vw-catalog.db now 6.75 GB (adult 128,924 / movie 1,124,770 / music 4,471,803 / tv 439,229 = 6,164,726, books 0), old 40.68 GB file kept as vw-catalog.old.db for the operator to delete. Gateway restarted on v0.14.0 after killing a stale launcher from 27 Oct that held the Local\\VaultRaggaeLauncher mutex; /embed loads again (embeddinggemma-2 on the 3060) and answers, verified with a real call. Catalog search verified. Scene counts for the picture decision: 1,778,228 total, 1,372,657 from 2016, clip-platform studios 309,914 (3 named) / 509,102 (7), 1,067,424 left after omitting the 3 and pre-2016. Suspect performers traced to one-person clip-store studios, only 34/785 names in tubevision.db. Exit pool now probes vps-ovhcloud first (its ten fill SCENES_MAX_EXITS), local Docker fleet a documented fallback. 114 tests pass.",
+  "commands": [
+    "python -m app.catalog.split_books swap",
+    "Start-ScheduledTask -TaskPath \\VaultWares\\ -TaskName 'Enrichment Gateway'",
+    "python -m pytest -q"
+  ],
+  "files": [
+    "app/config.py",
+    "AGENTS.md",
+    "G:/Catalogs/vw-catalog.db"
+  ],
+  "planPath": "",
+  "contentHash": "557e6271747e2badd3d101bc7bac553e9c6f16641e25eeca50ad053469fa6533",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-codex-vocal-habits-bridge",
+    "head": "6a77be8",
+    "hasChanges": false
+  }
+}

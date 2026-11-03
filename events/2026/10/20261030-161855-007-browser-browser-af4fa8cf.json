@@ -1,0 +1,51 @@
+{
+  "id": "20261030-161855-007-browser-browser-af4fa8cf",
+  "createdAt": "2026-10-30T20:18:55.0076221Z",
+  "createdAtLocal": "2026-10-30 16:18",
+  "timezone": "Eastern Standard Time",
+  "project": "browser-browser",
+  "kind": "code-change",
+  "actor": "Claude Code",
+  "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\browser-browser  Branch: main\r\nTools used (this reply): PowerShell, Edit, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-30 16:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Edit",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\browser-browser",
+  "summary": "package.ps1 now reads the version from manifest.json, bumps the minor and writes it to manifest.json and the <!-- vX.Y.Z --> page-head comments (-Version exact, -NoBump); verify-package-archive.ps1 checks the manifest's version. Packaged v1.5.0 (zip+xpi pass archive checks), committed 0ed5780 with the vault-raggae sidecar/.thumbs work and Everything removal, pushed to origin main.",
+  "commands": [
+    "scripts/package.ps1",
+    "tests/verify-package-archive.ps1",
+    "git push origin main"
+  ],
+  "files": [
+    "scripts/package.ps1",
+    "tests/verify-package-archive.ps1",
+    "manifest.json",
+    "CHANGES.md"
+  ],
+  "planPath": "",
+  "contentHash": "af4fa8cf42d5ddefc92a9b517c9c8c086ce242c9a324b1f7d519a9caa425f9f0",
+  "git": {
+    "repo": "browser-browser",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/browser-browser",
+    "branch": "main",
+    "head": "0ed5780",
+    "hasChanges": false
+  }
+}

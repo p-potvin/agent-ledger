@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261101-012434-235-vault-cacophony-6d3ccf23",
+    "createdAt":  "2026-11-01T06:24:34.2359626Z",
+    "createdAtLocal":  "2026-11-01 01:24",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 4 Argon\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-codex-cacophony-next-steps\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-01 01:24 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 4 Argon",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Reviewed merged main (PR #26, #27, #28), fixed 2 Riva/SRT unit test regressions from PR #26, wired answering-mode/streaming/prosody-tags and Voice Audition Shelf into cacophony-ui and ui_server.py, and added --all-voices/--download-if-missing to mint_voice_refs.py (57/57 tests passing)",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "6d3ccf23de7fad977a7bdbf3830d064b60f13f8a4b1d40d0ae061a4297f91ac8",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "vw-codex-cacophony-next-steps",
+                "head":  "b1e913d",
+                "hasChanges":  true
+            }
+}

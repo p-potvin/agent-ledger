@@ -1,0 +1,48 @@
+{
+  "id": "20261101-000625-936-vault-raggae-e6a9f668",
+  "createdAt": "2026-11-01T04:06:25.9369894Z",
+  "createdAtLocal": "2026-11-01 00:06",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-panel-qol\r\nTools used (this reply): Claude_Browser, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-01 00:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Claude_Browser",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Read-only visual pass of catalogs.vaultwares.ca (18 pages + scene sheet, performer, studio, movie detail) in the built-in browser with screenshots and DOM probes; traced the thumbs.py history in docs. Findings list sent to the operator for review, nothing changed. Notable: performer page scene list 65 s for a performer with few scenes (plan walks idx_scenes_date), 'most scenes' sort 0.9 s, People covers are full photos not face crops.",
+  "commands": [
+    "browser DOM probes",
+    "curl timings"
+  ],
+  "files": [
+    "docs/STATE.md",
+    "docs/state/SESSIONS.md"
+  ],
+  "planPath": "",
+  "contentHash": "e6a9f668d5b3451ac494ea7853637970b1d71aff413ffdc9d9ee93e0533bdea5",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-panel-qol",
+    "head": "157f532",
+    "hasChanges": true
+  }
+}

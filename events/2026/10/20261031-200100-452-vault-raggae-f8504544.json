@@ -1,0 +1,56 @@
+{
+  "id": "20261031-200100-452-vault-raggae-f8504544",
+  "createdAt": "2026-11-01T00:01:00.4520182Z",
+  "createdAtLocal": "2026-10-31 20:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-sidecar-report\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-31 20:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "#8 #9 merged; gateway restarted v0.15.3, stats ingest verified (one probe row). PR #10 (v0.16.0): panel GETs on RAGGAE_READ_ROUTES proxied to raggae-read with 30 s fallback; /v1/performers in Rust with slow-cache count (offset 30000: 6.6 s -> 0.6 s; identical JSON); task \\VaultWares\\Raggae Read registered and running (127.0.0.1:8753). Branch vw-raggae-sidecar-report: Report-Sidecars.ps1 dry run running in background (D: done, 100% sidecars); A7 closed by observation; vault-music's I:\\Musicbrainz DB is gone (lookups online). pytest 128, cargo test 2.",
+  "commands": [
+    "Restart-Gateway.ps1",
+    "Register-ReadTask.ps1",
+    "Report-Sidecars.ps1",
+    "pytest -q",
+    "cargo test"
+  ],
+  "files": [
+    "app/panel.py",
+    "rust/raggae-core/src/slowcache.rs",
+    "rust/raggae-read/src/main.rs",
+    "scripts/Start-Read.ps1",
+    "scripts/Report-Sidecars.ps1",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "f8504544cdab97dfd0d4c25fcd51520af0c7af1e93261a94ed6353ff23df6964",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-sidecar-report",
+    "head": "3878faa",
+    "hasChanges": true
+  }
+}

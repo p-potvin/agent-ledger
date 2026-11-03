@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261102-204316-004-vaultwares-docs-0b76cf2a",
+    "createdAt":  "2026-11-03T01:43:16.0044029Z",
+    "createdAtLocal":  "2026-11-02 20:43",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-docs",
+    "kind":  "plan",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: docs/security-phase6\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-02 20:43 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+    "summary":  "Read the live tailnet policy from the admin console (read-only) and drafted tailscale-policy.proposed.hujson (git-excluded): group:admins/group:guests, autogroup:member-\u003eself, admins-\u003eservers all ports, deduped server port lists, removed unused ipsets/hosts/tags (vps-old, torrenting, deprecated, aperture), stale Clopeux-Ubuntu IP and ovh-panopticam host, app-connectors noop, extra Tailscale SSH rules; funnel and service auto-approval narrowed from all members to admins/servers. Nothing saved to Tailscale yet; awaiting review.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "tailscale-policy.proposed.hujson"
+              ],
+    "planPath":  "",
+    "contentHash":  "0b76cf2a355db7655e03e1bf297acdc1879a5020b6a4e13bc1fa442bf0c7cdfc",
+    "git":  {
+                "repo":  "vaultwares-docs",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+                "branch":  "docs/security-phase6",
+                "head":  "87a00fe",
+                "hasChanges":  false
+            }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "20261101-001553-672-vault-raggae-5e0c2e32",
+  "createdAt": "2026-11-01T04:15:53.6728701Z",
+  "createdAtLocal": "2026-11-01 00:15",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-01 00:15 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Scheduled run (vault-raggae-catalog-progression). PR #14: scan.py --by-folder/--counts-only + Report-Sidecars -ByFolder/-CountsOnly; ran read-only over all roots (F: 59 s): 57,118 masters lack a sidecar, ~42k are caches/crops/artwork/backups/training data; A13 in STATE.md now has the per-folder table and an exclude_paths proposal. PR #13: /v1/scenes in Rust raggae-read with slow-cached count, added to RAGGAE_READ_ROUTES default (v0.17.1, raggae-read 0.4.0); parity test + live JSON equal; page 1 130->13 ms, unfiltered count 5.9 s->cached. Not deployed. pytest 134 passed, cargo test ok. STATE.md, SESSIONS.md, PERFORMANCE.md updated.",
+  "commands": [
+    "scripts\\Report-Sidecars.ps1 -ByFolder 2 -CountsOnly",
+    "cargo build --release",
+    "pytest tests"
+  ],
+  "files": [
+    "app/files/records/scan.py",
+    "scripts/Report-Sidecars.ps1",
+    "rust/raggae-core/src/scenes.rs",
+    "rust/raggae-read/src/main.rs",
+    "tests/test_rust_read.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "5e0c2e32d2207dbb75a35ad8a11747b5bbbc439fed67a0fc572a54609f3c26f4",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "da0244a",
+    "hasChanges": true
+  }
+}

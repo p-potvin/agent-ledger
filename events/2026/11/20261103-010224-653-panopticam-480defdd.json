@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261103-010224-653-panopticam-480defdd",
+    "createdAt":  "2026-11-03T06:02:24.6536164Z",
+    "createdAtLocal":  "2026-11-03 01:02",
+    "timezone":  "Eastern Standard Time",
+    "project":  "panopticam",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-03 01:02 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+    "summary":  "Fixed ingest \u0027Cannot find the path .insightface\\models\u0027: the ~/.insightface symlink (1 Nov) pointed at missing F:\\amd\\.not-gallery. Downloaded antelopev2 (DIAMONIK7777/antelopev2, sha256 = ComfyUI copy) to D:\\HuggingFace\\insightface\\models\\antelopev2, junction C:\\Users\\Administrator\\.insightface -\u003e D:\\HuggingFace\\insightface. v0.75.3: POST /api/vision/datasets/requeue + vision/requeue.py; 87 skipped/failed archives requeued and re-ingesting (created/added). Rebased onto PR #4; operator\u0027s onlyfans.py untouched. STATE + HANDOFF.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "480defdd3f6331596e7a630e786ff84ee727144c8e2e0ef5f9897efb479dedac",
+    "git":  {
+                "repo":  "panopticam",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+                "branch":  "main",
+                "head":  "af3781c",
+                "hasChanges":  true
+            }
+}

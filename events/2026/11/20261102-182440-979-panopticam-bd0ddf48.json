@@ -1,0 +1,41 @@
+{
+  "id": "20261102-182440-979-panopticam-bd0ddf48",
+  "createdAt": "2026-11-02T23:24:40.9791361Z",
+  "createdAtLocal": "2026-11-02 18:24",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "verification",
+  "actor": "claude-code-remote",
+  "agentHeader": "Agent: claude-code-remote (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: unknown (network: Windows workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-02 18:24 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "code",
+    "permissions": "unknown",
+    "network": "Windows workstation (Clopeux-Desktop), local",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Read-only check (Mon, 02 Nov 2026 ~18:20-18:45 local) for the project coordinator. greencloud-panopticam: both services active, v0.75.1, load 3.8-4.4/4, swap 2.8/4 GB, 22 GB free. 77 judged moments since 31 Oct 00:00 UTC: 31 hit the 180 s cap (25 of 32 motion-judged no-chat rooms vs 6 of 45 chat-judged), 46 ended on 3 strikes, 3 false starts. KEEP_EVENT/grown no longer exist since v0.75.0. Calibration (3 days, 221k) on ticks 0.5-0.8; top bucket 0.94 -> 0.90. No commits since 30 Oct because the 12-hourly Panopticam routine is disabled (last run 30 Oct 20:13 UTC). Only health alerts: memory:api flapping 2.4-3.5 GB, mail cap hit 7+16 times on 1-2 Nov. PC worker alive, Heard listener=pc. Restart-Gateway.ps1 now excludes *Restart-Gateway.ps1*; test_memguard still looks for Restart-EmbedServer.ps1. Nothing changed.",
+  "commands": [
+    "ssh ubuntu@100.105.177.10 (read-only queries)",
+    "curl https://panopticam.vaultwares.ca/"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "bd0ddf4886a1eacd3e391c9d52a0433ba9abc2eaf32720eb268f69a6fa3368cb",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "e0e53cf",
+    "hasChanges": true
+  }
+}

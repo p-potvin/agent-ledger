@@ -1,0 +1,51 @@
+{
+  "id": "20261031-001816-975-vault-raggae-205fd69b",
+  "createdAt": "2026-10-31T04:18:16.9753947Z",
+  "createdAtLocal": "2026-10-31 00:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-state-perf\r\nTools used (this reply): Bash, Edit, Write, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-31 00:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Scheduled run vault-raggae-catalog-progression: timed panel read routes read-only; catalog browse with no category sorted by year was a 46 s full scan + temp sort. Added 3 indexes (year, rating, updated_at) to BROWSE_INDEXES + test, built them live via app.catalog.ingest --source indexes (13 s, no restart): gateway now 4-14 ms. Recorded remaining hot spots (deep offset paging 7-9 s, studios 0.3-0.8 s, performer count 1.7 s) in docs/state/PERFORMANCE.md; new operator asks A10 (thumbs.py pick() TODO(human)) and A11 (keyset paging). Committed on local branch vw-raggae-state-perf (7ebdeb7), not pushed.",
+  "commands": [
+    "python -m app.catalog.ingest --source indexes",
+    "pytest tests/test_panel.py tests/test_catalog.py"
+  ],
+  "files": [
+    "app/catalog/db.py",
+    "tests/test_panel.py",
+    "docs/STATE.md",
+    "docs/state/PERFORMANCE.md"
+  ],
+  "planPath": "",
+  "contentHash": "205fd69b92325d50eefca1e3f06238c1dd6cafdf1a564453767dde6c5cdc4eae",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-state-perf",
+    "head": "7ebdeb7",
+    "hasChanges": true
+  }
+}

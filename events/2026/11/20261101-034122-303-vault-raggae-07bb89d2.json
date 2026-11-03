@@ -1,0 +1,62 @@
+{
+  "id": "20261101-034122-303-vault-raggae-07bb89d2",
+  "createdAt": "2026-11-01T08:41:22.3032286Z",
+  "createdAtLocal": "2026-11-01 03:41",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands,verification",
+  "actor": "Claude",
+  "agentHeader": "Agent: Claude (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-sync-settings\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser, Agent\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-01 03:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser",
+      "Agent"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Fixed Devin findings on PRs 13 (count key), 14 (counts-only/limit/report name), 15 (8 items incl. SVG sanitizing, picker catalog, studio totals/networks, Rust port of scene filters after 13 moved /v1/scenes to Rust); merged 13,14,15 on operator go-ahead. Then PR 16 (v0.19.0): media-sync now indexes new files (none since 22 Oct), watch.py + hourly Media Watch task for download folders (2,599 indexed), gallery relink -I fix, Settings page (config.py + media-records.yaml), IMDb weekly all-7-dump conditional download + BLAKE2b per-title deltas, panel favicon/logo; Dupes Sync registered Sun 05:00; Celebrities head cards running via KFC; vision-lab icon PR Prom-King/vision-lab#1.",
+  "commands": [
+    "gh pr merge 13/14/15",
+    "Register-DupesTask.ps1",
+    "Register-WatchTask.ps1",
+    "watch.py --execute",
+    "watch.py --all-roots (dry run)",
+    "head_cards.py G:\\Galleries\\Celebrities",
+    "pytest (152)",
+    "Restart-Gateway.ps1",
+    "Restart-Read.ps1"
+  ],
+  "files": [
+    "app/files/records/sync.py",
+    "app/files/records/watch.py",
+    "app/settings.py",
+    "app/catalog/imdb_delta.py",
+    "scripts/Sync-Catalog.ps1",
+    "web/src/pages/Settings.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "07bb89d2d534db239051adf78336cf8e8fc7089ada5c15667251a96c3e141762",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-sync-settings",
+    "head": "2ca60f4",
+    "hasChanges": false
+  }
+}

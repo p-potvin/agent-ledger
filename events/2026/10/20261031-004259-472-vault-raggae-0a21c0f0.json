@@ -1,0 +1,56 @@
+{
+  "id": "20261031-004259-472-vault-raggae-0a21c0f0",
+  "createdAt": "2026-10-31T04:42:59.4726856Z",
+  "createdAtLocal": "2026-10-31 00:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands,documentation",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-state-perf\r\nTools used (this reply): Bash, Edit, Write, PowerShell, Monitor\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-31 00:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "PowerShell",
+      "Monitor"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Operator answers A1-A6 recorded in docs/STATE.md, ROADMAP, review (stack A+B+C approved, Tauri desktop-only; file-name index approved with exclusions, resident host = new ask A12; scene thumbnails dropped; sidecar rules from media-records.yaml + sidecar_names.py). Added scripts/Register-ScenesTask.ps1 and registered \\VaultWares\\Scenes Sync daily 05:00. Opened PR p-potvin/vault-raggae#3 (vw-raggae-state-perf -> main). Devin review: fixed one-exit-per-egress-IP in scenes Source.open(), files-index recover() order (create/move/delete) and --only scope; tests added (118 pass); replied to all 6 comments. Google review not posted yet.",
+  "commands": [
+    "Register-ScenesTask.ps1",
+    "gh pr create",
+    "pytest",
+    "gh api replies"
+  ],
+  "files": [
+    "vault-raggae/docs/STATE.md",
+    "vault-raggae/scripts/Register-ScenesTask.ps1",
+    "vault-raggae/app/scenes/sources.py",
+    "vault-raggae/app/files/sizes.py",
+    "vault-raggae/tests/test_files_sizes.py",
+    "vault-raggae/tests/test_scenes.py"
+  ],
+  "planPath": "",
+  "contentHash": "0a21c0f0d0647015c01b4424c1e46241f52f0e578e34382908af35cd23125d25",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-state-perf",
+    "head": "0b8458f",
+    "hasChanges": true
+  }
+}

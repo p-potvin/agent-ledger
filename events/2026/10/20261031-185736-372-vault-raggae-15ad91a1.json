@@ -1,0 +1,51 @@
+{
+  "id": "20261031-185736-372-vault-raggae-15ad91a1",
+  "createdAt": "2026-10-31T22:57:36.3728289Z",
+  "createdAtLocal": "2026-10-31 18:57",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-studio-refresh\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-31 18:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "PR #7 second Devin round: only studio batches hold the studio directory rebuild (catalog enrich no longer delays studio edits); _refresh_studios checks the hold under self.lock (no race). Docs finding already covered by 76774d1. New test; 122 pass; pushed. Verified Nemotron 3.5 ASR on RTX 2060 (nemo-speech :8793) is actively used by Panopticam Heard worker (~200 clips / 7 min).",
+  "commands": [
+    "pytest -q",
+    "nvidia-smi",
+    "git push"
+  ],
+  "files": [
+    "app/edits.py",
+    "app/batch.py",
+    "tests/test_batch.py",
+    "docs/STATE.md",
+    "docs/state/SESSIONS.md"
+  ],
+  "planPath": "",
+  "contentHash": "15ad91a13755b4133fc25fa6999670a12777a7e3f40c37e2ee94bad31a624f2d",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-studio-refresh",
+    "head": "cee229a",
+    "hasChanges": true
+  }
+}

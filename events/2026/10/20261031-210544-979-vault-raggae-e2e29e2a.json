@@ -1,0 +1,55 @@
+{
+  "id": "20261031-210544-979-vault-raggae-e2e29e2a",
+  "createdAt": "2026-11-01T01:05:44.9791574Z",
+  "createdAtLocal": "2026-10-31 21:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-sidecar-report\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-31 21:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Addressed Devin findings on PR #10 (SlowCache capped at 2 in-flight refreshes, busy keys answer counting; panel falls back to gateway on raggae-read 5xx, 4xx pass through; cargo test 3, pytest 132; raggae-read rebuilt/restarted) and PR #11 (Report-Sidecars.ps1 exits 1 on failed root discovery or scan; hashed unique report names; STATE: 56,919 is an upper bound, writer blocked on new ask A13). One test line accidentally started a full read-only scan; stopped after ~2 min, duplicate outputs removed.",
+  "commands": [
+    "cargo test --release",
+    "pytest -q",
+    "Restart-Read.ps1",
+    "git push"
+  ],
+  "files": [
+    "rust/raggae-core/src/slowcache.rs",
+    "app/panel.py",
+    "tests/test_panel.py",
+    "scripts/Report-Sidecars.ps1",
+    "docs/STATE.md",
+    "docs/state/SESSIONS.md"
+  ],
+  "planPath": "",
+  "contentHash": "e2e29e2aa0358b89b831d2544b289310453014949052518ee88cc1a0496fd1ce",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-sidecar-report",
+    "head": "7d7b560",
+    "hasChanges": true
+  }
+}

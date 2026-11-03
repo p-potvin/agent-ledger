@@ -1,0 +1,57 @@
+{
+  "id": "20261031-214451-539-vault-raggae-f0218e8b",
+  "createdAt": "2026-11-01T01:44:51.5395929Z",
+  "createdAtLocal": "2026-10-31 21:44",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-panel-qol\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-31 21:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "#10/#11 merged, gateway restarted. PR #12 (v0.17.0): scene list 47-96 s -> 65 ms via per-sort indexes (built on live vw-scenes.db, 22 s; ensured by ingest); Duplicates .thumbs stills/hover clips; People faces contain; folder picker fixed height; Moments collapsed per video + 12/page; Performers sort (name/most scenes, Python+Rust) + card size + reset; Scenes remembered sort/size; studio logo icons; transcripts 'og'. Gateway and raggae-read restarted on the branch (dist live). Webm delay investigated: not reproduced (Chromium 0.2 s); likely F: scan load. pytest 133, cargo 3. thumbs.py committed by mistake then untracked (private repo).",
+  "commands": [
+    "python -m app.scenes.store index",
+    "npm run build",
+    "Restart-Gateway.ps1",
+    "Restart-Read.ps1",
+    "pytest -q"
+  ],
+  "files": [
+    "app/scenes/store.py",
+    "app/main.py",
+    "web/src/pages/Moments.tsx",
+    "web/src/pages/Performers.tsx",
+    "web/src/pages/Dupes.tsx",
+    "rust/raggae-core/src/scenes.rs"
+  ],
+  "planPath": "",
+  "contentHash": "f0218e8bd62e6512f4367df3428eebef7cd1fc8765eab280542d84c56c8f396b",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-panel-qol",
+    "head": "157f532",
+    "hasChanges": true
+  }
+}

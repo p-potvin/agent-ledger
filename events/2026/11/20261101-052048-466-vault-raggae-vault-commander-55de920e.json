@@ -1,0 +1,52 @@
+{
+  "id": "20261101-052048-466-vault-raggae-vault-commander-55de920e",
+  "createdAt": "2026-11-01T10:20:48.4663614Z",
+  "createdAtLocal": "2026-11-01 05:20",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae, vault-commander",
+  "kind": "code-change",
+  "actor": "Claude",
+  "agentHeader": "Agent: Claude (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-sync-settings\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-01 05:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "vault-raggae: a copy whose original still exists now gets a new vw.id/row (copied_from in sidecar; stream rewritten), a lone copy takes over the row; tests. vault-commander PR #33: preview-generator description rewritten (it makes .thumbs jpg+webm), plus the checkout's other uncommitted work swept in on the operator's word (whisper-words, censor-words, image-enhance scripts and workers, subtitle ASR/server, README); CodeFormer/GFPGAN weights gitignored.",
+  "commands": [
+    "git switch -m",
+    "gh pr create/edit (vault-commander#33)",
+    "pytest"
+  ],
+  "files": [
+    "app/files/records/index.py",
+    "tests/test_media_watch.py",
+    "vault-commander/cli/vw-commands.ps1",
+    "vault-commander/.gitignore"
+  ],
+  "planPath": "",
+  "contentHash": "55de920e8a28910d8582ee73b5f6738b0cd4d2b0c3947df02f66ad27b56c18ed",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-sync-settings",
+    "head": "1ec04b3",
+    "hasChanges": false
+  }
+}

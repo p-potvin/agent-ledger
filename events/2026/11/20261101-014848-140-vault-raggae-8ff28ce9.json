@@ -1,0 +1,63 @@
+{
+  "id": "20261101-014848-140-vault-raggae-8ff28ce9",
+  "createdAt": "2026-11-01T06:48:48.1401513Z",
+  "createdAtLocal": "2026-11-01 01:48",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,verification",
+  "actor": "Claude",
+  "agentHeader": "Agent: Claude (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-visual-pass\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-01 01:48 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Operator's visual-pass answers (docs/TODO.md, 27 items): performer page 65s->5ms, small studio 13.7s->0ms, Most-scenes 1.2s->3ms (2 indexes, pinned join order, Python+Rust); performer names without parentheses (aliases kept; 14 performers/223 credits/261 scenes cleaned); IMDb crew/cast/French titles via new app/catalog/imdb_extra.py run over 1 Nov dump (1.64M titles); SVG studio logos fixed; studio duplicate records grouped; panel: menu trims, collapsible rail, click-outside closes sheets, scroll-to-top, batch bar only on selection, centred checkbox, toolbar wrapping, filters/sorts on Studios/People/Performers/Scenes/Transcripts/Movies, Changes diffs + files added/removed, Moments expanding grid; one version 0.18.0. thumbs.py deleted. PR p-potvin/vault-raggae#15; gateway + raggae-read live on branch. 4 asks pending (A14-A17).",
+  "commands": [
+    "python -m app.scenes.store index",
+    "python -m app.scenes.store clean-names",
+    "python -m app.scenes.store refresh",
+    "python -m app.catalog.imdb_extra",
+    "pytest (140 passed)",
+    "cargo test",
+    "npm run build",
+    "Restart-Gateway.ps1",
+    "Restart-Read.ps1",
+    "gh pr create"
+  ],
+  "files": [
+    "docs/TODO.md",
+    "app/scenes/service.py",
+    "app/scenes/store.py",
+    "app/catalog/imdb_extra.py",
+    "rust/raggae-core/src/scenes.rs",
+    "web/src/App.tsx",
+    "web/src/pages/Moments.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "8ff28ce968b2010f616da7965b093056631a6e4eb85f569ad5b608028a470c1b",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-visual-pass",
+    "head": "82fcc36",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "20261101-051008-508-vault-raggae-1efed405",
+  "createdAt": "2026-11-01T10:10:08.5089492Z",
+  "createdAtLocal": "2026-11-01 05:10",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands",
+  "actor": "Claude",
+  "agentHeader": "Agent: Claude (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-sync-settings\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-01 05:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "PR16 Devin findings fixed (media_pending retry queue, unrepresented-id arrivals, copy collisions, restored files, settings write scoping/bootstrap/symlink/watch_folders validation); Include-unreleased as standalone filter; removed performer lookup (2-scene floor kept). Started: KFC reindex of 29 zero-crop Celebrities identities, vw preview-generator over approved folders, normalize.py --execute then watch.py --all-roots --execute (A13 settled, no exclusions).",
+  "commands": [
+    "reindex_celebrities.py --model ... --execute",
+    "generate_previews.py <folders>",
+    "normalize.py --execute",
+    "watch.py --all-roots --execute",
+    "pytest (155)"
+  ],
+  "files": [
+    "app/files/records/sync.py",
+    "app/files/records/index.py",
+    "app/settings.py",
+    "web/src/pages/Catalog.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "1efed405a81f75685adbfaf725d683a97bd9ea110f0bbc4c0787691a53751bb7",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-sync-settings",
+    "head": "e667ae0",
+    "hasChanges": false
+  }
+}

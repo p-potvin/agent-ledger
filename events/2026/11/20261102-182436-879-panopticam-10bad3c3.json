@@ -1,0 +1,44 @@
+{
+  "id": "20261102-182436-879-panopticam-10bad3c3",
+  "createdAt": "2026-11-02T23:24:36.8796716Z",
+  "createdAtLocal": "2026-11-02 18:24",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "handoff",
+  "actor": "claude-code-remote",
+  "agentHeader": "Agent: claude-code-remote (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: unknown (network: Windows workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-02 18:24 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "code",
+    "permissions": "unknown",
+    "network": "Windows workstation (Clopeux-Desktop), local",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Ledger entry left by the cloud project thread (Mon, 02 Nov 2026): docs PR Prom-King/panopticam#4 (branch claude/project-thread-1mrbx2, open, not merged) adds docs/HANDOFF.md, a short board every session reads first and updates last, and points AGENTS.md, CLAUDE.md, README.md and docs/STATE.md at it. Docs only, no behaviour change; merging is the operator's call. Recorded from the workstation because cloud threads cannot reach the ledger.",
+  "commands": [],
+  "files": [
+    "docs/HANDOFF.md",
+    "docs/STATE.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "README.md"
+  ],
+  "planPath": "",
+  "contentHash": "10bad3c397934b4dbb1ee7a690c49b5a343fa51fe58d39a0027d182d49f705df",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "e0e53cf",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261030-195235-462-panopticam-80c70484",
+    "createdAt":  "2026-10-30T23:52:35.4628702Z",
+    "createdAtLocal":  "2026-10-30 19:52",
+    "timezone":  "Eastern Standard Time",
+    "project":  "panopticam",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-30 19:52 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+    "summary":  "v0.75.0-0.75.1 + client: Moments judged every 5 s (keyframes, loudness, YOLO person; dead=empty or \u003c -75 dB, quiet=no chat spark 10 s), 3 strikes stop, false starts dropped, minutes budget; spread (site share, floor 20, chatless content bar, half the spare chat slots a sticky draw). Heard moved to the PC: nemo-speech Nemotron 3.5 ASR on RTX 2060 (new build-sm75, sm_75 kernels; pulled q8_0 GGUF), streaming socket client vision/nemo_asr.py, 3-line server patch for language, box Whisper steps aside (who=pc, 120 s). VRAM 855-863 MiB flat streaming vs growing upload route. Task \u0027Panopticam Nemo Speech\u0027 registered, worker env PANOPTICAM_NEMO_URL, worker restarted.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "80c704848286fce18a0731d4b1c85ec4cc7ee73ed7b13d012a743e26d963d7c2",
+    "git":  {
+                "repo":  "panopticam",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+                "branch":  "main",
+                "head":  "a58e503",
+                "hasChanges":  false
+            }
+}
