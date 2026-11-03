@@ -1,0 +1,47 @@
+{
+    "id": "20261102-221706-421-vault-raggae-d506e255",
+    "createdAt": "2026-11-03T03:17:06.420Z",
+    "createdAtLocal": "2026-11-02 22:17",
+    "timezone": "Eastern Standard Time",
+    "project": "vault-raggae",
+    "kind": "code-change",
+    "actor": "Claude Code (cloud session)",
+    "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nMode: auto\r\nCWD: /home/user/vault-raggae  Branch: feat/catalogs-logo\r\nSession: https://claude.ai/code/session_01S8Yht5iAGS5Nsj3R8gGuNZ",
+    "runtime": {
+        "role": "main",
+        "model": "claude-opus-5-5",
+        "thinking": "unknown",
+        "mode": "auto",
+        "permissions": "unknown",
+        "network": "agent-proxy",
+        "toolsUsed": "",
+        "mcpServersAccessed": "github"
+    },
+    "telemetry": {
+        "flags": {},
+        "metrics": null
+    },
+    "workspaceRoot": "/home/user",
+    "cwd": "/home/user/vault-raggae",
+    "summary": "Catalogs wordmark (the o is the search ring around a query; text as outlines), detailed logo-full.svg (minute ticks, pointer, similarity-threshold ring, neighbours tinted by catalog) and lockup, each wordmark/lockup also -on-light, in web/public; README shows the lockup. Pushed to PR p-potvin/vault-raggae#21.",
+    "commands": [
+        "python3 brand_gen.py (fontTools + HarfBuzz text to outlines)",
+        "node shot.js (Chromium preview)",
+        "git push origin feat/catalogs-logo"
+    ],
+    "files": [
+        "README.md",
+        "web/public/logo-full.svg",
+        "web/public/wordmark.svg",
+        "web/public/lockup.svg"
+    ],
+    "planPath": "",
+    "contentHash": "d506e25519c607e12e303656cd078923a1d2164b5b61f2f20b01051a081db95b",
+    "git": {
+        "repo": "vault-raggae",
+        "root": "/home/user/vault-raggae",
+        "branch": "feat/catalogs-logo",
+        "head": "",
+        "hasChanges": false
+    }
+}
