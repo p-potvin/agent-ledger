@@ -1,0 +1,54 @@
+{
+    "id": "20261102-214606-539-vault-raggae-05f0c22c",
+    "createdAt": "2026-11-03T02:46:06.538Z",
+    "createdAtLocal": "2026-11-02 21:46",
+    "timezone": "Eastern Standard Time",
+    "project": "vault-raggae",
+    "kind": "code-change",
+    "actor": "Claude Code (cloud session)",
+    "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nMode: auto\r\nCWD: /home/user/vault-raggae  Branch: feat/catalogs-logo\r\nSession: https://claude.ai/code/session_01S8Yht5iAGS5Nsj3R8gGuNZ",
+    "runtime": {
+        "role": "main",
+        "model": "claude-opus-5-5",
+        "thinking": "unknown",
+        "mode": "auto",
+        "permissions": "unknown",
+        "network": "agent-proxy",
+        "toolsUsed": {},
+        "mcpServersAccessed": {
+            "github": true
+        }
+    },
+    "telemetry": {
+        "flags": {},
+        "metrics": null
+    },
+    "workspaceRoot": "/home/user",
+    "cwd": "/home/user/vault-raggae",
+    "summary": "New Catalogs logo + favicons (vault dial around a query vector and its nearest neighbours; iris violet-teal). web/public favicon.ico (16-64), icon-180/192/512.png, logo-256.webp replaced; new favicon.svg + logo.svg; index.html links the SVG favicon, rail logo uses logo.svg. PR p-potvin/vault-raggae#21.",
+    "commands": [
+        "node render.js (Playwright Chromium SVG -> PNG)",
+        "convert *.png favicon.ico",
+        "git push -u origin feat/catalogs-logo"
+    ],
+    "files": [
+        "web/index.html",
+        "web/src/App.tsx",
+        "web/public/favicon.ico",
+        "web/public/favicon.svg",
+        "web/public/logo.svg",
+        "web/public/icon-180.png",
+        "web/public/icon-192.png",
+        "web/public/icon-512.png",
+        "web/public/logo-256.webp"
+    ],
+    "planPath": "",
+    "contentHash": "05f0c22c848c1c5699753f86107ab1343c991fc2526c223279c6aeb811359362",
+    "git": {
+        "repo": "vault-raggae",
+        "root": "/home/user/vault-raggae",
+        "branch": "feat/catalogs-logo",
+        "head": "",
+        "hasChanges": false
+    }
+}
