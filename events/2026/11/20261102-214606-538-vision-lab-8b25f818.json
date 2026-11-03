@@ -1,0 +1,49 @@
+{
+    "id": "20261102-214606-538-vision-lab-8b25f818",
+    "createdAt": "2026-11-03T02:46:06.538Z",
+    "createdAtLocal": "2026-11-02 21:46",
+    "timezone": "Eastern Standard Time",
+    "project": "vision-lab",
+    "kind": "code-change",
+    "actor": "Claude Code (cloud session)",
+    "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nMode: auto\r\nCWD: /home/user/vision-lab  Branch: feat/lab-logo\r\nSession: https://claude.ai/code/session_01S8Yht5iAGS5Nsj3R8gGuNZ",
+    "runtime": {
+        "role": "main",
+        "model": "claude-opus-5-5",
+        "thinking": "unknown",
+        "mode": "auto",
+        "permissions": "unknown",
+        "network": "agent-proxy",
+        "toolsUsed": "",
+        "mcpServersAccessed": "github"
+    },
+    "telemetry": {
+        "flags": {},
+        "metrics": null
+    },
+    "workspaceRoot": "/home/user",
+    "cwd": "/home/user/vision-lab",
+    "summary": "New Tube Lab logo + favicons (eye in a face-detection box, 8 ticks for the 8 sampled frames; pink-violet from --accent). static/favicon.ico (16-64), icon-180.png, new favicon.svg + logo.svg served by api.py; header brand shows the logo. PR Prom-King/vision-lab#2.",
+    "commands": [
+        "node render.js (Playwright Chromium SVG -> PNG)",
+        "convert *.png favicon.ico",
+        "git push -u origin feat/lab-logo"
+    ],
+    "files": [
+        "src/tubevision/api.py",
+        "src/tubevision/lab.html",
+        "src/tubevision/static/favicon.ico",
+        "src/tubevision/static/icon-180.png",
+        "src/tubevision/static/favicon.svg",
+        "src/tubevision/static/logo.svg"
+    ],
+    "planPath": "",
+    "contentHash": "8b25f8182ef629eff280fd44bec59c0785210796f6f167bf95a8c9b94312a9c7",
+    "git": {
+        "repo": "vision-lab",
+        "root": "/home/user/vision-lab",
+        "branch": "feat/lab-logo",
+        "head": "",
+        "hasChanges": false
+    }
+}

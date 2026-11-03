@@ -1,0 +1,48 @@
+{
+    "id": "20261102-221706-420-vision-lab-30dbe764",
+    "createdAt": "2026-11-03T03:17:06.420Z",
+    "createdAtLocal": "2026-11-02 22:17",
+    "timezone": "Eastern Standard Time",
+    "project": "vision-lab",
+    "kind": "code-change",
+    "actor": "Claude Code (cloud session)",
+    "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nMode: auto\r\nCWD: /home/user/vision-lab  Branch: feat/lab-logo\r\nSession: https://claude.ai/code/session_01S8Yht5iAGS5Nsj3R8gGuNZ",
+    "runtime": {
+        "role": "main",
+        "model": "claude-opus-5-5",
+        "thinking": "unknown",
+        "mode": "auto",
+        "permissions": "unknown",
+        "network": "agent-proxy",
+        "toolsUsed": "",
+        "mcpServersAccessed": "github"
+    },
+    "telemetry": {
+        "flags": {},
+        "metrics": null
+    },
+    "workspaceRoot": "/home/user",
+    "cwd": "/home/user/vision-lab",
+    "summary": "Tube Lab wordmark (Inter Display Bold, 'Lab' in gradient, mono subline, text as outlines), detailed logo-full.svg (detection tag, iris striations, keypoints, 8-frame strip) and lockup (mark + wordmark), each wordmark/lockup also -on-light. One whitelisted /{name}.svg route serves the brand SVGs; README shows the lockup. Pushed to PR Prom-King/vision-lab#2.",
+    "commands": [
+        "python3 brand_gen.py (fontTools + HarfBuzz text to outlines)",
+        "node shot.js (Chromium preview)",
+        "git push origin feat/lab-logo"
+    ],
+    "files": [
+        "src/tubevision/api.py",
+        "README.md",
+        "src/tubevision/static/logo-full.svg",
+        "src/tubevision/static/wordmark.svg",
+        "src/tubevision/static/lockup.svg"
+    ],
+    "planPath": "",
+    "contentHash": "30dbe764a1f59a53f32aef9666a0de5299f47d93af3087802f86e620684568bc",
+    "git": {
+        "repo": "vision-lab",
+        "root": "/home/user/vision-lab",
+        "branch": "feat/lab-logo",
+        "head": "",
+        "hasChanges": false
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "id": "20261102-224141-017-general-tasks-93aca05c",
+    "createdAt": "2026-11-03T03:41:41.015Z",
+    "createdAtLocal": "2026-11-02 22:41",
+    "timezone": "Eastern Standard Time",
+    "project": "General Tasks",
+    "kind": "general",
+    "actor": "Claude Code (cloud session)",
+    "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nMode: auto\r\nBranch: -\r\nSession: https://claude.ai/code/session_01S8Yht5iAGS5Nsj3R8gGuNZ",
+    "runtime": {
+        "role": "main",
+        "model": "claude-opus-5-5",
+        "thinking": "unknown",
+        "mode": "auto",
+        "permissions": "unknown",
+        "network": "agent-proxy",
+        "toolsUsed": "",
+        "mcpServersAccessed": "github"
+    },
+    "telemetry": {
+        "flags": {},
+        "metrics": null
+    },
+    "workspaceRoot": "/home/user",
+    "cwd": "/home/user",
+    "summary": "Claude Design 'Logos' canvas (https://claude.ai/artifact/BUoH1ppHuGYZaZ9EMPGiu3): 37 logos from the VaultWares/Prom-King repos on three boards (VaultWares brand, VaultWares apps, Prom-King), vaultsqware tokens installed. 22 private repos attached to the session to scan; vault-warden, vault-tv, thoughts refused by the auto-mode classifier and not scanned.",
+    "commands": [],
+    "files": [],
+    "planPath": "",
+    "contentHash": "93aca05c798c61975957d1b8ac0b09293b0eca1a6a618842163ce781a14f1e1d",
+    "git": {
+        "repo": "General Tasks",
+        "root": "",
+        "branch": "",
+        "head": "",
+        "hasChanges": false
+    }
+}
