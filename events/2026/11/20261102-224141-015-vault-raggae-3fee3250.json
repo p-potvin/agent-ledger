@@ -1,0 +1,44 @@
+{
+    "id": "20261102-224141-015-vault-raggae-3fee3250",
+    "createdAt": "2026-11-03T03:41:41.015Z",
+    "createdAtLocal": "2026-11-02 22:41",
+    "timezone": "Eastern Standard Time",
+    "project": "vault-raggae",
+    "kind": "code-change",
+    "actor": "Claude Code (cloud session)",
+    "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nMode: auto\r\nBranch: feat/catalogs-logo\r\nSession: https://claude.ai/code/session_01S8Yht5iAGS5Nsj3R8gGuNZ",
+    "runtime": {
+        "role": "main",
+        "model": "claude-opus-5-5",
+        "thinking": "unknown",
+        "mode": "auto",
+        "permissions": "unknown",
+        "network": "agent-proxy",
+        "toolsUsed": "",
+        "mcpServersAccessed": "github"
+    },
+    "telemetry": {
+        "flags": {},
+        "metrics": null
+    },
+    "workspaceRoot": "/home/user",
+    "cwd": "/home/user",
+    "summary": "Detailed Catalogs mark everywhere: favicon.svg/.ico + icon-180/192/512 rendered from logo-full.svg; logo.svg and logo-256.webp removed. Rail shows lockup-on-light.svg (rail is warm paper) at the top and wordmark-name-on-light.svg in the footer; every .cp-page__head h1 gets the mark. Vite build checked (url rewritten to ../logo-full.svg), screenshots of Overview/Scenes. PR #21.",
+    "commands": [],
+    "files": [
+        "web/src/App.tsx",
+        "web/src/app.css",
+        "web/public/favicon.svg",
+        "web/public/favicon.ico",
+        "web/public/wordmark-name-on-light.svg"
+    ],
+    "planPath": "",
+    "contentHash": "3fee3250656d2dd551eb3f540ec6d2283fea6b5537aef8417a8befd679b7267c",
+    "git": {
+        "repo": "vault-raggae",
+        "root": "",
+        "branch": "feat/catalogs-logo",
+        "head": "",
+        "hasChanges": false
+    }
+}
