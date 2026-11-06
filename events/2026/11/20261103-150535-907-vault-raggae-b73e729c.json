@@ -1,0 +1,53 @@
+{
+  "id": "20261103-150535-907-vault-raggae-b73e729c",
+  "createdAt": "2026-11-03T20:05:35.9072123Z",
+  "createdAtLocal": "2026-11-03 15:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-embed-shards\r\nTools used (this reply): Bash, PowerShell, Edit, Monitor\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-03 15:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Monitor"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Batched text embeddings in Embedder (one padded pass per request; 15.8/s -> 429/s at 64 on the 3060, cosine >= 0.9996). Gateway restarted 0.19.5. Backfill re-split into 3 shards: 2 via gateway on 3060 (~380/s), 1 in-process on 2060 with --embed-pause 0.2 (~90/s) because the 2060 ran 76-80C at its power limit (rests at the bottom of the case). Added scripts/Watch-GpuTemp.ps1 (stops the 2060 worker at 85C). ETA 3060 ~17:00, 2060 ~19:30. PR #26 updated.",
+  "commands": [
+    "Restart-Gateway.ps1",
+    "ingest --source embed --shard k/3 --no-index",
+    "Watch-GpuTemp.ps1 -Gpu 1 -MaxC 85"
+  ],
+  "files": [
+    "app/embed.py",
+    "app/config.py",
+    "app/catalog/ingest.py",
+    "scripts/Watch-GpuTemp.ps1",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "b73e729c734ad2c365b928de6b1611a57baa5c138d90c0a2a18b71174651a4a5",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-embed-shards",
+    "head": "c359ec4",
+    "hasChanges": false
+  }
+}

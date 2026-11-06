@@ -1,0 +1,43 @@
+{
+  "id": "20261103-233647-818-vault-raggae-65536a90",
+  "createdAt": "2026-11-04T04:36:47.8187111Z",
+  "createdAtLocal": "2026-11-03 23:36",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-03 23:36 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Status check 23:35: all PRs merged, vault-raggae checkout back on main (419ac5d). GPU chain: step 1 (2 uncapped workers) done 20:38, 0 new nvlddmkm faults; MusicBrainz catch-up done 23:11 (packets 188416-190238, 5,470 requests: 154,115 new albums, 151,668 releases updated, 462,323 artists); step 2 final uncapped embed + LanceDB sync running (4.58M vectors synced, ~125k items left of 6.32M); step 3 music indexer (208/1,304 songs) pending. Anything index live from the test clone (1.27 GB, serve + app).",
+  "commands": [
+    "git switch main; git pull"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "65536a90056c6cc230a993cf7b9d7aefb44831e0d45f8214a728dd5e06b18ae2",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "419ac5d",
+    "hasChanges": false
+  }
+}

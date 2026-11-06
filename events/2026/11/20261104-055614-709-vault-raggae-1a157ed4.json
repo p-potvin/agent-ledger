@@ -1,0 +1,56 @@
+{
+  "id": "20261104-055614-709-vault-raggae-1a157ed4",
+  "createdAt": "2026-11-04T10:56:14.7094094Z",
+  "createdAtLocal": "2026-11-04 05:56",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,plan,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-media-links\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-04 05:56 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "A17 answered by operator. #34 Devin fixes (ffprobe stream_disposition selector, phash keeps video stream). #35 scene_uids + app.scenes.merge run live on vw-scenes.db: 39,986 TPDB records merged into StashDB scenes (1,748,445 scenes), Devin's 7 findings fixed (operator flags, purge promotion, strict uniqueness, own links on undo, stale keys, GET /v1/scenes/uid/{uid}), merge redone and verified idempotent. #36 (stacked): media_links + offline matcher for G:\\mega, dry run 905/1,146 linked, name matcher 629/635 vs fingerprints; nothing written. A18 asks TPDB daily vs backfill (TPDB mostly clip-store scenes absent from StashDB). pytest 198 passed.",
+  "commands": [
+    "python -m app.scenes.merge --execute",
+    "python -m app.scenes.merge --undo --since",
+    "python -m app.links scenes --calibrate",
+    "gh pr create"
+  ],
+  "files": [
+    "app/scenes/merge.py",
+    "app/scenes/store.py",
+    "app/scenes/service.py",
+    "app/main.py",
+    "app/links.py",
+    "app/probe.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "1a157ed4ec70d65241e6300a2077c31d95dbdcf6ada1a9ea8783b18c045baf7c",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-media-links",
+    "head": "6192e74",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "20261103-153511-831-vault-raggae-0049ee27",
+  "createdAt": "2026-11-03T20:35:11.8319440Z",
+  "createdAtLocal": "2026-11-03 15:35",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-embed-shards\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Agent\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-03 15:35 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Agent"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Music search per operator: app/music indexes the 1,367 audio masters as 10 s CLAP windows + pooled song vector + LRCLIB lyrics (synced lines mapped to windows); store music (vw-music.db) + vw-music.lance; /v1/music/search|similar|summary; tests 175 pass. LRCLIB key read at run time from Github Repos\\.access (never in repo). Declined routing LRCLIB through the VPN fleet (per-IP limits). LRCLIB returned 503 all afternoon: lyrics failures no longer block sound; give up after 3. Detached starter waits for the 3060 embed shards (~17:05), restarts gateway, runs the indexer, retries lyrics hourly. PR #26.",
+  "commands": [
+    "python -m app.music.index",
+    "Start-MusicAfter3060.ps1 (detached)"
+  ],
+  "files": [
+    "app/music/index.py",
+    "app/music/lyrics.py",
+    "app/music/search.py",
+    "app/config.py",
+    "app/stores.py",
+    "app/main.py",
+    "tests/test_music.py"
+  ],
+  "planPath": "",
+  "contentHash": "0049ee277f4b0f3628296a02b661057cd61d78cad6fe0815f174536ed7689b16",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-embed-shards",
+    "head": "aecaa2e",
+    "hasChanges": false
+  }
+}

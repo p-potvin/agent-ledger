@@ -1,0 +1,42 @@
+{
+  "id": "20261105-121551-044-vault-cacophony-vault-raggae-37f32c0e",
+  "createdAt": "2026-11-05T17:15:51.0449838Z",
+  "createdAtLocal": "2026-11-05 12:15",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony, vault-raggae",
+  "kind": "verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Bash, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-05 12:15 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Read-only survey of <media>.tags.json (tagstore.py, written by vault-cacophony/vault-commander ASR, speakers, faces, VSS): 726 files via the Anything index, median 3.3 KB, p99 54 KB, max 149 KB, 57% of bytes are cues duplicating the .srt; tracks language 485, speaker 32, voice 7, caption/event 2 (samples). VSS caption track ~180-400 KB/hour and event track ~64-90 KB/hour, duplicating .captions.jsonl and .summary.json. Proposal: label-valued tracks (language, speaker, voice, face) into the main sidecar under 'tags'; cues/captions/events stay in the .srt and VSS files; migration tool with dry run. Awaiting operator go.",
+  "commands": [
+    "raggae-files query *.tags.json",
+    "python tags_survey.py"
+  ],
+  "files": [
+    "vault-cacophony/scripts/tagstore.py",
+    "vault-cacophony/scripts/vss_pipeline.py"
+  ],
+  "planPath": "",
+  "contentHash": "37f32c0e2d035025c7039faafafdad22187c714fbb54508c31e6ba4e4b7992f4",
+  "git": null
+}

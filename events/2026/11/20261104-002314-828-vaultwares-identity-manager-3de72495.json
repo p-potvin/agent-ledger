@@ -1,0 +1,46 @@
+{
+  "id": "20261104-002314-828-vaultwares-identity-manager-3de72495",
+  "createdAt": "2026-11-04T05:23:14.8284748Z",
+  "createdAtLocal": "2026-11-04 00:23",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-identity-manager",
+  "kind": "verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: auto (network: local Windows 11)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-identity-manager  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-04 00:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "auto",
+    "network": "local Windows 11",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-identity-manager",
+  "summary": "Reviewed PR 17 against local WIP (stash@{0}). Local lacks: tailwind v3 pin, static import in content script, persisted auto-lock deadline, IP/shared-hosting domain fixes, stricter save-prompt matching, identity-assign sync enqueue, two-step delete, Google Fonts removal, decrypted-item cache + GET_ITEM_SUMMARY. Local already has TOTP code generation and no gecko.comment. No files changed.",
+  "commands": [
+    "git show stash@{0}:...",
+    "git log ec57eff..71678aa"
+  ],
+  "files": [
+    "docs/extension-audit-2026-11.md"
+  ],
+  "planPath": "",
+  "contentHash": "3de724956816d706b71077c3897161b810e202bc6496127cef74b7e5d511941b",
+  "git": {
+    "repo": "vaultwares-identity-manager",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-identity-manager",
+    "branch": "main",
+    "head": "71678aa",
+    "hasChanges": true
+  }
+}

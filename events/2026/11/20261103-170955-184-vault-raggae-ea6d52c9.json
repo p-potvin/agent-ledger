@@ -1,0 +1,48 @@
+{
+  "id": "20261103-170955-184-vault-raggae-ea6d52c9",
+  "createdAt": "2026-11-03T22:09:55.1848205Z",
+  "createdAtLocal": "2026-11-03 17:09",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "documentation",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-anything-design\r\nTools used (this reply): Write, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-03 17:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Write",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Wrote docs/state/ANYTHING.md, the agreed design contract for Anything (Everything replacement): raggae-files Windows service replacing the Python Files Index, memory-mapped index (A12 answered), Tauri raggae-desktop, Everything query core, double-click folder browses into it (parent:), media-aware Move/Rename/Copy, vaultsqware with 3 palettes, order of work. STATE/ROADMAP updated. PR #27 (docs only); checkout on branch vw-anything-design.",
+  "commands": [
+    "gh pr create #27"
+  ],
+  "files": [
+    "docs/state/ANYTHING.md",
+    "docs/STATE.md",
+    "docs/state/ROADMAP.md"
+  ],
+  "planPath": "",
+  "contentHash": "ea6d52c90cef4e43e580088c0da65dc2b427fb36c67cc085d587bacb82ecdd99",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-anything-design",
+    "head": "e4b2c9a",
+    "hasChanges": false
+  }
+}

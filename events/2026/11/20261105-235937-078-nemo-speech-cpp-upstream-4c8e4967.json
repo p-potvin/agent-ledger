@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261105-235937-078-nemo-speech-cpp-upstream-4c8e4967",
+    "createdAt":  "2026-11-06T04:59:37.0785196Z",
+    "createdAtLocal":  "2026-11-05 23:59",
+    "timezone":  "Eastern Standard Time",
+    "project":  "NeMo-Speech.cpp-upstream",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 3.8 Flash\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\NeMo-Speech.cpp-upstream  Branch: vw-codex-upstream-sync\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-05 23:59 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3.8 Flash",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\NeMo-Speech.cpp-upstream",
+    "summary":  "Fix HTTP 404 error in vw better-subtitles and live-subtitles caused by NeMo-Speech 0.3.0 strict model name validation on /v1/audio/transcriptions",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "4c8e496726c49fdce74cfbd30291d28360e7bba82a259cac516569b9f91af16c",
+    "git":  {
+                "repo":  "NeMo-Speech.cpp-upstream",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/NeMo-Speech.cpp-upstream",
+                "branch":  "vw-codex-upstream-sync",
+                "head":  "536b17a",
+                "hasChanges":  true
+            }
+}

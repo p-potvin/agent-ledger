@@ -1,0 +1,47 @@
+{
+  "id": "20261105-132035-783-vault-cacophony-vault-commander-vault-raggae-76b2a572",
+  "createdAt": "2026-11-05T18:20:35.7830429Z",
+  "createdAtLocal": "2026-11-05 13:20",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony, vault-commander, vault-raggae",
+  "kind": "code-change,commands,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Bash, PowerShell, Write, Edit, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-05 13:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Tag store moved into the media's main sidecar (key tags, label tracks only: language/speaker/voice/face); .tags.json and .summary.md dropped with no backward compatibility. vault-cacophony#32: other session's uncommitted VSS face bridge committed as found, then tagstore rewrite (save re-reads sidecar, replaces only changed tracks), callers (faces, speakers --media + .srt cues, words_to_srt --tags, conversations -> .srt), VSS readable summary.json, no caption/event tracks; migrate_tags_json.py run: 728 found, 698 migrated (472 language, 18 speaker), 26 orphans + 2 old format recycled, 2 foreign files untouched, vw.id intact on all 696. Tests 95 passed. vault-commander#35: vss help/registry wording, unused tagstore/speakers/words_to_srt copies removed; contract 144/144. vault-raggae#46: .tags.json no longer a companion; STATE decision; pytest 288.",
+  "commands": [
+    "python scripts/migrate_tags_json.py --execute",
+    "pytest tests",
+    "Invoke-VwCommandContractTests.ps1"
+  ],
+  "files": [
+    "vault-cacophony/scripts/tagstore.py",
+    "vault-cacophony/scripts/vss_pipeline.py",
+    "vault-cacophony/scripts/migrate_tags_json.py",
+    "vault-raggae/app/files/records/scan.py"
+  ],
+  "planPath": "",
+  "contentHash": "76b2a5727c00f1534a3a405738c3c7068d1ed0c609b2fcc743bad63ab6fbc327",
+  "git": null
+}

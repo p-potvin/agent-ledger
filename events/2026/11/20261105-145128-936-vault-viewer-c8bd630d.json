@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261105-145128-936-vault-viewer-c8bd630d",
+    "createdAt":  "2026-11-05T19:51:28.9368458Z",
+    "createdAtLocal":  "2026-11-05 14:51",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-viewer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 3.8 Flash\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-viewer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-05 14:51 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3.8 Flash",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-viewer",
+    "summary":  "Move AppShell out of #root, mount directly to body, and add html/body overflow:hidden reset in vault-viewer",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "c8bd630d7bc7dd421bdfd16c60cd0654ae2e7457d40200d719d9037c3fe27a9a",
+    "git":  {
+                "repo":  "vault-viewer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-viewer",
+                "branch":  "main",
+                "head":  "1b1aef5",
+                "hasChanges":  true
+            }
+}

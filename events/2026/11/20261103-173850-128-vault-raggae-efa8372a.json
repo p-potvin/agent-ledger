@@ -1,0 +1,49 @@
+{
+  "id": "20261103-173850-128-vault-raggae-efa8372a",
+  "createdAt": "2026-11-03T22:38:50.1289246Z",
+  "createdAtLocal": "2026-11-03 17:38",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-lrclib-503\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-03 17:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "3060 embed shards finished 17:09; moved the 2060's remaining third to the 3060 as shards 2/6 + 5/6 via gateway (~320/s, ETA 18:35), 2060 freed and watchdog stopped. Music indexer was crawling (25 s/song): LRCLIB 503 ServerOverloaded Retry-After 1 vs our 5-25 s backoff; PR #29 honours Retry-After (exp backoff from 1 s, 7 attempts, test). Restricted music indexing to G:\\Music per operator (1,304 songs), deleted 63 non-music tracks from vw-music.db/.lance; now ~2.4 s/song, ETA 18:30. STATE updated.",
+  "commands": [
+    "python -m app.music.index --roots G:\\Music",
+    "python -m app.catalog.ingest --source embed --shard 2/6|5/6 --no-index"
+  ],
+  "files": [
+    "app/music/lyrics.py",
+    "tests/test_music.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "efa8372a25b829e25450f026d3ce2290cea8be0f8478af358e5aedd0752563a7",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-lrclib-503",
+    "head": "a978b98",
+    "hasChanges": false
+  }
+}

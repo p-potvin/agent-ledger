@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261105-173448-422-nemo-speech-cpp-upstream-40b2be87",
+    "createdAt":  "2026-11-05T22:34:48.4229349Z",
+    "createdAtLocal":  "2026-11-05 17:34",
+    "timezone":  "Eastern Standard Time",
+    "project":  "NeMo-Speech.cpp-upstream",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 3.8 Flash\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\NeMo-Speech.cpp-upstream  Branch: vw-codex-upstream-sync\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-05 17:34 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3.8 Flash",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\NeMo-Speech.cpp-upstream",
+    "summary":  "Benchmark NeMo-Speech 6-way ASR on 20min wav, replace vault-cacophony clone with v0.3.0, enable default nemotron-3.5 word boosting with empty dictionary fallback, and benchmark new Nemotron-3-Diarization on 5-speaker conversation",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "40b2be8770ab7da34b57ee62c34dc3396580958174a72fceb3ee89cf452aff43",
+    "git":  {
+                "repo":  "NeMo-Speech.cpp-upstream",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/NeMo-Speech.cpp-upstream",
+                "branch":  "vw-codex-upstream-sync",
+                "head":  "536b17a",
+                "hasChanges":  true
+            }
+}

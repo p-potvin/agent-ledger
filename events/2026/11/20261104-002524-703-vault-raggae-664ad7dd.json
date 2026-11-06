@@ -1,0 +1,53 @@
+{
+  "id": "20261104-002524-703-vault-raggae-664ad7dd",
+  "createdAt": "2026-11-04T05:25:24.7031181Z",
+  "createdAtLocal": "2026-11-04 00:25",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-anything-follower-fixup\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-04 00:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Installed AnythingIndex Windows service + app installer from main; deleted the test clone. Folder-size parity found the journal follower dropping every changed/new file (FSCTL_GET_NTFS_FILE_RECORD returns fixups undone, parse() re-checked them): vw-catalog.db 20.7 GB and tonight's .lance files missing. Fixed (mft::parse_fixed, PR #32, test; also DST test fix), reinstalled service, rebuilt index, live create/grow/delete check passes; parity now shows Anything more accurate than the Python index (hard-link double counts, staleness). Detached job will restart the gateway after the GPU chain, verify /v1/files reads the service, then disable the Files Index task and end the Python follower.",
+  "commands": [
+    "Install-Anything.ps1",
+    "raggae-files build --all",
+    "raggae-files parity",
+    "Switch-FilesToAnything.ps1"
+  ],
+  "files": [
+    "rust/raggae-files/src/mft.rs",
+    "rust/raggae-files/src/win/volume.rs",
+    "rust/raggae-files/src/query.rs",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "664ad7dd4a788d4c8378516433a82b52624c1effdb82e338f852a5be71b4e50e",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-anything-follower-fixup",
+    "head": "b4c4067",
+    "hasChanges": false
+  }
+}

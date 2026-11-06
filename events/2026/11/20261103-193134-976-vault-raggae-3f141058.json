@@ -1,0 +1,54 @@
+{
+  "id": "20261103-193134-976-vault-raggae-3f141058",
+  "createdAt": "2026-11-04T00:31:34.9769113Z",
+  "createdAtLocal": "2026-11-03 19:31",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-mb-feed\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Agent, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-03 19:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Agent",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Devin on #29 fixed (no wait after last refused LRCLIB attempt). MetaBrainz Live Data Feed: app/catalog/mb_feed.py applies the hourly JSON dumps (release, release-group, artist) weekly to vw-catalog.db (mirror stays read-only): own item / group item via mb_groups or title+artist / new item, text changes drop vectors; artists to mb_artists; token read from .access at run time. Task Catalog Sync MusicBrainz Sat 04:00 registered alone. Catch-up from packet 188410 running (crashed once on U+2028 splitlines, fixed+test), ETA 23:05. PR #30 stacked on #29; pytest 182.",
+  "commands": [
+    "python -m app.catalog.mb_feed --from 188410",
+    "Register-CatalogTasks.ps1 -Name 'Catalog Sync MusicBrainz'"
+  ],
+  "files": [
+    "app/catalog/mb_feed.py",
+    "tests/test_mb_feed.py",
+    "scripts/Sync-Catalog.ps1",
+    "scripts/Register-CatalogTasks.ps1",
+    "app/music/lyrics.py"
+  ],
+  "planPath": "",
+  "contentHash": "3f14105844016b0d98fdf6ce0c9cf61abffe80b356c7d83b56ae9c1114075f04",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-mb-feed",
+    "head": "f30d0f3",
+    "hasChanges": false
+  }
+}

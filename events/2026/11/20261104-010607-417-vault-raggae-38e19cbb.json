@@ -1,0 +1,46 @@
+{
+  "id": "20261104-010607-417-vault-raggae-38e19cbb",
+  "createdAt": "2026-11-04T06:06:07.4171136Z",
+  "createdAtLocal": "2026-11-04 01:06",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-anything-follower-fixup\r\nTools used (this reply): Bash, PowerShell, Read, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-04 01:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Anything follow-ups: (1) installed anything.exe does carry the new icon (gap lower-left); the taskbar/desktop show Windows' cached icon -> ran ie4uinit -show. (2) Case-sensitivity report not reproduced: CLI and the live service with the app's exact request (options from the operator's settings.json) return identical totals for Models/models/AMD with Match Path on and off; match_case is false by default; filters carry no options. The visible difference with Match Path is which text a plain term is compared to (file name vs full path: 17,389 vs 18,338 for 'path:F:\\amd\\models a'). Asked the operator for the exact query; proposed making other terms match the full path whenever the query names a path.",
+  "commands": [
+    "raggae-files query",
+    "pipe probe with the app's request"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "38e19cbba2ad6050446919527b246e5e1a4ccc59ec61665fa9d3e14cf828231a",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-anything-follower-fixup",
+    "head": "026355a",
+    "hasChanges": false
+  }
+}

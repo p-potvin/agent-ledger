@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261103-012919-577-panopticam-533ed4b8",
+    "createdAt":  "2026-11-03T06:29:19.5773088Z",
+    "createdAtLocal":  "2026-11-03 01:29",
+    "timezone":  "Eastern Standard Time",
+    "project":  "panopticam",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-03 01:29 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+    "summary":  "Follow-up on the 30 Oct session. Moments 1-3 Nov: 78 kept + 4 false starts; CB 42 / CS 25 / BongaCams 11; p50 146 s; chat-followed median 86 s (4/43 capped), chatless 26/33 capped (STILL 8 only just live). Heard on Nemotron: ~1,050 lines/day, 284/362 rooms agree with Whisper; lyric hallucinations + \u0027unk\u0027 -\u003e v0.75.4 drops Nemotron answers on CLAP-music clips, unk = no language; worker restarted. Memguard stops 206-290/day, unchanged vs before the speech server. STATE + HANDOFF.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "533ed4b8d5c9da0a55170a2e56dc77e358f627e9bc0a9b1d05867a1bdc864520",
+    "git":  {
+                "repo":  "panopticam",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+                "branch":  "main",
+                "head":  "d0563fb",
+                "hasChanges":  true
+            }
+}

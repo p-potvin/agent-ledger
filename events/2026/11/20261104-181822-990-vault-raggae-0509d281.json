@@ -1,0 +1,46 @@
+{
+  "id": "20261104-181822-990-vault-raggae-0509d281",
+  "createdAt": "2026-11-04T23:18:22.9902742Z",
+  "createdAtLocal": "2026-11-04 18:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "commands,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-04 18:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Operator approved: python -m app.links scenes --execute over G:\\mega wrote 894 auto scene links to media_links in vw-media.db (oshash 635, phash 188, near 33, name 20, fingerprint+name 17, near+name 1), one per file; 107 files queued for the Review page Files tab (96 unsure, 11 conflicts), 145 without candidates. Verified DB rows, review summary and the live Files tab. STATE note added to docs PR #40.",
+  "commands": [
+    "python -m app.links scenes --execute"
+  ],
+  "files": [
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "0509d2815189463b37039c8b7e39b4142a279622dff4934747c8361437d858c2",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "2a40fcb",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "20261105-082033-954-vault-raggae-vault-explorer-cd0028ee",
+  "createdAt": "2026-11-05T13:20:33.9540753Z",
+  "createdAtLocal": "2026-11-05 08:20",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae, vault-explorer",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-05 08:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Operator session: deployed vault-raggae #41/#42 (raggae-read rebuilt, read+gateway restarted, media_mtime/media_size indexes built; panel /api/media/files newest 3 ms warm). PR #43: Anything installer wording (operator), .bak deleted, nightly embed uncapped (A14; all 6,320,880 items already embedded), asks A9/A11/A16 closed, state notes. PR #44: ops.py moves unindexed masters with companions, case-only renames, new delete op (Recycle Bin with sidecars+companions). vault-explorer#65: rename/paste/delete through ops.py as local process (Anything contract), delete now Recycle Bin (was permanent), local fallback, prefix-rename bug fixed, Properties shows /v1/media/by-path; tests/raggae_ops_test.js passes vs #44. Other session's 27 uncommitted vault-explorer files untouched.",
+  "commands": [
+    "cargo build --release -p raggae-read",
+    "scripts\\Restart-Read.ps1",
+    "scripts\\Restart-Gateway.ps1",
+    "pytest -q",
+    "node tests/raggae_ops_test.js"
+  ],
+  "files": [
+    "vault-raggae/app/files/records/ops.py",
+    "vault-raggae/scripts/Sync-Catalog.ps1",
+    "vault-explorer/src/raggae-ops.js",
+    "vault-explorer/src/ipc/files.ipc.js",
+    "vault-explorer/src/ipc/media.ipc.js"
+  ],
+  "planPath": "",
+  "contentHash": "cd0028ee07be76cb25e57468b247809e301ae741f1d32600a2a11fd0cc4ad86c",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "0eca400",
+    "hasChanges": false
+  }
+}

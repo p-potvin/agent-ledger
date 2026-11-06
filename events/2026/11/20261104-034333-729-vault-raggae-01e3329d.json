@@ -1,0 +1,55 @@
+{
+  "id": "20261104-034333-729-vault-raggae-01e3329d",
+  "createdAt": "2026-11-04T08:43:33.7297509Z",
+  "createdAtLocal": "2026-11-04 03:43",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,plan,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-04 03:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "PR #34: app/probe.py playable length - audio windows/duration from decoded samples, video = shorter of default video/audio stream (moments, phash, /embed); secret-track album re-indexed (600.111 s, 0 inverted windows). pytest 190 passed. Read-only measurement of file-to-catalog matching: nothing linked yet; G:\\mega (operator: only TPDB/StashDB scenes there) 860/1,146 videos match vw-scenes scene_keys exactly by oshash/phash. A17 added to STATE (link store, multi-source, near matches, movies/TV scope).",
+  "commands": [
+    "pytest",
+    "python -m app.music.index --roots ... --force --no-lyrics",
+    "gh pr create"
+  ],
+  "files": [
+    "app/probe.py",
+    "app/music/index.py",
+    "app/moments/index.py",
+    "app/files/records/phash.py",
+    "app/embed.py",
+    "tests/test_probe.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "01e3329d2b2f2245852c13524edbdbf2ddddbd329c3754df1d3b7e77e3998c49",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "8ed5fe5",
+    "hasChanges": false
+  }
+}

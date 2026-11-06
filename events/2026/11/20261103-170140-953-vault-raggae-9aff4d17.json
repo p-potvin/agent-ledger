@@ -1,0 +1,48 @@
+{
+  "id": "20261103-170140-953-vault-raggae-9aff4d17",
+  "createdAt": "2026-11-03T22:01:40.9537327Z",
+  "createdAtLocal": "2026-11-03 17:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "plan",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: plan\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): AskUserQuestion, Artifact, Bash, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-03 17:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "plan",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "AskUserQuestion",
+      "Artifact",
+      "Bash",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "PR #26 merged; checkout on main. Ran a grill-me design interview (20 questions) for 'Anything', the voidtools Everything replacement: vaultsqware with 3 switchable palettes, Everything-style menus (no rail), details table (Name+shell icon, Date Modified locale, Size MiB incl. folders, Path bold, ~30 rows), Everything-compatible query core, on-demand content:, media-aware move/rename/copy, tray + Alt+T palette, separate windows, English only. Architecture: Rust raggae-files Windows service replacing the Python Files Index, memory-mapped index (A12), named-pipe IPC to Tauri raggae-desktop, all NTFS volumes incl. Temp minus dev-cache folders. Awaiting the operator's 'ship' on the design contract; no code written.",
+  "commands": [
+    "git switch main; git pull"
+  ],
+  "files": [
+    "vaultwares-themes (read)",
+    "vaultsqware design system artifact (read)"
+  ],
+  "planPath": "",
+  "contentHash": "9aff4d176548a6e188125b5f91e21ba7b0832abbfceef43b1207ab8eff7bfe2f",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "973e7a5",
+    "hasChanges": false
+  }
+}

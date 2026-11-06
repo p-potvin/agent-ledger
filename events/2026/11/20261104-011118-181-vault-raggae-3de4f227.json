@@ -1,0 +1,46 @@
+{
+  "id": "20261104-011118-181-vault-raggae-3de4f227",
+  "createdAt": "2026-11-04T06:11:18.1815079Z",
+  "createdAtLocal": "2026-11-04 01:11",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "commands,documentation",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-04 01:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Merged #32. Overnight chain finished 00:48 (embed + LanceDB sync complete, 0 unindexed; music done; 0 driver faults). Files switch: gateway restarted 00:49 and answers /v1/files from AnythingIndex (G:\\Catalogs 134.30 GB live), but the job's exact-bytes check false-negatived (live vs saved index, 1.2 MB); retired the Python Files Index by hand: task Disabled, 3 follower processes ended, vw-files.db kept as fallback. STATE PR #33 (docs).",
+  "commands": [
+    "gh pr merge 32",
+    "Disable-ScheduledTask 'Files Index'"
+  ],
+  "files": [
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "3de4f2279c329a11c6f841a6f7e5863cb5a393e68a2498c4c59e4f5362edd757",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "b62adb4",
+    "hasChanges": false
+  }
+}

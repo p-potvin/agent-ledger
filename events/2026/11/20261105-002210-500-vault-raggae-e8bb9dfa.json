@@ -1,0 +1,53 @@
+{
+  "id": "20261105-002210-500-vault-raggae-e8bb9dfa",
+  "createdAt": "2026-11-05T05:22:10.5008449Z",
+  "createdAtLocal": "2026-11-05 00:22",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-05 00:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Scheduled run vault-raggae-catalog-progression: health checks clean (#38/#39/#40 deployed, nightly tasks OK). PR #41: GET /v1/media/files (Library) ported to raggae-read (raggae-core media.rs with .thumbs previews, slow-cache count, VW_MEDIA_DB), parity test vs gateway (26 shapes + 503), identical items on live index, warm timings equal or faster; on by default in RAGGAE_READ_ROUTES. PR #42: media(mtime,path) and media(size,path) indexes in media_roles.ensure (all-kinds sorts 145-2000 ms -> 0.1-48 ms on in-memory copy). pytest 284 passed; cargo tests 7; clippy clean. STATE/SESSIONS/PERFORMANCE updated. Operator's uncommitted raggae-desktop edits left untouched; checkout back on main.",
+  "commands": [
+    "cargo build --release -p raggae-read",
+    "pytest -q",
+    "gh pr create"
+  ],
+  "files": [
+    "rust/raggae-core/src/media.rs",
+    "rust/raggae-read/src/main.rs",
+    "tests/test_rust_read.py",
+    "app/media_roles.py",
+    "app/config.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "e8bb9dfaf684ddaf70643f9297a86428df636589d18c7a0e35a434e735631967",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "079a4f3",
+    "hasChanges": true
+  }
+}

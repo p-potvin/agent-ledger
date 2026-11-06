@@ -1,0 +1,54 @@
+{
+  "id": "20261104-071404-300-vault-raggae-be041553",
+  "createdAt": "2026-11-04T12:14:04.3000887Z",
+  "createdAtLocal": "2026-11-04 07:14",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-media-links\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-04 07:14 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "#36: merged main (STATE conflict), fixed Devin's 4 (one auto link per file, operator confirmed/rejected respected, date guard on near+name and name stage, shared exact hash -> review); dry run 903/1,146. #37 scene sync rules (app/scenes/rules.py): women-only or women+men, excluded tags (JAV, PMV, AI-made, 180 VR, pee/piss/wetting); TPDB listing filtered by performer_genders[Female] (verified with 2 requests); keep-rule dry run: StashDB 195,838 and TPDB 54,185 stored scenes would be purged (not purged, awaits operator); Sync-Scenes.ps1 runs the scene merge after each sync (A18: TPDB stays daily). No review UI exists for merge/link candidates; proposed.",
+  "commands": [
+    "python -m app.scenes.ingest --apply-keep-rule --dry-run --source all",
+    "python -m app.links scenes",
+    "gh pr create"
+  ],
+  "files": [
+    "app/links.py",
+    "app/scenes/rules.py",
+    "app/scenes/sources.py",
+    "app/scenes/ingest.py",
+    "scripts/Sync-Scenes.ps1",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "be04155356bd4e2cc7ea36745c3ec3cf328ba79b7c55856c1f29f7db84b99539",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-media-links",
+    "head": "9cca603",
+    "hasChanges": false
+  }
+}

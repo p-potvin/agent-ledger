@@ -1,0 +1,44 @@
+{
+  "id": "20261103-235621-875-vaultwares-identity-manager-3a20eb5a",
+  "createdAt": "2026-11-04T04:56:21.8758382Z",
+  "createdAtLocal": "2026-11-03 23:56",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-identity-manager",
+  "kind": "verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: auto (network: local Windows 11)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-identity-manager  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-03 23:56 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "auto",
+    "network": "local Windows 11",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-identity-manager",
+  "summary": "Read-only analysis: local uncommitted WIP (29 files, based on 98537e2) is independent of PR 17 (5-10% line overlap, mostly boilerplate). Without PR 17 (ec57eff), WIP applies cleanly; the only pre-PR17 origin change is package-lock.json. No changes made.",
+  "commands": [
+    "git diff --stat",
+    "git apply --cached --check"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "3a20eb5abb83340fd4e19d1f27e07e36b7081627921463f44aa7bc38292e1000",
+  "git": {
+    "repo": "vaultwares-identity-manager",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-identity-manager",
+    "branch": "main",
+    "head": "71678aa",
+    "hasChanges": true
+  }
+}

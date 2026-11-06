@@ -1,0 +1,49 @@
+{
+  "id": "20261103-144332-855-vault-raggae-2f913f95",
+  "createdAt": "2026-11-03T19:43:32.8557067Z",
+  "createdAtLocal": "2026-11-03 14:43",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-embed-shards\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-03 14:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Operator asked to run the catalog embedding backfill on both GPUs. Added ingest --shard k/n, --embed-gpu (in-process model on the named card), --no-index (single LanceDB writer). Launched 14:39: shard 0 via gateway on RTX 3060 (~20/s, limit 900k, pid 28572) and shard 1 on RTX 2060 (~16/s, limit 650k, pid 30816); nightly 02:00 syncs LanceDB. PR #26 stacked on #25.",
+  "commands": [
+    "python -m app.catalog.ingest --source embed --shard 0/2 --no-index --embed-limit 900000",
+    "python -m app.catalog.ingest --source embed --shard 1/2 --embed-gpu 2060 --no-index --embed-limit 650000"
+  ],
+  "files": [
+    "app/catalog/ingest.py",
+    "tests/test_ingest.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "2f913f9533acc2cc94de48d64b63d404b727e918d6fa866751becd6bcc6dd762",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-embed-shards",
+    "head": "59083f4",
+    "hasChanges": false
+  }
+}

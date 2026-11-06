@@ -1,0 +1,56 @@
+{
+  "id": "20261104-095321-665-vault-raggae-7ff7918c",
+  "createdAt": "2026-11-04T14:53:21.6657262Z",
+  "createdAtLocal": "2026-11-04 09:53",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-review\r\nTools used (this reply): Bash, PowerShell, Write, Edit, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-04 09:53 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Operator go: purged stored scenes failing #37 rules (StashDB 195,836, TPDB 54,161 removed; 1,508,199 scenes left), cleaned 2,432 orphan merge flags + 9,804 orphan links, purge_scenes fixed to remove flags/links. #37 conflict resolved and merged into main. #38 Review page: app/review.py (scene_review + scene_not_same in vw-scenes.db, media_link_review in vw-media.db, audited/undoable decisions via undo_handlers), web Review.tsx; merge rerun filled 1,947 open scene items (+45 merges). Viewed in browser on throwaway port 8762. pytest 275 passed. File queue awaits app.links --execute (operator).",
+  "commands": [
+    "python -m app.scenes.ingest --apply-keep-rule --source all",
+    "python -m app.scenes.merge --execute",
+    "gh pr merge 37",
+    "gh pr create"
+  ],
+  "files": [
+    "app/review.py",
+    "web/src/pages/Review.tsx",
+    "app/scenes/store.py",
+    "app/scenes/merge.py",
+    "app/edits.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "7ff7918c5970cf3256b3cfb337768b37410edaf0f89b313191aaebb07ec63c7f",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-review",
+    "head": "4aa8eb1",
+    "hasChanges": false
+  }
+}
