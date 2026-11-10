@@ -1,0 +1,50 @@
+{
+  "id": "20261109-235948-002-vault-raggae-2ea5bb8a",
+  "createdAt": "2026-11-10T04:59:48.0022694Z",
+  "createdAtLocal": "2026-11-09 23:59",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-sync-returns\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-09 23:59 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Scheduled run Mon 09 Nov 2026: verified #63 live (gateway VRAM 1.7 GB reserved), lyrics embed finished (3,624,739 embedded+indexed), nightly embed and scenes sync exit 0. Found Media Sync left 382 linked G: files marked missing after they came back at their path under a new FRN; fixed sync.plan_moves (returns) + one-time --recheck-missing (run live: 406 rows restored). Wrote 1 new scene sidecar block. PR p-potvin/vault-raggae#64 (v0.20.5); STATE.md and SESSIONS.md updated.",
+  "commands": [
+    "python app/files/records/sync.py --recheck-missing --execute",
+    "python -m app.links sidecars --execute"
+  ],
+  "files": [
+    "app/files/records/sync.py",
+    "tests/test_media_sync_returns.py",
+    "docs/STATE.md",
+    "docs/state/SESSIONS.md"
+  ],
+  "planPath": "",
+  "contentHash": "2ea5bb8a8df65e6500caf88d73522434649362ef12607f7f145d5fdd511e8be0",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-sync-returns",
+    "head": "1d93352",
+    "hasChanges": false
+  }
+}

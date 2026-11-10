@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261106-221742-300-nemo-speech-cpp-upstream-eb6464fe",
+    "createdAt":  "2026-11-07T03:17:42.3002269Z",
+    "createdAtLocal":  "2026-11-06 22:17",
+    "timezone":  "Eastern Standard Time",
+    "project":  "NeMo-Speech.cpp-upstream",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 2.5 Pro\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\NeMo-Speech.cpp-upstream  Branch: vw-codex-upstream-sync\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-06 22:17 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 2.5 Pro",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\NeMo-Speech.cpp-upstream",
+    "summary":  "Investigated duplicate subtitle filename report; confirmed source directory contained separate (1).mp4 media file, verified Start-BetterSubtitles translation and skip logic",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "eb6464fe2e3228e22e5960cc18bdf75a1134cc04799e3a471e5bfb196d26b52c",
+    "git":  {
+                "repo":  "NeMo-Speech.cpp-upstream",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/NeMo-Speech.cpp-upstream",
+                "branch":  "vw-codex-upstream-sync",
+                "head":  "536b17a",
+                "hasChanges":  true
+            }
+}

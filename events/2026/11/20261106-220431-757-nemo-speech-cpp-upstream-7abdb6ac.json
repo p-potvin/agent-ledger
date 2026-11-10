@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261106-220431-757-nemo-speech-cpp-upstream-7abdb6ac",
+    "createdAt":  "2026-11-07T03:04:31.7570881Z",
+    "createdAtLocal":  "2026-11-06 22:04",
+    "timezone":  "Eastern Standard Time",
+    "project":  "NeMo-Speech.cpp-upstream",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 3.8 Flash\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\NeMo-Speech.cpp-upstream  Branch: vw-codex-upstream-sync\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-06 22:04 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3.8 Flash",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\NeMo-Speech.cpp-upstream",
+    "summary":  "Fix Start-BetterSubtitles.ps1 subtitle target logic: write new language SRT without rewriting original SRT when -SkipExisting is passed; support -Force to rewrite both",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "7abdb6aca20f6b5f282dbadce9d365084ad54e9bac04228f9c0e11bb0144363e",
+    "git":  {
+                "repo":  "NeMo-Speech.cpp-upstream",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/NeMo-Speech.cpp-upstream",
+                "branch":  "vw-codex-upstream-sync",
+                "head":  "536b17a",
+                "hasChanges":  true
+            }
+}

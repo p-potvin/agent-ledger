@@ -1,0 +1,49 @@
+{
+  "id": "20261107-130124-314-vault-raggae-4bda72c7",
+  "createdAt": "2026-11-07T18:01:24.3148286Z",
+  "createdAtLocal": "2026-11-07 13:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "documentation,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-state-lyrics-matched\r\nTools used (this reply): Bash, PowerShell, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-07 13:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Lyrics full match done: 40,826,836 recordings, 8,034,790 with lyrics (19.7%), 5h49m; baseline set (fetch_floor 48,420,347). LRCLIB .gz already gone from I:. Docs PR #58 updates STATE/SESSIONS (deploy status, uids, old library dropped, cleanup items, embedding pace ask).",
+  "commands": [
+    "python -m app.music.catalog_lyrics match",
+    "python -m app.music.catalog_lyrics baseline",
+    "gh pr create"
+  ],
+  "files": [
+    "docs/STATE.md",
+    "docs/state/SESSIONS.md"
+  ],
+  "planPath": "",
+  "contentHash": "4bda72c7987649db2f745c33268392828631879fdff780ab86791c681d3d6204",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-state-lyrics-matched",
+    "head": "0b71c82",
+    "hasChanges": false
+  }
+}

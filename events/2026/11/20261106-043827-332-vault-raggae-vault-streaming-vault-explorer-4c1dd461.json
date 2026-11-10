@@ -1,0 +1,56 @@
+{
+  "id": "20261106-043827-332-vault-raggae-vault-streaming-vault-explorer-4c1dd461",
+  "createdAt": "2026-11-06T09:38:27.3322556Z",
+  "createdAtLocal": "2026-11-06 04:38",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae, vault-streaming, vault-explorer",
+  "kind": "code-change,commands,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-06 04:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Implemented the vault-streaming review fixes. vault-raggae: pushed the other session's unpushed vw-codex-next-steps as #47; #48 (stacked) makes /v1/catalog/ingest fill-only (enrich_item), loopback only, CATALOG_WRITE, category check, 100-item cap, vector dropped on text change (pytest 291). Checkout back on main, raggae-read and panel rebuilt, read + gateway restarted (ingest now 405). Deleted fake imdb:tt8888888 (item + FTS row) through the SQL bridge. vault-streaming#13: movie+tv local search re-ranked, TMDB when local is thin, paging, IMDb->TMDB id mapping with catalog fallback, exact-id details, ingest keyed on IMDb ids without placeholders, breaker on network errors only, project header, sidecar contract via vault-explorer modules, OMDb key in .env + https + redacted logs; self-contained test (10 checks). vault-explorer#67: literal temp-file name broke cross-drive sidecar writes.",
+  "commands": [
+    "pytest",
+    "cargo build --release",
+    "npm run build",
+    "Restart-Gateway.ps1",
+    "node tests/test_raggae_integration.js"
+  ],
+  "files": [
+    "vault-raggae/app/catalog/db.py",
+    "vault-raggae/app/main.py",
+    "vault-streaming/src/tmdb.js",
+    "vault-streaming/src/raggae.js",
+    "vault-streaming/src/ipc/media.ipc.js",
+    "vault-explorer/src/sidecar-record.js"
+  ],
+  "planPath": "",
+  "contentHash": "4c1dd461bd8d07668ad51d37d9ee1a13f0d37e86da6302ffdf09053d999ccd1d",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "818b1ab",
+    "hasChanges": false
+  }
+}

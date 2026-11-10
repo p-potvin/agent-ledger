@@ -1,0 +1,53 @@
+{
+  "id": "20261107-175847-212-vault-raggae-c01ca066",
+  "createdAt": "2026-11-07T22:58:47.2125389Z",
+  "createdAtLocal": "2026-11-07 17:58",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-panel-one-scene-catalog\r\nTools used (this reply): Bash, PowerShell, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-07 17:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Panel: removed the per-site scene source concept (toggle, badges, source rows, per-site wording, request breakdown); link picker searches all scenes; v0.20.2, PR vault-raggae#61, built and checked live on :8752. viewer.vaultwares.ca checked: up (200, v0.3.0, no console errors), nginx on greencloud is tailnet-only (403 off-tailnet).",
+  "commands": [
+    "npm run build",
+    "gh pr create",
+    "ssh greencloud nginx logs"
+  ],
+  "files": [
+    "web/src/scenes.ts",
+    "web/src/pages/Scenes.tsx",
+    "web/src/pages/Performers.tsx",
+    "web/src/components/SceneSheet.tsx",
+    "web/src/pages/Review.tsx",
+    "web/src/pages/Overview.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "c01ca0662094f902bc9c0671d8bb8ad6ccd5c98b941f2b70d0431b884f8dc3d1",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-panel-one-scene-catalog",
+    "head": "1f9028a",
+    "hasChanges": false
+  }
+}

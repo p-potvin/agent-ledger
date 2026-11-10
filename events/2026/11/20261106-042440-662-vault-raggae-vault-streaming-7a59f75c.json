@@ -1,0 +1,47 @@
+{
+  "id": "20261106-042440-662-vault-raggae-vault-streaming-7a59f75c",
+  "createdAt": "2026-11-06T09:24:40.6624844Z",
+  "createdAtLocal": "2026-11-06 04:24",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae, vault-streaming",
+  "kind": "verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: chat\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-codex-next-steps\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-06 04:24 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "chat",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Checked the operator's fix plan for the vault-streaming review. Facts: catalog_fts is a plain FTS5 table without triggers; raggae commit fc10775 (vw-codex-next-steps) is unpushed; the live gateway was restarted 06 Nov 03:29 on that branch (it serves /v1/catalog/ingest); rust/target raggae-read.exe (03:13) and web/dist (03:44) were built from it; no live DB schema changes. Advice: delete through the gateway writer, push the branch before switching, rebuild raggae-read and the panel on main and restart gateway/read, review the ingest endpoint itself, extra items for the streaming fixes. No changes made.",
+  "commands": [
+    "git reflog",
+    "sqlite read-only schema check"
+  ],
+  "files": [
+    "vault-raggae/app/main.py",
+    "vault-streaming/src/tmdb.js"
+  ],
+  "planPath": "",
+  "contentHash": "7a59f75cd6ea20e93bf7bb5aae3b0271111f00f62af2d16845ec07129d633423",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-codex-next-steps",
+    "head": "fc10775",
+    "hasChanges": false
+  }
+}

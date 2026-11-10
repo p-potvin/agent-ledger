@@ -1,0 +1,46 @@
+{
+  "id": "20261108-025159-330-vault-raggae-9267e8a4",
+  "createdAt": "2026-11-08T07:51:59.3306441Z",
+  "createdAtLocal": "2026-11-08 02:51",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-scene-sidecars\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-08 02:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Scheduled run (vault-raggae-catalog-progression). Health: nightly embed + scenes sync exit 0; 3,556 nvlddmkm event 13 GPU faults Sat 17:00-Sun 01:00 (nothing died); lyrics embed 1.08M/3.62M slowed 40->16/s; nemo-speech holds a context on both GPUs. New: python -m app.links sidecars (app/scene_sidecars.py) writes a catalog block (scene uid, title, date, studio, performers, link) into linked files' sidecars, journal + undo; live dry run 892 to write, not executed. v0.20.3, PR p-potvin/vault-raggae#62. STATE/SESSIONS/ROADMAP updated.",
+  "commands": [
+    "python -m app.links sidecars",
+    "pytest -q"
+  ],
+  "files": [
+    "app/scene_sidecars.py",
+    "app/links.py",
+    "tests/test_scene_sidecars.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "9267e8a4a332f1eb7f6ba12d3cef9e633ff1578feded3e3218d03be0c78b7822",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-scene-sidecars",
+    "head": "eeb29e6",
+    "hasChanges": false
+  }
+}

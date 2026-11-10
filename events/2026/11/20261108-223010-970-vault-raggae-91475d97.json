@@ -1,0 +1,47 @@
+{
+  "id": "20261108-223010-970-vault-raggae-91475d97",
+  "createdAt": "2026-11-09T03:30:10.9705519Z",
+  "createdAtLocal": "2026-11-08 22:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-embed-vram-cap\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-08 22:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Merged PR #62 (rebased on #61, version conflict resolved). 3060 overflow traced to the gateway's torch caching allocator (reserved 14.4 GB vs 1.9 GB allocated, 3.3 GB spilled to shared memory), not nemo-speech (cuda:1, 93 MB on 3060). PR #63 (v0.20.4): EMBED_VRAM_CAP_MB 6144 + empty_cache past EMBED_CACHE_SLACK_MB 1536; pytest 315 passed; not deployed. STATE notes candidate stores to move to CLOPEUX-UBUNTU.",
+  "commands": [
+    "gh pr merge 62 --merge",
+    "curl 127.0.0.1:8750/health",
+    "pytest -q"
+  ],
+  "files": [
+    "app/embed.py",
+    "app/config.py",
+    "tests/test_embed_trim.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "91475d97384f1fd2beba5753c6995e5e0f37ff313714166c36a753891f5b201a",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-embed-vram-cap",
+    "head": "c832012",
+    "hasChanges": false
+  }
+}

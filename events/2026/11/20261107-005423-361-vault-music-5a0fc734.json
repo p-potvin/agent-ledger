@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261107-005423-361-vault-music-5a0fc734",
+    "createdAt":  "2026-11-07T05:54:23.3611719Z",
+    "createdAtLocal":  "2026-11-07 00:54",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-music",
+    "kind":  "code-change,verification",
+    "actor":  "vault-raggae/docs/STATE.md",
+    "agentHeader":  "Agent: vault-raggae/docs/STATE.md (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: bypass (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-07 00:54 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "agent",
+                    "permissions":  "bypass",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "vault-music#6: committed another session\u0027s Apple Music work as found; MusicBrainz lookups through vault-raggae (/v1/sql/musicbrainz + /v1/catalog/search, back-off, no title-only guess with artist) replacing the deleted I: SQLite + python -c; tag-reader reads ID3v2.2, MP4 ilst, Ogg, UTF-16 (G:\\Music titles M4A 0-\u003e672, MP3 135-\u003e577); genres precedence fix; v1.3.0; npm test 10/10. vault-raggae: #49 deployed (changes 73-86 ms), docs PR #50. Answered Python vs Rust inventory.",
+    "commands":  [
+                     "vault-music/src/musicbrainz/tag-reader.js"
+                 ],
+    "files":  [
+                  "vault-music/src/musicbrainz/local-db.js"
+              ],
+    "planPath":  "vault-music/tests/musicbrainz_raggae_test.js",
+    "contentHash":  "5a0fc734366d8820cd4e929326dea71a576613c13c96055b20e9fad93834d862",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "c8db16b",
+                "hasChanges":  false
+            }
+}

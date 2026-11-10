@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261108-233449-198-nemo-speech-cpp-upstream-785da589",
+    "createdAt":  "2026-11-09T04:34:49.1988413Z",
+    "createdAtLocal":  "2026-11-08 23:34",
+    "timezone":  "Eastern Standard Time",
+    "project":  "NeMo-Speech.cpp-upstream",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Claude Opus 4.6\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\NeMo-Speech.cpp-upstream  Branch: vw-codex-upstream-sync\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-08 23:34 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude Opus 4.6",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\NeMo-Speech.cpp-upstream",
+    "summary":  "Diagnosed parakeet-tdt RTFx regression (missing fused_max_q gate in rel_pos_attention.cpp), explained unbounded offline VRAM (pos_emb_max_len=5000 / 400s chunks without VAD segmentation), and reproduced French vs Quebecois bilingual gaps on unmodified NeMo-Speech.cpp 0.3.0 build",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "785da589ed9e931161d9384cb6a03154e777fdcf99c9aa83a3bd5bf3dbd58039",
+    "git":  {
+                "repo":  "NeMo-Speech.cpp-upstream",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/NeMo-Speech.cpp-upstream",
+                "branch":  "vw-codex-upstream-sync",
+                "head":  "536b17a",
+                "hasChanges":  true
+            }
+}

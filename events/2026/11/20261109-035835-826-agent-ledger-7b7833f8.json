@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261109-035835-826-agent-ledger-7b7833f8",
+    "createdAt":  "2026-11-09T08:58:35.8265587Z",
+    "createdAtLocal":  "2026-11-09 03:58",
+    "timezone":  "Eastern Standard Time",
+    "project":  "agent-ledger",
+    "kind":  "documentation",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 2.5 Pro\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-09 03:58 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 2.5 Pro",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+    "summary":  "Document empirical limitations of 2D gaze/RBF warping and roadmap for 3D FLAME/SPADE projection",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "7b7833f89d8083f4b3eb9e62e261e8e1130c2584914336b1dbdc8399864be5fc",
+    "git":  {
+                "repo":  "agent-ledger",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+                "branch":  "main",
+                "head":  "c172103c",
+                "hasChanges":  true
+            }
+}
