@@ -1,0 +1,38 @@
+{
+  "id": "20261110-192712-368-colonel-kfc-7428f227",
+  "createdAt": "2026-11-11T00:27:12.3684886Z",
+  "createdAtLocal": "2026-11-10 19:27",
+  "timezone": "Eastern Standard Time",
+  "project": "ColONEL-KFC",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-10 19:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Panopticam _pending --existing add finished: 1 created, 4453 added, 74 skipped, 87 failed (folders 3039-3126, contiguous; FileNotFoundError then missing pwsh.dll - transient PowerShell 7 outage; pwsh present now, photos still in _pending). Report F:\\amd\\gallery\\identity-folder-import-report.json.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "7428f22796045ddcc1f2aa87fd28b2fb2eee3082ab72b0851b4c4de3fcb01531",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "4a90416",
+    "hasChanges": true
+  }
+}

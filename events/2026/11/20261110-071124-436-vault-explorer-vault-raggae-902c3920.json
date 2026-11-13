@@ -1,0 +1,50 @@
+{
+  "id": "20261110-071124-436-vault-explorer-vault-raggae-902c3920",
+  "createdAt": "2026-11-10T12:11:24.4368934Z",
+  "createdAtLocal": "2026-11-10 07:11",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer, vault-raggae",
+  "kind": "code-change,commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-10 07:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Tue 10 Nov 2026: vault-explorer#69 second Gemini round (retry tag load after failure incl. gateway success:false; null-safe proof) fixed and merged. vault-raggae: #65/#66 merged by operator, checkout on main, panel rebuilt, gateway restarted. Operator rule: 81 date-only-titled scene records with no candidate duration within 10 s marked different via audited route; queue 1,303 open. Docs PR vault-raggae#67.",
+  "commands": [
+    "gh pr merge 69 --merge",
+    "python date_titles.py --execute",
+    "scripts\\Restart-Gateway.ps1"
+  ],
+  "files": [
+    "vault-explorer/js/audio.js",
+    "vault-explorer/tests/music_tab_proof.js",
+    "vault-raggae/docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "902c3920729a6b22c2cf368a777ae4daa8e633813f8ac1024c00f4b4b100d2bc",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "53bbdef",
+    "hasChanges": false
+  }
+}

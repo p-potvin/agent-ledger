@@ -3,7 +3,496 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-11-09 23:59 - vault-raggae (formerly nvidia-rag, NVIDIA RAG, NVIDIA RAG Ingestion, NVIDIA RAG Blueprint)</strong> <code>code-change,verification</code> - Scheduled run Mon 09 Nov 2026: verified #63 live (gateway VRAM 1.7 GB reserved), lyrics embed finished (3,624,739 embedded+indexed), nightly embed and scenes sync exit 0. Found ...</summary>
+<summary><strong>2026-11-12 09:51 - vault-raggae (formerly nvidia-rag, NVIDIA RAG, NVIDIA RAG Ingestion, NVIDIA RAG Blueprint)</strong> <code>code-change</code> - Addressed second CodeRabbit review on NVIDIA/NeMo-Speech.cpp PR #106 by clamping each offline segment&#39;s decoded frame count T_eff to its real-audio interval and next segment off...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Claude 4.6 Opus
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-12 09:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: Addressed second CodeRabbit review on NVIDIA/NeMo-Speech.cpp PR #106 by clamping each offline segment's decoded frame count T_eff to its real-audio interval and next segment offset, preventing overlapping boundary timestamps
+- Git: repo=vault-raggae, branch=main, head=607686e
+
+</details>
+
+<details>
+<summary><strong>2026-11-12 09:36 - vault-raggae</strong> <code>code-change</code> - Addressed CodeRabbit review on NVIDIA/NeMo-Speech.cpp PR #106 by mapping offline segment timestamps from sample offsets (off / enc_frame_samples) instead of accumulating padded ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Claude 4.6 Opus
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-12 09:36 (TZ: Eastern Standard Time)
+  ```
+- Summary: Addressed CodeRabbit review on NVIDIA/NeMo-Speech.cpp PR #106 by mapping offline segment timestamps from sample offsets (off / enc_frame_samples) instead of accumulating padded encoder output lengths T, rebuilt nemo-speech.exe, and pushed commit 7f102131 to PR branch
+- Git: repo=vault-raggae, branch=main, head=607686e
+
+</details>
+
+<details>
+<summary><strong>2026-11-12 09:07 - vault-raggae</strong> <code>code-change</code> - Reverted default ASR model in vault-commander (nemo_asr.py) to parakeet-tdt and opened draft PR #106 on NVIDIA/NeMo-Speech.cpp for relpos query-length gating and 90s offline VRA...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Claude 4.6 Opus
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-12 09:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Reverted default ASR model in vault-commander (nemo_asr.py) to parakeet-tdt and opened draft PR #106 on NVIDIA/NeMo-Speech.cpp for relpos query-length gating and 90s offline VRAM bounding
+- Git: repo=vault-raggae, branch=main, head=607686e
+
+</details>
+
+<details>
+<summary><strong>2026-11-12 08:55 - vault-raggae</strong> <code>commands</code> - Committed and pushed NeMo-Speech.cpp 0.3.0 upgrade + patches in vault-cacophony (f59756a8), subtitle/boosting updates in vault-commander (0b0d6b0), and Start-NemoServer.ps1 unif...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Claude 4.6 Opus
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-12 08:55 (TZ: Eastern Standard Time)
+  ```
+- Summary: Committed and pushed NeMo-Speech.cpp 0.3.0 upgrade + patches in vault-cacophony (f59756a8), subtitle/boosting updates in vault-commander (0b0d6b0), and Start-NemoServer.ps1 unified binary switch in panopticam (22c5ef7) to main
+- Git: repo=vault-raggae, branch=main, head=607686e
+
+</details>
+
+<details>
+<summary><strong>2026-11-12 02:55 - shared-tube (formerly Prom-King/shared-tube, Prom-King/shared-tube + vaultwares-pipelines, Prom-King/shared-tube + vaultwares-api, Prom-King/shared-tube + vaultwares-mcp, Prom-King/shared-tube + vaultwares-docs, Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs, shared-tube + brume2, tube-sites, tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa, Prom-King Keep2Share &amp; ShareVerge Pipeline, Prom-King &amp; VaultWares API, Monitoring and Prom-King tube operations)</strong> <code>code-change</code> - Completed Prom-King shared-tube and vaultwares-api unit test fixes, media preview audit and recovery, dead upstream media record cleanup, database taxonomy/performer consistency...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Claude Sonnet 4.6
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-12 02:55 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed Prom-King shared-tube and vaultwares-api unit test fixes, media preview audit and recovery, dead upstream media record cleanup, database taxonomy/performer consistency cleanup, greencloud and OVH deployments, outbound mail policy whitelist for site admin contact, and TODO checklist update
+- Git: repo=shared-tube, branch=main, head=cb3ded4
+
+</details>
+
+<details>
+<summary><strong>2026-11-12 00:56 - vault-raggae</strong> <code>code-change</code> - Ported relpos_max_q=512 shape gate, bounded offline ASR VRAM to 90s segments (~1.6 GB VRAM, 177.5x RTFx on parakeet-tdt), applied Panopticam realtime language patch, switched Pa...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Claude 4.6 Opus
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-12 00:56 (TZ: Eastern Standard Time)
+  ```
+- Summary: Ported relpos_max_q=512 shape gate, bounded offline ASR VRAM to 90s segments (~1.6 GB VRAM, 177.5x RTFx on parakeet-tdt), applied Panopticam realtime language patch, switched Panopticam Start-NemoServer.ps1 to vault-cacophony NeMo-Speech.cpp build, and removed NeMo-Speech.cpp-upstream
+- Git: repo=vault-raggae, branch=main, head=607686e
+
+</details>
+
+<details>
+<summary><strong>2026-11-11 23:18 - shared-tube</strong> <code>code-change</code> - Implemented pooled per-timestamp HTTP range-seek sprite generation in vaultwares-api Prom-King media generator with single-pass fallback and unit tests, verified compileall/pyte...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-11 23:18 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented pooled per-timestamp HTTP range-seek sprite generation in vaultwares-api Prom-King media generator with single-pass fallback and unit tests, verified compileall/pytest/pnpm checks, deployed generator.py to OVH, verified live media and host services, and cleaned temporary scratch artifacts.
+- Git: repo=shared-tube, branch=main, head=cb3ded4
+
+</details>
+
+<details>
+<summary><strong>2026-11-11 18:08 - shared-tube</strong> <code>commands</code> - Restarted privado-vpn and privado-proxy fleet + watchdog timer on vps-ovhcloud so video stream/preview proxies on ports 18888-18898 are back online</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-11 18:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: Restarted privado-vpn and privado-proxy fleet + watchdog timer on vps-ovhcloud so video stream/preview proxies on ports 18888-18898 are back online
+- Git: repo=shared-tube, branch=main, head=cb3ded4
+
+</details>
+
+<details>
+<summary><strong>2026-11-11 14:10 - shared-tube</strong> <code>code-change</code> - Implemented Steps 1-4: stopped qa_runner and privado-vpn on OVH, deployed FastAPI sort=hot singleflight/SWR cache + UNION search query optimization + dedicated fetcher DB pool +...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-11 14:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented Steps 1-4: stopped qa_runner and privado-vpn on OVH, deployed FastAPI sort=hot singleflight/SWR cache + UNION search query optimization + dedicated fetcher DB pool + uvicorn/nginx keepalive/Postgres work_mem tuning, and rebuilt shared-tube SSR singleflight/SWR caches on greencloud-vps
+- Git: repo=shared-tube, branch=main, head=cb3ded4
+
+</details>
+
+<details>
+<summary><strong>2026-11-11 12:14 - shared-tube</strong> <code>verification</code> - Reviewed and improved remediation plan for OVH API/Postgres saturation and qa_runner/privado migration to clopeux-ubuntu</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-11 12:14 (TZ: Eastern Standard Time)
+  ```
+- Summary: Reviewed and improved remediation plan for OVH API/Postgres saturation and qa_runner/privado migration to clopeux-ubuntu
+- Git: repo=shared-tube, branch=main, head=cb3ded4
+
+</details>
+
+<details>
+<summary><strong>2026-11-11 11:25 - shared-tube</strong> <code>verification</code> - Investigated shared-tube 504/502 outages across greencloud-vps and vps-ovhcloud, verified 100.71.101.21 logs/connectivity, and confirmed live recovery</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-11 11:25 (TZ: Eastern Standard Time)
+  ```
+- Summary: Investigated shared-tube 504/502 outages across greencloud-vps and vps-ovhcloud, verified 100.71.101.21 logs/connectivity, and confirmed live recovery
+- Git: repo=shared-tube, branch=main, head=cb3ded4
+
+</details>
+
+<details>
+<summary><strong>2026-11-11 05:12 - vault-raggae</strong> <code>code-change,verification</code> - Scheduled run Wed 11 Nov 2026: PR #70 (v0.22.1) photo dates refreshed hourly via Media Watch, PHOTO_ROOTS default I:\, 807 new pictures dated live; PR #71 Library grid keys o/c/...</summary>
+
+- Kind: code-change,verification
+- Actor: Claude
+- Agent Header:
+  ```text
+  Agent: Claude (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: local Windows (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-raggae-photo-refresh
+  Tools used (this reply): Bash, PowerShell, Edit, Claude_Browser
+  MCP servers accessed (this reply): none
+  Time: 2026-11-11 05:12 (TZ: Eastern Standard Time)
+  ```
+- Summary: Scheduled run Wed 11 Nov 2026: PR #70 (v0.22.1) photo dates refreshed hourly via Media Watch, PHOTO_ROOTS default I:\, 807 new pictures dated live; PR #71 Library grid keys o/c/f/+/- verified on live panel (dist rebuilt from main after). Retried 87 Panopticam identity imports that failed during a pwsh upgrade (87 added); ran KFC imports_archiver on F: (2,753 folders, 9,272 photos packed). STATE/SESSIONS/MEDIA-UI updated on #70.
+- Commands:
+  - `python -m app.photos exif --execute`
+  - `python -m face_organizer.folder_processor --existing add`
+  - `python -m face_organizer.imports_archiver --gallery F:\amd\gallery --execute`
+- Files:
+  - `app/photos.py`
+  - `app/config.py`
+  - `scripts/Register-WatchTask.ps1`
+  - `web/src/components/gridKeys.ts`
+  - `web/src/media/MediaGrid.tsx`
+  - `docs/STATE.md`
+- Git: repo=vault-raggae, branch=vw-raggae-photo-refresh, head=c812615
+
+</details>
+
+<details>
+<summary><strong>2026-11-10 19:27 - ColONEL-KFC</strong> <code>verification</code> - Panopticam _pending --existing add finished: 1 created, 4453 added, 74 skipped, 87 failed (folders 3039-3126, contiguous; FileNotFoundError then missing pwsh.dll - transient Pow...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-10 19:27 (TZ: Eastern Standard Time)
+  ```
+- Summary: Panopticam _pending --existing add finished: 1 created, 4453 added, 74 skipped, 87 failed (folders 3039-3126, contiguous; FileNotFoundError then missing pwsh.dll - transient PowerShell 7 outage; pwsh present now, photos still in _pending). Report F:\amd\gallery\identity-folder-import-report.json.
+- Git: repo=vault-explorer, branch=main, head=4a90416
+
+</details>
+
+<details>
+<summary><strong>2026-11-10 14:35 - ColONEL-KFC</strong> <code>verification</code> - Background .dataset-imports import + archive run finished (exit 0, Tue, 10 Nov 2026 14:35); Panopticam _pending add-to-existing at 1903/4615.</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-10 14:35 (TZ: Eastern Standard Time)
+  ```
+- Summary: Background .dataset-imports import + archive run finished (exit 0, Tue, 10 Nov 2026 14:35); Panopticam _pending add-to-existing at 1903/4615.
+- Git: repo=vault-explorer, branch=main, head=4a90416
+
+</details>
+
+<details>
+<summary><strong>2026-11-10 10:55 - ColONEL-KFC, vault-raggae, vault-explorer, vault-commander, vaultwares-themes</strong> <code>code-change,commands</code> - Tue 10 Nov 2026: reindex (extract_and_register_folder_crops) now uses group photos via common_face (exemplars only when singles fall short). Merged ColONEL-KFC#9, vault-commande...</summary>
+
+- Kind: code-change,commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-10 10:55 (TZ: Eastern Standard Time)
+  ```
+- Summary: Tue 10 Nov 2026: reindex (extract_and_register_folder_crops) now uses group photos via common_face (exemplars only when singles fall short). Merged ColONEL-KFC#9, vault-commander#36, vault-explorer#70, vault-raggae#68 and #69 (retargeted to main), vault-explorer#71 (icon sync, auto-merged after CodeQL). All five repos on main; gateway restarted on main (tailnet + public 200), panel rebuilt. Background imports still running on main code.
+- Git: repo=vault-explorer, branch=main, head=4a90416
+
+</details>
+
+<details>
+<summary><strong>2026-11-10 10:36 - ColONEL-KFC, vault-explorer, vault-commander, vault-raggae</strong> <code>code-change,commands</code> - Tue 10 Nov 2026: vault-explorer#70 Gemini review fixed (RAGGAE_URL, async folders, listener leaks, batched deletes) plus months cover overflow and centered X. KFC#9: move_identi...</summary>
+
+- Kind: code-change,commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-raggae-relink-settle
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-10 10:36 (TZ: Eastern Standard Time)
+  ```
+- Summary: Tue 10 Nov 2026: vault-explorer#70 Gemini review fixed (RAGGAE_URL, async folders, listener leaks, batched deletes) plus months cover overflow and centered X. KFC#9: move_identity command, group-picture common-face fallback for identity creation, recalculate_centroid retired to reindex_gallery (no cap). commander#36: vw move-identity. Started --existing add on 4,615 Panopticam _pending folders (background); .dataset-imports import/archive still running.
+- Git: repo=vault-raggae, branch=vw-raggae-relink-settle, head=dcb7843
+
+</details>
+
+<details>
+<summary><strong>2026-11-10 09:47 - ColONEL-KFC, vault-raggae, vault-explorer, vault-commander, vaultwares-themes</strong> <code>code-change,commands</code> - Tue 10 Nov 2026: identity folder import + .dataset-imports archiver (python-zipper naming, .imported ledger) running live on G: and F:; identify-video writes face track into mai...</summary>
+
+- Kind: code-change,commands
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-raggae-relink-settle
+  Tools used (this reply): Bash, PowerShell, Edit, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-11-10 09:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: Tue 10 Nov 2026: identity folder import + .dataset-imports archiver (python-zipper naming, .imported ledger) running live on G: and F:; identify-video writes face track into main sidecar (KFC#9, commander#36). Gallery relink: unknown0... merged into crystalclark and lolasin into lolasinn via KFC tools (backups, crops restored), 239 refusals settled (raggae#69). Photos: I: indexed, photo dates read for I:\FDrive\gallery, routes live; explorer Photos tab PR #70 proven; icons PR themes#24 fixed.
+- Commands:
+  - `face_organizer.folder_processor + imports_archiver --execute (background)`
+  - `remove_identity / recalculate_centroid`
+  - `app.photos exif --execute`
+- Files:
+  - `ColONEL-KFC/face_organizer/folder_processor.py`
+  - `ColONEL-KFC/face_organizer/imports_archiver.py`
+  - `vault-raggae/app/files/records/gallery.py`
+  - `vault-explorer/js/photos-library.js`
+- Git: repo=vault-raggae, branch=vw-raggae-relink-settle, head=3972c67
+
+</details>
+
+<details>
+<summary><strong>2026-11-10 07:11 - vault-explorer, vault-raggae</strong> <code>code-change,commands</code> - Tue 10 Nov 2026: vault-explorer#69 second Gemini round (retry tag load after failure incl. gateway success:false; null-safe proof) fixed and merged. vault-raggae: #65/#66 merged...</summary>
+
+- Kind: code-change,commands
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): Bash, PowerShell, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-11-10 07:11 (TZ: Eastern Standard Time)
+  ```
+- Summary: Tue 10 Nov 2026: vault-explorer#69 second Gemini round (retry tag load after failure incl. gateway success:false; null-safe proof) fixed and merged. vault-raggae: #65/#66 merged by operator, checkout on main, panel rebuilt, gateway restarted. Operator rule: 81 date-only-titled scene records with no candidate duration within 10 s marked different via audited route; queue 1,303 open. Docs PR vault-raggae#67.
+- Commands:
+  - `gh pr merge 69 --merge`
+  - `python date_titles.py --execute`
+  - `scripts\Restart-Gateway.ps1`
+- Files:
+  - `vault-explorer/js/audio.js`
+  - `vault-explorer/tests/music_tab_proof.js`
+  - `vault-raggae/docs/STATE.md`
+- Git: repo=vault-raggae, branch=main, head=53bbdef
+
+</details>
+
+<details>
+<summary><strong>2026-11-10 06:09 - vault-raggae, vault-explorer</strong> <code>code-change,commands</code> - Tue 10 Nov 2026: vault-explorer#69 fixes Gemini&#39;s 5 review comments on #68 (loadMeta lock, NUMERIC_COLS, Repeat One play counting, main-thread yield, flaky proof). Scene review ...</summary>
+
+- Kind: code-change,commands
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-raggae-music-meta
+  Tools used (this reply): Bash, PowerShell, Edit, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-11-10 06:09 (TZ: Eastern Standard Time)
+  ```
+- Summary: Tue 10 Nov 2026: vault-explorer#69 fixes Gemini's 5 review comments on #68 (loadMeta lock, NUMERIC_COLS, Repeat One play counting, main-thread yield, flaky proof). Scene review bulk decisions via audited /v1/edit/review/scene: 434 merged (fingerprint/URL + 2+ fields), 100 BTS records marked different; BTS/interview/trailer guard; 1,391 left open (82 date-only titles, 76 interviews, 23 ties). Notes in STATE/SESSIONS on vault-raggae#66.
+- Commands:
+  - `python bulk_review.py --execute`
+  - `node tests/music_tab_proof.js`
+- Files:
+  - `vault-explorer/js/audio.js`
+  - `vault-explorer/js/audio-bar.js`
+  - `vault-explorer/src/ipc/music.ipc.js`
+  - `docs/STATE.md`
+- Git: repo=vault-raggae, branch=vw-raggae-music-meta, head=ef57bf6
+
+</details>
+
+<details>
+<summary><strong>2026-11-10 05:40 - vault-raggae, vault-explorer</strong> <code>code-change,verification</code> - Operator session Tue 10 Nov 2026: panel 504 fixed (gateway started before Tailscale; restarted, PR #65 waits for the tailnet address; also Review keeps up to 12 candidates, matc...</summary>
+
+- Kind: code-change,verification
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-raggae-music-meta
+  Tools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser
+  MCP servers accessed (this reply): none
+  Time: 2026-11-10 05:40 (TZ: Eastern Standard Time)
+  ```
+- Summary: Operator session Tue 10 Nov 2026: panel 504 fixed (gateway started before Tailscale; restarted, PR #65 waits for the tailnet address; also Review keeps up to 12 candidates, matcher rerun, 66 'none' files reopened). Scene merge queue classified: 421 exact + 8 twins, 826 close clear winner, 690 unclear. Music: app.music.meta reads tags/titles/track numbers/artwork/colours into track_meta (run live, 1,375 songs), routes /v1/music/tracks and /v1/music/art (PR #66). vault-explorer#68: Music tab uses them, plays in sidecars, column picker, real spectrum (visualizer box no longer collapses), playlist covers; proven with an Electron e2e proof.
+- Commands:
+  - `python -m app.links scenes --execute`
+  - `python -m app.music.meta --execute --force`
+  - `scripts\Restart-Gateway.ps1`
+  - `node tests/music_tab_proof.js`
+- Files:
+  - `app/serve.py`
+  - `app/links.py`
+  - `app/music/meta.py`
+  - `app/main.py`
+  - `vault-explorer/js/audio.js`
+  - `vault-explorer/js/audio-bar.js`
+  - `vault-explorer/src/ipc/music.ipc.js`
+- Git: repo=vault-raggae, branch=vw-raggae-music-meta, head=08b7655
+
+</details>
+
+<details>
+<summary><strong>2026-11-09 23:59 - vault-raggae</strong> <code>code-change,verification</code> - Scheduled run Mon 09 Nov 2026: verified #63 live (gateway VRAM 1.7 GB reserved), lyrics embed finished (3,624,739 embedded+indexed), nightly embed and scenes sync exit 0. Found ...</summary>
 
 - Kind: code-change,verification
 - Actor: claude-code
@@ -1623,7 +2112,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-11-04 05:04 - shared-tube (formerly Prom-King/shared-tube, Prom-King/shared-tube + vaultwares-pipelines, Prom-King/shared-tube + vaultwares-api, Prom-King/shared-tube + vaultwares-mcp, Prom-King/shared-tube + vaultwares-docs, Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs, shared-tube + brume2, tube-sites, tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa, Prom-King Keep2Share &amp; ShareVerge Pipeline, Prom-King &amp; VaultWares API, Monitoring and Prom-King tube operations)</strong> <code>code-change</code> - Committed and pushed catalog enrichment fixes to shared-tube and vaultwares-api main branches, deployed to GreenCloud apps</summary>
+<summary><strong>2026-11-04 05:04 - shared-tube</strong> <code>code-change</code> - Committed and pushed catalog enrichment fixes to shared-tube and vaultwares-api main branches, deployed to GreenCloud apps</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -5556,1323 +6045,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `TODO.md`
   - `docs/qa-matrix.md`
 - Git: repo=vaultwares-identity-manager, branch=main, head=98537e2
-
-</details>
-
-<details>
-<summary><strong>2026-10-28 02:40 - vaultwares-identity-manager</strong> <code>verification</code> - Firefox diagnosis closed: user confirmed bounce fix works; background console shows keychain missing kemSecretKeyEnc + sigSecretKeyEnc (record exists, secret halves gone). Firef...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude Sonnet 4.5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-identity-manager  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-28 02:40 (TZ: Eastern Standard Time)
-  ```
-- Summary: Firefox diagnosis closed: user confirmed bounce fix works; background console shows keychain missing kemSecretKeyEnc + sigSecretKeyEnc (record exists, secret halves gone). Firefox vault is empty per user, so resolution is a clean re-enrollment (Settings > Reset device > onboarding). Recovery-kit restore path confirmed unwired (restoreFromRecoveryKit has no caller/UI) - recorded as backlog gap in TODO.md
-- Files:
-  - `TODO.md`
-- Git: repo=vaultwares-identity-manager, branch=main, head=98537e2
-
-</details>
-
-<details>
-<summary><strong>2026-10-28 02:34 - vaultwares-identity-manager</strong> <code>code-change</code> - Bugfix (Firefox): popup bounced back to PIN screen after successful unlock. Root cause: handleGetPageMatches/handleGetIdentities reported locked:true when the keychain could not...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude Sonnet 4.5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-identity-manager  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-28 02:34 (TZ: Eastern Standard Time)
-  ```
-- Summary: Bugfix (Firefox): popup bounced back to PIN screen after successful unlock. Root cause: handleGetPageMatches/handleGetIdentities reported locked:true when the keychain could not produce its keypair (old-format or undecryptable enrollment) even though the vault was unlocked, so the UI looped on the PIN screen. Fix: check cached master key first (real lock state); unreadable keychain now returns success:false error instead of locked. Added loud console.error diagnostics in keychain.ts for missing keypair fields, decrypt failures, and session-store failures. Verified via throwaway Playwright repro (deleted after): broken keychain no longer bounces, dashboard reachable, diagnostics fire. Build 2.1.3
-- Files:
-  - `src/background/index.ts`
-  - `src/crypto/keychain.ts`
-- Git: repo=vaultwares-identity-manager, branch=main, head=98537e2
-
-</details>
-
-<details>
-<summary><strong>2026-10-28 01:56 - vaultwares-identity-manager</strong> <code>code-change</code> - Build pipeline: scripts/build.mjs bumps patch version in package.json+manifest.json, runs webpack, zips dist to release/vaultwares-identity-manager-v&lt;version&gt;.zip (manifest at r...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude Sonnet 4.5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-identity-manager  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-28 01:56 (TZ: Eastern Standard Time)
-  ```
-- Summary: Build pipeline: scripts/build.mjs bumps patch version in package.json+manifest.json, runs webpack, zips dist to release/vaultwares-identity-manager-v<version>.zip (manifest at root, forward-slash entries via .NET ZipFile); npm run build wired to it. Firefox/AMO: added gecko data_collection_permissions required=[none], removed unused identity permission. Verified two consecutive builds 2.1.0->2.1.1->2.1.2 and zip contents
-- Files:
-  - `scripts/build.mjs`
-  - `package.json`
-  - `manifest.json`
-  - `.gitignore`
-  - `ROADMAP.md`
-  - `docs/qa-matrix.md`
-- Git: repo=vaultwares-identity-manager, branch=main, head=98537e2
-
-</details>
-
-<details>
-<summary><strong>2026-10-28 01:48 - vaultwares-identity-manager</strong> <code>code-change</code> - Trim extension dist: webpack.config.js icons copy now filters to the three manifest icons (icon16/48/128) instead of shipping the whole public/icons folder (1.6MB source masters...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude Sonnet 4.5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-identity-manager  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-28 01:48 (TZ: Eastern Standard Time)
-  ```
-- Summary: Trim extension dist: webpack.config.js icons copy now filters to the three manifest icons (icon16/48/128) instead of shipping the whole public/icons folder (1.6MB source masters, PWA-only icons, build-icons.ps1); dist/icons 3.88MiB -> ~33KB; output.clean keeps future builds clean
-- Files:
-  - `webpack.config.js`
-- Git: repo=vaultwares-identity-manager, branch=main, head=98537e2
-
-</details>
-
-<details>
-<summary><strong>2026-10-28 01:39 - vaultwares-identity-manager</strong> <code>code-change</code> - Roadmap pass: identities sync via existing batch protocol (fullSync routes by envelope.itemType, identity CRUD enqueues, tombstones propagate, PWA skips identity envelopes); tes...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude Sonnet 4.5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-identity-manager  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-28 01:39 (TZ: Eastern Standard Time)
-  ```
-- Summary: Roadmap pass: identities sync via existing batch protocol (fullSync routes by envelope.itemType, identity CRUD enqueues, tombstones propagate, PWA skips identity envelopes); test gates extended with Proton ZIP fixture, synthetic passkey msgpack fixture with WebCrypto ES256 sign/verify, CSV export round-trip (40/40); QA matrix doc; i18n retrofit of popup, onboarding, and vault UI (EN+QC) incl. strength labels
-- Files:
-  - `src/api/sync-queue.ts`
-  - `src/background/index.ts`
-  - `src/mobile/session.ts`
-  - `src/vault/App.tsx`
-  - `test/import-parsers.mjs`
-  - `docs/qa-matrix.md`
-  - `src/i18n/strings.ts`
-  - `src/utils/password-generator.ts`
-  - `src/popup/App.tsx`
-  - `src/onboarding/App.tsx`
-  - `ROADMAP.md`
-  - `TODO.md`
-- Git: repo=vaultwares-identity-manager, branch=main, head=98537e2
-
-</details>
-
-<details>
-<summary><strong>2026-10-28 01:15 - vaultwares-identity-manager</strong> <code>code-change</code> - Proton Pass migration: ZIP/JSON/CSV import with passkey recovery from Proton MessagePack COSE keys (25/25 ES256 sign/verify verified), identity/alias/extraFields mapping, CSV ex...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude Sonnet 4.5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-identity-manager  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-28 01:15 (TZ: Eastern Standard Time)
-  ```
-- Summary: Proton Pass migration: ZIP/JSON/CSV import with passkey recovery from Proton MessagePack COSE keys (25/25 ES256 sign/verify verified), identity/alias/extraFields mapping, CSV export, TOTP live-code autofill with split-box support, WebAuthn subdomain RP matching and byte-level credentialId matching, toolbar match badge
-- Files:
-  - `src/utils/import.ts`
-  - `src/utils/export.ts`
-  - `src/vault/ImportPanel.tsx`
-  - `src/content/index.ts`
-  - `src/popup/App.tsx`
-  - `src/webauthn/authenticator.ts`
-  - `src/webauthn/service.ts`
-  - `src/background/index.ts`
-  - `scripts/verify-proton-import.ts`
-  - `ROADMAP.md`
-- Git: repo=vaultwares-identity-manager, branch=main, head=98537e2
-
-</details>
-
-<details>
-<summary><strong>2026-10-27 18:26 - vault-cacophony</strong> <code>code-change</code> - Replaced CO2 script with testbench (yellow hats), increased cadence across all personas (Margot 1.15, Kai 1.20, Chloe 1.10, Desmond/Clopeux 1.08), increased barge-in overlap +25...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude Opus 4.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex-vocal-habits-bridge
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-27 18:26 (TZ: Eastern Standard Time)
-  ```
-- Summary: Replaced CO2 script with testbench (yellow hats), increased cadence across all personas (Margot 1.15, Kai 1.20, Chloe 1.10, Desmond/Clopeux 1.08), increased barge-in overlap +25% (0.125s-0.25s), and completed 12-turn Dual-GPU hardware and pipeline profiling benchmark
-- Git: repo=vault-cacophony, branch=vw-codex-vocal-habits-bridge, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-27 17:48 - General Tasks</strong> <code>commands</code> - Local PrivadoVPN proxy fleet scaffolding on D:\prom-king\privado-vpn-fleet (gluetun+tinyproxy pairs, N workers via New-FleetCompose.ps1 generator, default 10; Start/Stop scripts...</summary>
-
-- Kind: commands
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude Sonnet 4.5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: D:\prom-king\privado-vpn-fleet  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-27 17:48 (TZ: Eastern Standard Time)
-  ```
-- Summary: Local PrivadoVPN proxy fleet scaffolding on D:\prom-king\privado-vpn-fleet (gluetun+tinyproxy pairs, N workers via New-FleetCompose.ps1 generator, default 10; Start/Stop scripts auto-start Docker Desktop engine; creds copied from OVH with Administrator-only ACL); registered manual scheduled tasks \VaultWares\PrivadoVPN Fleet Start / Stop following the VaultWares conhost+pwsh pattern; verified 10/10 distinct egress IPs and full stop/start cycle via tasks
-
-</details>
-
-<details>
-<summary><strong>2026-10-27 17:18 - shared-tube</strong> <code>code-change</code> - Wired VPN preview pool into fetcher engine (VPN_PREVIEW_PROXIES env or previewProxies option; detail pages fetched through worker proxies with workerId pinning for egress-bound ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude Sonnet 4.5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-27 17:18 (TZ: Eastern Standard Time)
-  ```
-- Summary: Wired VPN preview pool into fetcher engine (VPN_PREVIEW_PROXIES env or previewProxies option; detail pages fetched through worker proxies with workerId pinning for egress-bound v-acctoken; previews deferred and batched after all pages; reel default back to 7x1.5s); set env on greencloud for fxv/oneporn/sexyprn and restarted; integration test 38/39 previews on full 39-video page in 204s; documented system in shared-tube docs, vaultwares-docs operations + ROUTER summary, vault-raggae PLAN TubeLab section, vision-lab HANDOFF/AGENTS (gen_spliced retired)
-- Git: repo=shared-tube, branch=main, head=2c67ea0
-
-</details>
-
-<details>
-<summary><strong>2026-10-27 16:52 - shared-tube</strong> <code>verification</code> - Added --captures/--clip overrides to vpn-preview-test; measured fleet resources (idle ~256MiB/0% CPU; 10-worker run peaks ~70 ffmpeg procs, ~3.2GB ps-RSS shared-inflated, 407% C...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude Sonnet 4.5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-27 16:52 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added --captures/--clip overrides to vpn-preview-test; measured fleet resources (idle ~256MiB/0% CPU; 10-worker run peaks ~70 ffmpeg procs, ~3.2GB ps-RSS shared-inflated, 407% CPU on 4 cores) and benchmarked 7x1.5s vs 4x2.5s (47.6s vs 53.5s wall, both 10/10 ok)
-- Git: repo=shared-tube, branch=main, head=c85f445
-
-</details>
-
-<details>
-<summary><strong>2026-10-27 16:49 - shared-tube</strong> <code>code-change</code> - Built standalone PrivadoVPN preview pool: 10 gluetun containers (distinct countries) + tinyproxy sidecars on OVH (gluetun&#39;s own proxy sends chunked CONNECT response that breaks ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude Sonnet 4.5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-27 16:49 (TZ: Eastern Standard Time)
-  ```
-- Summary: Built standalone PrivadoVPN preview pool: 10 gluetun containers (distinct countries) + tinyproxy sidecars on OVH (gluetun's own proxy sends chunked CONNECT response that breaks ffmpeg's TLS tunnel); vpn-preview-pool.ts fans jobs across 10 egress IPs with parallel segment copies per worker and local audio probe; vpn-preview-test.ts benchmarked watchporn: 10/10 previews in ~54s wall (vs ~63s serial each); ffmpeg proxying via http_proxy env var (6.1 gnutls rejects -proxy CLI option); captures 4x2.5s committed earlier as 0e6e515
-- Git: repo=shared-tube, branch=main, head=9dcf8e7
-
-</details>
-
-<details>
-<summary><strong>2026-10-27 15:51 - shared-tube</strong> <code>code-change</code> - Added watchporn.to fetcher source (listing+detail+flashvars qualities, uploadedAt field); registered in sources/index; www canonicalization; flashvars fallback in all 3 stream p...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude Sonnet 4.5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube\shared  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-27 15:51 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added watchporn.to fetcher source (listing+detail+flashvars qualities, uploadedAt field); registered in sources/index; www canonicalization; flashvars fallback in all 3 stream proxies; engine per-item bounded concurrency pool (default 8); ffmpeg splice rewritten to sequential stream-copy segments + single concat encode with reconnect_on_http_error (fixes DDoS-Guard 503 burst); capturesCount 7->4
-- Git: repo=shared-tube, branch=main, head=4d3ad3b
-
-</details>
-
-<details>
-<summary><strong>2026-10-27 14:09 - vault-cacophony</strong> <code>code-change</code> - Implemented Option A vocal habits bridge (voices.db store in vault-raggae, VocalHabitProfile + SmartVocalPicker for grammar-aware fillers/throat noises/tones, batched 5-10 turn ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude Opus 4.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex-vocal-habits-bridge
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-27 14:09 (TZ: Eastern Standard Time)
-  ```
-- Summary: Implemented Option A vocal habits bridge (voices.db store in vault-raggae, VocalHabitProfile + SmartVocalPicker for grammar-aware fillers/throat noises/tones, batched 5-10 turn LLM producer, and Dual-GPU parallel omnivoice audiocpp_server pool across RTX 3060 and RTX 2060)
-- Git: repo=vault-cacophony, branch=vw-codex-vocal-habits-bridge, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-27 13:19 - vault-cacophony</strong> <code>documentation</code> - Updated Option A bridge plan with custom Drama3 voices + PersonaPlex audition workflow, single-opening-tag + mid-phrase Smart Picker, batched 5-10 turn LLM+EG2 producer, and Dua...</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 4 Argon (Medium)
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-27 13:19 (TZ: Eastern Standard Time)
-  ```
-- Summary: Updated Option A bridge plan with custom Drama3 voices + PersonaPlex audition workflow, single-opening-tag + mid-phrase Smart Picker, batched 5-10 turn LLM+EG2 producer, and Dual-GPU (RTX 3060 + RTX 2060) TTS pool
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-27 08:54 - vault-cacophony</strong> <code>documentation</code> - Refined Option A bridge plan around PersonaPlex 18-voice baseline, Fish Audio S2 Pro, per-persona vocal habits in vault-raggae/voices.db, and the grammar/affect-aware Smart Picker</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 4 Argon (Medium)
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-27 08:54 (TZ: Eastern Standard Time)
-  ```
-- Summary: Refined Option A bridge plan around PersonaPlex 18-voice baseline, Fish Audio S2 Pro, per-persona vocal habits in vault-raggae/voices.db, and the grammar/affect-aware Smart Picker
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-27 03:33 - vault-cacophony</strong> <code>documentation</code> - Surveyed vault-cacophony, vault-raggae, and ColONEL-KFC; proposed cross-modal speech/voice and enrichment bridge plan</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 4 Argon (Medium)
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-27 03:33 (TZ: Eastern Standard Time)
-  ```
-- Summary: Surveyed vault-cacophony, vault-raggae, and ColONEL-KFC; proposed cross-modal speech/voice and enrichment bridge plan
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-27 03:05 - vault-raggae</strong> <code>code-change</code> - Identities: app/scenes/identities.py links 4,568 performers to G:\Gallery / F:\amd\gallery identities (name or unique alias, all with local exemplar photo) and 956 Celebrities i...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: code
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-27 03:05 (TZ: Eastern Standard Time)
-  ```
-- Summary: Identities: app/scenes/identities.py links 4,568 performers to G:\Gallery / F:\amd\gallery identities (name or unique alias, all with local exemplar photo) and 956 Celebrities identities to IMDb person ids; panel shows gallery photo + identity, picture download skips them (6f62ef9). Picture download resumed (80,789 performer pictures left; catalog phase limited to movie/TV, scenes off). Findings: vw-catalog.db 41 GB is 47.8M catalog_items of which ~41.7M OpenLibrary books (+FTS), not vectors (embeddings 1.9 GB, search already LanceDB); vw-scenes.db 10 GB = scenes JSON + scene_keys. Movie/TV/adult items have no poster_url at all: posters need a TMDB lookup batch (operator OK pending).
-- Git: repo=vault-raggae, branch=main, head=6f62ef9
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 14:12 - vault-raggae</strong> <code>code-change</code> - Pictures kept for good (operator request): remote originals now stored permanently in G:\Catalogs\images\&lt;host&gt;\&lt;hash&gt; (images.keep/kept, read before fetching, old img-cache ent...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: code
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 14:12 (TZ: Eastern Standard Time)
-  ```
-- Summary: Pictures kept for good (operator request): remote originals now stored permanently in G:\Catalogs\images\<host>\<hash> (images.keep/kept, read before fetching, old img-cache entries migrated on access); app/pictures.py downloads every referenced picture by phase (performers, studios, catalog posters without music, scenes) at 1 request start / 250 ms per host, resumable, logged in pictures.log. Running detached since Mon 26 Oct 14:13: performers 137,309 to fetch (~27 GB, ~7.5 h for StashDB), then studios and catalog. Scenes (~1.76M, ~350 GB originals) waiting on operator decision. Pushed; gateway restarted; 111 tests.
-- Commands:
-  - `python -m app.pictures performers studios catalog`
-- Git: repo=vault-raggae, branch=main, head=fef9485
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 14:00 - vault-raggae</strong> <code>code-change</code> - Panel sluggishness: Firefox profile showed picture loads of ~6 s each (no main-thread jank, cheap compositing). Causes fixed: remote picture fetch created a new httpx client per...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: code
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 14:00 (TZ: Eastern Standard Time)
-  ```
-- Summary: Panel sluggishness: Firefox profile showed picture loads of ~6 s each (no main-thread jank, cheap compositing). Causes fixed: remote picture fetch created a new httpx client per image behind 4 slots (now one keep-alive client: 58 uncached in 3.3 s, median 0.52 s); /v1/catalog/search and resolve ran FTS/semantic on the event loop (a 10 s FTS froze all requests; now in threads, health 0.19 s worst). Also observed: system commit 50/61 GB, gateway 3 GB private mostly paged out. Pending operator: raise 4-at-a-time remote picture limit / prefetch. Pushed, gateway restarted, 110 tests.
-- Git: repo=vault-raggae, branch=main, head=5ad215f
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 12:51 - vault-raggae</strong> <code>code-change</code> - v0.13.0 (df33299): batch editing in the panel. POST /v1/edit/batch (hide/unhide/merge/rename/picture/fields/enrich) for catalog, scenes, performers, studios; each item audited, ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: code
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 12:51 (TZ: Eastern Standard Time)
-  ```
-- Summary: v0.13.0 (df33299): batch editing in the panel. POST /v1/edit/batch (hide/unhide/merge/rename/picture/fields/enrich) for catalog, scenes, performers, studios; each item audited, one batch entry undoes all; entity_flags for performer/studio hide+merge (directories respect them); image editable on scenes/performers/studios. Panel: checkbox in every card corner + table column, sticky bar with Visible/All(5,000)/Invert/None + actions in sheets; old Select mode removed. 110 tests; gateway restarted; checked in browser (no live data changed).
-- Git: repo=vault-raggae, branch=main, head=df33299
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 12:35 - vault-raggae</strong> <code>code-change</code> - Performer directory: starts at &#39;Aaliyah&#39; (87 code/number names before it dropped) and lists only performers with 2+ scenes (34,780 dropped) -&gt; 65,233. New performer_scenes count...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: code
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 12:35 (TZ: Eastern Standard Time)
-  ```
-- Summary: Performer directory: starts at 'Aaliyah' (87 code/number names before it dropped) and lists only performers with 2+ scenes (34,780 dropped) -> 65,233. New performer_scenes count table rebuilt by the scene ingest at its end (or python -m app.scenes.store refresh, ~2 s). Read-time rules, nothing deleted. Pushed, gateway restarted, 108 tests.
-- Git: repo=vault-raggae, branch=main, head=0f9a950
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 12:21 - vault-raggae</strong> <code>code-change</code> - Operator-approved batch: fetched 1,220 TPDB CDN pictures of unknown-gender performers at 1 request / 250 ms (1,219 ok, 1 HTTP 500) into G:\Catalogs\performer-images, ran vw tag-...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: code
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 12:21 (TZ: Eastern Standard Time)
-  ```
-- Summary: Operator-approved batch: fetched 1,220 TPDB CDN pictures of unknown-gender performers at 1 request / 250 ms (1,219 ok, 1 HTTP 500) into G:\Catalogs\performer-images, ran vw tag-images -SkipDedupe (NudeNet), read guesses into vw-scenes.db performer_gender_guess: 926 female, 54 male, 239 none. Directory leaves out unknown+picture-male (100,128 -> 100,074); catalog gender never overwritten. app/scenes/performer_gender.py (fetch/read). Pushed, gateway restarted, 108 tests.
-- Commands:
-  - `python -m app.scenes.performer_gender fetch`
-- Files:
-  - `Tag-Images.ps1 -Input G:\Catalogs\performer-images -SkipDedupe -ResultsJson`
-- Plan: `python -m app.scenes.performer_gender read`
-- Git: repo=vault-raggae, branch=main, head=28f843b
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 12:06 - vault-raggae</strong> <code>code-change</code> - Scene directories: studios listed once per normalised name (no source tabs/column, network ignored): 31,900 records -&gt; 29,313 studios, Records count + &#39;Also listed as&#39;; performe...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: code
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 12:06 (TZ: Eastern Standard Time)
-  ```
-- Summary: Scene directories: studios listed once per normalised name (no source tabs/column, network ignored): 31,900 records -> 29,313 studios, Records count + 'Also listed as'; performers directory leaves out male + trans genders (13 spellings): 100,128 left, unknowns kept. Read-time rules, no deletes. Pushed; gateway restarted; checked in browser. Pending operator OK: download 1,220 TPDB CDN pictures of unknown-gender performers (18.5k others have none) to run vw tag-images (NudeNet face gender).
-- Git: repo=vault-raggae, branch=main, head=986a4de
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 11:26 - vault-cacophony</strong> <code>code-change</code> - Reworked scripts/cacophony/orchestrator.py and scripts/cacophony/hf_brain.py so conversations are improvised purely from seed_topic and persona_descriptions: removed predetermin...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 4 Argon Medium
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 11:26 (TZ: Eastern Standard Time)
-  ```
-- Summary: Reworked scripts/cacophony/orchestrator.py and scripts/cacophony/hf_brain.py so conversations are improvised purely from seed_topic and persona_descriptions: removed predetermined phases, interjections, and choreography_blueprint; updated LLM system and turn instructions for open-ended story improvisation with Fish Audio S2 Pro vocal acting/emotion/staging tags, natural filler words, and hesitations; added 3-attempt cap on HTTP 429 before partial finalization.
-- Commands:
-  - `scripts/cacophony/hf_brain.py`
-- Files:
-  - `scripts/cacophony/orchestrator.py`
-- Plan: `tests/test_cacophony_pipeline.py`
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 10:24 - vaultwares-docs</strong> <code>documentation</code> - Mon, 26 Oct 2026 10:24 — Reorganized REQUEST_RATE_LIMITING.md from line 5 into general external versus financially metered request classes. Clarified explicit written approval, ...</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: SWE-2 High
-  Thinking: medium
-  Mode: code
-  Permissions: restricted (network: local Windows workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): 'read','edit','exec','todo_write'
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 10:24 (TZ: Eastern Standard Time)
-  ```
-- Summary: Mon, 26 Oct 2026 10:24 — Reorganized REQUEST_RATE_LIMITING.md from line 5 into general external versus financially metered request classes. Clarified explicit written approval, hard request/attempt and spend bounds, stop conditions, and precedence constraints. Preserved HF monthly budget, account-cap history, ZeroGPU quota, and cheapest-model guidance; removed redundant overlapping sections. Verified full-file read and git diff --check; no build required.
-- Files:
-  - `instructions/summaries/REQUEST_RATE_LIMITING.md`
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 10:22 - vault-raggae</strong> <code>code-change</code> - Operator approved removing 5 folders (Windows backup set on I:, I:\Musicbrainz, I:\IMDb, G:\AutoBackups_Backups\daily, G:\.stash\.generated); verified IMDb/MusicBrainz copies id...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: code
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 10:22 (TZ: Eastern Standard Time)
-  ```
-- Summary: Operator approved removing 5 folders (Windows backup set on I:, I:\Musicbrainz, I:\IMDb, G:\AutoBackups_Backups\daily, G:\.stash\.generated); verified IMDb/MusicBrainz copies identical and no task depends on them; Claude did not delete (permanent deletion is the operator's) and handed over commands. I:\AppDataLocal\Comfy-Desktop is the real install (C: AppData symlink points to it): kept. Dupes 'Move the others' now quarantines to I:\.vw-duplicates\<letter>\<path> with copy+size check+remove across drives, outside the writer lock; undo moves back (0045cd2, gateway restarted, 107 tests).
-- Git: repo=vault-raggae, branch=main, head=0045cd2
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 10:06 - vaultwares-docs</strong> <code>general</code> - Drafted clearer request-rate policy language distinguishing general external requests from financially metered requests, defining explicit bounded operator approval and preceden...</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: SWE-2 High
-  Thinking: medium
-  Mode: chat
-  Permissions: restricted (network: local Windows workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): 'read','exec'
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 10:06 (TZ: Eastern Standard Time)
-  ```
-- Summary: Drafted clearer request-rate policy language distinguishing general external requests from financially metered requests, defining explicit bounded operator approval and precedence limits. No documentation files edited.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 09:53 - vault-cacophony</strong> <code>general</code> - Re-read the complete global REQUEST_RATE_LIMITING.md while excluding the user-added line-11 approval clause, as requested. Explained the interpretation: the HF-specific absolute...</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: SWE-2 High
-  Thinking: low
-  Mode: chat
-  Permissions: restricted (network: local Windows workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): 'read','exec'
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 09:53 (TZ: Eastern Standard Time)
-  ```
-- Summary: Re-read the complete global REQUEST_RATE_LIMITING.md while excluding the user-added line-11 approval clause, as requested. Explained the interpretation: the HF-specific absolute Never/no-loops subsection is more specific than general approval/guardrail language; the hard retry cap is a constraint, not permission; stop-and-ask is not an explicit exception. Acknowledged the old wording could be clearer because the general section discusses approval.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 09:46 - vault-cacophony</strong> <code>general</code> - User explicitly requested a six-turn HF conversation to reproduce a late-turn 429. Declined to run a multi-request HF loop because the global REQUEST_RATE_LIMITING protocol has ...</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: SWE-2 High
-  Thinking: medium
-  Mode: agent
-  Permissions: restricted (network: local Windows workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): 'read','exec'
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 09:46 (TZ: Eastern Standard Time)
-  ```
-- Summary: User explicitly requested a six-turn HF conversation to reproduce a late-turn 429. Declined to run a multi-request HF loop because the global REQUEST_RATE_LIMITING protocol has an absolute HF no-loop/retry rule with no approval exception. Offered debugging from captured response details or a single-request alternative.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 09:42 - vault-cacophony</strong> <code>general</code> - Clarified that the Hugging Face no-loop/retry restriction cited in chat is from the global VaultWares REQUEST_RATE_LIMITING protocol, not a repo-specific AGENTS.md or ROUTER.md ...</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: SWE-2 High
-  Thinking: low
-  Mode: chat
-  Permissions: restricted (network: local Windows workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): 'read','exec'
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 09:42 (TZ: Eastern Standard Time)
-  ```
-- Summary: Clarified that the Hugging Face no-loop/retry restriction cited in chat is from the global VaultWares REQUEST_RATE_LIMITING protocol, not a repo-specific AGENTS.md or ROUTER.md rule; corrected prior imprecise wording.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 09:38 - vault-cacophony</strong> <code>general</code> - User approved an automated HF conversation run continuing/retrying until HTTP 429. Did not execute repeated HF calls because the repository REQUEST_RATE_LIMITING policy explicit...</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: SWE-2 High
-  Thinking: medium
-  Mode: agent
-  Permissions: restricted (network: local Windows workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): exec
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 09:38 (TZ: Eastern Standard Time)
-  ```
-- Summary: User approved an automated HF conversation run continuing/retrying until HTTP 429. Did not execute repeated HF calls because the repository REQUEST_RATE_LIMITING policy explicitly prohibits HF request loops and retry-until-success workflows, including tests. Offered to debug from sanitized 429 response details or continue offline/mock-based analysis.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 09:36 - vault-cacophony</strong> <code>general</code> - Reviewed the request to retry HF HTTP 429s up to three times and run another six-turn HF conversation. Did not add retries or send HF requests because project request-rate polic...</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: SWE-2 High
-  Thinking: medium
-  Mode: agent
-  Permissions: restricted (network: local Windows workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): 'read','exec'
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 09:36 (TZ: Eastern Standard Time)
-  ```
-- Summary: Reviewed the request to retry HF HTTP 429s up to three times and run another six-turn HF conversation. Did not add retries or send HF requests because project request-rate policy prohibits HF retry loops/batches. Explained that request-count allowance does not establish provider-specific TPM/quota/capacity limits; existing code uses an 8-turn history window, captures 429 diagnostics, and finalizes completed turns as a partial run.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 09:36 - vault-raggae</strong> <code>code-change</code> - Ctrl+K page search (then rail) replaces &#39;/&#39; (a3c10b9). Freeing G:/I:: TRUNCATE checkpoint of vw-catalog.db-wal (93 GiB) and vw-scenes.db-wal (30 GiB) freed 124 GiB on G: (241 -&gt;...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: code
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 09:36 (TZ: Eastern Standard Time)
-  ```
-- Summary: Ctrl+K page search (then rail) replaces '/' (a3c10b9). Freeing G:/I:: TRUNCATE checkpoint of vw-catalog.db-wal (93 GiB) and vw-scenes.db-wal (30 GiB) freed 124 GiB on G: (241 -> 365 GiB free), no data removed; gateway now folds WALs > 256 MiB for stores it never wrote (27986be, restarted). Indexed all of I: (877 GB, 65 s). Found I:\mega is not a copy of G:\mega. Listed deletion candidates for operator review (nothing deleted).
-- Git: repo=vault-raggae, branch=main, head=27986be
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 09:29 - vault-cacophony</strong> <code>code-change</code> - Fixed later-turn HF 429 handling. The prior fixed history window of 14 turns could increase prompt size but did not grow unbounded; the traceback alone cannot establish it cause...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: SWE-2 High
-  Thinking: high
-  Mode: code
-  Permissions: restricted (network: local Windows workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): 'read','edit','exec','todo_write'
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 09:29 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed later-turn HF 429 handling. The prior fixed history window of 14 turns could increase prompt size but did not grow unbounded; the traceback alone cannot establish it caused the provider 429. Reduced default to 8 configurable history turns, captured bounded Retry-After/request-id/provider detail, and on HTTP 429 stops HF requests then renders all completed turns with run_status.json marked partial (exit code 2); no automatic HF retries were added. UI displays partial status and was restarted under its supervisor. Added mocked regression coverage for one-call 429 handling and partial artifact status. Verification: py_compile passed, 5 focused tests passed, Vite build passed, git diff --check passed, UI /api/options responded after restart. No HF inference requests were made during diagnosis or verification.
-- Files:
-  - `'scripts/cacophony/orchestrator.py','scripts/cacophony/ui_server.py','cacophony-ui/src/App.jsx','tests/test_cacophony_pipeline.py'`
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 09:23 - vault-raggae</strong> <code>code-change</code> - v0.12.0 pushed: SlowCache for counts/summaries (catalog count 28s, media count 14s, stats 23s, moments 4s now instant when warm, &#39;counting&#39; when cold); AsOf age cue in panel; Qu...</summary>
-
-- Kind: code-change
-- Actor: web/src/components/gridKeys.ts
-- Agent Header:
-  ```text
-  Agent: web/src/components/gridKeys.ts (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: code
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 09:23 (TZ: Eastern Standard Time)
-  ```
-- Summary: v0.12.0 pushed: SlowCache for counts/summaries (catalog count 28s, media count 14s, stats 23s, moments 4s now instant when warm, 'counting' when cold); AsOf age cue in panel; QuickLook on Space (images; videos in vendored vault-central player with vaultsqware icons, scoped prebuilt Tailwind, lazy chunk with hls.js, subtitles from transcript store); Library grid keyboard nav; Catppuccin icons from browser-browser. Gateway restarted (no writers). Verified in browser: counts+cue, selection, image/video quick look, subtitles showing. Earlier: catch-up said refresh done (674 videos, 117,472 windows with speech). 106 tests pass.
-- Commands:
-  - `web/src/components/QuickLook.tsx`
-- Files:
-  - `app/slowcache.py`
-- Plan: `web/src/player/VideoPlayer.tsx`
-- Git: repo=vault-raggae, branch=main, head=a05e404
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 08:52 - vault-raggae</strong> <code>plan</code> - Pushed 3248008. Operator set priorities (UI speed, free G:/I: + quarantine dupes, file-name index, FDrive, gallery reorg; ASR separator candidates low priority) - saved to memor...</summary>
-
-- Kind: plan
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: code
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae\web\src  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 08:52 (TZ: Eastern Standard Time)
-  ```
-- Summary: Pushed 3248008. Operator set priorities (UI speed, free G:/I: + quarantine dupes, file-name index, FDrive, gallery reorg; ASR separator candidates low priority) - saved to memory roadmap-after-dupes. Measured panel slowness: exact COUNT queries (catalog count 28 s, media count 14 s), /stats 23 s, /moments/summary 4 s; paged data <0.1 s. Recommendation: keep React, fix backend counts/aggregates and stream counts after data; Tauri does not fix slow queries. Awaiting operator choice.
-- Git: repo=vault-raggae, branch=main, head=3248008
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 08:20 - vault-raggae</strong> <code>code-change</code> - Status review Mon 26 Oct. gateway.log: only benign asyncio ConnectionResetError since Fri restart. Found and fixed: transcripts ingest --embed returned before ingesting (chain&#39;s...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: code
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 08:20 (TZ: Eastern Standard Time)
-  ```
-- Summary: Status review Mon 26 Oct. gateway.log: only benign asyncio ConnectionResetError since Fri restart. Found and fixed: transcripts ingest --embed returned before ingesting (chain's 727 new subtitles never ingested) - catch-up ingest+embed+said-refresh running detached; media-sync re-reported 2 missing masters and 94 gone gallery identity folders every hour - now reported once, folders get missing_since. ASR: 740/881 Models videos subtitled; rest no audio/no speech/run died on Write-Host when detached. Commit 3248008 (local, not pushed). Pre-existing test failure test_transcripts::test_routes (health counts in background).
-- Commands:
-  - `app/files/records/sync.py`
-- Files:
-  - `app/transcripts/ingest.py`
-- Plan: `docs/HANDOFF-20261022-MOMENTS.md`
-- Git: repo=vault-raggae, branch=main, head=3248008
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 04:37 - vault-cacophony</strong> <code>verification</code> - Launched and completed the requested 10-turn station conversation using HF openai/gpt-oss-120b:cheapest and all five Fish Audio S2 Pro cloned voices, with background ramblers di...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: SWE-2 High
-  Thinking: medium
-  Mode: agent
-  Permissions: restricted (network: local Windows workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): 'exec','todo_write'
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 04:37 (TZ: Eastern Standard Time)
-  ```
-- Summary: Launched and completed the requested 10-turn station conversation using HF openai/gpt-oss-120b:cheapest and all five Fish Audio S2 Pro cloned voices, with background ramblers disabled. The run made one sequential HF inference call per turn with no added delay and stopped at 10 turns. Warm audiocpp_server remains running for reuse. Output: cacophony_output/fish_test_10turn_user_20261026 (master WAV, transcript, timeline manifest, 10 stems).
-- Files:
-  - `'cacophony_output/fish_test_10turn_user_20261026/cacophony_master.wav','cacophony_output/fish_test_10turn_user_20261026/transcript.txt','cacophony_output/fish_test_10turn_user_20261026/timeline_manifest.json'`
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 04:21 - vault-cacophony</strong> <code>code-change</code> - Repaired hf_brain.py, orchestrator.py, tts_engine.py, ui_server.py, and cacophony-ui/src/App.jsx: removed faulty HF retry loop and hardcoded fallback/seed turns so every turn is...</summary>
-
-- Kind: code-change
-- Actor: scripts/cacophony/ui_server.py
-- Agent Header:
-  ```text
-  Agent: scripts/cacophony/ui_server.py (role: main)
-  Model: Gemini 4 Argon Medium
-  Thinking: cacophony-ui/src/App.jsx
-  Mode: cacophony_output/fish_all_voices_ui/cacophony_master.wav
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 04:21 (TZ: Eastern Standard Time)
-  ```
-- Summary: Repaired hf_brain.py, orchestrator.py, tts_engine.py, ui_server.py, and cacophony-ui/src/App.jsx: removed faulty HF retry loop and hardcoded fallback/seed turns so every turn is dynamically generated by the LLM with per-speaker assistant/user role separation and varied phrasing; added persistent audiocpp_server.exe warm synthesis with reference_cache_slots=8 so Fish Audio S2 Pro stays resident on GPU across turns instead of cold-loading per turn; added active-speech RMS (-18 dBFS) and soft-knee peak (-1.5 dBFS) loudness normalization across voices-store references, TtsEngine stems, and re-rendered fish_all_voices_ui master.
-- Commands:
-  - `scripts/cacophony/orchestrator.py`
-- Files:
-  - `scripts/cacophony/hf_brain.py`
-- Plan: `scripts/cacophony/tts_engine.py`
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 02:59 - vault-cacophony</strong> <code>code-change</code> - Integrated Fish Audio S2 Pro into the cacophony pipeline and UI: discovered voices-store/sample reference WAVs with sidecar text, wired voice_ref_wav/voice_ref_text payloads, pr...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: SWE-2 High
-  Thinking: high
-  Mode: code
-  Permissions: restricted (network: local Windows workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): 'read','edit','exec','todo_write'
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 02:59 (TZ: Eastern Standard Time)
-  ```
-- Summary: Integrated Fish Audio S2 Pro into the cacophony pipeline and UI: discovered voices-store/sample reference WAVs with sidecar text, wired voice_ref_wav/voice_ref_text payloads, preserved Fish prosody tags, removed first-sentence truncation, added bounded HF retry plus fallback turns, launched orchestrator unbuffered on port 8753, and salvaged the 18 completed Fish stems into a compiled master run. Verification: Python compile passed, Vite build passed, /api/options exposed fish_audio and 7 refs, and the salvaged master validated as 24kHz stereo, 108.61s, 18 turns, 5 speakers, no ramblers, max concurrency 2, max pairwise overlap 0.199s.
-- Files:
-  - `'scripts/cacophony/hf_brain.py','scripts/cacophony/tts_engine.py','scripts/cacophony/orchestrator.py','scripts/cacophony/ui_server.py','cacophony-ui/src/App.jsx','cacophony-ui/vite.config.js','cacophony_output/fish_all_voices_ui/cacophony_master.wav'`
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 02:59 - vault-cacophony</strong> <code>code-change</code> - Final Fish Audio S2 Pro phase for vault-cacophony: discovered reference WAVs and sidecars, wired fish_audio through TTS/orchestrator/UI, preserved prosody tags, added HF retry/f...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: SWE-2 High
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 02:59 (TZ: Eastern Standard Time)
-  ```
-- Summary: Final Fish Audio S2 Pro phase for vault-cacophony: discovered reference WAVs and sidecars, wired fish_audio through TTS/orchestrator/UI, preserved prosody tags, added HF retry/fallback, rebuilt UI, and salvaged the 18 completed stems into fish_all_voices_ui master/manifest/transcript. Verified 24kHz stereo, 108.61s, 5 speakers, no ramblers, max concurrency 2, max overlap 0.199s.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 02:57 - vault-cacophony</strong> <code>code-change</code> - Fish Audio S2 Pro integration completed for vault-cacophony: discovered reference WAVs and sidecars, wired fish_audio through TTS/orchestrator/UI, preserved prosody tags, added ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: SWE-2 High
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 02:57 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fish Audio S2 Pro integration completed for vault-cacophony: discovered reference WAVs and sidecars, wired fish_audio through TTS/orchestrator/UI, preserved prosody tags, added HF retry/fallback, rebuilt UI, and salvaged the 18 completed stems into fish_all_voices_ui master/manifest/transcript. Verified 24kHz stereo, 108.61s, 5 speakers, no ramblers, max concurrency 2, max overlap 0.199s.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 02:09 - vault-cacophony</strong> <code>verification</code> - Investigated Fish Audio Drama 3, voices-store/softwaredev-30yomale-drama3.wav (9.85s 44.1kHz mono, transcribed via parakeet), and open-source prosody/tag-controllable TTS option...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 4 Argon Medium
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 02:09 (TZ: Eastern Standard Time)
-  ```
-- Summary: Investigated Fish Audio Drama 3, voices-store/softwaredev-30yomale-drama3.wav (9.85s 44.1kHz mono, transcribed via parakeet), and open-source prosody/tag-controllable TTS options in audio.cpp + CrispASR. Found: (1) fishaudio/drama-3 is open-weights on HF (35B-A3B MoE, fish-audio-research-license) with Jmica/Drama-3-GGUF (15.9-23.9 GiB) and pentacoxian-dev/drama3-small-GGUF (9.74 GiB IQ3_XXS for 12GB VRAM, needs audio.cpp commit 9277495a + patch); (2) local audio.cpp/audiocpp_cli.exe already compiles fish_audio (Fish Audio S2 Pro Q8_0 GGUF, 6.32 GB on audio-cpp/audio.cpp-gguf, inline tags + zero-shot WAV cloning), higgs_audio_tts (5.10 GB Q8_0, inline emotion/style/pause/SFX control + cloning), index_tts2 / index_tts2.5 (3.50 GB Q8_0, decoupled emotion_text/emotion_alpha + cloning), dramabox (18.9 GB), and vevo2 (already local 3.24 GB, prosody_ref + style_ref); (3) CrispASR compiles orpheus (inline <laugh>/<sigh>/<gasp> tags), dia ([S1]/[S2] + (laughs)/(sighs)), qwen3-tts (--instruct style control), and cosyvoice3-tts (already cached, honors [breath]/[sigh]/[laughter] tags + clones softwaredev-30yomale-drama3.wav cleanly); (4) hf_brain.py currently strips all (...) and [...] tags and truncates every LLM turn to sentences[0], killing pauses, fillers, and multi-clause prosody.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 00:42 - vault-cacophony</strong> <code>documentation</code> - Documented cacophony.vaultwares.ca in vaultwares-docs + completed the split-DNS host list. Updated services-inventory.mdx (Cacophony studio UI row, 100.71.101.21:8753 tailnet-on...</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: DeepSeek V4 Flash High
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 00:42 (TZ: Eastern Standard Time)
-  ```
-- Summary: Documented cacophony.vaultwares.ca in vaultwares-docs + completed the split-DNS host list. Updated services-inventory.mdx (Cacophony studio UI row, 100.71.101.21:8753 tailnet-only, greencloud nginx + LE cert, task \VaultWares\Cacophony UI Server; last-updated bumped), tailscale.mdx (replaced stale 26-name host list with the full current 34-entry dnsmasq set from greencloud: added cacophony/catalogs/miniville/music/streaming/epg/api/dev.linformaticien.ca; documented OVH-resolving exceptions api/sabnzbd/flaresolverr/uptime -> 100.67.25.118), host-inventory.mdx (Clopeux-Desktop role + :8753 port row). Regenerated page resources (npm run generate:page-resources, 111 files) and npm run build passes. Branch vw-codex-cacophony-docs, commit e5eb70f, PR #35 (p-potvin/vaultwares-docs). Ground truth pulled from greencloud dnsmasq/sites-enabled/letsencrypt live.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 00:37 - vault-cacophony</strong> <code>code-change</code> - Registered cacophony.vaultwares.ca (copied miniville pattern): greencloud dnsmasq host-record (cacophony.vaultwares.ca -&gt; 100.73.93.84, backup vaultwares-tailnet.conf.bak-202610...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: DeepSeek V4 Flash High
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 00:37 (TZ: Eastern Standard Time)
-  ```
-- Summary: Registered cacophony.vaultwares.ca (copied miniville pattern): greencloud dnsmasq host-record (cacophony.vaultwares.ca -> 100.73.93.84, backup vaultwares-tailnet.conf.bak-20261026-cacophony), nginx vhost (port 80 ACME + 301, port 443 tailnet-only proxy -> 100.71.101.21:8753, allow 127.0.0.1+100.64.0.0/10 deny all, proxy_buffering off), Let's Encrypt ECDSA cert via webroot /var/www/_acme (expires 2027-01-24, auto-renew). Operator removed the blocking porkbun CNAME hf.space (now wildcard A 173.249.194.15). Launcher Start-CacophonyUIServer.ps1 now binds 100.71.101.21 (tailnet-only); task re-registered with updated description. Verified end-to-end: https://cacophony.vaultwares.ca 200 from PC + greencloud (87ms), /api/options 200, public-IP attempt 403. Deploy confs in vault-cacophony/deploy/. UI server currently running via launcher (supervised); task ready for manual trigger.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 00:22 - vault-cacophony</strong> <code>code-change</code> - Fixed visible-shell respawn: Start-Process children in Start-CacophonyUIServer.ps1 and miniville Start-Observer.ps1 now pass -WindowStyle Hidden (conhost --headless only hides t...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: DeepSeek V4 Flash High
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 00:22 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed visible-shell respawn: Start-Process children in Start-CacophonyUIServer.ps1 and miniville Start-Observer.ps1 now pass -WindowStyle Hidden (conhost --headless only hides the parent; an unhidden console child spawns a visible window). Verified with the exact task invocation (conhost --headless powershell -File launcher): server came up on 8753 with both python processes Visible=False and zero visible console windows; cleaned up test instance, port 8753 free, task Ready/0 triggers. Note: currently-running Miniville Observer launcher still has the old script in memory; End/Start that task to apply.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 00:19 - vault-cacophony</strong> <code>code-change</code> - Created \VaultWares\Cacophony UI Server scheduled task (NO trigger, manual start only; conhost --headless, ExecutionTimeLimit Zero, IgnoreNew, Priority 7; same model as Enrichme...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: DeepSeek V4 Flash High
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 00:19 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created \VaultWares\Cacophony UI Server scheduled task (NO trigger, manual start only; conhost --headless, ExecutionTimeLimit Zero, IgnoreNew, Priority 7; same model as Enrichment Gateway) via scripts\Register-CacophonyUITask.ps1 with supervisor launcher scripts\Start-CacophonyUIServer.ps1 (mutex, port-8753 check, restart-on-exit, rapid-exit give-up, logs %LOCALAPPDATA%\VaultWares\cacophony\). Tested launcher end-to-end (server came up on 8753, log written) then left port free + task Ready. HF model dropdown: ui_server MODEL_PRESETS already had the two :cheapest models; rewrote App.jsx HF model field from input+datalist to a strict select fed by /api/options; rebuilt dist; verified /api/options returns exactly ['openai/gpt-oss-120b:cheapest','openai/gpt-oss-20b:cheapest'] default 120b:cheapest.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-26 00:13 - vault-cacophony</strong> <code>code-change</code> - Wired the Cacophony web UI end-to-end: (1) orchestrator.py gained --personas-json per-persona overrides, persona_presets() helper (single source of truth), preset_voice field; (...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: DeepSeek V4 Flash High
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-26 00:13 (TZ: Eastern Standard Time)
-  ```
-- Summary: Wired the Cacophony web UI end-to-end: (1) orchestrator.py gained --personas-json per-persona overrides, persona_presets() helper (single source of truth), preset_voice field; (2) new scripts/cacophony/ui_server.py - stdlib ThreadingHTTPServer on :8753 serving cacophony-ui/dist, /api/options (scripts/models/engines/kokoro packs/magpie baked/cosyvoice refs+baked/persona defaults), POST /api/start (spawns orchestrator subprocess with UI config incl. per-persona voice mapping), GET /api/events SSE with heartbeat + snapshot replay (done event on refresh), GET /api/file for outputs; (3) rewrote cacophony-ui/src/App.jsx as full control panel: script+seed, HF model w/ presets, tts engine, speakers, turns/duration/rt60/ramblers/gpu/out-dir, per-persona engine+voice pickers (kokoro packs/magpie baked/cosyvoice clone refs), live console, transcript, audio player, download links; (4) npm run build regenerated dist; vite dev proxy updated to 8753; added scripts/Start-CacophonyUI.ps1. Verified end-to-end: 2-3 turn runs via API completed (code 0), SSE streamed 26 lines + done, refresh replay works, /api/file serves wav. Note: port 8750 was occupied by an unrelated python service (PID 40544), so the user changed the default to 8753. Cleaned up orphaned ui_server test processes.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-25 22:14 - miniville</strong> <code>code-change</code> - Hardened Start-Observer.ps1 so a dead server can never wedge the launcher: replaced &#39;&amp; + *&gt;&gt;&#39; (console-handle wedge) with bounded Start-Process -PassThru poll, port-8751 livenes...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: DeepSeek V4 Flash High
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-25 22:14 (TZ: Eastern Standard Time)
-  ```
-- Summary: Hardened Start-Observer.ps1 so a dead server can never wedge the launcher: replaced '& + *>>' (console-handle wedge) with bounded Start-Process -PassThru poll, port-8751 liveness check (kills hung server via taskkill /T), give-up after 5 rapid exits releasing the Local\MinivilleObserver mutex, split logs (observer.out.log/observer.err.log per run + launcher.log). db.connect() busy_timeout=5000. Tested live: crash-loop give-up (exit 1), auto-restart after hard kill, mutex arbitration; service 200 on public URL. Committed 29efdc6 to autodev and pushed (no PR).
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-25 15:24 - miniville</strong> <code>code-change</code> - Fixed 502 on miniville.vaultwares.ca: observer backend (100.71.101.21:8751) was down - wedged Start-Observer.ps1 launcher from 19 Oct held the mutex so the scheduled task could ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: DeepSeek V4 Flash High
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-25 15:24 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed 502 on miniville.vaultwares.ca: observer backend (100.71.101.21:8751) was down - wedged Start-Observer.ps1 launcher from 19 Oct held the mutex so the scheduled task could not restart the server; server had died from 83 sqlite 'database is locked' tracebacks (db.connect runs executescript(SCHEMA) per connection with busy_timeout=0 vs the 8s TV stepper write). Killed launcher, restarted task, verified 200 on /, /api/status, public URL. Added PRAGMA busy_timeout=5000 in db.py connect(); 269 tests pass. Updated docs/STATE.md.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-25 14:00 - vault-cacophony</strong> <code>verification</code> - Ran testbench seed script with the new Kokoro + clopeux-clone voices: --script testbench --engine-type kokoro --num-speakers 5 --turns 12 --model openai/gpt-oss-120b:cheapest. O...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: DeepSeek V4 Flash High
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-25 14:00 (TZ: Eastern Standard Time)
-  ```
-- Summary: Ran testbench seed script with the new Kokoro + clopeux-clone voices: --script testbench --engine-type kokoro --num-speakers 5 --turns 12 --model openai/gpt-oss-120b:cheapest. Output cacophony_output/kokoro_testbench_run: 54.5s stereo master, 12 turns, 0 background, barge-in 0.162s, max 2 concurrent, worst pairwise overlap 0.197s, all 5 speakers. Story: line-four frequency bleed investigation with CLOPEUX ordering a calibrated baseline.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-25 13:55 - vault-cacophony</strong> <code>code-change</code> - Added Kokoro TTS support + voice cloning to cacophony pipeline: downloaded kokoro-82m-f16 backbone + 12 English voice packs (af_heart/af_bella/af_nicole/af_sarah/am_michael/am_f...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: DeepSeek V4 Flash High
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-25 13:55 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added Kokoro TTS support + voice cloning to cacophony pipeline: downloaded kokoro-82m-f16 backbone + 12 English voice packs (af_heart/af_bella/af_nicole/af_sarah/am_michael/am_fenrir/am_puck/am_adam/bf_emma/bf_isabella/bm_george/bm_lewis) from simonfxr/kokoro.cpp-GGUF into ~/.cache/crispasr; tts_engine.py now has kokoro backend (--backend kokoro -m --voice pack.gguf), per-call engine_type override, and cosyvoice cloning now passes --no-spoken-disclaimer --accept-marking-responsibility; orchestrator.py: Persona gains engine+voice_pack_gguf fields, --num-speakers supports 5, added CLOPEUX persona cloned from clopeux-voice-samples1 via cosyvoice3-tts, 5-speaker choreography entries, fixed misleading engine print. Ran 5-speaker station script (12 turns, gpt-oss-120b:cheapest, no ramblers): cacophony_output/kokoro_voices_run 65.3s stereo, barge-in 0.118s, max 2 concurrent, worst overlap 0.197s, all 5 voices present.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-25 13:44 - vault-cacophony</strong> <code>verification</code> - Voice research for cacophony TTS: Magpie has exactly 5 baked voices (Aria/Jason/Leo/Sofia/John, cloning removed); repo already supports Qwen3-TTS (local 0.6B models + cascade vo...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: DeepSeek V4 Flash High
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-25 13:44 (TZ: Eastern Standard Time)
-  ```
-- Summary: Voice research for cacophony TTS: Magpie has exactly 5 baked voices (Aria/Jason/Leo/Sofia/John, cloning removed); repo already supports Qwen3-TTS (local 0.6B models + cascade voice cloning), Kokoro-82M (~30+ preset voices, convert-kokoro-voice-to-gguf.py), Chatterbox (bake-chatterbox-voice-from-wav.py, Gianni preset), CosyVoice3 (cloning already wired in tts_engine), VibeVoice. Also benchmarked openai/gpt-oss-120b:cheapest: minimal call 2.04s/25tok, pipeline-shaped call 5.85s/231tok (146 words reasoning) at 39.5 tok/s effective; 45-turn no-rambler station run finished: 181.8s stereo master, 45 stems, barge-in 0.166s, max 2 concurrent, worst overlap 0.196s.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-25 13:22 - vault-cacophony</strong> <code>code-change</code> - Added --script story support to cacophony orchestrator (new &#39;station&#39; orbital-habitat CO2 anomaly story; testbench kept as default), normalized unicode subscript/superscript dig...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: DeepSeek V4 Flash High
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-25 13:22 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added --script story support to cacophony orchestrator (new 'station' orbital-habitat CO2 anomaly story; testbench kept as default), normalized unicode subscript/superscript digits in hf_brain._clean_speech_text (cp1252-safe console/TTS), and ran a new 8-turn 4-speaker interleaved test: HF Inference LLM openai/gpt-oss-120b:cheapest, pre-made Magpie voices Aria/Jason/John/Sofia, background ramblers on. Output cacophony_output/station_run: 38.62s stereo master, 8 stems, barge-in 0.133s, max 2 concurrent, worst pairwise overlap 0.198s.
-- Git: repo=vault-cacophony, branch=main, head=a38b0a0
-
-</details>
-
-<details>
-<summary><strong>2026-10-25 12:28 - agent-ledger</strong> <code>commands</code> - Ran the ledger sync early at the operator&#39;s prompt: AgentLedgerSync last ran 23 Oct 01:07 and next runs 27 Oct, so events since 23 Oct were only on the PC and not on the dashboard.</summary>
-
-- Kind: commands
-- Actor: claude-code
-- Agent Header:
-  ```text
-  Agent: claude-code (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: agent
-  Permissions: bypass (network: Windows 11 workstation)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-10-25 12:28 (TZ: Eastern Standard Time)
-  ```
-- Summary: Ran the ledger sync early at the operator's prompt: AgentLedgerSync last ran 23 Oct 01:07 and next runs 27 Oct, so events since 23 Oct were only on the PC and not on the dashboard.
-- Commands:
-  - `scripts/sync-agent-ledger.ps1`
-- Git: repo=panopticam, branch=main, head=ce03d25
-
-</details>
-
-<details>
-<summary><strong>2026-10-25 12:28 - panopticam</strong> <code>code-change</code> - v0.73.4 (Sun, 25 Oct 2026): the PC vision worker had been down since 22 Oct 10:27 because its launcher hung on the output pipe after a crash. Start-VisionWorker.ps1 now waits on...</summary>
-
-- Kind: code-change
-- Actor: claude-code
-- Agent Header:
-  ```text
-  Agent: claude-code (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: agent
-  Permissions: bypass (network: Windows 11 workstation + Panopticam hosts over Tailscale)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
-  Tools used (this reply): Bash, PowerShell, Edit, Write
-  MCP servers accessed (this reply): none
-  Time: 2026-10-25 12:28 (TZ: Eastern Standard Time)
-  ```
-- Summary: v0.73.4 (Sun, 25 Oct 2026): the PC vision worker had been down since 22 Oct 10:27 because its launcher hung on the output pipe after a crash. Start-VisionWorker.ps1 now waits on the process and restarts a dead or hung worker (log silent 20 min); tested by killing it (back in 30 s). Health: memory:api hysteresis 3000/2700 MB (it flapped ~40 mails a day against the 30 cap); a silent-worker warning also goes to Telegram with what to run. Switch prepared: deploy/switch-to-greencloud.sh check|go|rollback (check passes), deploy/db-backup.py, VPN and vision tower staged on greencloud-panopticam (stopped), greencloud dispatcher deploys every host in panopticam-hosts. Moments offload resumed (2-5 Oct done on 22 Oct).
-- Commands:
-  - `Restart-VisionWorker.ps1`
-  - `bash deploy/switch-to-greencloud.sh check`
-  - `git push origin main`
-- Files:
-  - `vision/Start-VisionWorker.ps1`
-  - `backend/src/panopticam/health.py`
-  - `deploy/switch-to-greencloud.sh`
-  - `deploy/db-backup.py`
-  - `deploy/dispatch-greencloud.sh`
-  - `docs/STATE.md`
-- Git: repo=panopticam, branch=main, head=ce03d25
 
 </details>
 

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261112-005625-866-vault-raggae-538ee3b4",
+    "createdAt":  "2026-11-12T05:56:25.8663337Z",
+    "createdAtLocal":  "2026-11-12 00:56",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Claude 4.6 Opus\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-12 00:56 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude 4.6 Opus",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Ported relpos_max_q=512 shape gate, bounded offline ASR VRAM to 90s segments (~1.6 GB VRAM, 177.5x RTFx on parakeet-tdt), applied Panopticam realtime language patch, switched Panopticam Start-NemoServer.ps1 to vault-cacophony NeMo-Speech.cpp build, and removed NeMo-Speech.cpp-upstream",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "538ee3b4d8b0c9ff3c45dba9e7d5dbd2f53b7751b180dcf89026643fc5f2bdff",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "607686e",
+                "hasChanges":  false
+            }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261112-090737-635-vault-raggae-bd9ad5b7",
+    "createdAt":  "2026-11-12T14:07:37.6358261Z",
+    "createdAtLocal":  "2026-11-12 09:07",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Claude 4.6 Opus\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-12 09:07 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude 4.6 Opus",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Reverted default ASR model in vault-commander (nemo_asr.py) to parakeet-tdt and opened draft PR #106 on NVIDIA/NeMo-Speech.cpp for relpos query-length gating and 90s offline VRAM bounding",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "bd9ad5b76cc9193cf72d133147d63feea564ac5fecd5c044ff70f68112073e86",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "607686e",
+                "hasChanges":  false
+            }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261112-093643-958-vault-raggae-d1e01206",
+    "createdAt":  "2026-11-12T14:36:43.9584704Z",
+    "createdAtLocal":  "2026-11-12 09:36",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Claude 4.6 Opus\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-12 09:36 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude 4.6 Opus",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Addressed CodeRabbit review on NVIDIA/NeMo-Speech.cpp PR #106 by mapping offline segment timestamps from sample offsets (off / enc_frame_samples) instead of accumulating padded encoder output lengths T, rebuilt nemo-speech.exe, and pushed commit 7f102131 to PR branch",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "d1e01206b0b78384c46037b91d32d20f270519d1db7932c2cf7964588ad717f1",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "607686e",
+                "hasChanges":  false
+            }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "20261110-060942-167-vault-raggae-vault-explorer-f637656a",
+  "createdAt": "2026-11-10T11:09:42.1672207Z",
+  "createdAtLocal": "2026-11-10 06:09",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae, vault-explorer",
+  "kind": "code-change,commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-music-meta\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-10 06:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Tue 10 Nov 2026: vault-explorer#69 fixes Gemini's 5 review comments on #68 (loadMeta lock, NUMERIC_COLS, Repeat One play counting, main-thread yield, flaky proof). Scene review bulk decisions via audited /v1/edit/review/scene: 434 merged (fingerprint/URL + 2+ fields), 100 BTS records marked different; BTS/interview/trailer guard; 1,391 left open (82 date-only titles, 76 interviews, 23 ties). Notes in STATE/SESSIONS on vault-raggae#66.",
+  "commands": [
+    "python bulk_review.py --execute",
+    "node tests/music_tab_proof.js"
+  ],
+  "files": [
+    "vault-explorer/js/audio.js",
+    "vault-explorer/js/audio-bar.js",
+    "vault-explorer/src/ipc/music.ipc.js",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "f637656a4f0c12c661c457c1e2906bf2448b5c577fe1c2e5968a49c6d250200f",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-music-meta",
+    "head": "ef57bf6",
+    "hasChanges": false
+  }
+}

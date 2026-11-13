@@ -1,0 +1,38 @@
+{
+  "id": "20261110-105548-980-colonel-kfc-vault-raggae-vault-explorer-vault-co-4a25bab2",
+  "createdAt": "2026-11-10T15:55:48.9804665Z",
+  "createdAtLocal": "2026-11-10 10:55",
+  "timezone": "Eastern Standard Time",
+  "project": "ColONEL-KFC, vault-raggae, vault-explorer, vault-commander, vaultwares-themes",
+  "kind": "code-change,commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-10 10:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Tue 10 Nov 2026: reindex (extract_and_register_folder_crops) now uses group photos via common_face (exemplars only when singles fall short). Merged ColONEL-KFC#9, vault-commander#36, vault-explorer#70, vault-raggae#68 and #69 (retargeted to main), vault-explorer#71 (icon sync, auto-merged after CodeQL). All five repos on main; gateway restarted on main (tailnet + public 200), panel rebuilt. Background imports still running on main code.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "4a25bab20d3778c6ff59fe42e486d6e6ce306d94ccd57ab473c371ab53ce130f",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "4a90416",
+    "hasChanges": true
+  }
+}

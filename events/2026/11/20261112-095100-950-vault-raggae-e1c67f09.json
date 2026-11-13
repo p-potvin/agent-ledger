@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261112-095100-950-vault-raggae-e1c67f09",
+    "createdAt":  "2026-11-12T14:51:00.9502057Z",
+    "createdAtLocal":  "2026-11-12 09:51",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Claude 4.6 Opus\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-12 09:51 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude 4.6 Opus",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Addressed second CodeRabbit review on NVIDIA/NeMo-Speech.cpp PR #106 by clamping each offline segment\u0027s decoded frame count T_eff to its real-audio interval and next segment offset, preventing overlapping boundary timestamps",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "e1c67f09cdc4e7c8199287aee9f340e9da8d9caedd34900b1f0b08f366c9c8db",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "607686e",
+                "hasChanges":  false
+            }
+}
