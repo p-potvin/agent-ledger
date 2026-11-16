@@ -1,0 +1,54 @@
+{
+  "id": "20261115-084733-413-vault-raggae-a3503230",
+  "createdAt": "2026-11-15T13:47:33.4133624Z",
+  "createdAtLocal": "2026-11-15 08:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,verification",
+  "actor": "claude-code-scheduled",
+  "agentHeader": "Agent: claude-code-scheduled (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (CLOPEUX-DESKTOP))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Claude_Browser, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-15 08:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (CLOPEUX-DESKTOP)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Claude_Browser",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Scheduled run Sun 15 Nov: nightly embed + scenes sync OK. Gateway (8750/8752) hung ~08:14-08:43 (no CPU, trimmed WS, low RAM); restarted via scripts\\Restart-Gateway.ps1, healthy. PR #78 Library folder tree (MEDIA-UI backlog 3), verified in browser pane vs live panel, Devin keyboard finding fixed. PR #79 docs (stacked on #77): STATE/SESSIONS, operator asks A19 (/v1/img 403 for watch-folder pictures) and A20 (Python Files Index follower running again). Checkout left on main.",
+  "commands": [
+    "scripts\\Restart-Gateway.ps1",
+    "npx tsc --noEmit",
+    "gh pr create (#78, #79)"
+  ],
+  "files": [
+    "web/src/media/FolderTree.tsx",
+    "web/src/pages/Library.tsx",
+    "web/src/app.css",
+    "docs/STATE.md",
+    "docs/state/SESSIONS.md",
+    "docs/state/MEDIA-UI.md"
+  ],
+  "planPath": "",
+  "contentHash": "a35032303585aca89013f362f9d57bdd1130be1d9af723d279bd7b9125b5062b",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "607686e",
+    "hasChanges": false
+  }
+}

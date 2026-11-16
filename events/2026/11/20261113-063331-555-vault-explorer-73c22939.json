@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261113-063331-555-vault-explorer-73c22939",
+    "createdAt":  "2026-11-13T11:33:31.5556650Z",
+    "createdAtLocal":  "2026-11-13 06:33",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Claude 4.6 Sonnet\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-13 06:33 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude 4.6 Sonnet",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Unified Generate Subtitles root context menu across videos tab and video player with 2-step separator/language modal (defaulting to settings and parakeet-tdt), piped vw better-subtitles output to main terminal console, and fixed preview force-retry when sidecar marks isValid=false despite hasVideo=true.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "73c22939515fef04c897ecf290604f5f9dcb601d74218e0e3f718785385d19e8",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "4a90416",
+                "hasChanges":  true
+            }
+}

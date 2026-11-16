@@ -1,0 +1,52 @@
+{
+  "id": "20261115-090354-926-vault-cacophony-ba6e06b0",
+  "createdAt": "2026-11-15T14:03:54.9265031Z",
+  "createdAtLocal": "2026-11-15 09:03",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5-2\r\nThinking: low\r\nMode: code\r\nPermissions: ask (network: Windows 11 Enterprise, local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-codex-clause-stream-csm-dia\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-15 09:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5-2",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows 11 Enterprise, local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Sun, 15 Nov 2026 09:03. With user approval rebuilt CrispASR (cmake --build build --target bin/crispasr.exe, Ninja/MSVC 18/CUDA 13.3); previous binaries kept in CrispASR/build/bin.bak-20261115. The rebuild was based on my wrong diagnosis: Dia's 200-step (2.15 s) cap is in current source (src/dia_tts.cpp, temp CPU-testing limit) and is raised by env CRISPASR_DIA_MAX_STEPS, not by rebuilding. With the cap raised Dia never ended the utterance, only the first clause was intelligible to Parakeet (25 s audio for a 21-word line; same for a plain two-clause line), at about 5 steps/s (12 min per sentence). Conclusion: Dia unusable through this CrispASR port; TtsEngine leaves the cap alone and raises on truncated output. New binary re-checked with Kokoro, CSM and Parakeet round trips: all correct. 69 tests pass (live HF test deselected). Docs and HANDOFF updated. Branch vw-codex-clause-stream-csm-dia, uncommitted.",
+  "commands": [
+    "cmake --build build -j 16 --target bin/crispasr.exe",
+    "CRISPASR_DIA_MAX_STEPS=600 crispasr.exe --backend dia --tts ...",
+    "pytest tests/test_speech_markup.py tests/test_cacophony_pipeline.py tests/test_clause_stream.py -k 'not live'"
+  ],
+  "files": [
+    "scripts/cacophony/tts_engine.py",
+    "docs/voice-prosody.md",
+    "HANDOFF.md",
+    "CrispASR/build/bin/crispasr.exe"
+  ],
+  "planPath": "",
+  "contentHash": "ba6e06b0e75f96cfbf84d678c00fe9e6d8871ef3519eb4a977d2535087c6fdd1",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-codex-clause-stream-csm-dia",
+    "head": "cb2fbc9b",
+    "hasChanges": true
+  }
+}

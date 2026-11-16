@@ -1,0 +1,51 @@
+{
+  "id": "20261116-042024-485-vault-raggae-2c4544cb",
+  "createdAt": "2026-11-16T09:20:24.4855529Z",
+  "createdAtLocal": "2026-11-16 04:20",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "general,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-16 04:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Scheduled run Mon 16 Nov: gateway hung again; root cause is a kernel File-handle leak (System pid 4 holds 16.2M handles / 16.6M File objects, nonpaged pool 25.7 GB, paged 14.8 GB, ~1 GB RAM free). py-spy installed (operator allowed): event loop stuck in Thread.start(). Restart-Gateway failed (old process half-terminated holding 8750); operator rebooting after session. web/dist rebuilt from main (v0.22.2). Found docs PRs #79/#82 merged into stacked branches, not main; PR #83 lands them plus today's notes and ask A23.",
+  "commands": [
+    "uv tool install py-spy",
+    "py-spy dump --pid 27164",
+    "scripts\\Restart-Gateway.ps1",
+    "npm run build"
+  ],
+  "files": [
+    "docs/STATE.md",
+    "docs/state/SESSIONS.md"
+  ],
+  "planPath": "",
+  "contentHash": "2c4544cb8d611a0a7cfb975af50018299c9104a27af70d7e3a96245bb22eed47",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "6a7011f",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "20261113-042155-577-vault-cacophony-874bc86e",
+  "createdAt": "2026-11-13T09:21:55.5775032Z",
+  "createdAtLocal": "2026-11-13 04:21",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5-2\r\nThinking: low\r\nMode: code\r\nPermissions: ask (network: Windows 11 Enterprise, local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-codex-clause-stream-csm-dia\r\nTools used (this reply): Bash, PowerShell, Read, Write, Edit, Grep, Glob\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-13 04:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5-2",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows 11 Enterprise, local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Write",
+      "Edit",
+      "Grep",
+      "Glob"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Evaluated the prosody plan (HANDOFF open thread) and implemented steps 2 and 3 on branch vw-codex-clause-stream-csm-dia, uncommitted. Step 2: new scripts/clause_stream.py (ClauseChunker, split_utterance, ClauseStreamer) plus TtsEngine.synthesize_clauses, orchestrator --clause-pauses, cascade --stream/--tts/--keep-alive. Step 3: csm and dia engines in TtsEngine via CrispASR (per-voice seed, runaway guard, no implicit download), Dia dialect and speaker slot in speech_markup. Measured Fri, 13 Nov 2026 04:15: first audio 3.5-4.5s -> 1.2-1.3s on Kokoro and warm OmniVoice; 400 ms target NOT reached (about 1.2s floor per call). CSM run and checked; Dia not run (model absent). Side effect: a crispasr flag check with a nonexistent -m path auto-downloaded csm-1b-q4_k.gguf (1.44 GB) into the shared crispasr model cache. 68 tests pass (live HF test deselected).",
+  "commands": [
+    "pytest tests/test_speech_markup.py tests/test_cacophony_pipeline.py tests/test_clause_stream.py -k 'not live'",
+    "crispasr.exe --backend csm -m <absent> --tts hi (triggered 1.44 GB model download)",
+    "git switch -c vw-codex-clause-stream-csm-dia"
+  ],
+  "files": [
+    "scripts/clause_stream.py",
+    "scripts/speech_markup.py",
+    "scripts/cacophony/tts_engine.py",
+    "scripts/cacophony/orchestrator.py",
+    "scripts/cascade_conversation.py",
+    "tests/test_clause_stream.py",
+    "docs/voice-prosody.md",
+    "HANDOFF.md",
+    "README.md"
+  ],
+  "planPath": "",
+  "contentHash": "874bc86ec4528a12e23a6743c9605ececbec475c698a08034e5bca2dc4af357a",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-codex-clause-stream-csm-dia",
+    "head": "f59756a8",
+    "hasChanges": true
+  }
+}

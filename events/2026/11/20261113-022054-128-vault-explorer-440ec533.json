@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261113-022054-128-vault-explorer-440ec533",
+    "createdAt":  "2026-11-13T07:20:54.1281785Z",
+    "createdAtLocal":  "2026-11-13 02:20",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 4 Hydrogen\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-13 02:20 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 4 Hydrogen",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Addressed Greptile P1 findings on NVIDIA/NeMo-Speech.cpp PR #106: extracted shared bound_decoder_timings() helper in decoder.h and documented NEMO_SPEECH_RELPOS_MAX_Q and NEMO_SPEECH_MAX_OFFLINE_SEC in docs/development/diagnostics.md; rebuilt nemo-speech.exe and pushed commit 0ce1cb7d",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "440ec5334e214a82365360cadd7456d35c47c9d372c57e8c48c28695d13904a2",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "4a90416",
+                "hasChanges":  true
+            }
+}

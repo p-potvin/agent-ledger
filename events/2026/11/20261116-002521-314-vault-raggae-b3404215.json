@@ -1,0 +1,52 @@
+{
+  "id": "20261116-002521-314-vault-raggae-b3404215",
+  "createdAt": "2026-11-16T05:25:21.3145117Z",
+  "createdAtLocal": "2026-11-16 00:25",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: local Windows 11 (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): PowerShell, Edit, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-16 00:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "local Windows 11 (Clopeux-Desktop)",
+    "toolsUsed": [
+      "PowerShell",
+      "Edit",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Scheduled run vault-raggae-catalog-progression (Mon 16 Nov 2026). Health checked (gateway, raggae-read OK; Sun embed + scenes exit 0). Satellite upgrade: p-potvin/vault-music#8 - MusicBrainz lookups via vault-raggae now return album, track/disc number, release, release group, dates, artist MBID from the rebuilt music reference (album-first pass + ranked exact-title candidates). npm test 10/10; 15-file sample 13 found, 11/11 track numbers agree. Docs PR p-potvin/vault-raggae#82 (STATE/SESSIONS/SATELLITES, stacked on #79). Checkout back on main.",
+  "commands": [
+    "npm test",
+    "RAGGAE_LIVE=1 node tests/musicbrainz_raggae_test.js",
+    "gh pr create"
+  ],
+  "files": [
+    "vault-music/src/musicbrainz/local-db.js",
+    "vault-music/tests/musicbrainz_raggae_test.js",
+    "vault-raggae/docs/STATE.md",
+    "vault-raggae/docs/state/SATELLITES.md"
+  ],
+  "planPath": "",
+  "contentHash": "b340421529dc3d8c761a2844ec59e81e75b27f00c63c02b75b49127867b68e48",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "607686e",
+    "hasChanges": false
+  }
+}

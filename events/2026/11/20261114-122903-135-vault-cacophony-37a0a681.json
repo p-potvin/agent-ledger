@@ -1,0 +1,52 @@
+{
+  "id": "20261114-122903-135-vault-cacophony-37a0a681",
+  "createdAt": "2026-11-14T17:29:03.1353210Z",
+  "createdAtLocal": "2026-11-14 12:29",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5-2\r\nThinking: low\r\nMode: code\r\nPermissions: ask (network: Windows 11 Enterprise, local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-codex-clause-stream-csm-dia\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-14 12:29 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5-2",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows 11 Enterprise, local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Sat, 14 Nov 2026 12:28. With user approval downloaded Dia (dia-1.6b-f16.gguf 3.2 GB + dac-44khz.gguf 109 MB) into the shared crispasr model cache. CrispASR's own downloader failed (WinHTTP refused, curl fallback wrote the model to stdout), so fetched with curl from the registry URLs. Ran Dia through TtsEngine: loads, same seed gives identical audio, other speaker slot differs, BUT the built crispasr.exe caps Dia at 200 decoder steps (2.15 s), ignores --max-new-tokens and exits 0, so a 21-word line returns its first 7 words at about 25 s per call. Source tree has no such cap; rebuild not done. Added a guard in TtsEngine that raises when CSM/Dia audio is too short for its text, with a test. 69 tests pass (live HF test deselected). Docs and HANDOFF updated. Branch vw-codex-clause-stream-csm-dia, still uncommitted.",
+  "commands": [
+    "curl -L -o dia-1.6b-f16.gguf https://huggingface.co/cstr/dia-1.6b-GGUF/resolve/main/dia-1.6b-f16.gguf",
+    "crispasr.exe --backend dia -m dia-1.6b-f16.gguf --tts ... --seed 7",
+    "pytest tests/test_speech_markup.py tests/test_cacophony_pipeline.py tests/test_clause_stream.py -k 'not live'"
+  ],
+  "files": [
+    "scripts/cacophony/tts_engine.py",
+    "tests/test_clause_stream.py",
+    "docs/voice-prosody.md",
+    "HANDOFF.md"
+  ],
+  "planPath": "",
+  "contentHash": "37a0a681f06385e5a6bd037b860df4a8db6a839c4df9eb358246e9e8e7d3ddc0",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-codex-clause-stream-csm-dia",
+    "head": "cb2fbc9b",
+    "hasChanges": true
+  }
+}
