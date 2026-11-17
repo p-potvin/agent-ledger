@@ -12,12 +12,21 @@
 if (-not (Get-Variable -Name '__ProjectAliasCache' -Scope Script -ErrorAction SilentlyContinue)) {
     $script:__ProjectAliasCache = $null
     $script:__ProjectAliasCacheTime = [DateTime]::MinValue
+    $script:__ProjectAliasFailedTime = [DateTime]::MinValue
 }
 
 function Get-ProjectAliasMap {
+    # VW_AGENT_LEDGER_ALIAS_FETCH=0 skips the API entirely (aliases are then left as written).
+    if ($env:VW_AGENT_LEDGER_ALIAS_FETCH -eq '0') { return $null }
+
     # Cache for 10 minutes to avoid spamming the API on heavy local script usage
     if ($script:__ProjectAliasCache -and ([DateTime]::UtcNow - $script:__ProjectAliasCacheTime).TotalMinutes -lt 10) {
         return $script:__ProjectAliasCache
+    }
+    # A failure is remembered for 10 minutes too: the renderer resolves every event, and without this each call
+    # retried the API (16 Nov 2026: ~1,700 requests for one recorded event while the API's certificate was expired).
+    if (([DateTime]::UtcNow - $script:__ProjectAliasFailedTime).TotalMinutes -lt 10) {
+        return $null
     }
 
     $apiBase = $env:VW_API_URL
@@ -31,11 +40,13 @@ function Get-ProjectAliasMap {
         $raw = $response
     }
     catch {
-        Write-Warning "resolve-project-alias: could not fetch aliases from API ($($_.Exception.Message)). Returning empty map."
+        $script:__ProjectAliasFailedTime = [DateTime]::UtcNow
+        Write-Warning "resolve-project-alias: could not fetch aliases from API ($($_.Exception.Message)). Using no aliases for 10 minutes."
         return $null
     }
 
     if (-not $raw) {
+        $script:__ProjectAliasFailedTime = [DateTime]::UtcNow
         return $null
     }
 
