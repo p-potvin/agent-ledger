@@ -48,6 +48,47 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-11-16 05:22 - vault-raggae</strong> <span class="kind">general,verification</span> - Ledger audit (operator ask) plus the no-op replies: PR #84 bot comments (CodeRabbit skipped by path filters, Devin no issues; nothing changed) and the ledger script&#39;s alias-look...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general,verification</p>
+      <p><strong>Actor:</strong> claude-code</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: claude-code (role: main) Model: claude-opus-5-5 Thinking: low Mode: agent Permissions: bypass (network: Windows 11 local (Clopeux-Desktop)) CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts  Branch: main Tools used (this reply): Bash, PowerShell MCP servers accessed (this reply): none Time: 2026-11-16 05:22 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Ledger audit (operator ask) plus the no-op replies: PR #84 bot comments (CodeRabbit skipped by path filters, Devin no issues; nothing changed) and the ledger script&#39;s alias-lookup retry burst (agent-ledger, not changed). Checked today&#39;s 3 vault-raggae events (00:25, 04:20, 04:39): fields and kinds valid; 2 missing entries backfilled (post-reboot check, this one). API sync failed for all: api.vaultwares.ca TLS certificate expired (SEC_E_CERT_EXPIRED); FastAPI is loopback-only on vps-ovhcloud, so no other route. Entries are local only; after the cert is renewed run scripts\backfill-agent-ledger-to-api.py (idempotent).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>curl https://api.vaultwares.ca/health</code></li>
+        <li><code>record-agent-change.ps1 (VW_AGENT_LEDGER_API_SYNC=0)</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/events/2026/11/20261116-*.json</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=agent-ledger, branch=main, head=1919db01</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-11-16 05:20 - vault-raggae</strong> <span class="kind">verification</span> - Backfilled entry for the post-reboot check, Mon 16 Nov 2026 04:31-04:36 (not recorded at the time). Boot 04:28: System 6.4k handles, pools 1.1/1.6 GB, 17 GB free (leak cleared)....</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> claude-code</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: claude-code (role: main) Model: claude-opus-5-5 Thinking: low Mode: agent Permissions: bypass (network: Windows 11 local (Clopeux-Desktop)) CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts  Branch: main Tools used (this reply): Bash, PowerShell, Edit MCP servers accessed (this reply): none Time: 2026-11-16 05:20 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Backfilled entry for the post-reboot check, Mon 16 Nov 2026 04:31-04:36 (not recorded at the time). Boot 04:28: System 6.4k handles, pools 1.1/1.6 GB, 17 GB free (leak cleared). Waited for at-logon tasks: raggae-read 200, gateway /health 200 (embedder loading), panel 200 loopback + tailnet at v0.22.2. Committed the handle baseline note to vw-raggae-state-20261116-land after #83 had merged (stranded; carried to main by #84).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Invoke-WebRequest /health (8750, 8754, 8752)</code></li>
+        <li><code>(Get-Process -Id 4).HandleCount</code></li>
+        <li><code>git commit/push docs</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>docs/STATE.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=agent-ledger, branch=main, head=1919db01</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-11-16 04:39 - vault-raggae</strong> <span class="kind">code-change,commands</span> - Operator follow-up after reboot: pulled main (15 behind), uv sync, panel built v0.22.3, gateway restarted (all 200). Ran #81 performer_merge --execute (12,825 merges). Installed...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change,commands</p>

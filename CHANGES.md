@@ -3,6 +3,61 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-11-16 05:22 - vault-raggae</strong> <code>general,verification</code> - Ledger audit (operator ask) plus the no-op replies: PR #84 bot comments (CodeRabbit skipped by path filters, Devin no issues; nothing changed) and the ledger script&#39;s alias-look...</summary>
+
+- Kind: general,verification
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts  Branch: main
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-11-16 05:22 (TZ: Eastern Standard Time)
+  ```
+- Summary: Ledger audit (operator ask) plus the no-op replies: PR #84 bot comments (CodeRabbit skipped by path filters, Devin no issues; nothing changed) and the ledger script's alias-lookup retry burst (agent-ledger, not changed). Checked today's 3 vault-raggae events (00:25, 04:20, 04:39): fields and kinds valid; 2 missing entries backfilled (post-reboot check, this one). API sync failed for all: api.vaultwares.ca TLS certificate expired (SEC_E_CERT_EXPIRED); FastAPI is loopback-only on vps-ovhcloud, so no other route. Entries are local only; after the cert is renewed run scripts\backfill-agent-ledger-to-api.py (idempotent).
+- Commands:
+  - `curl https://api.vaultwares.ca/health`
+  - `record-agent-change.ps1 (VW_AGENT_LEDGER_API_SYNC=0)`
+- Files:
+  - `agent-ledger/events/2026/11/20261116-*.json`
+- Git: repo=agent-ledger, branch=main, head=1919db01
+
+</details>
+
+<details>
+<summary><strong>2026-11-16 05:20 - vault-raggae</strong> <code>verification</code> - Backfilled entry for the post-reboot check, Mon 16 Nov 2026 04:31-04:36 (not recorded at the time). Boot 04:28: System 6.4k handles, pools 1.1/1.6 GB, 17 GB free (leak cleared)....</summary>
+
+- Kind: verification
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts  Branch: main
+  Tools used (this reply): Bash, PowerShell, Edit
+  MCP servers accessed (this reply): none
+  Time: 2026-11-16 05:20 (TZ: Eastern Standard Time)
+  ```
+- Summary: Backfilled entry for the post-reboot check, Mon 16 Nov 2026 04:31-04:36 (not recorded at the time). Boot 04:28: System 6.4k handles, pools 1.1/1.6 GB, 17 GB free (leak cleared). Waited for at-logon tasks: raggae-read 200, gateway /health 200 (embedder loading), panel 200 loopback + tailnet at v0.22.2. Committed the handle baseline note to vw-raggae-state-20261116-land after #83 had merged (stranded; carried to main by #84).
+- Commands:
+  - `Invoke-WebRequest /health (8750, 8754, 8752)`
+  - `(Get-Process -Id 4).HandleCount`
+  - `git commit/push docs`
+- Files:
+  - `docs/STATE.md`
+- Git: repo=agent-ledger, branch=main, head=1919db01
+
+</details>
+
+<details>
 <summary><strong>2026-11-16 04:39 - vault-raggae</strong> <code>code-change,commands</code> - Operator follow-up after reboot: pulled main (15 behind), uv sync, panel built v0.22.3, gateway restarted (all 200). Ran #81 performer_merge --execute (12,825 merges). Installed...</summary>
 
 - Kind: code-change,commands

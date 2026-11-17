@@ -1,0 +1,48 @@
+{
+  "id": "20261116-052051-363-vault-raggae-dde7fc37",
+  "createdAt": "2026-11-16T10:20:51.3633887Z",
+  "createdAtLocal": "2026-11-16 05:20",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\scripts  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-16 05:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\scripts",
+  "summary": "Backfilled entry for the post-reboot check, Mon 16 Nov 2026 04:31-04:36 (not recorded at the time). Boot 04:28: System 6.4k handles, pools 1.1/1.6 GB, 17 GB free (leak cleared). Waited for at-logon tasks: raggae-read 200, gateway /health 200 (embedder loading), panel 200 loopback + tailnet at v0.22.2. Committed the handle baseline note to vw-raggae-state-20261116-land after #83 had merged (stranded; carried to main by #84).",
+  "commands": [
+    "Invoke-WebRequest /health (8750, 8754, 8752)",
+    "(Get-Process -Id 4).HandleCount",
+    "git commit/push docs"
+  ],
+  "files": [
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "dde7fc377b526904ba6a54238c5c6dcadded488e0659e879ded684038501fc30",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "1919db01",
+    "hasChanges": true
+  }
+}
