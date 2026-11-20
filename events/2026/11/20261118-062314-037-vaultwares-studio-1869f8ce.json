@@ -1,0 +1,45 @@
+{
+  "id": "20261118-062314-037-vaultwares-studio-1869f8ce",
+  "createdAt": "2026-11-18T11:23:14.0373067Z",
+  "createdAtLocal": "2026-11-18 06:23",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local + HF Jobs)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-18 06:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local + HF Jobs",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "vw-studio-gs rebuilt on official colmap/colmap:20260929.8468 (COLMAP 4.2.1 CUDA) + uv Python 3.10, torch 2.4.1+cu124, prebuilt gsplat 1.5.3+pt24cu124, nerfstudio main (COLMAP4 flag patch, fpsample==0.3.3 pin, pil_to_numpy replaced with np.array after Pillow private-API TypeError on first paid attempt). Original from-source build hit HF's ~30 min Space build timeout. L4 unavailable twice (cancelled unbilled); attempt 3 failed in 55 s on the Pillow bug. 600-iteration smoke test passed on l4x1 (228 s, ~.05): resize to 1536x864 OK, 22.8 ms/iter, cgroup 10.9/30 GB while caching, export 508,793 gaussians. Full Option A (64k iters, cull 0.005) launched. train_colmap_bundle.py gained --scheduling-timeout.",
+  "commands": [],
+  "files": [
+    "docker/gs/Dockerfile",
+    "tools/train_colmap_bundle.py"
+  ],
+  "planPath": "",
+  "contentHash": "1869f8ce748501452d630331fdb205cd2cf7527148d99d9ec0649533bd471d05",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "613e13c",
+    "hasChanges": true
+  }
+}

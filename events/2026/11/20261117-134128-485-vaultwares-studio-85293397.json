@@ -1,0 +1,48 @@
+{
+  "id": "20261117-134128-485-vaultwares-studio-85293397",
+  "createdAt": "2026-11-17T18:41:28.4850521Z",
+  "createdAtLocal": "2026-11-17 13:41",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local + HF)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-17 13:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local + HF",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "19 Sep COLMAP camera: OPENCV 1920x1080, f 888.6 (94.4 deg HFOV = iPhone 11 0.5x ultra-wide, video; in-camera lens correction leaves k1 0.011 k2 -0.012). nerfstudio undistort ROI would be 1919x1079. Added recon_entrypoint --train-size WxH (prepare_training_size: undistort via getOptimalNewCameraMatrix alpha 0, crop ROI, INTER_AREA resize, rewrite transforms as PINHOLE), 3 geometry tests (projected dots within 1 px). Chose 1536x864: 0.8x, 96x54 gsplat 16px tiles, 4 MiB pinned/frame. train_colmap_bundle.py: --train-size default 1536x864, ships worker.zip overlay (recon_entrypoint + heartbeat wrapper, which now watches /tmp/recon/train too). Option A dry run: 1600 frames 1536x864 on l4x1 predicted 22.2/30 GB. Not submitted.",
+  "commands": [],
+  "files": [
+    "docker/worker/recon_entrypoint.py",
+    "tools/train_colmap_bundle.py",
+    "tools/run_train_only_with_retention.py",
+    "tests/test_train_size.py"
+  ],
+  "planPath": "",
+  "contentHash": "85293397778b423cc29a2d40f6b5f8a62deda9686e61d1d453e6b2631ef12a08",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "613e13c",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "20261119-073928-164-vault-streaming-91628ce3",
+  "createdAt": "2026-11-19T12:39:28.1644812Z",
+  "createdAtLocal": "2026-11-19 07:39",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: auto (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-codex-stream-picker\r\nTools used (this reply): Bash, Edit, Write, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-19 07:39 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "auto",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Stream picker rewrite on branch vw-codex-stream-picker (uncommitted, v2.4.1). New src/realdebrid/candidates.js drops Comet Sync entries and lapsed AllDebrid/TorBox entries, dedupes by info hash (prefers linked/cached RD copy), tags episode fit (exact/pack/other). ranking.js: buildPlayQueue (only linked entries, cached then single episode then packs, manual pick first, max 8, 120s budget), pickDeepbridSource (single episode before pack), unknown seeders no longer penalised, pack/other-episode penalties. rd-flow.js startRDDebridFlow rewritten around the queue; dead RD polling branch removed; display list in try order. stream.js: uncached source whose size probe fails moves to next (20s probe). Live GoT S01E01: 71 entries to 23 candidates, 8 distinct linked tries (was 5 tries, 1 real). tests/test_stream_picker.js 8/8 with redacted fixture.",
+  "commands": [
+    "node tests/test_stream_picker.js",
+    "node tests/test_version.js",
+    "node scripts/sync-version.js 2.4.1"
+  ],
+  "files": [
+    "src/realdebrid/candidates.js",
+    "js/streaming/ranking.js",
+    "js/streaming/rd-flow.js",
+    "src/realdebrid/stream.js",
+    "src/realdebrid/search.js",
+    "tests/test_stream_picker.js"
+  ],
+  "planPath": "",
+  "contentHash": "91628ce3cb621f3dfa560844ff992451dea3e30f168347f0fbbac77731aad836",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-codex-stream-picker",
+    "head": "f9b99f5",
+    "hasChanges": true
+  }
+}

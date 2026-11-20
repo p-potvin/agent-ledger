@@ -1,0 +1,40 @@
+{
+  "id": "20261119-063424-436-vault-raggae-4cfffe94",
+  "createdAt": "2026-11-19T11:34:24.4367475Z",
+  "createdAtLocal": "2026-11-19 06:34",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Bash, PowerShell, Monitor\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-19 06:34 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Monitor"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Kernel leak diagnosis: System holds 13.47 M handles again 3 days after reboot (pools 34 GB, 1.2 GB RAM free). Pool tags tie the leaked objects to the Windows Container Isolation filter (wcifs.sys). Ordinary file access does not reproduce it; the trigger needs SYSTEM rights. Timing sampler failed (empty counts under the monitor), +192k handles in 37 min unattributed. Only Windows Sandbox among container features is enabled; operator will disable it and reboot to test.",
+  "commands": [
+    "Probe-KernelLeak.ps1",
+    "fltmc instances -f wcifs",
+    "Get-WindowsOptionalFeature"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "4cfffe94e0856e04119ec35bd2985513a9bb7b8b27691cd2e841ed24a2599f67",
+  "git": null
+}

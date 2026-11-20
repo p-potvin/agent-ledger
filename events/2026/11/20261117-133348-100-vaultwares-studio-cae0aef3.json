@@ -1,0 +1,45 @@
+{
+  "id": "20261117-133348-100-vaultwares-studio-cae0aef3",
+  "createdAt": "2026-11-17T18:33:48.1001976Z",
+  "createdAtLocal": "2026-11-17 13:33",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local + HF)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-17 13:33 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local + HF",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Replaced the training memory gate's 1/3-of-RAM uint8 rule with a measured model in tools/prepare_zerogpu_training.py: nerfstudio pins the CPU image cache and torch's CachingHostAllocator rounds blocks to powers of two (verified in torch 2.1.2 and 2.7.1), so 1080p frames cost 8 MiB + 0.29x raw fragmentation = 10.2 MB (matches thorough3 heartbeat: +20.4 GB for 2000 frames). Fixed overhead 13.65 GB fitted between 1600-survived and 2000-OOM on l4x1. Findings: at 1080p the old 33% sat exactly at the edge; at <=1536x864 frames fit 4 MiB blocks (~2770 frames on l4x1); old rule was too loose at 1600x900. Option A (1600f 1080p l4x1) predicts 100% of RAM. 5 new tests (13 in file). LichtFeld build restarted at normal priority after a stalled vcpkg download. Suite 364 pass / 3 pre-existing.",
+  "commands": [],
+  "files": [
+    "tools/prepare_zerogpu_training.py",
+    "tests/test_training_memory_guard.py"
+  ],
+  "planPath": "",
+  "contentHash": "cae0aef3b683ac3113d3fb2303899e7a757abc6f425bf69a7a4ad04a93aa9daf",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "613e13c",
+    "hasChanges": true
+  }
+}

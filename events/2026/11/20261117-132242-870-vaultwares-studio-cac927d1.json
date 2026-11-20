@@ -1,0 +1,49 @@
+{
+  "id": "20261117-132242-870-vaultwares-studio-cac927d1",
+  "createdAt": "2026-11-17T18:22:42.8701210Z",
+  "createdAtLocal": "2026-11-17 13:22",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local + HF Spaces)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-17 13:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local + HF Spaces",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "New worker image docker/gs/Dockerfile (Space clopeux/vw-studio-gs, building): CUDA 12.6/Ubuntu 24.04, COLMAP 4.2.1 (CUDA, Caspar GPU BA, global_mapper), torch 2.7.1+cu126, gsplat 1.5.3, nerfstudio main (MCMC + bilateral grid, colmap_utils patched for COLMAP 4 flags), DA3. recon_entrypoint run() now rewrites 5 renamed COLMAP 4 flags and drops the legacy vocab tree path (empty = COLMAP picks current tree); 4 tests. push_da3_space.py supports vw-studio-gs. New tools/train_colmap_bundle.py (dry-run default) trains a COLMAP SfM bundle straight from the Hub. ZeroGPU judged too tight for 64k iters. LichtFeld Studio v0.5.4.2 building from source on D: (own vcpkg + caches + temp on D:, low priority; prebuilt binaries are paid). Suite 360 pass / 3 pre-existing. No paid job submitted.",
+  "commands": [],
+  "files": [
+    "docker/gs/Dockerfile",
+    "docker/worker/recon_entrypoint.py",
+    "tools/train_colmap_bundle.py",
+    "tools/push_da3_space.py",
+    "tests/test_colmap4_flags.py"
+  ],
+  "planPath": "",
+  "contentHash": "cac927d12d16be5144af0a9dfa02bf0710b04ac502e9a22918879112757fff04",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "613e13c",
+    "hasChanges": true
+  }
+}

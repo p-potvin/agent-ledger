@@ -1,0 +1,47 @@
+{
+  "id": "20261118-083628-668-vaultwares-studio-d3d15f01",
+  "createdAt": "2026-11-18T13:36:28.6684464Z",
+  "createdAtLocal": "2026-11-18 08:36",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-18 08:36 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Option A full run (HF job 6afd8a9be5cad0e4dc3e6bad, l4x1, vw-studio-gs image: COLMAP 4.2.1 SfM bundle + gsplat 1.5.3 splatfacto, 1600 frames at 1536x864, 64k it) completed: 7486 s, ~1.66 USD, 1.98M gaussians, peak cgroup 15.3/30 GB (model predicted 22.2 GB, conservative). Recovered to cloud.ply/.splat/USD with artifact-store dedupe (large files 'present', not re-downloaded). Far-field tail restored vs DA3 thorough3 (p99/p50 radius 6.7 vs 3.3). Default viewer framing lands inside the cloud.",
+  "commands": [
+    "tools/recover_remote_recon.py --job colmap-merged1600-train-20261118-0623",
+    "tools/viewport_screenshot.py reconstruction/cloud.splat"
+  ],
+  "files": [
+    "jobs/colmap-merged1600-train-20261118-0623/reconstruction/cloud.splat"
+  ],
+  "planPath": "",
+  "contentHash": "d3d15f01c5f9538af45b1990411a4455071da4daae16e7b86ad82870e427844c",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "613e13c",
+    "hasChanges": true
+  }
+}

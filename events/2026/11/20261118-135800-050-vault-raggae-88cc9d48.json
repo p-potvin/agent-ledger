@@ -1,0 +1,49 @@
+{
+  "id": "20261118-135800-050-vault-raggae-88cc9d48",
+  "createdAt": "2026-11-18T18:58:00.0501485Z",
+  "createdAtLocal": "2026-11-18 13:58",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Bash, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-18 13:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Wed, 18 Nov 2026 14:00: gateway restarted on merged main (0.25.0, back in 12 s); backfill rode through (one 30 s pause, nothing lost, 10,506 done). Comet: 0 of 71 entries carry the cached marker (Comet log: RD 1/132 cached, AD 0, user RTN filter kept 23) - Comet availability limitation after RD removed instantAvailability, not an app parsing bug; uncached RD entries still resolve. Live: GoT S01E01 720p (584 MB, 61 min, en+hi) queued as stream:imdb:tt0944947:s01e01, reading at 3x. Measured unthrottled: 10-min video in 44 s incl. model load (~20x once loaded). PR p-potvin/vault-raggae#88: RAGGAE_STREAM_READRATE default 0 (operator: no throttle), version 0.25.1.",
+  "commands": [
+    "scripts/Restart-Gateway.ps1",
+    "node live_moments2.cjs",
+    "python -m app.moments.stream (speed test)",
+    "gh pr create"
+  ],
+  "files": [
+    "app/moments/stream.py"
+  ],
+  "planPath": "",
+  "contentHash": "88cc9d484971e6291675f2c4ab718b929e4e8c45e0ae4cddad62c815d5ff605d",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "f9b99f5",
+    "hasChanges": true
+  }
+}

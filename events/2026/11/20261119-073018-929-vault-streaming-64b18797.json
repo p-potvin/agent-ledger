@@ -1,0 +1,46 @@
+{
+  "id": "20261119-073018-929-vault-streaming-64b18797",
+  "createdAt": "2026-11-19T12:30:18.9297286Z",
+  "createdAtLocal": "2026-11-19 07:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "handoff",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Bash, Write, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-19 07:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Thu, 19 Nov 2026: rewrote HANDOFF.md for the next chat (stream selection gives up after 5 tries). Measured on GoT S01E01 via the app's own ranking: of 5 attempts only 1 is a real distinct try - link-less TORRENT entries consume attempts, RD/AD duplicates of the same hash, uncached season packs rank high, Comet/StremThru reports almost nothing cached since RD dropped instantAvailability, hard cap 5, startIndex vs re-sorted list mismatch, Deepbrid fallback untested; TorBox absent from current Comet config. Also recorded: backfill finished (80,205 stored, 1,798 misses, 161,948 requests, 316 min), posters cached (84,014, 16.7 GB, 43 failed), vault-raggae#88 merged. HANDOFF.md not committed.",
+  "commands": [
+    "node (rank Comet results with js/streaming/ranking.js)"
+  ],
+  "files": [
+    "HANDOFF.md"
+  ],
+  "planPath": "",
+  "contentHash": "64b18797ea437872aab6e9418300a4a32db5a39fbd87860bc6cb7f475ee0ec5c",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "f9b99f5",
+    "hasChanges": true
+  }
+}

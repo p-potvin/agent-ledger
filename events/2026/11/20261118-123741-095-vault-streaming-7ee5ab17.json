@@ -1,0 +1,49 @@
+{
+  "id": "20261118-123741-095-vault-streaming-7ee5ab17",
+  "createdAt": "2026-11-18T17:37:41.0956119Z",
+  "createdAtLocal": "2026-11-18 12:37",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-codex-av1-trailers-backfill\r\nTools used (this reply): Bash, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-18 12:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Wed, 18 Nov 2026 11:15: addressed 4 Devin findings on p-potvin/vault-streaming#16 in 2a18cd3: French backfill blob keyed fr-FR (renderer key; verified French film/series/season served from catalog with 0 TMDB requests); failed browse page aborts candidate listing; failed extra-season request leaves series not-done; done file only records gateway-acknowledged titles. Re-ran 6-title sample (6 TMDB requests). Replied to and resolved all 4 threads. Full backfill still not started.",
+  "commands": [
+    "node scripts/backfill-catalog.js --execute --limit 3",
+    "git push",
+    "gh api replies + resolveReviewThread"
+  ],
+  "files": [
+    "scripts/backfill-catalog.js",
+    "src/raggae.js"
+  ],
+  "planPath": "",
+  "contentHash": "7ee5ab1714d29b77aad29d00247391aadf07a6a80276cf0be219679af6771367",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-codex-av1-trailers-backfill",
+    "head": "2a18cd3",
+    "hasChanges": true
+  }
+}
