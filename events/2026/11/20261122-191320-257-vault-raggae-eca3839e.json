@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261122-191320-257-vault-raggae-eca3839e",
+    "createdAt":  "2026-11-23T00:13:20.2576745Z",
+    "createdAtLocal":  "2026-11-22 19:13",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change",
+    "actor":  "rust/raggae-catalog/ui/src/pages/Oracle.tsx",
+    "agentHeader":  "Agent: rust/raggae-catalog/ui/src/pages/Oracle.tsx (role: main)\r\nModel: claude-opus-5-5\r\nThinking: rust/raggae-catalog/ui/src/pages/Lyrics.tsx\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-catalog-pages-2\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 19:13 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "rust/raggae-catalog/ui/src/pages/Lyrics.tsx",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "PR #107 review round: 7 Devin findings fixed and answered (lyrics on-disk lookup by tags, article file keys, music replay/keys/score badges, moments summary polling and title retry). New GET /v1/oracle/search on tech-oracle\u0027s own LanceDB (predictions 7,332, items 16,859, 768-d EG2), Ask box on the Tech oracle page. 403 tests passed. Gateway not restarted (branch unmerged). Lyrics on-disk browser check skipped at operator\u0027s request.",
+    "commands":  [
+                     "app/main.py"
+                 ],
+    "files":  [
+                  "app/oracle.py"
+              ],
+    "planPath":  "tests/test_panel_phase3.py",
+    "contentHash":  "eca3839ee3921eac19a36599014d9da364390898c4969f959bad6b221d9f14a0",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "vw-raggae-catalog-pages-2",
+                "head":  "7a5707f",
+                "hasChanges":  false
+            }
+}

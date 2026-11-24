@@ -1,0 +1,48 @@
+{
+  "id": "20261123-090040-329-vault-raggae-9fa0a897",
+  "createdAt": "2026-11-23T14:00:40.3299974Z",
+  "createdAtLocal": "2026-11-23 09:00",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + greencloud via tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-state-20261123d\r\nTools used (this reply): Bash, PowerShell, Edit, ssh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 09:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + greencloud via tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "ssh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "IMDb download: local first 500 done (499 fetched, 3 skipped, 0 errors); chain started rows 4161-7802 locally. Fixed pull_greencloud_imdb.py: tar stream drained after extract (padding blocked ssh), copies staged in G:\\Galleries\\.imdb-incoming and moved in only when whole, ssh -n + DEVNULL stdin (hidden process stdin kept ssh open, rm calls hit 120 s timeouts). Restarted; round copied 141 folders in ~8 min. greencloud run survived the ssh kill (setsid), at 276/3640. Existing identities (e.g. Michael Wincott) left alone. STATE on #125 updated.",
+  "commands": [
+    "pull_greencloud_imdb.py"
+  ],
+  "files": [
+    "%LOCALAPPDATA%\\VaultWares\\raggae\\runs\\pull_greencloud_imdb.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "9fa0a897fcc001b34c620ba4e03ee2dbf8a61c8c7e7a56ff2253e6ccd25733b9",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-state-20261123d",
+    "head": "6f8570d",
+    "hasChanges": false
+  }
+}

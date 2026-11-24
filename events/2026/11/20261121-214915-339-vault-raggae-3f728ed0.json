@@ -1,0 +1,43 @@
+{
+  "id": "20261121-214915-339-vault-raggae-3f728ed0",
+  "createdAt": "2026-11-22T02:49:15.3394643Z",
+  "createdAtLocal": "2026-11-21 21:49",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "commands,documentation",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 21:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Operator approved runs: checkout on main b7fe072; started picture vectors (posters, seasons, profiles via gateway 3060, ~10/s, ~4.5 h, pid 10576) and TMDB episode stills download (545,187 at 10/s, ~15 h, pid 22880). Docs PR #97 records it.",
+  "commands": [
+    "python -m app.picture_vectors posters seasons profiles --gpu gateway",
+    "python -m app.pictures stills"
+  ],
+  "files": [
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "3f728ed027b33dc79c63569ae1d975af0f6f078de84db082f22759417923f0f8",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "b7fe072",
+    "hasChanges": false
+  }
+}

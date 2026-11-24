@@ -1,0 +1,40 @@
+{
+  "id": "20261123-074433-553-vault-raggae-01b29944",
+  "createdAt": "2026-11-23T12:44:33.5533401Z",
+  "createdAtLocal": "2026-11-23 07:44",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 07:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "IMDb download runner: pause 3 s -> 0.2 s (operator), started/result lines so an actor stopped midway is refetched into its own folder; stopped the run at 211 done (1 partial, nm0001780, marked for refetch) and restarted: 289 left at ~9 s each. Multi-VPS parallel scraping discussed, not started (needs operator decision on hosts/ToS/datacenter-IP risk).",
+  "commands": [
+    "celeb_imdb_new_actors.py --first 500"
+  ],
+  "files": [
+    "%LOCALAPPDATA%\\VaultWares\\raggae\\runs\\celeb_imdb_new_actors.py"
+  ],
+  "planPath": "",
+  "contentHash": "01b29944e6b8fe5cb5b3fea6f383120ba94296fa9d4daa7c09cabe5385b56340",
+  "git": null
+}

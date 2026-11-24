@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261121-232903-368-shared-tube-e4ff364b",
+    "createdAt":  "2026-11-22T04:29:03.3687799Z",
+    "createdAtLocal":  "2026-11-21 23:29",
+    "timezone":  "Eastern Standard Time",
+    "project":  "shared-tube",
+    "kind":  "commands",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Antigravity Orchestrator\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 23:29 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Antigravity Orchestrator",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Prom King media catalog: checked subscription-feed video associations vs standard catalog counts for performer records in promking Postgres",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "e4ff364b9788aedc9b08f3f55bcd9b898f9ee35e5a0ebefea6c40a419e041c79",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "main",
+                "head":  "cb3ded4",
+                "hasChanges":  true
+            }
+}

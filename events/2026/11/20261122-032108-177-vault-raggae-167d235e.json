@@ -1,0 +1,52 @@
+{
+  "id": "20261122-032108-177-vault-raggae-167d235e",
+  "createdAt": "2026-11-22T08:21:08.1775703Z",
+  "createdAtLocal": "2026-11-22 03:21",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 03:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Scheduled run (vault-raggae-catalog-progression). Picture vectors run ended 02:24 (158,463 embedded, 0 failed); found 209,795 cast profiles never fetched. Queued chain-pictures.ps1 (pid 21880): after the stills fetch (pid 22880) ends, app.pictures profiles, then app.picture_vectors stills profiles via gateway. Nightly embed and scenes sync OK. PR #100 (v0.31.0): /v1/cast/search|person|title|summary read routes over vw-cast.db with 6 tests. STATE/SESSIONS/SATELLITES updated on PR #99. Checkout back on main.",
+  "commands": [
+    "python -m app.pictures profiles --dry-run",
+    "pytest -q",
+    "gh pr create (#100)"
+  ],
+  "files": [
+    "app/cast/service.py",
+    "app/main.py",
+    "tests/test_cast_service.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "167d235e590454aed78d585c86783fc686756f3df5beae8d7671b1ab277291c3",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "7a191ff",
+    "hasChanges": false
+  }
+}

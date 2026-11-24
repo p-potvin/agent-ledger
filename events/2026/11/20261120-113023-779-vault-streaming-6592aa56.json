@@ -1,0 +1,48 @@
+{
+  "id": "20261120-113023-779-vault-streaming-6592aa56",
+  "createdAt": "2026-11-20T16:30:23.7795664Z",
+  "createdAtLocal": "2026-11-20 11:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-series-resume\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-20 11:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows local",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "PR #24 review fixes (Devin): web/public/electron-api-shim.js exposes getShowProgress; Deepbrid wait retries pass torrentId and poll /torrents/info without re-adding the magnet (src/deepbrid/client.js, proxy-handlers.js, rd-flow.js) + stubbed-network test. Commit 3d8936c pushed; replied on both threads and resolved them. CodeRabbit summary ignored (nothing actionable). Tests 15/15, 7/7, 5/5.",
+  "commands": [
+    "node tests/test_stream_picker.js",
+    "git push",
+    "gh api .../replies"
+  ],
+  "files": [
+    "web/public/electron-api-shim.js",
+    "src/deepbrid/client.js",
+    "src/realdebrid/proxy-handlers.js",
+    "js/streaming/rd-flow.js",
+    "tests/test_stream_picker.js"
+  ],
+  "planPath": "",
+  "contentHash": "6592aa56b469ceb8521a71addbe4f43bd2a0df896793e3bee9189b360173ad46",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-series-resume",
+    "head": "3d8936c",
+    "hasChanges": false
+  }
+}

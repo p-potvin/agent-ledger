@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261122-074556-263-shared-tube-d61cd0dc",
+    "createdAt":  "2026-11-22T12:45:56.2631323Z",
+    "createdAtLocal":  "2026-11-22 07:45",
+    "timezone":  "Eastern Standard Time",
+    "project":  "shared-tube",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 07:45 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Prom King media catalog: verified v0.3.67 admin queue deploy on greencloud-vps, diagnosed /api/promking/auth/me 500 error (double-encoded JSONB preferences string on users id=8), and ran read-only dry-run matching 94,705 active videos against local vault-raggae scene catalog (49,681 high-confidence new matches)",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "d61cd0dc5d0c077714b59732615f0cf4db5fb8b098fc1b3ec2c72834b5952123",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "main",
+                "head":  "93b28fd",
+                "hasChanges":  true
+            }
+}

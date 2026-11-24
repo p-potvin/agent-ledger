@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261122-155250-553-vault-raggae-4d0c221d",
+    "createdAt":  "2026-11-22T20:52:50.5538316Z",
+    "createdAtLocal":  "2026-11-22 15:52",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change,documentation",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-catalog-cast\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 15:52 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "PR #105 review fixes: hidden/merged titles dropped from filmographies in CastService.person (test), optional linked count, retry, person panel kept mounted under title panel, proposed matches without head card, clear message for photos without picture vectors, SESSIONS entry. 7 threads replied/resolved.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "4d0c221d0a384a8059434a4bbb18bda351b0bacaac730a99e411e155d223a942",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "vw-raggae-catalog-cast",
+                "head":  "92f8f09",
+                "hasChanges":  false
+            }
+}

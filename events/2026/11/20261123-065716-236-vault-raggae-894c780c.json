@@ -1,0 +1,48 @@
+{
+  "id": "20261123-065716-236-vault-raggae-894c780c",
+  "createdAt": "2026-11-23T11:57:16.2368048Z",
+  "createdAtLocal": "2026-11-23 06:57",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-state-20261123d\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 06:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "A25 approved by operator (First 500 actors): wrote runs\\celeb_imdb_new_actors.py (KFC collect_and_stage_identity, 30 images max, headed browser, sequential, 3 s pause, skips existing _nm folders, resumable jsonl log). Smoke test Bruce Willis 30/30 in 6.7 s; full run of 500 started in background. STATE.md A25 updated on PR #125 with next steps (KFC reindex, lock, head cards, cast identities link).",
+  "commands": [
+    "python celeb_imdb_new_actors.py --only nm0000246",
+    "python celeb_imdb_new_actors.py --first 500"
+  ],
+  "files": [
+    "%LOCALAPPDATA%\\VaultWares\\raggae\\runs\\celeb_imdb_new_actors.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "894c780cf471d9ff5e276d6f7186508bd7041de7bd6f8fb936e07108bf43cf58",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-state-20261123d",
+    "head": "72a8f4a",
+    "hasChanges": false
+  }
+}

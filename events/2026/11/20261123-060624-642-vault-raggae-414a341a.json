@@ -1,0 +1,49 @@
+{
+  "id": "20261123-060624-642-vault-raggae-414a341a",
+  "createdAt": "2026-11-23T11:06:24.6425901Z",
+  "createdAtLocal": "2026-11-23 06:06",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: local Windows 11)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): PowerShell, Edit, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 06:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "local Windows 11",
+    "toolsUsed": [
+      "PowerShell",
+      "Edit",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Operator approved merging #122. Fixed Devin's 3 review findings first (superseded TMDB stills and removed episodes left out of episode ranking; fallback median from shown stills only, not excluded specials; shared tokenizer so apostrophes match), 3 new tests (20 pass), replied on the threads. Merged #122, restarted the gateway on main 0.41.0 (06:05; only the 2060 stills run active, which does not use the gateway). Live /v1/pictures/episodes checked: Office dinner party -> S4E9, Friends Ross's wedding -> S4E23, GoT -> S7E6, film -> 400. Docs PR #123 updated.",
+  "commands": [
+    "gh pr merge 122 --merge",
+    "scripts\\Restart-Gateway.ps1"
+  ],
+  "files": [
+    "app/picture_search.py",
+    "tests/test_picture_search.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "414a341a9000409c3981e3bfa217da47cb9a644bf8a17b62ab9d0e884115e3b1",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "687e982",
+    "hasChanges": false
+  }
+}

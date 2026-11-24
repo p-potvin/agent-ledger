@@ -1,0 +1,45 @@
+{
+  "id": "20261123-030701-479-panopticam-6b25e08a",
+  "createdAt": "2026-11-23T08:07:01.4791849Z",
+  "createdAtLocal": "2026-11-23 03:07",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "plan",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Clopeux-Desktop (Windows 11, local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 03:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Clopeux-Desktop (Windows 11, local)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Operator answers recorded in HANDOFF (Mon, 23 Nov 2026 01:05): F4F via Privado fleet kept; CB hourly user-list read approved up to 1/s; dataset-archive trim after KFC-ingest check; python-zipper fix approved; window embeds approved. Room counts read on the box (594k ever, 130k/day live, ~3.9k new/day). Next feature picked: Real audience (CB). Commit f77769c local.",
+  "commands": [
+    "ssh ubuntu@100.105.177.10 read-only room counts"
+  ],
+  "files": [
+    "docs/HANDOFF.md"
+  ],
+  "planPath": "",
+  "contentHash": "6b25e08a620d57231168c96efbe217db6d02fa18a7e4377a5aeaa5b67da59b9c",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "f77769c",
+    "hasChanges": true
+  }
+}

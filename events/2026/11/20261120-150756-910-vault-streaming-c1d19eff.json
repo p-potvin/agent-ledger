@@ -1,0 +1,50 @@
+{
+  "id": "20261120-150756-910-vault-streaming-c1d19eff",
+  "createdAt": "2026-11-20T20:07:56.9103282Z",
+  "createdAtLocal": "2026-11-20 15:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-episode-nav\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-20 15:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows local",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Moments CPU root cause: vault-raggae gateway pins CUDA_VISIBLE_DEVICES to the 3060 UUID, read jobs inherited it and asked for device 1 -> onnxruntime silent CPU fallback (6 cores, GPU idle). Fix in vault-raggae (branch vw-claude-transcript-1min, c9b1e8e, 0.27.0): job env pins its card by UUID as device 0, providers recorded in status; 1-min speech segments; partial transcript published per checkpoint and saved by gateway while running. Measured: 213 s/6 cores -> 44 s/0.15 cores, GPU1 65-92%. vault-streaming (vw-claude-episode-nav, ec0b6f2): second Comet request cachedOnly+noTorrent for episodes (cached season packs; AD S06E14 1 -> 5 cached), keep-warm 1 req/min while paused, transcript polled 30 s and reloaded while partial. Comet server: TorBox key removed from TORRENTIO_URL (backup .env.comet.bak-20261120-195506), comet recreated healthy. Punctuation: present end to end (rendered), sparse from the model; right context left at 1. Gateway restart needed for main.py fix.",
+  "commands": [
+    "py-spy record --pid",
+    "docker compose up -d comet",
+    "node tests/*.js",
+    "pytest tests"
+  ],
+  "files": [
+    "vault-raggae/app/main.py",
+    "vault-raggae/app/moments/stream.py",
+    "src/realdebrid/client.js",
+    "src/realdebrid/search.js",
+    "js/player/player.js",
+    "js/player/subtitles.js"
+  ],
+  "planPath": "",
+  "contentHash": "c1d19eff1d49aa4aacfa057f3901d4de674cca06c432d54de15cc8ce82b920f3",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-episode-nav",
+    "head": "ec0b6f2",
+    "hasChanges": false
+  }
+}

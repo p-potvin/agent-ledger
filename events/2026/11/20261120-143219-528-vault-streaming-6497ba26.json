@@ -1,0 +1,48 @@
+{
+  "id": "20261120-143219-528-vault-streaming-6497ba26",
+  "createdAt": "2026-11-20T19:32:19.5283397Z",
+  "createdAtLocal": "2026-11-20 14:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-episode-nav\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-20 14:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows local",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Branch vw-claude-episode-nav (5509d37, pushed, stacked on PR #24, version 2.9.0): series player features (prev/next + hover preview, Up next card N s before end setting default 40 + series autoplay, per-series skip intro/credits, episodes drawer), Watch History grouped per series, titles 'Series - SxxEyy - name', fixed-width time, fullscreen controls on mouse move, vault-explorer player icons, smaller SETTINGS, search icon inside box, Moments after 15 s; fixes: switch position leaking into next episode, error clips marking watched. Investigations: transcript slow/no punctuation = nemo-speech runs nemotron-3.5-asr-streaming (streaming model) + 10-min WAV segments, parakeet-tdt-0.6b-v3 is self-punctuating offline (nemo-speech pull parakeet-tdt); slow resume = Comet cold link 3.3 s vs 0.6 s warm; Stremio has more streams because Comet drops season/complete packs (Torrentio 27 vs Comet 6 for American Dad S06E14). Comet TORRENTIO_URL holds a lapsed TorBox key. PR not opened yet.",
+  "commands": [
+    "node scratchpad/gui4.cjs",
+    "git push -u origin vw-claude-episode-nav"
+  ],
+  "files": [
+    "js/player/series-controls.js",
+    "js/player/episodes.js",
+    "js/history.js",
+    "js/player/player.js",
+    "js/icons.js",
+    "css/player.css"
+  ],
+  "planPath": "",
+  "contentHash": "6497ba2627303ce572b0792133d189377f38400c5d512e940f4a2f299e442483",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-episode-nav",
+    "head": "5509d37",
+    "hasChanges": false
+  }
+}

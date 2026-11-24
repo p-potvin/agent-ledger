@@ -1,0 +1,45 @@
+{
+  "id": "20261121-210501-018-vault-raggae-89778890",
+  "createdAt": "2026-11-22T02:05:01.0188066Z",
+  "createdAtLocal": "2026-11-21 21:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,documentation",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-claude-tmdb-image-rate\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 21:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Scheduled run vault-raggae-catalog-progression: found cast catalog built (650,174 people, 6.6M credits) and 74k TMDB pictures kept today; added tests/test_picture_vectors.py (6 tests) to PR #95; docs PR #96 updates STATE.md/SESSIONS.md and adds operator ask A24 (picture vectors at scale). No outside requests, nothing left running.",
+  "commands": [
+    "pytest tests/test_picture_vectors.py tests/test_pictures.py tests/test_cast.py",
+    "gh pr create (#96)"
+  ],
+  "files": [
+    "tests/test_picture_vectors.py",
+    "docs/STATE.md",
+    "docs/state/SESSIONS.md"
+  ],
+  "planPath": "",
+  "contentHash": "897788906410d6c1e788674269a4bd0b8960feff31f08f45fbda191592d9f5b6",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-claude-tmdb-image-rate",
+    "head": "934909e",
+    "hasChanges": false
+  }
+}

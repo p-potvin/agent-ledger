@@ -1,0 +1,51 @@
+{
+  "id": "20261123-102650-712-vault-raggae-1b032026",
+  "createdAt": "2026-11-23T15:26:50.7122743Z",
+  "createdAtLocal": "2026-11-23 10:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-state-20261123d\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 10:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Kinopoisk fill (operator approved): runs\\celeb_kinopoisk_fill.py - soft identities with a Wikidata-mapped Kinopoisk id get up to 30 kp-NNN.jpg in their folder (pilot copies reused), then KFC CelebrityReindexPipeline + head cards; loop every 15 min, stops on captcha. gallery.db backed up first. First batch: 56 tried, 15 no gallery, 41 filled, 19 locked (Ben Affleck, Jim Carrey, Adrienne King, Jerry Goldsmith...), 19 head cards. Operator noted 404s: confirmed /photos/ 404 = no photo gallery (person page 200 on 4 ids), collector now records it and skips scrolling. Cate Blanchett / Brittany Murphy (23 kp photos) still soft: IMDb noise dominates whole-folder clustering. Loop started detached. STATE on #125.",
+  "commands": [
+    "celeb_kinopoisk_fill.py",
+    "celeb_kinopoisk_fill.py --loop",
+    "kp_status.py"
+  ],
+  "files": [
+    "%LOCALAPPDATA%\\VaultWares\\raggae\\runs\\celeb_kinopoisk_fill.py",
+    "%LOCALAPPDATA%\\VaultWares\\raggae\\runs\\celeb_kinopoisk_pilot.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "1b0320264135914532dc2850313370c1c971e6208d0bbdc3bccc7c57392619b1",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-state-20261123d",
+    "head": "37829b7",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "20261121-055829-464-vault-streaming-24626a72",
+  "createdAt": "2026-11-21T10:58:29.4647932Z",
+  "createdAtLocal": "2026-11-21 05:58",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-loading-preload\r\nTools used (this reply): Edit, Write, Bash, playwright, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 05:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Edit",
+      "Write",
+      "Bash",
+      "playwright",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "PR #27 (v2.10.0, branch vw-claude-loading-preload): splash-style stream loading card (loading-card.js mirrors rd-flow's dialog), in-player loading on the Up next card with a ring (z-index 210, clicks/Esc no longer cancel), next-episode pre-load 30 s before the end (preload.js: resolve + keep warm + queue Moments; rd-flow takePreloadedEpisode), Continue Watching grouped per series, idle cursor fix, X icon padding fix, removed blur handler, VAULT_STREAMING_USER_DATA for E2E. GUI-tested on real episodes with an isolated data folder; unit tests pass. Also switched vault-raggae checkout back to main after #93 merge.",
+  "commands": [
+    "node loadflow.cjs / preflow.cjs / inplayer.cjs",
+    "gh pr create"
+  ],
+  "files": [
+    "js/streaming/loading-card.js",
+    "js/streaming/preload.js",
+    "js/player/series-controls.js",
+    "js/continue-watching.js",
+    "css/modals.css",
+    "css/player.css",
+    "main.js"
+  ],
+  "planPath": "",
+  "contentHash": "24626a72f8f255f3a515dacb0e28102d409bc398b8d1167f1971e9c2d7c8c4cd",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-loading-preload",
+    "head": "74cf06e",
+    "hasChanges": false
+  }
+}

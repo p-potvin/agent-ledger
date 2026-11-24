@@ -1,0 +1,46 @@
+{
+  "id": "20261120-112324-207-vault-streaming-3994ebaa",
+  "createdAt": "2026-11-20T16:23:24.2072455Z",
+  "createdAtLocal": "2026-11-20 11:23",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-series-resume\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-20 11:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows local",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Committed 8625781 on vw-claude-series-resume (series resume, Mark as Watched at setting, Comet language requirement cleared, placeholder classification + RD/Deepbrid wait, Deepbrid magnet trackers, 2:3 poster cards with overlay details, hover mute carry, Library red X removed; version 2.8.0) and opened https://github.com/p-potvin/vault-streaming/pull/24 with reviewer p-potvin. Tests 7/7, 14/14, 5/5, version check. PR mergeable, no CI checks configured; Auto-fix on.",
+  "commands": [
+    "git commit",
+    "git push -u origin vw-claude-series-resume",
+    "gh pr create"
+  ],
+  "files": [
+    "js/streaming/details-modal.js",
+    "src/realdebrid/client.js",
+    "css/header.css"
+  ],
+  "planPath": "",
+  "contentHash": "3994ebaa0bcb23f53d9387847bd2a371280daa84eacea511a46759394ecc14f9",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-series-resume",
+    "head": "8625781",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "20261123-075717-625-vault-raggae-01740e5f",
+  "createdAt": "2026-11-23T12:57:17.6258467Z",
+  "createdAtLocal": "2026-11-23 07:57",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "commands,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + greencloud via tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Bash, PowerShell, Edit, ssh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 07:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + greencloud via tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "ssh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Multi-host IMDb download test (operator ask). greencloud has Xvfb (ovhcloud does not). Set up /opt/kfc-imdb on greencloud: python venv with patchright + requests + its Chromium, KFC's imdb_media_collector.py, the runner (now portable: --start/--first/--list/--log/--gallery) and the ranked list; qa-automation untouched. Test: rows 501-520 under xvfb-run, headed: 20/20 actors, 30/30 photos each, ~8 s per actor, no 403. Copied the 20 folders to G:\\Galleries\\Celebrities (none existed; copies left in /opt/kfc-imdb/gallery). Local run: 297 of 500 done, 0 errors.",
+  "commands": [
+    "xvfb-run .venv/bin/python celeb_imdb_new_actors.py --start 500 --first 20",
+    "patchright install chromium"
+  ],
+  "files": [
+    "%LOCALAPPDATA%\\VaultWares\\raggae\\runs\\celeb_imdb_new_actors.py",
+    "greencloud:/opt/kfc-imdb"
+  ],
+  "planPath": "",
+  "contentHash": "01740e5f53884063ea5d0375ada30b60d31ef56b496db547848f3b2dca1715f2",
+  "git": null
+}

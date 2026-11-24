@@ -1,0 +1,53 @@
+{
+  "id": "20261121-061911-813-vault-streaming-d0ec0d03",
+  "createdAt": "2026-11-21T11:19:11.8132082Z",
+  "createdAtLocal": "2026-11-21 06:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-loading-preload\r\nTools used (this reply): Edit, Bash, playwright, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 06:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Edit",
+      "Bash",
+      "playwright",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "PR #27 fe02ab9: Devin review fixes (stopStreamRequest on cancel/choose, superseded request guard, fullscreen exit for list, preload wait + tagged-track Moments, Continue Watching grouping by id + full history), Up next/loading card bottom-right at fixed 140 px, end-of-episode safeguard with [up next] logs. Diagnosed the operator's Play next failure on main: stream dialog z-index 3350 under the player (10000) and any click outside closed the invisible dialog, cancelling the flow; fixed by this PR's in-player loading. GUI-tested: cancel, superseded request, card position, Play next by itself to a pre-loaded episode. 8 threads replied and resolved.",
+  "commands": [
+    "node cancel.cjs / autonext.cjs",
+    "gh api replies + resolveReviewThread"
+  ],
+  "files": [
+    "js/streaming/loading-card.js",
+    "js/streaming/rd-flow.js",
+    "js/streaming/preload.js",
+    "js/player/series-controls.js",
+    "js/continue-watching.js",
+    "css/player.css"
+  ],
+  "planPath": "",
+  "contentHash": "d0ec0d0356b0a3f4e17bcb548064df1cf09132d3153c20c234cd0678e9ac0305",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-loading-preload",
+    "head": "fe02ab9",
+    "hasChanges": false
+  }
+}

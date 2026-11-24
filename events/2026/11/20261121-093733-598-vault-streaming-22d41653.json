@@ -1,0 +1,52 @@
+{
+  "id": "20261121-093733-598-vault-streaming-22d41653",
+  "createdAt": "2026-11-21T14:37:33.5986646Z",
+  "createdAtLocal": "2026-11-21 09:37",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-web-mobile\r\nTools used (this reply): Claude_Browser, Write, Edit, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 09:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Claude_Browser",
+      "Write",
+      "Edit",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "PR #29 2bc35d8: iOS web playback. Cause: /api/transcode pipes fMP4 without length/ranges; iPhone Safari refuses (format error), iPad gets a short duration that the <60 s provider-clip guard pauses. New web/hls-route.js: VOD HLS playlist (ffprobe duration), 6 s MPEG-TS segments on demand, restart on far seeks with -output_ts_offset, -forced-idr for NVENC, ffmpeg stopped 20 segments ahead / idle. Safari detection in web-overrides; playsinline + iPhone fullscreen fallback; body.vw-player-open hides titlebar+bottom bar on touch devices. Verified in pane: duration 1310.9 s, plays, seek to 700 s works, segments 6.0 s on one timeline; bars hidden/restored. Live 8722 server needs a restart for the route.",
+  "commands": [
+    "node web/server.js (dev 8723)",
+    "ffprobe segments"
+  ],
+  "files": [
+    "web/hls-route.js",
+    "web/public/web-overrides.js",
+    "js/mobile.js",
+    "css/mobile.css",
+    "web/server.js"
+  ],
+  "planPath": "",
+  "contentHash": "22d416536917307706984d6a46f209ecbc58d3f274d7aff3926ba56223aee0c9",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-web-mobile",
+    "head": "2bc35d8",
+    "hasChanges": false
+  }
+}

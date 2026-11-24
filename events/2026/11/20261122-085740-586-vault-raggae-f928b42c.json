@@ -1,0 +1,47 @@
+{
+  "id": "20261122-085740-586-vault-raggae-f928b42c",
+  "createdAt": "2026-11-22T13:57:40.5869077Z",
+  "createdAtLocal": "2026-11-22 08:57",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "commands,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): PowerShell, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 08:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local PC",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Restarted the gateway on main 0.31.0 (no stream reads in flight); verified /v1/pictures/search (7.2 s cold, ~0.41 s warm), /v1/pictures/summary, /v1/cast/search, image links. Surveyed embedding backlogs: catalog 1,997/6.37M missing, lyrics done, songs 1,304/1,432, Moments only F:\\amd\\Models (~2,800 other videos outside roots), stills on disk embeddable early. STATE update in PR #101.",
+  "commands": [
+    "scripts\\Restart-Gateway.ps1",
+    "GET /v1/pictures/search",
+    "GET /v1/cast/search"
+  ],
+  "files": [
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "f928b42c0652e9df934d06c2a82d96f76019e02c0727612b2ee8e8e15df4f588",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "c932ce9",
+    "hasChanges": false
+  }
+}

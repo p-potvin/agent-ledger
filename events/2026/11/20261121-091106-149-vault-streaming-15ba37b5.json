@@ -1,0 +1,46 @@
+{
+  "id": "20261121-091106-149-vault-streaming-15ba37b5",
+  "createdAt": "2026-11-21T14:11:06.1496728Z",
+  "createdAtLocal": "2026-11-21 09:11",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-web-mobile\r\nTools used (this reply): Claude_Browser, Bash, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 09:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Claude_Browser",
+      "Bash",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "PR #29 14a63f6: Devin fixes: details header sticks at top 0 carrying the safe-area inset (no scroll under a notch); player control groups shrink and wrap on phones. Verified at 320px on a temporary dev instance (data copy removed). 2 threads replied/resolved.",
+  "commands": [
+    "node web/server.js (dev, 8723)"
+  ],
+  "files": [
+    "css/mobile.css"
+  ],
+  "planPath": "",
+  "contentHash": "15ba37b5c9818d43897bbc00ab9d626a266fe847817c78379e218cc90dc7ce24",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-web-mobile",
+    "head": "14a63f6",
+    "hasChanges": false
+  }
+}

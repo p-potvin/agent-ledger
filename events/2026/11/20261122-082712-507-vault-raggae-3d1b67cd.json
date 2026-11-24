@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261122-082712-507-vault-raggae-3d1b67cd",
+    "createdAt":  "2026-11-22T13:27:12.5073652Z",
+    "createdAtLocal":  "2026-11-22 08:27",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-claude-picture-search\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 08:27 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "PR #98 review (Devin, 5 inline): already fixed on the branch by 130b18f/5288a11 (hidden titles + departed people filtered, file: posters via /v1/img?path=, IVF-PQ test, STATE/SESSIONS). Verified 17 tests pass; replied to and resolved the 5 threads. No new commits.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "3d1b67cd9f030688817a37d47c41c8f0be99cffb5e2f950bac975911bbf86c79",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "vw-claude-picture-search",
+                "head":  "e99e11c",
+                "hasChanges":  false
+            }
+}

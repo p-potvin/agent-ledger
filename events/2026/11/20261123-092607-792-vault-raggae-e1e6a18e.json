@@ -1,0 +1,52 @@
+{
+  "id": "20261123-092607-792-vault-raggae-e1e6a18e",
+  "createdAt": "2026-11-23T14:26:07.7925532Z",
+  "createdAtLocal": "2026-11-23 09:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + greencloud + clopeux-ubuntu)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-state-20261123d\r\nTools used (this reply): Bash, PowerShell, Edit, Write, ssh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 09:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + greencloud + clopeux-ubuntu",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "ssh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "IMDb download: laptop clopeux-ubuntu added (LAN 192.168.200.129; venv from wheels, browser on its desktop via Xwayland). Slices rebalanced, disjoint, ~2,200 each: greencloud 904-3128, laptop 3129-4160 + 6611-7802, this PC 4386-6610. Puller made host-configurable; second instance for the laptop. greencloud pkill matched its own ssh shell and stopped the run; relaunched from run.sh (qa-automation Xvfb untouched). KFC indexing: runs\\celeb_index_imdb_new.py (CelebrityReindexPipeline, 6 exemplars, new folders with .imdb-import.json and >=6 photos, head cards); gallery.db backup 20261123-0911-pre-imdb-new; dry run 25 -> 24 lock, ~8 s/actor; --execute --loop started (batches of 100). STATE on #125 updated.",
+  "commands": [
+    "celeb_index_imdb_new.py --limit 25",
+    "celeb_index_imdb_new.py --execute --loop",
+    "pull_greencloud_imdb.py --name laptop"
+  ],
+  "files": [
+    "%LOCALAPPDATA%\\VaultWares\\raggae\\runs\\celeb_index_imdb_new.py",
+    "%LOCALAPPDATA%\\VaultWares\\raggae\\runs\\pull_greencloud_imdb.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "e1e6a18e8cf576769c1d3cb0bb29e677a4398a4b6d50e22ccc62cb4d7c86fed8",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-state-20261123d",
+    "head": "7baf669",
+    "hasChanges": false
+  }
+}

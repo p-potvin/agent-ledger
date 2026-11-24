@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261123-030544-170-vault-streaming-a5119407",
+    "createdAt":  "2026-11-23T08:05:44.1706575Z",
+    "createdAtLocal":  "2026-11-23 03:05",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-streaming",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 03:05 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+    "summary":  "Before merging, fixed review findings: vault-raggae #118 (any-size lookup opt-in for serving only so backfill/picture index keep exact files; kept copies served after a host leaves the allowlist; remote() resize test) and vault-streaming #34 (fromWebLinks strips client origin to avoid corrupted history poster URLs; iOS history keeps /api/ posters; desktop redirect probes gateway every 15 s). Threads replied/resolved, iOS CI green, web check 20/20 via /api/img. Merged #118 and #34; local mains pulled.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "a511940749d6a336dc8c95e8c9ba9d9a4b60dcc8c864669b3d32ac4d00b84f98",
+    "git":  {
+                "repo":  "vault-streaming",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+                "branch":  "main",
+                "head":  "b3919ac",
+                "hasChanges":  false
+            }
+}

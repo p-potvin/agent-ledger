@@ -1,0 +1,50 @@
+{
+  "id": "20261120-041026-435-vault-streaming-354e8016",
+  "createdAt": "2026-11-20T09:10:26.4356742Z",
+  "createdAtLocal": "2026-11-20 04:10",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: subagent)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-codex-stream-picker\r\nTools used (this reply): Edit, Write, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-20 04:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "subagent",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "vault-raggae app/pictures.py: a response with no Content-Type is kept when its bytes have a JPEG/PNG/WebP/GIF signature (_image_bytes); retry fetched and kept all 43 (11.4 MB, all valid 780x1170 JPEGs). vault-streaming: new src/catalog-coverage.js holds the backfill vote floors (films 600, series 1000), and scripts/backfill-catalog.js now takes its defaults from it. src/tmdb.js (shared by the Electron app and web/server.js): Discover browse uses those floors (5000 for rating/newest sorts), and Discover, stored lists, trending and the local popular page drop cards without a poster; search shows local hits with posters first, lets a TMDB card with a poster replace a posterless local hit, and puts the remaining posterless hits last. Offline mocked handler tests pass. The catalog panel is left unchanged on purpose. Nothing committed.",
+  "commands": [
+    "python -m app.pictures catalog --limit 60"
+  ],
+  "files": [
+    "src/catalog-coverage.js",
+    "src/tmdb.js",
+    "scripts/backfill-catalog.js",
+    "vault-raggae/app/pictures.py"
+  ],
+  "planPath": "",
+  "contentHash": "354e801624323a99ce71f0f0bccdf78297d7f0789e98a25e208868147881409e",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-codex-stream-picker",
+    "head": "401e001",
+    "hasChanges": true
+  }
+}

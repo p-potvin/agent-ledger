@@ -1,0 +1,52 @@
+{
+  "id": "20261121-103147-610-vault-streaming-c00e1545",
+  "createdAt": "2026-11-21T15:31:47.6105601Z",
+  "createdAtLocal": "2026-11-21 10:31",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-web-mobile\r\nTools used (this reply): Bash, Edit, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 10:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Web client on iPad/iOS: tablets get 3/4/5 poster columns (css/mobile.css) instead of the phone's 2; card :hover scale/overview only under (hover:hover) and (pointer:fine) so iOS opens details on first tap (css/index.css); cached AV1 trailers get an H.264 copy for browsers without AV1 via /trailers/<id>.h264.mp4 (web/trailer-h264-route.js, NVENC, cached in <trailers>/h264), chosen by canPlayType with a <video> error fallback (js/streaming/trailer.js); PWA status bar black + theme-color (index.html). Verified in browser pane at 375/700/desktop and via curl (206 ranges, 401 without token). Commit ba44007 on vw-claude-web-mobile, not pushed. Surveyed ios/ native SwiftUI app; found the web token hardcoded in ios/VaultStreaming/AppConfig.swift in the public repo (since 4024fd7) - flagged for rotation.",
+  "commands": [
+    "git commit ba44007",
+    "curl /trailers/<id>.h264.mp4"
+  ],
+  "files": [
+    "css/mobile.css",
+    "css/index.css",
+    "web/trailer-h264-route.js",
+    "js/streaming/trailer.js",
+    "index.html",
+    "web/server.js"
+  ],
+  "planPath": "",
+  "contentHash": "c00e1545f8cf9969bf0a63272622afb11c83b4052ef5ab6689ee9605918d3eb9",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-web-mobile",
+    "head": "ba44007",
+    "hasChanges": false
+  }
+}

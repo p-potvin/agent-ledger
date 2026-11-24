@@ -1,0 +1,40 @@
+{
+  "id": "20261123-100438-721-vault-raggae-690f0db6",
+  "createdAt": "2026-11-23T15:04:38.7219916Z",
+  "createdAtLocal": "2026-11-23 10:04",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "general",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Bash, PowerShell, Write, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 10:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Kinopoisk viability probe (operator idea): one headed page load of /name/6458/photos/ - HTTP 200, no captcha, clean portraits, Latin name under the Cyrillic one, 128 photos + 20 events, lazy 300px thumbs; CDN /orig gives 1000x1499 (~377 KB, ~1/3 of IMDb's size). One Wikidata SPARQL query (P345 IMDb + P2604 Kinopoisk): 115,218 pairs; 68% of the 7,802-actor list mapped (97% of top 500), 64,094 cast-catalog people. Recommendation: targeted fetch by mapped ID, not a crawl of the whole ID space; pilot on actors IMDb left short. No files changed in repos.",
+  "commands": [
+    "kp_probe.py",
+    "Wikidata SPARQL P345/P2604"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "690f0db620036a582714b20fa71959155b9703c6fb9dd490c9d14c42b3129b87",
+  "git": null
+}

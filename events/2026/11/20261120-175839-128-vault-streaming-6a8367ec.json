@@ -1,0 +1,50 @@
+{
+  "id": "20261120-175839-128-vault-streaming-6a8367ec",
+  "createdAt": "2026-11-20T22:58:39.1284249Z",
+  "createdAtLocal": "2026-11-20 17:58",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Edit, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-20 17:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Edit",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Stream reload: context menu 'Reload Stream' (F5) and automatic reload (3x) when a stream that was playing errors out; re-requests Comet with a cache-busting param so Chromium drops the expired debrid redirect target, resumes at the same position; transcode sessions restart via transcodeRestart. Progress tick skips 0 s during a reload. Found Comet answers 302 (player reads the debrid link directly), so keep-warm only refreshed Comet's link. GUI test with a redirecting local server passes; unit tests pass. Uncommitted on main.",
+  "commands": [
+    "node reload.cjs (GUI test)",
+    "docker logs comet"
+  ],
+  "files": [
+    "js/player/player.js",
+    "js/player/transcode.js",
+    "js/navigation/keybindings.js",
+    "src/ipc/system.ipc.js"
+  ],
+  "planPath": "",
+  "contentHash": "6a8367ecf111bb141d1560ec6b5438af05c2eea15790d13cdb097c664f9c14dd",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "9a4052f",
+    "hasChanges": true
+  }
+}

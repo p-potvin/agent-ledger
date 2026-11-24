@@ -1,0 +1,54 @@
+{
+  "id": "20261123-080242-724-panopticam-1d85c2f7",
+  "createdAt": "2026-11-23T13:02:42.7241577Z",
+  "createdAtLocal": "2026-11-23 08:02",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Clopeux-Desktop (Windows 11, local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Monitor\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 08:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Clopeux-Desktop (Windows 11, local)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Monitor"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Moments edit v3 (local commits b86eed7..7b7f35e, not pushed): 10 s taste windows (EmbeddingGemma 2 + operator taste probe) can veto a planned cut; GPU capped 300 s/rolling hour (operator approval 23 Nov). Measured on 9 cut moments of 22 Nov: kept vs cut windows AUC 0.64, no vetoes. Worker restarted 07:30; first live pass 08:02: 30 re-edited, 2 cuts, 11 windows, 0 vetoes. Fixed stale fake in test_datasets_cam. STATE + HANDOFF updated. Real audience read: 2 passes, 1 failed, bands hold.",
+  "commands": [
+    "Restart-VisionWorker.ps1",
+    "pytest vision"
+  ],
+  "files": [
+    "vision/moment_edit.py",
+    "vision/moments_embed.py",
+    "vision/moments_pull.py",
+    "vision/worker.py",
+    "vision/test_moment_edit.py",
+    "vision/test_datasets_cam.py",
+    "docs/STATE.md",
+    "docs/HANDOFF.md"
+  ],
+  "planPath": "",
+  "contentHash": "1d85c2f7f412899dff7d3ff81ab28b2954b8a65e6512f1faeb8c0a678b330a97",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "7b7f35e",
+    "hasChanges": true
+  }
+}

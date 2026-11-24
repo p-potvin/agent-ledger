@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261122-030859-036-shared-tube-f174c940",
+    "createdAt":  "2026-11-22T08:08:59.0362111Z",
+    "createdAtLocal":  "2026-11-22 03:08",
+    "timezone":  "Eastern Standard Time",
+    "project":  "shared-tube",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 03:08 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Prom King media catalog: executed live DB replace for 368 single-video performer entries (tiers 1, 2a, 5a), added fuzzy-queue and batch replace API endpoints in vaultwares-api, and added FuzzyReplaceQueueModal in shared-tube admin",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "f174c94016ce37c541574e899bd8713658db48c28e5cd96bbf1136541d0db189",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "main",
+                "head":  "cb3ded4",
+                "hasChanges":  true
+            }
+}

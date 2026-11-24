@@ -1,0 +1,51 @@
+{
+  "id": "20261121-143527-715-vault-raggae-36006a0b",
+  "createdAt": "2026-11-21T19:35:27.7151399Z",
+  "createdAtLocal": "2026-11-21 14:35",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Bash, PowerShell, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 14:35 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Operator: TMDB images at 10 req/s, keep 2060 cool, hold stills embeddings. vault-raggae PR #95 (branch vw-claude-tmdb-image-rate, checkout on it): pictures.py paces image.tmdb.org at 100 ms with 4 in flight (measured ~10/s on 60 season posters), run ends promptly; picture_vectors.py --pause. Found dual-GPU notes: docs/state/SESSIONS.md Tue 03 Nov + docs/STATE.md (3 shards rowid%3, 2 via gateway on 3060, 1 on 2060 with --embed-pause 0.2 -> 72-75 C; Watch-GpuTemp.ps1 stops at 85 C). Replaced the after-backfill job wrapper (pid 34740): waits for running cast build (pass 1-2 done: 650,174 people, 6.6M credits), then pictures seasons+profiles, vectors posters/seasons/profiles on 2060 --pause 0.4 with Watch-GpuTemp at 80 C, then stills download; stills vectors dropped.",
+  "commands": [
+    "python -m app.pictures seasons --limit 60",
+    "python -m app.picture_vectors seasons --limit 64 --pause 0.3",
+    "gh pr create"
+  ],
+  "files": [
+    "app/pictures.py",
+    "app/config.py",
+    "app/picture_vectors.py",
+    "after-backfill-cast-pictures.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "36006a0b309926fcef1954c884f3f3639257e96a71d5af4829cdbcc4e58ec96a",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "419d9da",
+    "hasChanges": false
+  }
+}

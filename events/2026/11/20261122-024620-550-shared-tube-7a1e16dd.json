@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261122-024620-550-shared-tube-7a1e16dd",
+    "createdAt":  "2026-11-22T07:46:20.5509480Z",
+    "createdAtLocal":  "2026-11-22 02:46",
+    "timezone":  "Eastern Standard Time",
+    "project":  "shared-tube",
+    "kind":  "commands",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 02:46 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Prom King media catalog: benchmarked 8 fuzzy name-matching strategies across 11,791 single-video performer entries (read-only analysis)",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "7a1e16dd88845372473db926a5b6dd57c11606d4c5855c440da0587781c683f5",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "main",
+                "head":  "cb3ded4",
+                "hasChanges":  true
+            }
+}

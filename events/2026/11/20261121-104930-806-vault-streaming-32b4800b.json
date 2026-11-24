@@ -1,0 +1,48 @@
+{
+  "id": "20261121-104930-806-vault-streaming-32b4800b",
+  "createdAt": "2026-11-21T15:49:30.8069718Z",
+  "createdAtLocal": "2026-11-21 10:49",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-web-mobile\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 10:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "web/service/start-web.ps1: supervisor joins a kill-on-close job object and exits when its launcher (task conhost) is gone, so Stop-ScheduledTask now frees port 8722 (tested on the live task: stop -> port free in 2 s, start -> 401 on /). Killed an orphaned old supervisor (pid 12400) + node. HANDOFF restart note updated. Wrote ios/PORTING.md: native iOS feature-port plan (token out of code/Keychain, fr-CA localization, HLS playback, subtitles:search fix - get-subtitles channel missing, trailers, series flow, iPad layout). Commits e26645e + docs on vw-claude-web-mobile, not pushed.",
+  "commands": [
+    "Stop-ScheduledTask/Start-ScheduledTask VaultStreamingWeb"
+  ],
+  "files": [
+    "web/service/start-web.ps1",
+    "ios/PORTING.md",
+    "HANDOFF.md"
+  ],
+  "planPath": "",
+  "contentHash": "32b4800b66ca61205ba2deb33672050bc00e412c0dff6b965a2a06dd847269ed",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-web-mobile",
+    "head": "e1d7f9a",
+    "hasChanges": false
+  }
+}

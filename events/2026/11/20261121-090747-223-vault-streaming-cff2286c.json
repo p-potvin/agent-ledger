@@ -1,0 +1,50 @@
+{
+  "id": "20261121-090747-223-vault-streaming-cff2286c",
+  "createdAt": "2026-11-21T14:07:47.2231048Z",
+  "createdAtLocal": "2026-11-21 09:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-web-mobile\r\nTools used (this reply): Claude_Browser, Edit, Bash, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 09:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Claude_Browser",
+      "Edit",
+      "Bash",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "PR #29 (v2.10.2): web client usable on phones. Root cause of stacked tabs: css/mobile.css forced display:grid !important on #library-grid/#history-grid over the tabs' inline display:none. Also: bottom-bar Settings tap closed the panel (stopPropagation), details window and settings full screen one column (details header above titlebar z 20000; stale .modal-content rules removed), player hides bottom bar (:has), control rows visible, Up next/loading/episodes overlays fit, search box own row, raggae* shim parity. Verified in the browser pane at 375x812 on a separate dev instance (port 8723, own token and data copy, removed after); desktop width unchanged.",
+  "commands": [
+    "node web/server.js (dev, 8723)",
+    "gh pr create"
+  ],
+  "files": [
+    "css/mobile.css",
+    "js/mobile.js",
+    "web/public/electron-api-shim.js"
+  ],
+  "planPath": "",
+  "contentHash": "cff2286c1569178a012edaa4a3d85b11ee08e96d4b9d2e262d941ee613303ee4",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-web-mobile",
+    "head": "cf15a6e",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261123-005413-121-vault-streaming-c17f3ce4",
+    "createdAt":  "2026-11-23T05:54:13.1213120Z",
+    "createdAtLocal":  "2026-11-23 00:54",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-streaming",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-streaming-more-like-this\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 00:54 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+    "summary":  "PR #31: iOS More like this row (raggae-similar, fetchSimilar, sheet swap via onSelectSimilar), iOS CI build green. Front-page ingest 3-\u003e10 TMDB pages (200 titles/list), partial runs keep looked-up titles; ran once: 13/21 lists at ~200, 8 kept (gateway timeouts), 1026 TMDB requests. Desktop Discover now pages to 10. Checkout left on PR branch so the 06:30 ingest keeps lists deep.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "c17f3ce449a0ab1cea99be57f91b45e92e8b7c93ffa92dfff6eca0fb224b0e5f",
+    "git":  {
+                "repo":  "vault-streaming",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+                "branch":  "vw-streaming-more-like-this",
+                "head":  "2384eb0",
+                "hasChanges":  false
+            }
+}

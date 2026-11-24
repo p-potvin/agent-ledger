@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261123-043711-543-vault-raggae-13a4ca58",
+    "createdAt":  "2026-11-23T09:37:11.5430352Z",
+    "createdAtLocal":  "2026-11-23 04:37",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 04:37 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+    "summary":  "Fixed review findings then merged vault-raggae #119 (adult titles keep 100-vote floor), #120 (merged main in, kept 0.40.3), #121 (wording), vault-streaming #35 (jump box: shortcuts defer, idle guard, anchor, unreachable message, other-cut warning). Gateway restarted on main 70d6fa3 after profile vectors finished: similar 12 results, Moments said per video OK, img OK. VaultStreamingWeb restart: supervisor collision then a stuck start; clean restart in progress.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "13a4ca58dc3abd9d685c85e8520a7e7c3150a909c07d0a667e9f6848f4813be6",
+    "git":  {
+                "repo":  "vault-streaming",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+                "branch":  "main",
+                "head":  "bdc15cd",
+                "hasChanges":  false
+            }
+}

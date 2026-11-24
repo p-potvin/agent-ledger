@@ -1,0 +1,49 @@
+{
+  "id": "20261121-140842-549-vault-streaming-4969e353",
+  "createdAt": "2026-11-21T19:08:42.5498070Z",
+  "createdAtLocal": "2026-11-21 14:08",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Bash, PowerShell, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 14:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Merged PR #30 (794afa6; #29 was already merged). Version 2.10.4 on main (419d9da, pushed; iOS app copies left at 2.10.3, not covered by sync-version). Restarted VaultStreamingWeb (stop frees 8722, start) and the Enrichment Gateway (killed app.serve, supervisor restarted it in ~30 s). Verified: web serves v2.10.4, fr-FR browse returns French titles, /trailers/<id>.h264.mp4 200, gateway /health loaded (embeddinggemma-2 on RTX 3060). Backfill was no longer running. Raggae Read (8751) not restarted.",
+  "commands": [
+    "gh pr merge 30 --merge",
+    "node scripts/sync-version.js 2.10.4",
+    "Stop/Start-ScheduledTask VaultStreamingWeb"
+  ],
+  "files": [
+    "package.json",
+    "index.html"
+  ],
+  "planPath": "",
+  "contentHash": "4969e353c290014b2773a4864c7609d8928cebb328eecb45ebe7b8703b9af455",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "419d9da",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "20261121-082623-832-vault-raggae-0a46c712",
+  "createdAt": "2026-11-21T13:26:23.8325540Z",
+  "createdAtLocal": "2026-11-21 08:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-series-backfill\r\nTools used (this reply): Write, Edit, Bash, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 08:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Write",
+      "Edit",
+      "Bash",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Cast catalog + pictures. vault-streaming#28: backfill takes every series >=600 votes with all episodes (no cap), full episode fields incl. crew/guest stars, film credits and series aggregate_credits in raw_enrichment.tmdb.credits; done markers for episodes/credits; 16 MB ingest cap; fixed 14-season first request. Full run started then restarted after the fix (~86.7k titles). vault-raggae#94 (v0.29.0): vw-cast.db (people, people_fts, person_xref, credits, person_identities), app.cast.build titles/imdb/identities (offline; Celebrities identities link by TMDB/IMDb id suffix), app.pictures seasons/stills/profiles + --dry-run, app.picture_vectors (SigLIP into vw-pictures.lance). Tested on 300 titles and 50 posters; suite 367 passed. STATE/SESSIONS updated.",
+  "commands": [
+    "node scripts/backfill-catalog.js --execute",
+    "python -m app.cast.build (scratch)",
+    "python -m app.picture_vectors posters --limit 50"
+  ],
+  "files": [
+    "scripts/backfill-catalog.js",
+    "src/tmdb.js",
+    "app/cast/db.py",
+    "app/cast/build.py",
+    "app/pictures.py",
+    "app/picture_vectors.py"
+  ],
+  "planPath": "",
+  "contentHash": "0a46c712c91eb5d99edb2a830f0c8549d92461214979bd5bb958323c9c32689f",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-series-backfill",
+    "head": "d961365",
+    "hasChanges": false
+  }
+}

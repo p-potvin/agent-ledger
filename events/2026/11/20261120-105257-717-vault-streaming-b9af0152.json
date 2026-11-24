@@ -1,0 +1,44 @@
+﻿{
+    "id":  "20261120-105257-717-vault-streaming-b9af0152",
+    "createdAt":  "2026-11-20T15:52:57.7171513Z",
+    "createdAtLocal":  "2026-11-20 10:52",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-streaming",
+    "kind":  "code-change",
+    "actor":  "claude-code",
+    "agentHeader":  "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: js/streaming/rd-flow.js\r\nMode: code\r\nPermissions: bypass (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-series-resume\r\nTools used (this reply): js/streaming/ranking.js\r\nMCP servers accessed (this reply): src/realdebrid/search.js\r\nTime: 2026-11-20 10:52 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "js/streaming/rd-flow.js",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows local",
+                    "toolsUsed":  "js/streaming/ranking.js",
+                    "mcpServersAccessed":  "src/realdebrid/search.js"
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+    "summary":  "Real cause of American Dad/Family Guy failures: Real-Debrid refuses most uncached releases with HTTP 451 infringing_file (checked once via StremThru POST /magnets from the Comet container); Comet shows that as a 410511-byte status video. stream.js classifies Comet status videos by size (433923 MEDIA_NOT_CACHED_YET -\u003e notCachedYet, 410511 -\u003e refused). rd-flow: Deepbrid tried before the wait; wait rounds (6 x 15 s) re-ask RD sources that are downloading and Deepbrid while it downloads; refused/ downloading error messages. search.js: magnets use 8 live public trackers + release file name (old one had a dead coppersurfer tracker; Deepbrid queue sat at 0 seeds). Tests 14/14, 5/5, 6/6. App run Family Guy S04E02: 2 refused, 1 accepted, still downloading after 4 min; no play. User data restored. Uncommitted on vw-claude-series-resume.",
+    "commands":  [
+                     "node tests/test_stream_picker.js"
+                 ],
+    "files":  [
+                  "src/realdebrid/stream.js"
+              ],
+    "planPath":  "node scratchpad/playflow.cjs 1434:4:2",
+    "contentHash":  "b9af0152b320c9f76fce59c95e97316ce98879f5bacd82157e6e4aad6db3bd64",
+    "git":  {
+                "repo":  "vault-streaming",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+                "branch":  "vw-claude-series-resume",
+                "head":  "9438415",
+                "hasChanges":  true
+            }
+}

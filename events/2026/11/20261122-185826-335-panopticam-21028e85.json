@@ -1,0 +1,54 @@
+{
+  "id": "20261122-185826-335-panopticam-21028e85",
+  "createdAt": "2026-11-22T23:58:26.3356958Z",
+  "createdAtLocal": "2026-11-22 18:58",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Clopeux-Desktop (Windows 11, local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, hf_fs\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 18:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Clopeux-Desktop (Windows 11, local)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "hf_fs"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Operator feedback: Whisper every time at 0.5, get whisper-small running, RAM judged by working set, OF dead. Found worker venv onnxruntime-gpu 1.19.2 lacks CPU ConvInteger for int8 small (1.29+ venvs load it; no upgrade for CUDA safety); downloaded onnx-community whisper-small uint8 encoder/decoder (92+156 MB): 1.09 s/clip, +344 MB WSS. v0.75.8: whisper-small decides every clip with >=3 words (nospeech<0.5, words cross-check, top>=0.5); Silero crop tested and rejected (0 s speech on 12/43 worded clips). Live 10 min: talking 38%, moaning 1/35, worker WSS 2.8 GB. Memories: pc-ram-working-set, OF dead end updated.",
+  "commands": [
+    "curl HF onnx-community/whisper-small uint8",
+    "Restart-VisionWorker.ps1",
+    "git push origin main"
+  ],
+  "files": [
+    "vision/nemo_asr.py",
+    "vision/worker.py",
+    "vision/test_nemo_asr.py",
+    "docs/STATE.md",
+    "docs/HANDOFF.md"
+  ],
+  "planPath": "",
+  "contentHash": "21028e85e86c8e3c7e7bb8e67cf915ffa494c5e9fc14aefbdbd7130b05190c9b",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "d3fbf11",
+    "hasChanges": true
+  }
+}

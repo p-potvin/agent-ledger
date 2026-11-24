@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261122-184729-266-vault-raggae-9d4d24ca",
+    "createdAt":  "2026-11-22T23:47:29.2663050Z",
+    "createdAtLocal":  "2026-11-22 18:47",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change,commands",
+    "actor":  "rust/raggae-catalog/ui/src/pages/Oracle.tsx",
+    "agentHeader":  "Agent: rust/raggae-catalog/ui/src/pages/Oracle.tsx (role: main)\r\nModel: claude-opus-5-5\r\nThinking: docs/STATE.md\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-catalog-pages-2\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 18:47 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "docs/STATE.md",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Gateway restarted on main 0.37.0; picture index queued behind the picture runs (runs\\Picture-Index-20261122.ps1). Celebrities gallery.db exemplar boxes re-detected and corrected: 5,682 rows coord_space=source via SQL bridge (1,482 stale across 539 actors), backup gallery.db.bak-20261122-1845-pre-boxes, 90 left listed. IMDb re-download for 99 soft identities: script written, IMDb 403 to headless browser, stopped (no bot-protection workaround). PR #107 (v0.38.0): catalog app Lyrics, Music, Moments, Tech oracle pages, verified in browser pane.",
+    "commands":  [
+                     "rust/raggae-catalog/ui/src/pages/Music.tsx"
+                 ],
+    "files":  [
+                  "rust/raggae-catalog/ui/src/pages/Lyrics.tsx"
+              ],
+    "planPath":  "rust/raggae-catalog/ui/src/pages/Moments.tsx",
+    "contentHash":  "9d4d24ca4c04461e6eadd2d8804903c0a5a445658fb9cc01e782e7c5fba04d82",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "vw-raggae-catalog-pages-2",
+                "head":  "5025b4e",
+                "hasChanges":  false
+            }
+}

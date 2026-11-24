@@ -1,0 +1,49 @@
+{
+  "id": "20261122-225456-418-panopticam-d7900e33",
+  "createdAt": "2026-11-23T03:54:56.4188700Z",
+  "createdAtLocal": "2026-11-22 22:54",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Clopeux-Desktop (Windows 11, local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 22:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Clopeux-Desktop (Windows 11, local)",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "v0.75.9 (scheduled routine): the director's edit half for Moments. New vision/moment_edit.py cuts dull stretches (private/muted/frozen, empty+still, and quiet checks where the per-window life model dips) with lead-in/tail and pause-snapped cuts; moments_pull keeps secs+trail in PC jsons, stores 'edit' ranges, daily reels play only kept ranges in one encode. 11 new tests, 26 green. On 21 Nov: 4 of 70 moments cut (1%). Worker restarted; first pass edited 30. Heard checked: talking 34% counted, moaning 3.8%. Docs: STATE entry, HANDOFF question 10 (GPU window embeds).",
+  "commands": [
+    "python deploy/bump.py",
+    "git push origin main",
+    "vision/Restart-VisionWorker.ps1"
+  ],
+  "files": [
+    "vision/moment_edit.py",
+    "vision/moments_pull.py",
+    "vision/moment_quality.py",
+    "vision/test_moment_edit.py",
+    "docs/STATE.md",
+    "docs/HANDOFF.md"
+  ],
+  "planPath": "",
+  "contentHash": "d7900e336fd84355f97b885803328011ae3c2c381715c3fb95333577eb1ff849",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "b9dd31d",
+    "hasChanges": true
+  }
+}

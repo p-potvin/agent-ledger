@@ -1,0 +1,50 @@
+{
+  "id": "20261121-084911-313-vault-raggae-f3db4ac0",
+  "createdAt": "2026-11-21T13:49:11.3131659Z",
+  "createdAtLocal": "2026-11-21 08:49",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-series-backfill\r\nTools used (this reply): Write, Bash, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 08:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Write",
+      "Bash",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "PR #94 63bb4e5: cast relevance rule chosen by operator (top-billed first 20 + key crew jobs + Celebrities-named people; two-pass titles phase; 300-title sample 98,918 -> 14,471 people, 210,537 credits). Devin's 11 findings: default phases, indexed counts, IMDb xref + gallery link reconciliation, ambiguous-name votes, unicode name keys, Lance resume via search().select(), local posters, ModelRun recording, dry-run without copying. 6 cast tests, suite 371 passed. 11 threads replied/resolved.",
+  "commands": [
+    "python -m app.cast.build --limit 300 (scratch)",
+    "pytest -q"
+  ],
+  "files": [
+    "app/cast/build.py",
+    "app/picture_vectors.py",
+    "app/pictures.py",
+    "tests/test_cast.py"
+  ],
+  "planPath": "",
+  "contentHash": "f3db4ac0a380d20c9b61bc21a0c574e42faaaed5f4a11d91bfc8338221ac0b16",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-series-backfill",
+    "head": "4c4de51",
+    "hasChanges": false
+  }
+}

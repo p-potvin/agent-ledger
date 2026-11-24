@@ -1,0 +1,44 @@
+﻿{
+    "id":  "20261120-100142-601-vault-streaming-01dfb528",
+    "createdAt":  "2026-11-20T15:01:42.6013853Z",
+    "createdAtLocal":  "2026-11-20 10:01",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-streaming",
+    "kind":  "code-change",
+    "actor":  "claude-code",
+    "agentHeader":  "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: src/watch-history.js\r\nMode: code\r\nPermissions: bypass (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-series-resume\r\nTools used (this reply): js/continue-watching.js\r\nMCP servers accessed (this reply): css/modals.css\r\nTime: 2026-11-20 10:01 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "src/watch-history.js",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows local",
+                    "toolsUsed":  "js/continue-watching.js",
+                    "mcpServersAccessed":  "css/modals.css"
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+    "summary":  "Series open on the episode to resume: new watch-history:show-progress IPC (ids matched as strings, title fallback); details modal marks watched/in-progress episodes with progress bars, highlights and scrolls to the target, Resume S01E01 (5:18) / Next: S25E02 button (next skips episodes already finished); Continue Watching opens a finished episode\u0027s series instead of replaying it. tests/test_series_resume.js 6/6; Electron check on real history (South Park next, Bewitched resume), no console errors, user data unchanged. Version 2.8.0, branch vw-claude-series-resume, uncommitted.",
+    "commands":  [
+                     "node tests/test_series_resume.js"
+                 ],
+    "files":  [
+                  "js/streaming/details-modal.js"
+              ],
+    "planPath":  "node scratchpad/gui.cjs",
+    "contentHash":  "01dfb5289c20852a923c8988202a71cbc21ae6a3e4cb6ddb4686b65c71233cb8",
+    "git":  {
+                "repo":  "vault-streaming",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+                "branch":  "vw-claude-series-resume",
+                "head":  "9438415",
+                "hasChanges":  true
+            }
+}

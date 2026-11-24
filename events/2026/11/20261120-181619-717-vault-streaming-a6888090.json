@@ -1,0 +1,49 @@
+{
+  "id": "20261120-181619-717-vault-streaming-a6888090",
+  "createdAt": "2026-11-20T23:16:19.7179149Z",
+  "createdAtLocal": "2026-11-20 18:16",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-stream-reload\r\nTools used (this reply): Bash, gh, ccd_pr\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-20 18:16 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "gh",
+      "ccd_pr"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Opened PRs: vault-streaming#26 (stream reload F5/context menu/automatic, v2.9.1, commit 5123ef1 on vw-claude-stream-reload) and vault-raggae#93 (speaker-aware subtitles from Nemotron-3-Diarization, v0.28.0, commit 628c776 on vw-claude-diarized-cues). Both bound in the app with Auto-fix on.",
+  "commands": [
+    "gh pr create",
+    "git push -u origin vw-claude-stream-reload",
+    "git push -u origin vw-claude-diarized-cues"
+  ],
+  "files": [
+    "js/player/player.js",
+    "app/moments/stream.py"
+  ],
+  "planPath": "",
+  "contentHash": "a688809088d522f68167834b6725fb140efcaee8947fe7a01d0419e5611c351d",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-stream-reload",
+    "head": "5123ef1",
+    "hasChanges": false
+  }
+}

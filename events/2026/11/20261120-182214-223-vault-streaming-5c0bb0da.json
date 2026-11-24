@@ -1,0 +1,49 @@
+{
+  "id": "20261120-182214-223-vault-streaming-5c0bb0da",
+  "createdAt": "2026-11-20T23:22:14.2239755Z",
+  "createdAtLocal": "2026-11-20 18:22",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-stream-reload\r\nTools used (this reply): Edit, Bash, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-20 18:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Edit",
+      "Bash",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Review fixes on PR #26 (61db5a0): reload seek handler bound to its own load (no seeking the next title after a failed reload), status-clip check on reloads via shared statusVideoFound, paused transcode stays paused on reload (startPaused), Reload Stream in the web shim's player menu. Extended GUI test passes (4 scenarios). 4 Devin threads replied and resolved. Also vault-raggae#93 0fbfa14: STATE.md/SESSIONS.md handoff per Devin.",
+  "commands": [
+    "node reload.cjs",
+    "gh api replies + resolveReviewThread"
+  ],
+  "files": [
+    "js/player/player.js",
+    "js/player/transcode.js",
+    "web/public/electron-api-shim.js"
+  ],
+  "planPath": "",
+  "contentHash": "5c0bb0da6f91be69d12e6780dbcdd8af007bbbe7809a5e8cab6d7852c29fcafc",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-stream-reload",
+    "head": "61db5a0",
+    "hasChanges": false
+  }
+}

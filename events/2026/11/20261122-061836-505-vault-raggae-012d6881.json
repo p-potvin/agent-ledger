@@ -1,0 +1,51 @@
+{
+  "id": "20261122-061836-505-vault-raggae-012d6881",
+  "createdAt": "2026-11-22T11:18:36.5052677Z",
+  "createdAtLocal": "2026-11-22 06:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-claude-picture-search\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 06:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local PC",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Scheduled run: picture vectors (posters/seasons/profiles) finished 158,463 embedded; stills fetch 296k/545k. Fixed Devin review on PR #98 (picture search): hidden/merged titles and departed cast people excluded, local posters linked via /v1/img?path=, over-fetch; tests incl. IVF-PQ indexed search (37 pass). Verified on live 159k-row table (0.3-0.9 s/query). Profiles dry run: 209,795 to fetch; chained profiles fetch + stills/profiles vectors after stills (After-Stills-20261122.ps1). STATE.md/SESSIONS.md updated on the PR branch.",
+  "commands": [
+    "python -m app.pictures profiles --dry-run",
+    "pytest tests/test_picture_search.py tests/test_picture_vectors.py tests/test_api.py tests/test_catalog.py",
+    "git push (vw-claude-picture-search)"
+  ],
+  "files": [
+    "app/picture_search.py",
+    "tests/test_picture_search.py",
+    "docs/STATE.md",
+    "docs/state/SESSIONS.md"
+  ],
+  "planPath": "",
+  "contentHash": "012d6881dbf7b9ca37603d57fee2bb05e8cfaf999ed0a77a4cfa4c25a1901087",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-claude-picture-search",
+    "head": "e99e11c",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "20261123-070539-578-vault-raggae-37d857fd",
+  "createdAt": "2026-11-23T12:05:39.5787212Z",
+  "createdAtLocal": "2026-11-23 07:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-streaming-who-is-this\r\nTools used (this reply): Bash, PowerShell, Edit, Write, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 07:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Review fixes. vault-raggae #124 (3e58a04): best picked over full rankings (per-identity thresholds), picture links per request from socket port, body capped at 15 MB (413), decode checks 40 MP before decoding and drafts JPEGs, ModelRun telemetry imported lazily (ADK tests pkg shadowed ours), CUDA fallback logged; CUDA path checked on the 3060 (5.9 s load, 0.037 s/picture, 36/40); suite 431 passed. vault-streaming #37 (aba2e5a): overlay under controls, ffmpeg uses _vwSourceUrl, tags above near bottom, guesses dashed with ?, grabFrame settles at deadline; node tests pass. 12 threads replied and resolved. IMDb download for 500 actors running (~43 done, 0 errors).",
+  "commands": [
+    "pytest -q",
+    "node tests/test_who_is_this.js"
+  ],
+  "files": [
+    "app/faces.py",
+    "app/main.py",
+    "tests/test_faces.py",
+    "vault-streaming/js/player/who-is-this.js",
+    "vault-streaming/src/ipc/moments.ipc.js"
+  ],
+  "planPath": "",
+  "contentHash": "37d857fd779f735a5c662eea75fa6c3845d0d9ea1fb73ccea990c7b807bcdb4f",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-streaming-who-is-this",
+    "head": "aba2e5a",
+    "hasChanges": false
+  }
+}

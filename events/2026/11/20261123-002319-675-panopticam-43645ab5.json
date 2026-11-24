@@ -1,0 +1,51 @@
+{
+  "id": "20261123-002319-675-panopticam-43645ab5",
+  "createdAt": "2026-11-23T05:23:19.6759733Z",
+  "createdAtLocal": "2026-11-23 00:23",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Clopeux-Desktop (Windows 11, local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 00:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Clopeux-Desktop (Windows 11, local)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "12-hourly routine (Mon, 23 Nov 2026 00:45). Moments edit v2: a last piece under 8 s after a cut is dropped (4 of the first 8 cuts ended on a 4-7 s scrap of the box's closing strikes); EDIT_VERSION 2, test added, 21 tests pass; commit 128598e + docs cbac00f local only (not pushed: a push restarts the box for a PC-only change). PC vision worker restarted 00:22. Box read-only: DB 9.8 GB per table via dbstat at idle I/O; growth is ~218k rooms in 21 days, not a leak; 9k orphan face keys noted. HANDOFF/STATE updated.",
+  "commands": [
+    "pytest test_moment_edit.py test_moments_pull.py",
+    "Restart-VisionWorker.ps1",
+    "ssh ubuntu@100.105.177.10 dbstat read-only"
+  ],
+  "files": [
+    "vision/moment_edit.py",
+    "vision/moments_pull.py",
+    "vision/test_moment_edit.py",
+    "docs/HANDOFF.md",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "43645ab532ee9ab9f0d8b4914a806d9a3ba9255981abe4d1c1c939d69766ba29",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "cbac00f",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "20261123-062853-620-vault-raggae-a64f660a",
+  "createdAt": "2026-11-23T11:28:53.6203192Z",
+  "createdAtLocal": "2026-11-23 06:28",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-state-20261123d\r\nTools used (this reply): Bash, PowerShell, Edit, Write, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 06:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Scheduled run (vault-raggae-catalog-progression), plan 3.5 who-is-this: vault-raggae PR #124 (v0.42.0) POST /v1/faces/who (app/faces.py, antelopev2 as KFC embeds, KFC max-sim rule, title cast scored first, read-only), 8 tests; live CPU check 37/40 TMDB profiles named. vault-streaming PR #37 (v2.16.0) player who-is-this button (canvas or ffmpeg frame grab, face boxes with names), node test. Found gallery coverage limits it (19.2% of top-6 billed cast of most-voted titles); report missing-top-cast.csv; operator ask A25. Re-ran app.cast.build identities: links 945->1026. State PR #125.",
+  "commands": [
+    "python -m app.cast.build identities",
+    "pytest tests/test_faces.py",
+    "node tests/test_who_is_this.js"
+  ],
+  "files": [
+    "app/faces.py",
+    "app/main.py",
+    "tests/test_faces.py",
+    "vault-streaming/js/player/who-is-this.js",
+    "vault-streaming/src/ipc/moments.ipc.js",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "a64f660aaeaaf8d94499b2184a2c38b62f6776125b66e33b8e38079a4c82813d",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-state-20261123d",
+    "head": "70a4557",
+    "hasChanges": false
+  }
+}

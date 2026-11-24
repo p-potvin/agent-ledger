@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261123-031753-522-colonel-kfc-0ca0bf86",
+    "createdAt":  "2026-11-23T08:17:53.5220220Z",
+    "createdAtLocal":  "2026-11-23 03:17",
+    "timezone":  "Eastern Standard Time",
+    "project":  "ColONEL-KFC",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 03:17 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC",
+    "summary":  "Restarted VaultStreamingWeb on vault-streaming main (b3919ac); gateway restart left queued (profile vectors 195k/210k). KFC #12 review fixes: rgb_from_qimage always copies; Look-alikes index scoped to the open gallery db path; card photo opens only the scoring face record with no click-through; index stamp taken before/after reads (empty -wal ignored). 4 new tests, 15 lookalike tests pass; 6 pre-existing failures unchanged. Threads replied and resolved.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "0ca0bf862c96a790475a38e7731a7c3a98a2d6368d0870047b0b317a38a9ee15",
+    "git":  {
+                "repo":  "ColONEL-KFC",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/ColONEL-KFC",
+                "branch":  "main",
+                "head":  "780034e",
+                "hasChanges":  true
+            }
+}

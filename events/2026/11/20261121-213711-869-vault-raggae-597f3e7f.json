@@ -1,0 +1,44 @@
+{
+  "id": "20261121-213711-869-vault-raggae-597f3e7f",
+  "createdAt": "2026-11-22T02:37:11.8698747Z",
+  "createdAtLocal": "2026-11-21 21:37",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-claude-tmdb-image-rate\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 21:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "PR #95 review fixes: TMDB host pacing admitted under the lock from the real start time with perf_counter (Windows monotonic ~15.6 ms ticks), at least one worker per host, dry-run estimate per host in parallel; new pacing test; replied to and resolved 4 Devin threads.",
+  "commands": [
+    "pytest tests/test_pictures.py tests/test_picture_vectors.py",
+    "python -m app.pictures profiles --dry-run --limit 2000"
+  ],
+  "files": [
+    "app/pictures.py",
+    "tests/test_pictures.py"
+  ],
+  "planPath": "",
+  "contentHash": "597f3e7fe52a8ff91b22804dc128af5b080aeb5fc68e52b15f45c18890cab695",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-claude-tmdb-image-rate",
+    "head": "e04c099",
+    "hasChanges": false
+  }
+}

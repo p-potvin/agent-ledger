@@ -1,0 +1,46 @@
+{
+  "id": "20261121-142131-813-vault-streaming-b168e1d0",
+  "createdAt": "2026-11-21T19:21:31.8133415Z",
+  "createdAtLocal": "2026-11-21 14:21",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): PowerShell, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 14:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Started the after-backfill chain (operator approved): %LOCALAPPDATA%\\VaultWares\\vault-streaming\\after-backfill-cast-pictures.ps1 (pid 10168, log after-backfill-cast-pictures.log): 1 app.cast.build, 2 app.pictures seasons profiles, 3 app.picture_vectors posters seasons profiles, 4 app.pictures stills, 5 app.picture_vectors stills. Dry run: seasons 36,182 to fetch (~2.5 h), stills 545,187 (~37.9 h), 4 req/s to image.tmdb.org; G: 507 GB free. Cast build pass 1 kept ~627k people (profiles count known after build). First launch restarted to make the log readable (cmd >> instead of Add-Content pipeline).",
+  "commands": [
+    "python -m app.pictures seasons stills --dry-run",
+    "Start-Process after-backfill-cast-pictures.ps1"
+  ],
+  "files": [
+    "after-backfill-cast-pictures.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "b168e1d095a7abc70e7dd493d35a9a129f8653d79e838e65568d9fc2b6fb3942",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "419d9da",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261122-110520-536-vault-raggae-29e50e83",
+    "createdAt":  "2026-11-22T16:05:20.5362752Z",
+    "createdAtLocal":  "2026-11-22 11:05",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "documentation",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-state-20261122b\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 11:05 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Recorded operator answers in PLAN-20261122-SEMANTIC-FEATURES.md and STATE (face search allowed, IMDb route at 30 imgs/actor, VaultSqware theme, OVH ACLs). Read-only survey of G:\\Galleries\\Celebrities: 41,795 images 26.9 GB on disk, 40,611 images already deleted earlier (sidecars left), 3,517 of 7,231 exemplar images missing (790 identities, 44 with none). Pushed to PR #101.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "29e50e83de19786e11b3efdd2822b1f500d3e1bbaa81a063d7e4592309924cdc",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "vw-raggae-state-20261122b",
+                "head":  "f25992b",
+                "hasChanges":  false
+            }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "20261122-092748-321-vault-raggae-c9816e2f",
+  "createdAt": "2026-11-22T14:27:48.3215334Z",
+  "createdAtLocal": "2026-11-22 09:27",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "commands,plan",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): PowerShell, Bash, Grep, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 09:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local PC",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Grep",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Embedded the 1,997 missing catalog titles and started the catalog lyrics embed through the gateway; moved stills vectors to the RTX 2060 (Stills-2060-20261122.ps1 loop) and replaced chain-pictures.ps1 with Profiles-20261122.ps1 (profiles fetch + vectors on the gateway). Researched Panopticam's semantic features (Ask bar, Read-as chips, looks presets, similar, teach-an-action, Heard, Whois, alerts, taste) and the target apps' current search to draft a per-app feature list. STATE in PR #101.",
+  "commands": [
+    "python -m app.catalog.ingest --source embed",
+    "python -m app.music.catalog_lyrics embed",
+    "python -m app.picture_vectors stills --gpu 2060 --pause 0.2"
+  ],
+  "files": [
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "c9816e2f6fe2f365f34c75b118a7ddb395cb6d3609e0a3f3c110fdcd645ba785",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "c932ce9",
+    "hasChanges": false
+  }
+}

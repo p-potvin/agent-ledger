@@ -1,0 +1,49 @@
+{
+  "id": "20261120-111154-873-vault-streaming-81dccd27",
+  "createdAt": "2026-11-20T16:11:54.8738851Z",
+  "createdAtLocal": "2026-11-20 11:11",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-series-resume\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-20 11:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows local",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Pre-PR UI changes: (1) hover preview's muted/unmuted state + position carry into the details modal trailer. (2) Poster cards 2:3: 84,738 cached catalog posters measured (84% exactly 780x1170, 95% ratio 0.66-0.70); Discover + Library thumbnails aspect-ratio 2/3, columns auto-fill minmax(200px). (3) Library card red X removed (History untouched). (4) Setting 'Mark as Watched at' N% (default 95, 50-100) for player close and watch-history (was 15 s from end / 90%). Tests 7/7, 14/14, 5/5; app check passed, no console errors; user data unchanged. Uncommitted on vw-claude-series-resume.",
+  "commands": [
+    "node tests/test_series_resume.js",
+    "node scratchpad/gui2.cjs"
+  ],
+  "files": [
+    "js/hover-card.js",
+    "js/streaming/trailer.js",
+    "css/header.css",
+    "js/favorites.js",
+    "js/utils.js",
+    "src/watch-history.js",
+    "index.html"
+  ],
+  "planPath": "",
+  "contentHash": "81dccd27bd8fd2323789d319d6204010b94d78cf8c1e848b4a7dbdd062f01906",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-series-resume",
+    "head": "9438415",
+    "hasChanges": true
+  }
+}

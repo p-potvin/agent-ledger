@@ -1,0 +1,47 @@
+{
+  "id": "20261120-152523-443-vault-streaming-3084c5d3",
+  "createdAt": "2026-11-20T20:25:23.4436754Z",
+  "createdAtLocal": "2026-11-20 15:25",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-20 15:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows local",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "PR review fixes: vault-raggae#92 (2ac4239: partial-save errors stay in the wait loop, no gateway status writes during a run, transcript replace retried on Windows, partials published during speech catch-up, module-level STREAM_LOG) and vault-streaming#25 (a519b1b: keep-warm via main-process IPC with real Range, resolved-link cache keyed by link not hash, episode switch saves/pauses old episode and progress only for loaded stream, credits skip stays watched; 49d5422: episodes panel no longer shifts the player). All threads replied+resolved. Merged #25 and #92; both repos on main. Restarted gateway with scripts/Restart-Gateway.ps1; verified a read through the merged gateway: CUDA on the 2060, GPU1 75%, 0.69 cores, 48 s for 21:51, 22 segments, 300 cues saved.",
+  "commands": [
+    "gh pr merge 25 --merge",
+    "gh pr merge 92 --merge",
+    "scripts/Restart-Gateway.ps1"
+  ],
+  "files": [
+    "vault-raggae/app/main.py",
+    "vault-raggae/app/moments/stream.py",
+    "js/player/series-controls.js",
+    "src/realdebrid/stream.js"
+  ],
+  "planPath": "",
+  "contentHash": "3084c5d3f263f1479f623d78ea732ed8e069cb4ed01771a9c57ea10a15190355",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "9a4052f",
+    "hasChanges": false
+  }
+}

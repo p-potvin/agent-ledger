@@ -1,0 +1,45 @@
+{
+  "id": "20261120-064637-887-vault-streaming-0534ebbe",
+  "createdAt": "2026-11-20T11:46:37.8873488Z",
+  "createdAtLocal": "2026-11-20 06:46",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-20 06:46 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "vault-raggae 91 review fixes 027334e (checkpoint never passes a failed speech segment, stored reads need a gap-free transcript, checkpoints carry source and only continue on same audio track/copy, pause during startup kept, resumed forced read continues, write_status per-writer temp + retry), 4 Devin threads resolved, 357 tests passed. Merged vault-raggae 91 (dc53acc) and vault-streaming 21 (62fd213); both local checkouts on main. Gateway restarted on 0.26.0 (pause/resume endpoints answer; Odyssey partial will resume at 1:30:00). Built vault-streaming 2.6.0: dist/vault-streaming-setup-2.6.0.exe + win-unpacked, not installed.",
+  "commands": [
+    "gh pr merge 91 --merge",
+    "gh pr merge 21 --merge",
+    "npm run dist"
+  ],
+  "files": [
+    "dist/vault-streaming-setup-2.6.0.exe",
+    "app/moments/stream.py"
+  ],
+  "planPath": "",
+  "contentHash": "0534ebbeaa86830500c01fecee662b6e56355964590cf60cc9e06d143d7e74af",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "62fd213",
+    "hasChanges": false
+  }
+}

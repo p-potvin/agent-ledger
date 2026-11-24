@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261122-200354-600-vault-raggae-7383c173",
+    "createdAt":  "2026-11-23T01:03:54.6005467Z",
+    "createdAtLocal":  "2026-11-22 20:03",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change",
+    "actor":  "rust/raggae-catalog/ui/src/pages/TitleEdits.tsx",
+    "agentHeader":  "Agent: rust/raggae-catalog/ui/src/pages/TitleEdits.tsx (role: main)\r\nModel: claude-opus-5-5\r\nThinking: rust/raggae-catalog/ui/src/toast.tsx\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 20:03 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "rust/raggae-catalog/ui/src/toast.tsx",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "PR #109 review round (Devin, 4 findings) fixed in ddbf012, replied and resolved: gateway undo refuses to overwrite later changes to the same fields (RESTORES_BEFORE, batch pre-check); merge undo also undoes its fill; title editor keyed per title, toast groups, lists reload after edits. 404 tests passed. Checkout back on main.",
+    "commands":  [
+                     "app/audit.py"
+                 ],
+    "files":  [
+                  "app/edits.py"
+              ],
+    "planPath":  "tests/test_edits.py",
+    "contentHash":  "7383c1736ad3a7a46bbed3c74448ad63c52aa2171dcd58e5dddaff993860b162",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "d964d4f",
+                "hasChanges":  false
+            }
+}

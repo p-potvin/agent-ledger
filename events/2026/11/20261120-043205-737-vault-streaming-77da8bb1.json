@@ -1,0 +1,52 @@
+{
+  "id": "20261120-043205-737-vault-streaming-77da8bb1",
+  "createdAt": "2026-11-20T09:32:05.7376606Z",
+  "createdAtLocal": "2026-11-20 04:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: subagent)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-catalog-coverage\r\nTools used (this reply): Edit, Write, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-20 04:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "subagent",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Addressed Devin's 5 review findings on p-potvin/vault-streaming#20 in 629993b: numeric ids use the stored tmdb_type (app and backfill); an untyped stored id that 404s is re-checked with /find (same number only); a filteredPage helper fills Discover and popular pages past filtered rows with stable page starts; search later pages dedupe against all local hits; index.html version synced to 2.5.0; check scripts redact the web token in logs; new offline tests/test_catalog_lists.js (4 regressions pass) plus test_version. Replied to and resolved all 5 threads; CodeRabbit ignored per the user.",
+  "commands": [
+    "node tests/test_catalog_lists.js",
+    "node tests/test_version.js",
+    "git push"
+  ],
+  "files": [
+    "src/tmdb.js",
+    "scripts/backfill-catalog.js",
+    "tests/test_catalog_lists.js",
+    "index.html"
+  ],
+  "planPath": "",
+  "contentHash": "77da8bb10d08d0b4b964e606bcf10defa6df94d696f425f49a7f13a934d00e57",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-catalog-coverage",
+    "head": "629993b",
+    "hasChanges": false
+  }
+}

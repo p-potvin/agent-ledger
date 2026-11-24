@@ -1,0 +1,52 @@
+{
+  "id": "20261120-041842-928-vault-streaming-f15b8e91",
+  "createdAt": "2026-11-20T09:18:42.9283361Z",
+  "createdAtLocal": "2026-11-20 04:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: subagent)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-catalog-coverage\r\nTools used (this reply): Edit, Bash, PowerShell, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-20 04:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "subagent",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Discover browse now uses the coverage floors (films 600, series 1000) for every sort, replacing 5000 for rating/newest. Committed: vault-streaming 1f6382b on new branch vw-claude-catalog-coverage, cut from origin/main after confirming stream-picker PR #19 was already merged (local main fast-forwarded, upstream unset so a push can't reach main); it holds src/catalog-coverage.js, src/tmdb.js and scripts/backfill-catalog.js. HANDOFF.md and the untracked tests (other session's) are left uncommitted. vault-raggae de67661 on new branch vw-claude-pictures-headerless (rebased on origin/main 961ac6a; test_pictures passes). Nothing pushed; both checkouts are now on those branches.",
+  "commands": [
+    "git switch -c vw-claude-catalog-coverage origin/main",
+    "git switch -c vw-claude-pictures-headerless main",
+    "git rebase origin/main"
+  ],
+  "files": [
+    "src/catalog-coverage.js",
+    "src/tmdb.js",
+    "scripts/backfill-catalog.js",
+    "vault-raggae/app/pictures.py"
+  ],
+  "planPath": "",
+  "contentHash": "f15b8e91f8aaa0d191ca212ff9a8fb41f3ecdd10dcf8f1c458e8d6739aff40df",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-catalog-coverage",
+    "head": "1f6382b",
+    "hasChanges": true
+  }
+}

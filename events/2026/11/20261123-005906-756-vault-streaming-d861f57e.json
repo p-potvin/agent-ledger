@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261123-005906-756-vault-streaming-d861f57e",
+    "createdAt":  "2026-11-23T05:59:06.7569573Z",
+    "createdAtLocal":  "2026-11-23 00:59",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-streaming",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-streaming-more-like-this\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 00:59 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+    "summary":  "More like this not visible: live gateway answers a title\u0027s first similar call in 6-20 s (busy with profile vectors, pre-#113 code), client timeout was 10 s so the row stayed hidden. Raised to 30 s (PR #31). Browser client is served by VaultStreamingWeb (node web/server.js since 21 Nov), needs a restart to pick up the branch.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "d861f57e31e2a3ba02d08747e421b5a812c14f0ae2c639205a13e5bc51876792",
+    "git":  {
+                "repo":  "vault-streaming",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+                "branch":  "vw-streaming-more-like-this",
+                "head":  "34594fd",
+                "hasChanges":  false
+            }
+}

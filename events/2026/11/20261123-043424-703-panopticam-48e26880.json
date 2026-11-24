@@ -1,0 +1,50 @@
+{
+  "id": "20261123-043424-703-panopticam-48e26880",
+  "createdAt": "2026-11-23T09:34:24.7037168Z",
+  "createdAtLocal": "2026-11-23 04:34",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Clopeux-Desktop (Windows 11, local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Monitor\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 04:34 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Clopeux-Desktop (Windows 11, local)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Monitor"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Round (Mon, 23 Nov 2026 04:45): v0.75.12 'padded' card badge (counted CB room >=300 shown, accounts <10%); live: top 40 CB rooms 35 counted, 23 padded. python-zipper extension jobs:get reads 200 jobs and keeps running jobs by id (commit c611ad6 local in python-zipper, not pushed). Second headcount pass 316 rooms 0 failed. STATE/HANDOFF updated.",
+  "commands": [
+    "git push origin main",
+    "npm run build (python-zipper extension)"
+  ],
+  "files": [
+    "web/src/components/RoomCard.tsx",
+    "python-zipper/extension/src/background/index.ts",
+    "docs/STATE.md",
+    "docs/HANDOFF.md"
+  ],
+  "planPath": "",
+  "contentHash": "48e268808fa91440f49a85550bc73e48c396952727920207900072b479b5e0d2",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "0443942",
+    "hasChanges": true
+  }
+}

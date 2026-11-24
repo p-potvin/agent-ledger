@@ -1,0 +1,48 @@
+{
+  "id": "20261121-130829-820-vault-streaming-57fe25ff",
+  "createdAt": "2026-11-21T18:08:29.8207763Z",
+  "createdAtLocal": "2026-11-21 13:08",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-codex-ios-phase1\r\nTools used (this reply): Bash, ReportFindings\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 13:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "ReportFindings"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Reviewed PR #30 (vw-codex-ios-phase1, native iOS phases 1-7, +8.3k). 9 findings: app sends fr-CA but catalog/trailer index use fr-FR (no French, live TMDB lookups); src/tmdb.js overlay no-op for browse/search rows (no raw_enrichment); audio auto-select skipped when preferred track is container default but not index 0; failover keeps stale selectedAudioIndex; trailer .h264.mp4 route only in PR #29 (merge order); Discover load-more race on filter change; movie/tv TMDB id collision in MediaItem.id (pre-existing); token in URL query despite header auth; README /api/verify wrong + get-settings leaks keys. No code changed.",
+  "commands": [
+    "gh pr view 30",
+    "git fetch origin pull/30/head:pr30"
+  ],
+  "files": [
+    "ios/VaultStreaming/AppConfig.swift",
+    "src/tmdb.js",
+    "ios/VaultStreaming/PlayerViewModel.swift"
+  ],
+  "planPath": "",
+  "contentHash": "57fe25fff96347673987084b2b290327060cd39a34ed0f626e7503b222d211b2",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-codex-ios-phase1",
+    "head": "27b0649",
+    "hasChanges": false
+  }
+}

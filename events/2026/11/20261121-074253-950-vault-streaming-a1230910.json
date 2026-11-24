@@ -1,0 +1,46 @@
+{
+  "id": "20261121-074253-950-vault-streaming-a1230910",
+  "createdAt": "2026-11-21T12:42:53.9507193Z",
+  "createdAtLocal": "2026-11-21 07:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-series-backfill\r\nTools used (this reply): Bash, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 07:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Series backfill prep on branch vw-claude-series-backfill (uncommitted): MIN_VOTES.tv 1000->600 (src/catalog-coverage.js, shared with app lists), --episodes-top default 3000->0, backfill-episodes-done.txt so series stored without episodes are asked again. Dry run (local gateway only): 18,127 series >= 600 votes, episodes for 17,694 (674,603 episodes; 433 over 500 skipped), 16,897 titles to do (12,936 re-asked for episodes), ~21.4k TMDB requests, ~0.6 h. Not executed. Findings: episodes stored slimmed (no id, vote_count, crew, guest_stars, production_code, episode_type; stills only as paths); no credits appended at all. IMDb dumps on G: include name.basics and title.principals/crew (no bios/photos/birthplace).",
+  "commands": [
+    "node scripts/backfill-catalog.js --dry-run --category tv"
+  ],
+  "files": [
+    "scripts/backfill-catalog.js",
+    "src/catalog-coverage.js"
+  ],
+  "planPath": "",
+  "contentHash": "a12309103d6c25aa4a8547222d29ecb4fd54f452d13db7ae31ba21d5db06a05f",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-series-backfill",
+    "head": "1c82c87",
+    "hasChanges": true
+  }
+}

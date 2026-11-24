@@ -1,0 +1,44 @@
+{
+  "id": "20261120-040300-056-vault-streaming-05b0ccff",
+  "createdAt": "2026-11-20T09:03:00.0563514Z",
+  "createdAtLocal": "2026-11-20 04:03",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: subagent)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-codex-stream-picker\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-20 04:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "subagent",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Backfill run 5 (--retry-misses --keep-video, cap 2000 at 10/s): 1,294 queued, 3 stored, 1,291 missed (find-empty 1212, find-episode 78, details-404 1), 1,298 requests, 3.9 min; IMDb video titles mostly absent on TMDB. Poster run (app.pictures catalog, 4/s): 719 to fetch; 676 kept (124 MB), 43 failed again. The new logging shows the cause: image.tmdb.org returns 200 with a real 120-460 KB body but NO Content-Type header for those 43 files. Proposed fix (not made): in pictures.py, accept a response with no content type when the magic bytes match JPEG/PNG/WebP/GIF. Also answered the user: blank panel posters are IMDb-dump 2026 items with no votes and no poster_url (36,564 of 37,969 2026 titles), not the gateway version.",
+  "commands": [
+    "node scripts/backfill-catalog.js --execute --retry-misses --keep-video --max-requests 2000 --interval-ms 100",
+    "python -m app.pictures catalog"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "05b0ccffd60d28840c6c25d81c716c025766862f68893f21775acef55bb197dc",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-codex-stream-picker",
+    "head": "401e001",
+    "hasChanges": true
+  }
+}

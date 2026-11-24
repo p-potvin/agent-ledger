@@ -1,0 +1,48 @@
+{
+  "id": "20261121-144633-151-vault-raggae-2180c926",
+  "createdAt": "2026-11-21T19:46:33.1519817Z",
+  "createdAtLocal": "2026-11-21 14:46",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Bash, PowerShell, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 14:46 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Operator: picture vectors must use EmbeddingGemma 2 (multimodal, 768D, matryoshka) not SigLIP; 0.2 pause fine (75 C normal); run step 3 on both cards. picture_vectors.py rewritten (1b1fb61, PR #95): EG2 via gateway /v1/embed (3060) or local copy on a card (ingest.local_embedder), --shard k/n by key hash, --batch 32, refused pictures retried one by one. Dropped 134 SigLIP test rows. Tested both workers at once on 600 posters: gateway ~7.5/s, 2060 ~4.6/s with pause 0.2, 2060 peak 62.6 C; text->poster search correct (Batman -> Dark Knight trilogy). After-backfill job wrapper replaced (pid 30292): waits for step 2 (pictures seasons+profiles, running at ~10/s), then step 3 on both cards (3060 shard 0/2 via gateway, 2060 shard 1/2 pause 0.2, Watch-GpuTemp 85 C on '--shard 1/2'), then stills download; no stills vectors.",
+  "commands": [
+    "python -m app.picture_vectors posters --limit 300 --gpu gateway --shard 0/2",
+    "python -m app.picture_vectors posters --limit 300 --gpu 2060 --shard 1/2 --pause 0.2"
+  ],
+  "files": [
+    "app/picture_vectors.py",
+    "after-backfill-cast-pictures.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "2180c9263f37c03ce8c305b2a2cf9a395d5c0b635a31609f68e6efb742892035",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "419d9da",
+    "hasChanges": false
+  }
+}

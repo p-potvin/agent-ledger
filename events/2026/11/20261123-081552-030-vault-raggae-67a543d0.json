@@ -1,0 +1,52 @@
+{
+  "id": "20261123-081552-030-vault-raggae-67a543d0",
+  "createdAt": "2026-11-23T13:15:52.0302969Z",
+  "createdAtLocal": "2026-11-23 08:15",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + greencloud via tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-state-20261123d\r\nTools used (this reply): Bash, PowerShell, Edit, Write, ssh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 08:15 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + greencloud via tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "ssh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "IMDb download widened (operator: start greencloud). greencloud runs rows 521-4160 detached in /opt/kfc-imdb (xvfb-run, headed). runs\\pull_greencloud_imdb.py (detached) copies finished folders to G:\\Galleries\\Celebrities every 5 min, checks counts, removes greencloud copy (~32 MB/actor vs 24 GB free there); first round 14 pulled + 20 test copies cleared. This PC: first 500 running, rows 4161-7802 queued by Chain-IMDb-20261123.ps1. ~230 GB total on G:. STATE on PR #125 updated.",
+  "commands": [
+    "xvfb-run celeb_imdb_new_actors.py --start 520 --first 3640",
+    "pull_greencloud_imdb.py",
+    "Chain-IMDb-20261123.ps1"
+  ],
+  "files": [
+    "%LOCALAPPDATA%\\VaultWares\\raggae\\runs\\pull_greencloud_imdb.py",
+    "%LOCALAPPDATA%\\VaultWares\\raggae\\runs\\Chain-IMDb-20261123.ps1",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "67a543d01289a1ec28743179f04791c55a8543980487573ca59ae204f5814be0",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-state-20261123d",
+    "head": "1aa2f4f",
+    "hasChanges": false
+  }
+}

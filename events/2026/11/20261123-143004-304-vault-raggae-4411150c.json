@@ -1,0 +1,52 @@
+{
+  "id": "20261123-143004-304-vault-raggae-4411150c",
+  "createdAt": "2026-11-23T19:30:04.3046916Z",
+  "createdAtLocal": "2026-11-23 14:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-rerank\r\nTools used (this reply): Bash, PowerShell, Write, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 14:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Review fixes on PR #126: year param back to the FTS leg (+-1/undated) without overwriting year_min/max; one 768-d query embedding reused for the ANN prefix; CrossEncoder.scores wrapped in vaultwares-adk ModelRun (lazy import); eval live --rerank sends rerank=true. Tests added (7 in test_ranking); suite 438 passed; eval default unchanged (hit@1 0.77, MRR 0.797). 4 threads replied and resolved.",
+  "commands": [
+    "pytest -q",
+    "eval_search.py ranked --floor --full-dim --prior 0.3"
+  ],
+  "files": [
+    "app/catalog/ranking.py",
+    "app/rerank.py",
+    "app/main.py",
+    "tools/eval_search.py",
+    "tests/test_ranking.py"
+  ],
+  "planPath": "",
+  "contentHash": "4411150c1bd75b5b34f022c72b9392b72170530c945358e6c466060deb6ec57f",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-rerank",
+    "head": "6c77f74",
+    "hasChanges": true
+  }
+}

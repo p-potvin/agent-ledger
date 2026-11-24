@@ -1,0 +1,46 @@
+{
+  "id": "20261120-115532-495-vault-streaming-8d790def",
+  "createdAt": "2026-11-20T16:55:32.4954814Z",
+  "createdAtLocal": "2026-11-20 11:55",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-series-resume\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-20 11:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows local",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "PR #24 follow-up from user testing: second 25 s size probe for a cached source whose probe timed out (American Dad S06E14 played a Comet error video); player treats a <60 s stream as a provider status video (clears lastSource in memory and watch history, finds another source); subtitle tracks disabled before removal (old cues stacked); OpenSubtitles download retries 5xx twice. Not done: seek-bar preview showing an error frame (Comet connection cap is unlimited, cause not found); Moments CPU use (later session). Tests 15/15, 7/7, 5/5, 8/8; not run in the app.",
+  "commands": [
+    "node tests/test_stream_picker.js",
+    "git push"
+  ],
+  "files": [
+    "src/realdebrid/stream.js",
+    "js/player/player.js",
+    "js/player/subtitles.js",
+    "src/ipc/subtitles.ipc.js"
+  ],
+  "planPath": "",
+  "contentHash": "8d790defd85e438c43ad83ff4374fabea079e89a9643b56547f5e81abddd1add",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-series-resume",
+    "head": "cc356ca",
+    "hasChanges": false
+  }
+}

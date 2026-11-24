@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261122-141912-356-vault-raggae-99425bf3",
+    "createdAt":  "2026-11-22T19:19:12.3562104Z",
+    "createdAtLocal":  "2026-11-22 14:19",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-catalog-app\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 14:19 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "PR #103 review fixes: search precedence, yearMax-only Ask, multi-genre AND filters in gateway search/browse, no vote floor for albums/books, retry, catalog-id lookup, route-only path check in Rust gateway command, img-src http: for tailnet gateway, war-films parse, endpoint test. 10 threads replied/resolved. Celebrities head cards done 948/948; clutter recycling at 24k/111k.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "99425bf34e3ec2f16172b4e5033125248def1812e145d303cc04d3d299b1c59f",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "vw-raggae-catalog-app",
+                "head":  "6ef2596",
+                "hasChanges":  false
+            }
+}

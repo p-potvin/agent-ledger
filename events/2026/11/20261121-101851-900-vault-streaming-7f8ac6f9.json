@@ -1,0 +1,43 @@
+{
+  "id": "20261121-101851-900-vault-streaming-7f8ac6f9",
+  "createdAt": "2026-11-21T15:18:51.9001100Z",
+  "createdAtLocal": "2026-11-21 10:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "handoff",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-web-mobile\r\nTools used (this reply): Write, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 10:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Write",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Wrote HANDOFF.md (22b63db on PR #29 branch): running backfill status and resume files, the post-backfill vault-raggae steps (cast build, picture phases, picture vectors), live web server restart procedure for per-device data, PR #29 contents, open findings (TMDB vs Addic7ed episode numbering for subtitles, HLS for desktop browsers, device names), testing notes. vault-raggae checkout switched back to main after #94 merge.",
+  "commands": [],
+  "files": [
+    "HANDOFF.md"
+  ],
+  "planPath": "",
+  "contentHash": "7f8ac6f9d6182001de99a236ab5decadb6ded20ff99c83bcd556343fc45a2998",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-web-mobile",
+    "head": "22b63db",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "20261123-133208-697-vault-raggae-c0a53240",
+  "createdAt": "2026-11-23T18:32:08.6974521Z",
+  "createdAtLocal": "2026-11-23 13:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae\\rust\\raggae-catalog  Branch: vw-raggae-rerank\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 13:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae\\rust\\raggae-catalog",
+  "summary": "Search: PR #126 (v0.43.0) staged hybrid search + /v1/rerank (jina-reranker-v2-base-multilingual ONNX), eval set + tools; Ask-bar path hit@1 0.48->0.77, MRR 0.571->0.800; rerank opt-in (hit@10 0.90). Catalog app 500s (operator: Ask bar with People chip on Pictures): gateway 0.42.0 = main; stats.db shows no 5xx from any app in 72 h; reproduced the flow in the browser pane via Vite dev (.claude/launch.json catalog-ui-dev): 200, 60 results in 31 s, photos load; not reproduced. Pictures search is slow (30-37 s) until the picture index is built after the stills run. catalog.exe is from Sun 22 Nov 19:47 (older than source). Installer: NSIS configured in tauri.conf.json, never built; Tauri CLI not installed.",
+  "commands": [
+    "eval_search.py variants",
+    "curl /v1/pictures/search kind=profile",
+    "preview catalog-ui-dev"
+  ],
+  "files": [
+    "app/catalog/ranking.py",
+    "app/rerank.py",
+    "app/main.py",
+    "tools/eval_search.py",
+    ".claude/launch.json"
+  ],
+  "planPath": "",
+  "contentHash": "c0a532405434cfe21b0711abb0673e23b7a33d6851f77eb4e1b00f15335ddba4",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-rerank",
+    "head": "32ff183",
+    "hasChanges": true
+  }
+}

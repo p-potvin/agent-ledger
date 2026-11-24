@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261123-032551-761-vault-raggae-d9e1b57a",
+    "createdAt":  "2026-11-23T08:25:51.7614590Z",
+    "createdAtLocal":  "2026-11-23 03:25",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 03:25 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Next vault-raggae steps: #119 catalog app similar floor by kind (films 1250, series 250, none for albums/books which were always empty); #120 Moments said leg filtered by video before its limit (test + live GoT S1E1 check); vault-streaming #35 jump to a line or scene in the player (moments:jump-search, said then look, compact box, EN/FR, web-mode checked; v2.14.0 since #32 took 2.13.0); docs #121. Gateway restart still queued behind cast-profile vectors (205k/210k).",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "d9e1b57ab85c04931314c339d82bc1747c99f6a2e023c15d87b9cca887ed5f53",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "79a57c9",
+                "hasChanges":  false
+            }
+}

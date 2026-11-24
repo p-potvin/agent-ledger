@@ -1,0 +1,53 @@
+{
+  "id": "20261123-045812-788-vault-raggae-b9f6d99f",
+  "createdAt": "2026-11-23T09:58:12.7889834Z",
+  "createdAtLocal": "2026-11-23 04:58",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: local Windows 11)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): PowerShell, Bash, Edit, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-23 04:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "local Windows 11",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Edit",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Scheduled run vault-raggae-catalog-progression: plan 3.2 find an episode by scene. vault-raggae PR #122 (v0.41.0): GET /v1/pictures/episodes/{key}, episodes ranked by TMDB still cosine + name/overview word bonus, specials out by default, BTree owner index in picture_search index; 6 new tests, live read-only check on 4 series. vault-streaming PR #36 (v2.15.0): Find an episode box in the series modal, raggae-episodes IPC, node test; not browser-checked. Docs PR #123 (STATE, SESSIONS, plan). Checkouts left on main.",
+  "commands": [
+    "pytest -q",
+    "node tests/test_episode_find.js",
+    "gh pr create"
+  ],
+  "files": [
+    "app/picture_search.py",
+    "app/main.py",
+    "tests/test_picture_search.py",
+    "vault-streaming/js/streaming/details-modal.js",
+    "vault-streaming/src/raggae.js"
+  ],
+  "planPath": "",
+  "contentHash": "b9f6d99f659ca71a747527e30e777a659592f91b076e0c7ef21ee550bbbfb617",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "bdc15cd",
+    "hasChanges": false
+  }
+}

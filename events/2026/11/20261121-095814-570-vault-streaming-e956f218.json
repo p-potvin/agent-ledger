@@ -1,0 +1,53 @@
+{
+  "id": "20261121-095814-570-vault-streaming-e956f218",
+  "createdAt": "2026-11-21T14:58:14.5702642Z",
+  "createdAtLocal": "2026-11-21 09:58",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-web-mobile\r\nTools used (this reply): PowerShell, Claude_Browser, Write, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 09:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Claude_Browser",
+      "Write",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "PR #29 adc95e3: restarted live web server (VaultStreamingWeb task; had to kill orphaned node pid 30360 first) so the HLS route is live. Added web/devices.js: per-device settings + watch history keyed by tailnet address (greencloud X-Real-IP, trusted from greencloud/loopback), stored in userData/devices/<ip>, new device = copy of shared settings + empty history; verified with simulated devices. Translated English-only strings (details, bottom nav, player tooltips, filters, countdown, quick sheet, rd-flow status lines, history badge, IMDb button, quality menu); QC labels -> fr-CA. French subtitles verified (fr track auto-selected, 428 cues, accents OK); noted TMDB vs Addic7ed episode numbering mismatch for American Dad S07. HLS temp dir per port (dev instance had wiped live dir).",
+  "commands": [
+    "Start-ScheduledTask VaultStreamingWeb",
+    "node tests/test_web_devices.js"
+  ],
+  "files": [
+    "web/devices.js",
+    "web/server.js",
+    "web/hls-route.js",
+    "js/translations.en.js",
+    "js/translations.fr.js",
+    "index.html"
+  ],
+  "planPath": "",
+  "contentHash": "e956f218a9ddc7ce085d597d211f9253d6e0c4373db2e00017484d9d572224dd",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-web-mobile",
+    "head": "adc95e3",
+    "hasChanges": false
+  }
+}

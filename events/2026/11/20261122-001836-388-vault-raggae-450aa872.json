@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261122-001836-388-vault-raggae-450aa872",
+    "createdAt":  "2026-11-22T05:18:36.3881769Z",
+    "createdAtLocal":  "2026-11-22 00:18",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change",
+    "actor":  "app/main.py",
+    "agentHeader":  "Agent: app/main.py (role: main)\r\nModel: claude-opus-5-5\r\nThinking: tests/test_picture_search.py\r\nMode: agent\r\nPermissions: docs/STATE.md (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 00:18 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "tests/test_picture_search.py",
+                    "mode":  "agent",
+                    "permissions":  "docs/STATE.md",
+                    "network":  "Windows 11 local",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Scheduled run Sun 22 Nov 2026: checked overnight picture runs (vectors 80k/~160k, stills 88.9k/545k, no errors). PR #98 (v0.30.0): app/picture_search.py + GET /v1/pictures/search|similar|summary over vw-pictures.lance (EmbeddingGemma 2 text-\u003epicture), 7 tests, suite 385 passed. Docs PR #99 (STATE, SESSIONS, SATELLITES). Gateway not restarted (vectors run posts to it).",
+    "commands":  [
+                     "pytest -q"
+                 ],
+    "files":  [
+                  "app/picture_search.py"
+              ],
+    "planPath":  "gh pr create",
+    "contentHash":  "450aa8721923732e471744a8b939625c02bd5ea7d896d39bd7cbb87285df54cf",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "7a191ff",
+                "hasChanges":  false
+            }
+}

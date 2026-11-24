@@ -1,0 +1,47 @@
+{
+  "id": "20261120-033042-658-vault-raggae-4eaab0f8",
+  "createdAt": "2026-11-20T08:30:42.6586980Z",
+  "createdAtLocal": "2026-11-20 03:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "general,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-20 03:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Kernel handle leak solved: after the operator disabled Windows Sandbox and rebooted, System holds 6,576 handles after 20.8 h (baseline ~6.4k; leak had run ~180k/h), pools back to normal, 14.4 GB free. Root cause recorded in vault-raggae notes (PR vault-raggae#89).",
+  "commands": [
+    "Probe-KernelLeak.ps1",
+    "Get-WindowsOptionalFeature"
+  ],
+  "files": [
+    "vault-raggae/docs/STATE.md",
+    "vault-raggae/docs/state/SESSIONS.md"
+  ],
+  "planPath": "",
+  "contentHash": "4eaab0f81542b7aae746ad2d100a570a444acade4847f42f08e6b4bf1f70d6fb",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "0592f3e",
+    "hasChanges": false
+  }
+}

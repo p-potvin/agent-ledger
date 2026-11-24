@@ -1,0 +1,47 @@
+{
+  "id": "20261122-084213-973-vault-raggae-6209ba98",
+  "createdAt": "2026-11-22T13:42:13.9734049Z",
+  "createdAtLocal": "2026-11-22 08:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): PowerShell, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 08:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local PC",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Stopped a duplicate picture chain (After-Stills-20261122.ps1, pid 32532) before it downloaded anything; the earlier chain-pictures.ps1 (pid 21880) is kept. Moved my STATE/SESSIONS notes off PR #98 into PR #99 (vw-raggae-state-20261122); #98 now holds only code and tests.",
+  "commands": [
+    "Stop-Process 32532,26852",
+    "git revert/checkout docs on vw-claude-picture-search"
+  ],
+  "files": [
+    "docs/STATE.md",
+    "docs/state/SESSIONS.md"
+  ],
+  "planPath": "",
+  "contentHash": "6209ba98ed0a1dd6824d5d24f2f4739f34b476f1dbb01cddf4f952827b868749",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "7a191ff",
+    "hasChanges": false
+  }
+}

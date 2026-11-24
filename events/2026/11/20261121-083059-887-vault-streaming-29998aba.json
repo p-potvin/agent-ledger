@@ -1,0 +1,45 @@
+{
+  "id": "20261121-083059-887-vault-streaming-29998aba",
+  "createdAt": "2026-11-21T13:30:59.8874076Z",
+  "createdAtLocal": "2026-11-21 08:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-claude-series-backfill\r\nTools used (this reply): Bash, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 08:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "PR #28 4c4de51: Devin fixes to the backfill: every listed season incl. season 0 specials fetched and verified before checkpointing, episodes checkpoint moved to backfill-episodes-done-v2.txt (4,284 series re-asked for specials), credits checkpoint only when TMDB sent credits, header doc fixed. Verified Breaking Bad stores seasons 0-5. Backfill stopped and restarted on the fixed code. 4 threads replied/resolved.",
+  "commands": [
+    "node scripts/backfill-catalog.js --execute"
+  ],
+  "files": [
+    "scripts/backfill-catalog.js"
+  ],
+  "planPath": "",
+  "contentHash": "29998abae8a8f8d2cee0601a5474a3f600f509c54c0b79d09737b1599742ad94",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-claude-series-backfill",
+    "head": "4c4de51",
+    "hasChanges": false
+  }
+}

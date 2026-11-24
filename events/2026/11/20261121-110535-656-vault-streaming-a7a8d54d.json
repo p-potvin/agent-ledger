@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261121-110535-656-vault-streaming-a7a8d54d",
+    "createdAt":  "2026-11-21T16:05:35.6565900Z",
+    "createdAtLocal":  "2026-11-21 11:05",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-streaming",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Orchestrator (Argon)\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-codex-ios-phase1\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-21 11:05 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Orchestrator (Argon)",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+    "summary":  "Reviewed and updated ios/PORTING.md assuming all iOS code is out of date, and implemented Phase 1 on branch vw-codex-ios-phase1 (Keychain token storage, FirstRunConnectView, typed Api layer, catalog/details/history/subtitles schema alignment, language propagation)",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "a7a8d54dc3c9edb56f4c10952a39cdbd2e9d5b0916cd687bdb89c317ab81ba50",
+    "git":  {
+                "repo":  "vault-streaming",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+                "branch":  "vw-codex-ios-phase1",
+                "head":  "49f24d7",
+                "hasChanges":  true
+            }
+}

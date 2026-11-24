@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261122-104625-869-vault-raggae-b45e7905",
+    "createdAt":  "2026-11-22T15:46:25.8690921Z",
+    "createdAtLocal":  "2026-11-22 10:46",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "documentation",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-state-20261122b\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-22 10:46 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Wrote docs/PLAN-20261122-SEMANTIC-FEATURES.md (per-app semantic search/embedding features, operator order and decisions), recorded decisions in STATE.md and SESSIONS.md, pushed to PR #101. Indexed the last 127 audio masters by sound only (--no-lyrics, 3060); none were in Apple/Music folders.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "b45e79050b6f06446767fc966ce9867405821ac61ea87c337c89ea2006df0357",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "vw-raggae-state-20261122b",
+                "head":  "c720bee",
+                "hasChanges":  false
+            }
+}
