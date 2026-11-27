@@ -1,0 +1,50 @@
+{
+  "id": "20261124-101923-628-vault-raggae-244daadc",
+  "createdAt": "2026-11-24T15:19:23.6286535Z",
+  "createdAtLocal": "2026-11-24 10:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: local Windows 11)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): PowerShell, Bash, Edit, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-24 10:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "local Windows 11",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Edit",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Review round on PR #131 (Devin, 4): Cast page falls back to one full read on a pre-0.44 gateway (no credits_offset); cold cast summary counted once under a lock (warm-up and request share it, new test); paging only while the open tab has credits to come; grouping cost measured 2-14 ms on the largest filmographies (no change). Replied and resolved all four threads. Cast + version tests 15 passed.",
+  "commands": [
+    "pytest tests/test_cast_service.py tests/test_version.py",
+    "npx tsc --noEmit"
+  ],
+  "files": [
+    "app/cast/service.py",
+    "tests/test_cast_service.py",
+    "rust/raggae-catalog/ui/src/pages/Cast.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "244daadc84e2a60175ac85ffde855f8fee97ad78abde09af63ec335e331f876f",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "54be001",
+    "hasChanges": true
+  }
+}

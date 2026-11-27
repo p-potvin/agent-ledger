@@ -1,0 +1,53 @@
+{
+  "id": "20261124-143021-998-vault-raggae-366f23e9",
+  "createdAt": "2026-11-24T19:30:21.9988263Z",
+  "createdAtLocal": "2026-11-24 14:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-catalog-history\r\nTools used (this reply): Bash, PowerShell, gh, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-24 14:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "gh",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Merged 5 conflicting IMDb folders from greencloud/laptop into G:\\Galleries\\Celebrities (dupes skipped, conflicts renamed _2, remote copies removed). PR #137 (v0.44.4) Anything: hourly saves only for volumes with new names, 6 h otherwise, save after start, installer -Index G:\\Catalogs\\anything. ColONEL-KFC PR #13: face_crops img_w/img_h, readers rescale, shrink_gallery_photos.py (dry run 90,528 photos over 1600 px, 233 GB). PR #138 (v0.44.5) catalog app navigation history + one view per item, verified in dev preview. NVIDIA C: writes traced to nvtopps\\nct\\nvlog.nvlgstg.",
+  "commands": [
+    "merge_imdb.py",
+    "cargo test -p raggae-files",
+    "pytest tests/test_image_size.py",
+    "shrink_gallery_photos.py dry run"
+  ],
+  "files": [
+    "rust/raggae-files/src/follower.rs",
+    "scripts/Install-Anything.ps1",
+    "rust/raggae-catalog/ui/src/nav.ts",
+    "ColONEL-KFC/shrink_gallery_photos.py"
+  ],
+  "planPath": "",
+  "contentHash": "366f23e9449ff97593dfa3dc1b1075d02b1c2449cc568a780bdb82c66ec1363c",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-catalog-history",
+    "head": "8128a40",
+    "hasChanges": true
+  }
+}

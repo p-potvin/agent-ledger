@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261127-003409-995-vault-raggae-shared-tube-dad4fa77",
+    "createdAt":  "2026-11-27T05:34:09.9955309Z",
+    "createdAtLocal":  "2026-11-27 00:34",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae, shared-tube",
+    "kind":  "code-change,commands",
+    "actor":  "claude",
+    "agentHeader":  "Agent: claude (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local + OVH SSH)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-state-20261126\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-27 00:34 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows 11 local + OVH SSH",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "amd target G:\\Galleries\\amd recorded (#148). TPDB: measured recent 93k scenes (no-studio/future/non-latin 0; clip-store 73.7%); PR #150 keeps clip-store scenes only for performers with a studio-site scene or KFC gallery identity (~54% fewer new). shared-tube: 8,857 performers / 3,360 studios had no image (mostly NULL, never looked up; resolver uses limit 1 and permanent empty mark). Matched locally against vw-scenes.db (names, StashDB aliases, gender, len\u003e=5) and set 5,262 performers + 1,374 studios in one Postgres transaction on OVH (only empty rows; revert list ~/image-backfill/updated-20261127.tsv). No outside requests; single test verified via the resolve API first.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "dad4fa771e7c9a56f742ea0c381ecd22fcc6160938a6600e03bbbb9353669aba",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "vw-state-20261126",
+                "head":  "83a3732",
+                "hasChanges":  true
+            }
+}

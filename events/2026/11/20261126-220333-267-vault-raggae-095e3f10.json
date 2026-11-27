@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261126-220333-267-vault-raggae-095e3f10",
+    "createdAt":  "2026-11-27T03:03:33.2679621Z",
+    "createdAtLocal":  "2026-11-26 22:03",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change",
+    "actor":  "claude",
+    "agentHeader":  "Agent: claude (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-state-20261126\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-26 22:03 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows 11 local",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Auto-fix review rounds: ColONEL-KFC #15 (cap: .meta.json + shared-stem tag files, holding name collisions, system folders, relative paths, direct-db note; reindex resume log tied to its db, exit 0 when all done; Reindex-Gallery.ps1 -ResumeLog; 4 tests) pushed 9bd44dc, 9 threads replied/resolved. vault-raggae #148: BEL bytes in SESSIONS.md amd paths fixed, music backfill writer named; 2 threads resolved. ColONEL-KFC #14 and vault-commander #38 not touched: folders not on those PR branches.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "095e3f1034eda85e30c48c993e21281455ab5566eaa19efbd2861c89c59c5cec",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "vw-state-20261126",
+                "head":  "4810e33",
+                "hasChanges":  true
+            }
+}

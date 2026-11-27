@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261124-163817-888-vault-raggae-fec3d267",
+    "createdAt":  "2026-11-24T21:38:17.8883596Z",
+    "createdAtLocal":  "2026-11-24 16:38",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change,commands",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-24 16:38 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Review fixes on #143 (fetch lock, report guard, --limit counts retries) and #144 (album link to catalog edition, full view keeps chosen line copy, Play resumes, tooltips back on move). Merged #143-#146 (resolved version conflict on #145 keeping 0.44.8); gateway restarted 0.44.8. Handover notes in STATE/SESSIONS: popularity fetch and Celebrities shrink still running; Catalog app exe embeds ui/dist at build time so it needs a tauri build to show UI work since 0.44.3.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "fec3d26716b0540d75b92eaf6fb552a45d39388457bb8e7d546be758f3229aac",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "d45995a",
+                "hasChanges":  true
+            }
+}

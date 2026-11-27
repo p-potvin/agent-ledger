@@ -1,0 +1,46 @@
+{
+  "id": "20261126-220015-848-vault-raggae-d203997d",
+  "createdAt": "2026-11-27T03:00:15.8483957Z",
+  "createdAtLocal": "2026-11-26 22:00",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands",
+  "actor": "claude",
+  "agentHeader": "Agent: claude (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-state-20261126\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-26 22:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "amd chain changed per operator: no reindex; cap_gallery_photos --apply now backs up gallery.db, deletes moved photos' face_crops rows, resets sample_count (ColONEL-KFC #15). Chain restarted between identities (at 1,155) with the operator's 19 new tagged folders as an input; tag/reindex steps removed. Moved amd's 3 old gallery.db backups (13 GB) F: -> G:\\Galleries\\.amd-backups. Scene sync: not crashing (exit 0 nightly); PowerShell 5.1 formatted merge stderr as NativeCommandError; fixed in vault-raggae #149. TPDB ~28k kept/night = 14-day overlap reread; real new ~1.3-1.4k/day; coverage 2016-01-16..today. STATE updated on #148.",
+  "commands": [
+    "taskkill /T chain between identities",
+    "Start-ScheduledTask \\VaultWares\\Amd Chain",
+    "robocopy /MOV .vw-backups"
+  ],
+  "files": [
+    "ColONEL-KFC\\cap_gallery_photos.py",
+    "vault-raggae\\scripts\\Sync-Scenes.ps1",
+    "%LOCALAPPDATA%\\VaultWares\\raggae\\runs\\amd_chain.py"
+  ],
+  "planPath": "",
+  "contentHash": "d203997da0db167896d2258d2ff68473da9b40cf6b35de05e3f3ee56fbf59f86",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-state-20261126",
+    "head": "441878b",
+    "hasChanges": true
+  }
+}

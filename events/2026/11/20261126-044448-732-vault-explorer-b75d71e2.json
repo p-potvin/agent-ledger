@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261126-044448-732-vault-explorer-b75d71e2",
+    "createdAt":  "2026-11-26T09:44:48.7320916Z",
+    "createdAtLocal":  "2026-11-26 04:44",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 4 Neon (High)\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-26 04:44 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 4 Neon (High)",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Fixed Windows Path-\u003ePATH bug in vault-explorer getPythonEnv() so generate_subtitles.py uses vw better-subtitles instead of built-in ASR fallback; switched hf_translate.py to openai/gpt-oss-120b:cheapest on router.huggingface.co with reasoning_effort=low and CoT max_tokens headroom; removed translategemma and silent google fallback; fixed Parse-LastJsonLine [TRANS] cue logging in Start-BetterSubtitles.ps1; verified 535.5s (\u003e399s) hot-server benchmark and September blank-run root cause",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "b75d71e2e1dd1559b1db86722ca3e954246a53b82dfdf1289c0e371bebe80d09",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "eeb9e70",
+                "hasChanges":  true
+            }
+}

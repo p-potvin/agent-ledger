@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261126-094214-711-vault-explorer-22fdf09e",
+    "createdAt":  "2026-11-26T14:42:14.7119041Z",
+    "createdAtLocal":  "2026-11-26 09:42",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 3.1 Pro\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-26 09:42 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3.1 Pro",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Completed 696.11s bilingual audio CLI sweep (100% SHA-256 parity across lookahead 0/8/16/32/64; nemotron-3.5 2333 words vs parakeet-tdt 1450 words), updated hf_translate.py with concise word-level phonetic ASR-fix instructions (12/12 unit tests passing), and ran full vw better-subtitles end-to-end (210 cues in 209.4s).",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "22fdf09e1e42af167c3cd6b13ca7ff2a9c77ef76f4f1fb1e7c71d050219274a1",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "eeb9e70",
+                "hasChanges":  true
+            }
+}

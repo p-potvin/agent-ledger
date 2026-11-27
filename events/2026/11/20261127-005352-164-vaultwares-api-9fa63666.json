@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261127-005352-164-vaultwares-api-9fa63666",
+    "createdAt":  "2026-11-27T05:53:52.1641296Z",
+    "createdAtLocal":  "2026-11-27 00:53",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-api",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 4 Neon\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-27 00:53 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 4 Neon",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
+    "summary":  "Fixed shared-tube preview watchdog spawn race, stale failed-queue cleanup, retry HTML-URL bug, and preview fallback URL guard (v0.3.70); pushed to main and recovered the 70 stuck source videos on OVH",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "9fa63666a239a44769a446f9d974b295601703c01e53bd233d2269ce86438afd",
+    "git":  {
+                "repo":  "vaultwares-api",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-api",
+                "branch":  "main",
+                "head":  "e515445",
+                "hasChanges":  false
+            }
+}

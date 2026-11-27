@@ -1,0 +1,55 @@
+{
+  "id": "20261124-094555-110-vault-raggae-21ecd34e",
+  "createdAt": "2026-11-24T14:45:55.1105337Z",
+  "createdAtLocal": "2026-11-24 09:45",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands,documentation,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: local Windows 11)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): PowerShell, Bash, Edit, gh, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-24 09:45 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "local Windows 11",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Edit",
+      "gh",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Operator session Tue 24 Nov: gateway restarted on main 0.43.0 (only SSH pullers active). PR #128 (handoff): 4 Devin findings fixed in the doc (cast paging in SQL, lyrics line selection, Moments action labels kept, SESSIONS entry), replied and resolved. PR #129: autouse conftest fixture gives every test its own audit.db; settings tests restored + isolation test; full suite 439 passed, live audit.db unchanged (1363 rows, 219 old test rows not removed). PR #130 (v0.43.1): catalog app quick wins 1.1 fixed top-bar order, 1.5 Side panel (shadow, slide-in, click-outside, scroll reset), 1.9 look and feel, 1.10 snapping slider, 1.13 big initials, Pictures hint, 5.3 performer cards; checked in the dev preview.",
+  "commands": [
+    "scripts\\Restart-Gateway.ps1",
+    "pytest -q",
+    "npx tsc --noEmit",
+    "gh pr create"
+  ],
+  "files": [
+    "tests/conftest.py",
+    "tests/test_settings.py",
+    "rust/raggae-catalog/ui/src/ui.tsx",
+    "rust/raggae-catalog/ui/src/app.css",
+    "docs/HANDOFF-20261124-CATALOG-APP.md"
+  ],
+  "planPath": "",
+  "contentHash": "21ecd34e8a370b56811a8b18b27e0addf5f22f8ea80d7dfad3de04d8b6140add",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "b0c4bc8",
+    "hasChanges": true
+  }
+}

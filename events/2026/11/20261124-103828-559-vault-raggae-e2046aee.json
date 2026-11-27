@@ -1,0 +1,55 @@
+{
+  "id": "20261124-103828-559-vault-raggae-e2046aee",
+  "createdAt": "2026-11-24T15:38:28.5596793Z",
+  "createdAtLocal": "2026-11-24 10:38",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change,commands,documentation,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: local Windows 11)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): PowerShell, Bash, Edit, gh, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-24 10:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "local Windows 11",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Edit",
+      "gh",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Operator session: gateway restarted on main 0.44.0 (cast summary 10 ms, identities 36 ms, Tom Hanks page 144 ms). Built idx_catalog_names covering index on live vw-catalog.db via app.catalog.ingest --source indexes (242 s, 24.7->25.7 GB); SQLite ignored it so lookups use INDEXED BY via db.names_index (PR #134 v0.44.2, titles named 0-4 ms, full suite 442 passed). PR #133 v0.44.1: catalog app 5-minute GET cache (cleared on writes, generation counter) and activity bar (counter of in-flight requests), checked in dev preview. Docs PR opened.",
+  "commands": [
+    "scripts\\Restart-Gateway.ps1",
+    "python -m app.catalog.ingest --source indexes",
+    "pytest -q",
+    "gh pr create"
+  ],
+  "files": [
+    "app/catalog/db.py",
+    "app/cast/service.py",
+    "app/picture_search.py",
+    "rust/raggae-catalog/ui/src/api.ts",
+    "rust/raggae-catalog/ui/src/ui.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "e2046aee563f19f95cc2a2ad09edc2ea212b8619be6d7230c2428f52cd144422",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "5fb7848",
+    "hasChanges": true
+  }
+}

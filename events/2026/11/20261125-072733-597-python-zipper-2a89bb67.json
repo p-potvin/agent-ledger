@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261125-072733-597-python-zipper-2a89bb67",
+    "createdAt":  "2026-11-25T12:27:33.5975018Z",
+    "createdAtLocal":  "2026-11-25 07:27",
+    "timezone":  "Eastern Standard Time",
+    "project":  "python-zipper",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 4 Neon (High)\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-25 07:27 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 4 Neon (High)",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+    "summary":  "Added separate Chrome MV3 build target (dist-chrome/) via src-chrome/ and public-chrome/ overlay without modifying Firefox dist/, fixing background/content/sidebar memory leaks, Chrome SW Blob/header/sidePanel incompatibilities, and external stream provider session interference",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "2a89bb67f6f365644c7ae61dff0d3fb7525d800ecb215b09fa7aced31e7f5d06",
+    "git":  {
+                "repo":  "python-zipper",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+                "branch":  "main",
+                "head":  "c611ad6",
+                "hasChanges":  true
+            }
+}

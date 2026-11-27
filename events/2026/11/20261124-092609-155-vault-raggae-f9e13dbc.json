@@ -1,0 +1,50 @@
+{
+  "id": "20261124-092609-155-vault-raggae-f9e13dbc",
+  "createdAt": "2026-11-24T14:26:09.1559278Z",
+  "createdAtLocal": "2026-11-24 09:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "documentation",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: vw-raggae-handoff-20261124\r\nTools used (this reply): Bash, PowerShell, Read, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-24 09:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Handoff for the operator's catalog-app work list: docs/HANDOFF-20261124-CATALOG-APP.md (grouped by shell, Browse, Pictures, Cast, People, Lyrics, Music, Moments, Edits; findings, code pointers, approach, suggested order). Measured first-page sizes/times (10-122 KB; cast summary 32 s, identities 11.8 s, pictures 30-37 s) answering the cache-memory question (<2 MB for all first pages). Lyrics screenshot: B.Y.O.B. lyrics attached to other recordings (mapping bug). CLAP tags applied in moments/index.py and stream.py. Noted gateway still 0.42.0 after #126 merge. STATE points at it. PR #128.",
+  "commands": [
+    "curl first-page timings",
+    "gh pr create"
+  ],
+  "files": [
+    "docs/HANDOFF-20261124-CATALOG-APP.md",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "f9e13dbc81794941c6de56c5840045233cc709579b97c19d60775446d0e66f54",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "vw-raggae-handoff-20261124",
+    "head": "0bffc64",
+    "hasChanges": true
+  }
+}

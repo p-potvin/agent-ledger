@@ -3,7 +3,1376 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-11-23 14:30 - vault-raggae (formerly nvidia-rag, NVIDIA RAG, NVIDIA RAG Ingestion, NVIDIA RAG Blueprint)</strong> <code>code-change,verification</code> - Review fixes on PR #126: year param back to the FTS leg (+-1/undated) without overwriting year_min/max; one 768-d query embedding reused for the ANN prefix; CrossEncoder.scores ...</summary>
+<summary><strong>2026-11-27 00:53 - vaultwares-api (formerly vaultwares-pipelines, vaultwares-api + shared-tube, vaultwares-webhooks, vaultwares-api)</strong> <code>code-change</code> - Fixed shared-tube preview watchdog spawn race, stale failed-queue cleanup, retry HTML-URL bug, and preview fallback URL guard (v0.3.70); pushed to main and recovered the 70 stuc...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-api  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-27 00:53 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed shared-tube preview watchdog spawn race, stale failed-queue cleanup, retry HTML-URL bug, and preview fallback URL guard (v0.3.70); pushed to main and recovered the 70 stuck source videos on OVH
+- Git: repo=vaultwares-api, branch=main, head=e515445
+
+</details>
+
+<details>
+<summary><strong>2026-11-27 00:34 - vault-raggae, shared-tube</strong> <code>code-change,commands</code> - amd target G:\Galleries\amd recorded (#148). TPDB: measured recent 93k scenes (no-studio/future/non-latin 0; clip-store 73.7%); PR #150 keeps clip-store scenes only for performe...</summary>
+
+- Kind: code-change,commands
+- Actor: claude
+- Agent Header:
+  ```text
+  Agent: claude (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local + OVH SSH)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-state-20261126
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-27 00:34 (TZ: Eastern Standard Time)
+  ```
+- Summary: amd target G:\Galleries\amd recorded (#148). TPDB: measured recent 93k scenes (no-studio/future/non-latin 0; clip-store 73.7%); PR #150 keeps clip-store scenes only for performers with a studio-site scene or KFC gallery identity (~54% fewer new). shared-tube: 8,857 performers / 3,360 studios had no image (mostly NULL, never looked up; resolver uses limit 1 and permanent empty mark). Matched locally against vw-scenes.db (names, StashDB aliases, gender, len>=5) and set 5,262 performers + 1,374 studios in one Postgres transaction on OVH (only empty rows; revert list ~/image-backfill/updated-20261127.tsv). No outside requests; single test verified via the resolve API first.
+- Git: repo=vault-raggae, branch=vw-state-20261126, head=83a3732
+
+</details>
+
+<details>
+<summary><strong>2026-11-27 00:15 - vaultwares-api</strong> <code>verification</code> - Diagnosed shared-tube preview watchdog re-marking 70 stale Nov 11 source videos as preview_failed on every run: spawn race in preview-queue/watchdog ignores pendingCount while w...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-api  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-27 00:15 (TZ: Eastern Standard Time)
+  ```
+- Summary: Diagnosed shared-tube preview watchdog re-marking 70 stale Nov 11 source videos as preview_failed on every run: spawn race in preview-queue/watchdog ignores pendingCount while worker boots, reconcilePreviews never removes processed failed/*.json files, and 70 historical rows lost detail-page stream qualities on Nov 11
+- Git: repo=vaultwares-api, branch=main, head=e515445
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 22:53 - vaultwares-api</strong> <code>verification</code> - Explained python-zipper pull-queue architecture (Firefox extension -&gt; OVH api.vaultwares.ca &lt;- Windows Python Zipper Worker) and verified worker.py service is running cleanly on...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-api  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 22:53 (TZ: Eastern Standard Time)
+  ```
+- Summary: Explained python-zipper pull-queue architecture (Firefox extension -> OVH api.vaultwares.ca <- Windows Python Zipper Worker) and verified worker.py service is running cleanly on Clopeux-Desktop
+- Git: repo=vaultwares-api, branch=main, head=e515445
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 22:50 - vaultwares-api</strong> <code>verification</code> - Confirmed Windows Python Zipper Worker is healthy on OVH tailnet (200 OK) and separate from Firefox extension; explained why zipper extension remains on stale GreenCloud HTTP/2 ...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-api  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 22:50 (TZ: Eastern Standard Time)
+  ```
+- Summary: Confirmed Windows Python Zipper Worker is healthy on OVH tailnet (200 OK) and separate from Firefox extension; explained why zipper extension remains on stale GreenCloud HTTP/2 socket *5570491 (port 49874) due to Firefox connection partitioning
+- Git: repo=vaultwares-api, branch=main, head=e515445
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 22:46 - vaultwares-api</strong> <code>verification</code> - Diagnosed api.vaultwares.ca 403s from Clopeux-Desktop: brief Firefox DoH (CIRA) window resolved public GreenCloud IP 173.249.194.15 (403 by nginx allowlist), and active HTTP/2 k...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-api  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 22:46 (TZ: Eastern Standard Time)
+  ```
+- Summary: Diagnosed api.vaultwares.ca 403s from Clopeux-Desktop: brief Firefox DoH (CIRA) window resolved public GreenCloud IP 173.249.194.15 (403 by nginx allowlist), and active HTTP/2 keepalive socket kept zipper poller pinned to 173.249.194.15 even after DoH was turned off and fresh tabs returned to OVH 100.67.25.118
+- Git: repo=vaultwares-api, branch=main, head=e515445
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 22:03 - vault-raggae (formerly nvidia-rag, NVIDIA RAG, NVIDIA RAG Ingestion, NVIDIA RAG Blueprint)</strong> <code>code-change</code> - Auto-fix review rounds: ColONEL-KFC #15 (cap: .meta.json + shared-stem tag files, holding name collisions, system folders, relative paths, direct-db note; reindex resume log tie...</summary>
+
+- Kind: code-change
+- Actor: claude
+- Agent Header:
+  ```text
+  Agent: claude (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-state-20261126
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 22:03 (TZ: Eastern Standard Time)
+  ```
+- Summary: Auto-fix review rounds: ColONEL-KFC #15 (cap: .meta.json + shared-stem tag files, holding name collisions, system folders, relative paths, direct-db note; reindex resume log tied to its db, exit 0 when all done; Reindex-Gallery.ps1 -ResumeLog; 4 tests) pushed 9bd44dc, 9 threads replied/resolved. vault-raggae #148: BEL bytes in SESSIONS.md amd paths fixed, music backfill writer named; 2 threads resolved. ColONEL-KFC #14 and vault-commander #38 not touched: folders not on those PR branches.
+- Git: repo=vault-raggae, branch=vw-state-20261126, head=4810e33
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 22:00 - vault-raggae</strong> <code>code-change,commands</code> - amd chain changed per operator: no reindex; cap_gallery_photos --apply now backs up gallery.db, deletes moved photos&#39; face_crops rows, resets sample_count (ColONEL-KFC #15). Cha...</summary>
+
+- Kind: code-change,commands
+- Actor: claude
+- Agent Header:
+  ```text
+  Agent: claude (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-state-20261126
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 22:00 (TZ: Eastern Standard Time)
+  ```
+- Summary: amd chain changed per operator: no reindex; cap_gallery_photos --apply now backs up gallery.db, deletes moved photos' face_crops rows, resets sample_count (ColONEL-KFC #15). Chain restarted between identities (at 1,155) with the operator's 19 new tagged folders as an input; tag/reindex steps removed. Moved amd's 3 old gallery.db backups (13 GB) F: -> G:\Galleries\.amd-backups. Scene sync: not crashing (exit 0 nightly); PowerShell 5.1 formatted merge stderr as NativeCommandError; fixed in vault-raggae #149. TPDB ~28k kept/night = 14-day overlap reread; real new ~1.3-1.4k/day; coverage 2016-01-16..today. STATE updated on #148.
+- Commands:
+  - `taskkill /T chain between identities`
+  - `Start-ScheduledTask \VaultWares\Amd Chain`
+  - `robocopy /MOV .vw-backups`
+- Files:
+  - `ColONEL-KFC\cap_gallery_photos.py`
+  - `vault-raggae\scripts\Sync-Scenes.ps1`
+  - `%LOCALAPPDATA%\VaultWares\raggae\runs\amd_chain.py`
+- Git: repo=vault-raggae, branch=vw-state-20261126, head=441878b
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 20:26 - shared-tube (formerly Prom-King/shared-tube, Prom-King/shared-tube + vaultwares-pipelines, Prom-King/shared-tube + vaultwares-api, Prom-King/shared-tube + vaultwares-mcp, Prom-King/shared-tube + vaultwares-docs, Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs, shared-tube + brume2, tube-sites, tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa, Prom-King Keep2Share &amp; ShareVerge Pipeline, Prom-King &amp; VaultWares API, Monitoring and Prom-King tube operations)</strong> <code>code-change</code> - Teamwork UI/UX polish across shared-tube apps (R1-R4): enlarged header wordmarks without icons, updated favicons/fonts, cleaner homepage hero and Browse strip, redesigned video ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 20:26 (TZ: Eastern Standard Time)
+  ```
+- Summary: Teamwork UI/UX polish across shared-tube apps (R1-R4): enlarged header wordmarks without icons, updated favicons/fonts, cleaner homepage hero and Browse strip, redesigned video cards with overlaid 50-char titles and wrapping pills, duration slider and sort-direction toggle, 7-page pagination with First/Prev/Next/Last; verified with 158 tests, typecheck, build, and live dev-server QA (uncommitted on main).
+- Git: repo=shared-tube, branch=main, head=52a9d61
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 19:09 - shared-tube</strong> <code>verification</code> - Completed Iteration 3 final verification (tests, typecheck, build, and live Playwright browser QA across fxv/oneporn/sexyprn) with APPROVE verdict.</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: subagent)
+  Model: Claude Opus 4.6
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 19:09 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed Iteration 3 final verification (tests, typecheck, build, and live Playwright browser QA across fxv/oneporn/sexyprn) with APPROVE verdict.
+- Git: repo=shared-tube, branch=main, head=52a9d61
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 19:05 - shared-tube</strong> <code>verification</code> - Challenger Iteration 3 empirical verification of shared-tube video-filters, Header responsive layout, and R1-R4 invariants (CONFIRMED)</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: subagent)
+  Model: Claude Opus
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 19:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: Challenger Iteration 3 empirical verification of shared-tube video-filters, Header responsive layout, and R1-R4 invariants (CONFIRMED)
+- Git: repo=shared-tube, branch=main, head=52a9d61
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 18:50 - shared-tube</strong> <code>verification</code> - Primary Wave Verification (Reviewer Iteration 2) for shared-tube R1-R5: Vitest (157/157), typecheck, build, and live dev-server Playwright QA across fxv (4321), oneporn (4323), ...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: subagent)
+  Model: Gemini 3.1 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 18:50 (TZ: Eastern Standard Time)
+  ```
+- Summary: Primary Wave Verification (Reviewer Iteration 2) for shared-tube R1-R5: Vitest (157/157), typecheck, build, and live dev-server Playwright QA across fxv (4321), oneporn (4323), and sexyprn (4324) all passed; verdict APPROVE.
+- Git: repo=shared-tube, branch=main, head=52a9d61
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 18:47 - shared-tube</strong> <code>verification</code> - Completed Iteration 2 adversarial challenge probes on shared-tube; verified 5 remediation targets and identified 2 medium challenges.</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: subagent)
+  Model: Claude Opus 4.6
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 18:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed Iteration 2 adversarial challenge probes on shared-tube; verified 5 remediation targets and identified 2 medium challenges.
+- Git: repo=shared-tube, branch=main, head=52a9d61
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 18:43 - shared-tube</strong> <code>verification</code> - Forensic integrity audit (Iteration 2 whole-project) of shared-tube: CLEAN (22/22 test files, 157/157 tests, 0 typecheck errors)</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: subagent)
+  Model: Claude Opus 4.6
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 18:43 (TZ: Eastern Standard Time)
+  ```
+- Summary: Forensic integrity audit (Iteration 2 whole-project) of shared-tube: CLEAN (22/22 test files, 157/157 tests, 0 typecheck errors)
+- Git: repo=shared-tube, branch=main, head=52a9d61
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 18:37 - shared-tube</strong> <code>code-change</code> - Remediated Iteration 2 findings in shared-tube: sequential chunked filtered pagination + filtered totalCount, NaN page fallback on taxonomy and search routes, single-row Trendin...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: subagent)
+  Model: Claude Opus 4.5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 18:37 (TZ: Eastern Standard Time)
+  ```
+- Summary: Remediated Iteration 2 findings in shared-tube: sequential chunked filtered pagination + filtered totalCount, NaN page fallback on taxonomy and search routes, single-row Trending Searches grid, surrogate-safe title truncation, SectionStrip optional chaining, and mobile Safe Mode header layout
+- Git: repo=shared-tube, branch=main, head=52a9d61
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 18:23 - shared-tube</strong> <code>verification</code> - Verified shared-tube Iteration 1 (R1-R5) across tests, typecheck, build, assets, and live Playwright checks; issued REQUEST_CHANGES due to filtered pagination overlap/truncation.</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: subagent)
+  Model: Claude Opus 4.6
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 18:23 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified shared-tube Iteration 1 (R1-R5) across tests, typecheck, build, assets, and live Playwright checks; issued REQUEST_CHANGES due to filtered pagination overlap/truncation.
+- Git: repo=shared-tube, branch=main, head=52a9d61
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 18:17 - shared-tube</strong> <code>verification</code> - Completed whole-project forensic integrity audit for shared-tube Iteration 1 (CLEAN: 22 test files / 152 tests pass, workspace typecheck 0 errors, git/conventions/asset checks p...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: subagent)
+  Model: Claude Opus 4.5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 18:17 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed whole-project forensic integrity audit for shared-tube Iteration 1 (CLEAN: 22 test files / 152 tests pass, workspace typecheck 0 errors, git/conventions/asset checks pass)
+- Git: repo=shared-tube, branch=main, head=52a9d61
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 18:12 - shared-tube</strong> <code>code-change</code> - Implemented shared-tube R1-R4 UI/branding/VideoCard/filter/pagination updates and verified tests, typecheck, build, and live dev servers</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: subagent)
+  Model: Claude
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 18:12 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented shared-tube R1-R4 UI/branding/VideoCard/filter/pagination updates and verified tests, typecheck, build, and live dev servers
+- Git: repo=shared-tube, branch=main, head=52a9d61
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 15:09 - shared-tube</strong> <code>code-change</code> - Enriched viewer favourites API endpoint with preview_url, views, qualities, studios, and performers; committed and deployed both vaultwares-api (e515445) and shared-tube (52a9d6...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Hydrogen
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 15:09 (TZ: Eastern Standard Time)
+  ```
+- Summary: Enriched viewer favourites API endpoint with preview_url, views, qualities, studios, and performers; committed and deployed both vaultwares-api (e515445) and shared-tube (52a9d61, v0.3.69) to main.
+- Git: repo=shared-tube, branch=main, head=52a9d61
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 11:21 - vault-explorer (formerly vw-comet + vault-explorer, vault-explorer + vw-comet)</strong> <code>code-change</code> - Set NEMO_SPEECH_RNNT_LOOKAHEAD default to 16, rebuilt build-cuda-server with SHA-256 byte-parity verified (B8E2A6BCAF395838), and opened PRs targeting main for vault-cacophony (...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.1 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/ai-subtitles-unify-and-model-picker
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 11:21 (TZ: Eastern Standard Time)
+  ```
+- Summary: Set NEMO_SPEECH_RNNT_LOOKAHEAD default to 16, rebuilt build-cuda-server with SHA-256 byte-parity verified (B8E2A6BCAF395838), and opened PRs targeting main for vault-cacophony (#34), vault-commander (#39), and vault-explorer (#72).
+- Git: repo=vault-explorer, branch=feat/ai-subtitles-unify-and-model-picker, head=71b5985
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 10:54 - vault-explorer</strong> <code>code-change</code> - Kept CUDA RNNT on OfflineRunner for arbitrary-length files in NeMo-Speech.cpp recognizer.cpp; rebuilt build-cuda-server and verified 192.1x RTFx (lookahead=16) / 189.5x RTFx (lo...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.1 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 10:54 (TZ: Eastern Standard Time)
+  ```
+- Summary: Kept CUDA RNNT on OfflineRunner for arbitrary-length files in NeMo-Speech.cpp recognizer.cpp; rebuilt build-cuda-server and verified 192.1x RTFx (lookahead=16) / 189.5x RTFx (lookahead=32) on 696.11s bilingual audio with 100% SHA-256 byte-parity and saved nemotron-3.5-offline.srt.
+- Git: repo=vault-explorer, branch=main, head=eeb9e70
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 10:43 - vault-raggae</strong> <code>code-change,commands</code> - Popularity fetch made headless (one-off task), finished: 4,615,075 release groups, 2.9M with listeners. ColONEL-KFC #14 + vault-commander #38: process-identity-folders -SkipTagg...</summary>
+
+- Kind: code-change,commands
+- Actor: claude
+- Agent Header:
+  ```text
+  Agent: claude (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-state-20261126
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 10:43 (TZ: Eastern Standard Time)
+  ```
+- Summary: Popularity fetch made headless (one-off task), finished: 4,615,075 release groups, 2.9M with listeners. ColONEL-KFC #14 + vault-commander #38: process-identity-folders -SkipTagged (no second tag/dedupe pass); 49 tagged folders imported into F:\amd\gallery (41 created, 8 added). ColONEL-KFC #15: cap_gallery_photos.py (30 per identity, excess moved to F:\amd\excess-20261126) and reindex_gallery --resume-log. Started task \VaultWares\Amd Chain (extract zips, import named folders, shrink, cap, tag untagged, backup + reindex; ~3-4 days). vault-raggae #148: STATE/SESSIONS (zip deletion and move to G:\Galleries after the chain; order amd, music, books; IMDb downloads on hold).
+- Commands:
+  - `Register-ScheduledTask \VaultWares\Amd Chain`
+  - `folder_processor --existing add --skip-tagged`
+- Files:
+  - `ColONEL-KFC\cap_gallery_photos.py`
+  - `ColONEL-KFC\reindex_gallery.py`
+  - `ColONEL-KFC\face_organizer\tmdb_gallery.py`
+  - `%LOCALAPPDATA%\VaultWares\raggae\runs\amd_chain.py`
+  - `vault-raggae\docs\STATE.md`
+- Git: repo=vault-raggae, branch=vw-state-20261126, head=b337802
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 10:37 - vault-explorer</strong> <code>code-change</code> - Committed and pushed vault-commander subtitle/HF/demucs-remux changes to main (ddbbf4a2); added ASR Model dropdown above Audio Separator in vault-explorer AI Subtitles menu and ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.1 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 10:37 (TZ: Eastern Standard Time)
+  ```
+- Summary: Committed and pushed vault-commander subtitle/HF/demucs-remux changes to main (ddbbf4a2); added ASR Model dropdown above Audio Separator in vault-explorer AI Subtitles menu and wired model selection through player and card context menu.
+- Git: repo=vault-explorer, branch=main, head=eeb9e70
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 10:22 - vault-explorer</strong> <code>code-change</code> - Saved side-by-side 696.11s SRT transcripts (nemotron-3.5.srt, nemotron-3.5.en.srt, parakeet-tdt.srt) in Desktop/lolsrt/full-696s-test; added two Demucs+FFmpeg remux CLI commands...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.1 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 10:22 (TZ: Eastern Standard Time)
+  ```
+- Summary: Saved side-by-side 696.11s SRT transcripts (nemotron-3.5.srt, nemotron-3.5.en.srt, parakeet-tdt.srt) in Desktop/lolsrt/full-696s-test; added two Demucs+FFmpeg remux CLI commands (vw demucs-loudnorm and vw demucs-mix) in vault-commander with AST/contract test verification.
+- Git: repo=vault-explorer, branch=main, head=eeb9e70
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 09:42 - vault-explorer</strong> <code>verification</code> - Completed 696.11s bilingual audio CLI sweep (100% SHA-256 parity across lookahead 0/8/16/32/64; nemotron-3.5 2333 words vs parakeet-tdt 1450 words), updated hf_translate.py with...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.1 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 09:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed 696.11s bilingual audio CLI sweep (100% SHA-256 parity across lookahead 0/8/16/32/64; nemotron-3.5 2333 words vs parakeet-tdt 1450 words), updated hf_translate.py with concise word-level phonetic ASR-fix instructions (12/12 unit tests passing), and ran full vw better-subtitles end-to-end (210 cues in 209.4s).
+- Git: repo=vault-explorer, branch=main, head=eeb9e70
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 08:43 - vault-explorer</strong> <code>code-change</code> - Fixed hf_translate.py cue-merging desync via JSON-keyed cues + split-retry; implemented capped RNNT lookahead (default 32) and device-resident offline enc_out with Session::Inpu...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.1 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 08:43 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed hf_translate.py cue-merging desync via JSON-keyed cues + split-retry; implemented capped RNNT lookahead (default 32) and device-resident offline enc_out with Session::Input::gather in NeMo-Speech.cpp; rebuilt build-cuda-server and verified 3.16x-3.24x speedup with 100% SHA-256 byte-parity.
+- Git: repo=vault-explorer, branch=main, head=eeb9e70
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 07:44 - vault-explorer</strong> <code>code-change</code> - Added ASR homonym and chunk-context instructions to hf_translate.py; restored all 6 opt-in NeMo-Speech.cpp 0.3.0 debug/diagnostic hooks (NEMO_SPEECH_DEBUG_ENC, NEMO_SPEECH_DEBUG...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 07:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added ASR homonym and chunk-context instructions to hf_translate.py; restored all 6 opt-in NeMo-Speech.cpp 0.3.0 debug/diagnostic hooks (NEMO_SPEECH_DEBUG_ENC, NEMO_SPEECH_DEBUG_RNNT, NEMO_SPEECH_OFFLINE_LEFT_CTX, NEMO_SPEECH_OFFLINE_RIGHT_CTX, NEMO_SPEECH_DEBUG_BLANK_SHADOW, NEMO_SPEECH_RNNT_MAX_BLANK) and rebuilt build-cuda-server incrementally; analyzed SRT gaps, nemotron-3.5 speed bottlenecks, silence/dither behavior, and resettable model state
+- Git: repo=vault-explorer, branch=main, head=eeb9e70
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 04:44 - vault-explorer</strong> <code>code-change</code> - Fixed Windows Path-&gt;PATH bug in vault-explorer getPythonEnv() so generate_subtitles.py uses vw better-subtitles instead of built-in ASR fallback; switched hf_translate.py to ope...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 04:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed Windows Path->PATH bug in vault-explorer getPythonEnv() so generate_subtitles.py uses vw better-subtitles instead of built-in ASR fallback; switched hf_translate.py to openai/gpt-oss-120b:cheapest on router.huggingface.co with reasoning_effort=low and CoT max_tokens headroom; removed translategemma and silent google fallback; fixed Parse-LastJsonLine [TRANS] cue logging in Start-BetterSubtitles.ps1; verified 535.5s (>399s) hot-server benchmark and September blank-run root cause
+- Git: repo=vault-explorer, branch=main, head=eeb9e70
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 02:33 - shared-tube</strong> <code>code-change</code> - UI/UX overhaul across shared-tube apps: uniform video cards, grid sorting and duration/quality filters, empty ad slot removal, improved pagination, centered logos and wordmarks,...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Hydrogen
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 02:33 (TZ: Eastern Standard Time)
+  ```
+- Summary: UI/UX overhaul across shared-tube apps: uniform video cards, grid sorting and duration/quality filters, empty ad slot removal, improved pagination, centered logos and wordmarks, upgraded directory cards with search, account page hover previews and metadata, and light header theme.
+- Git: repo=shared-tube, branch=main, head=89af949
+
+</details>
+
+<details>
+<summary><strong>2026-11-26 01:07 - vault-raggae</strong> <code>commands</code> - Scheduled run: found Wed 25 Nov jobs done (amd head cards 47,090 ok/116 failed; next-5k IMDb pulls done; indexing done) and the gallery shrink running (63k photos, 150.6 GB save...</summary>
+
+- Kind: commands
+- Actor: claude
+- Agent Header:
+  ```text
+  Agent: claude (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-music-votes
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-26 01:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Scheduled run: found Wed 25 Nov jobs done (amd head cards 47,090 ok/116 failed; next-5k IMDb pulls done; indexing done) and the gallery shrink running (63k photos, 150.6 GB saved). ListenBrainz popularity fetch had died with the app at 1,085,000/4,615,075 release groups; resumed it as one-off headless task \VaultWares\Music Popularity Fetch (conhost --headless, runs\Popularity-Fetch-20261126.ps1, 3,531 calls at 1/s). Branch vw-music-votes created for the music votes backfill (no code yet).
+- Commands:
+  - `Register-ScheduledTask \VaultWares\Music Popularity Fetch`
+- Files:
+  - `%LOCALAPPDATA%\VaultWares\raggae\runs\Popularity-Fetch-20261126.ps1`
+- Git: repo=vault-raggae, branch=vw-music-votes, head=a9eb7e1
+
+</details>
+
+<details>
+<summary><strong>2026-11-25 19:13 - vault-explorer</strong> <code>code-change</code> - Updated HF translation prompt to forbid reverse translation; added same-language skip, server startup lock, and bounded memory flags in vault-commander; unified vault-explorer A...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-25 19:13 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated HF translation prompt to forbid reverse translation; added same-language skip, server startup lock, and bounded memory flags in vault-commander; unified vault-explorer AI subtitles into src/ai-subtitles.js and js/player/ai-subtitles.js with serialized execution and removed the en clobber and hardcoded model; removed diarization from Start-NemoServer.ps1; converted and symlinked silero-v6.2.0.gguf; benchmarked OfflineRunner bucketing
+- Git: repo=vault-explorer, branch=main, head=eeb9e70
+
+</details>
+
+<details>
+<summary><strong>2026-11-25 18:08 - vault-explorer</strong> <code>general</code> - Answered NeMo-Speech 0.3.0 offline dispatch, CUDA arch 75;86 fatbin, Silero VAD, and multi-process/unbounded memory questions prior to finalizing subtitle refactor plan</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-25 18:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: Answered NeMo-Speech 0.3.0 offline dispatch, CUDA arch 75;86 fatbin, Silero VAD, and multi-process/unbounded memory questions prior to finalizing subtitle refactor plan
+- Git: repo=vault-explorer, branch=main, head=eeb9e70
+
+</details>
+
+<details>
+<summary><strong>2026-11-25 10:24 - vault-explorer</strong> <code>general</code> - Diagnosed subtitle quality/speed regressions, TranslateFrom/same-language skip gaps, HF mixed-language translation prompt ambiguity, and NeMo-Speech build/GPU/runner configuration</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-25 10:24 (TZ: Eastern Standard Time)
+  ```
+- Summary: Diagnosed subtitle quality/speed regressions, TranslateFrom/same-language skip gaps, HF mixed-language translation prompt ambiguity, and NeMo-Speech build/GPU/runner configuration
+- Git: repo=vault-explorer, branch=main, head=eeb9e70
+
+</details>
+
+<details>
+<summary><strong>2026-11-25 07:35 - miniville</strong> <code>code-change</code> - Miniville v0.67-v0.70: Skywatch, Culinary Heritage, Live Music, and Mutual Relief (swarm sprint)</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-25 07:35 (TZ: Eastern Standard Time)
+  ```
+- Summary: Miniville v0.67-v0.70: Skywatch, Culinary Heritage, Live Music, and Mutual Relief (swarm sprint)
+- Git: repo=miniville, branch=autodev, head=8af8651
+
+</details>
+
+<details>
+<summary><strong>2026-11-25 07:28 - python-zipper (formerly python-scripts)</strong> <code>verification</code> - Completed Chrome MV3 overlay build (dist-chrome/) with all memory-leak bounds, offscreen Blob URL handoff, safe downloads/DNR rules, and passive session-safe stream resolution; ...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-25 07:28 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed Chrome MV3 overlay build (dist-chrome/) with all memory-leak bounds, offscreen Blob URL handoff, safe downloads/DNR rules, and passive session-safe stream resolution; verified all typechecks, 168/168 existing checks, and 22/22 Chrome regression checks pass while keeping Firefox dist/ untouched
+- Git: repo=python-zipper, branch=main, head=c611ad6
+
+</details>
+
+<details>
+<summary><strong>2026-11-25 07:27 - python-zipper</strong> <code>code-change</code> - Added separate Chrome MV3 build target (dist-chrome/) via src-chrome/ and public-chrome/ overlay without modifying Firefox dist/, fixing background/content/sidebar memory leaks,...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-25 07:27 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added separate Chrome MV3 build target (dist-chrome/) via src-chrome/ and public-chrome/ overlay without modifying Firefox dist/, fixing background/content/sidebar memory leaks, Chrome SW Blob/header/sidePanel incompatibilities, and external stream provider session interference
+- Git: repo=python-zipper, branch=main, head=c611ad6
+
+</details>
+
+<details>
+<summary><strong>2026-11-25 07:16 - vault-commander</strong> <code>code-change</code> - Addressed all 7 Devin review comments on PR #37, added unit/integration tests, and squash-merged PR #37 into main (4959692)</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Hydrogen
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-25 07:16 (TZ: Eastern Standard Time)
+  ```
+- Summary: Addressed all 7 Devin review comments on PR #37, added unit/integration tests, and squash-merged PR #37 into main (4959692)
+- Git: repo=vault-commander, branch=main, head=4959692
+
+</details>
+
+<details>
+<summary><strong>2026-11-25 06:12 - vault-raggae</strong> <code>commands</code> - Started amd gallery head cards for all 47,206 identities (overwrite; runs/gallery_headcards.py). Built next 5,000-actor ranked list (reports/faces-coverage-2026-11-25/next-top-c...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-state-20261125a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-25 06:12 (TZ: Eastern Standard Time)
+  ```
+- Summary: Started amd gallery head cards for all 47,206 identities (overwrite; runs/gallery_headcards.py). Built next 5,000-actor ranked list (reports/faces-coverage-2026-11-25/next-top-cast.csv; films>=5k, series>=2k votes, top-10 billed, by votes sum, gallery folders excluded) and started IMDb photo downloads on this PC (ranks 1-1667), greencloud (1668-3334, xvfb) and the Ubuntu laptop (3335-5000), with two pullers into G:\Galleries\Celebrities. State notes PR #147.
+- Git: repo=vault-raggae, branch=vw-state-20261125a, head=14acf37
+
+</details>
+
+<details>
+<summary><strong>2026-11-25 04:38 - vault-viewer</strong> <code>code-change</code> - vault-viewer Phases 1-3: wired real G:\Catalogs atlases (18,956 EG2+CLAP + 6,000 SigLIP pictures), WebGL point cloud, AABB label declutter, non-clipping Atlas header/footer, liv...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-viewer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-25 04:38 (TZ: Eastern Standard Time)
+  ```
+- Summary: vault-viewer Phases 1-3: wired real G:\Catalogs atlases (18,956 EG2+CLAP + 6,000 SigLIP pictures), WebGL point cloud, AABB label declutter, non-clipping Atlas header/footer, live Query Overlay + Rerank diff, Picture Cluster Wall, One-Vibe Cross-Modal Showcase, Semantic Path Playground, inline 10s CLAP AudioWindowPlayer, live Tech-Oracle search, and ui_server Range proxy.
+- Git: repo=vault-viewer, branch=main, head=b78c24e
+
+</details>
+
+<details>
+<summary><strong>2026-11-25 04:32 - python-zipper</strong> <code>verification</code> - Investigated python-zipper web extension: identified memory leaks across background/content/sidebar, Chrome MV3 incompatibilities, and root causes of external stream provider se...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-25 04:32 (TZ: Eastern Standard Time)
+  ```
+- Summary: Investigated python-zipper web extension: identified memory leaks across background/content/sidebar, Chrome MV3 incompatibilities, and root causes of external stream provider session/private-show interference (no files modified)
+- Git: repo=python-zipper, branch=main, head=c611ad6
+
+</details>
+
+<details>
+<summary><strong>2026-11-25 04:31 - vault-commander</strong> <code>code-change</code> - Opened PR #37 (vw-codex-recent-writes -&gt; main) for vw recent-writes CLI command</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Hydrogen
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: vw-codex-recent-writes
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-25 04:31 (TZ: Eastern Standard Time)
+  ```
+- Summary: Opened PR #37 (vw-codex-recent-writes -> main) for vw recent-writes CLI command
+- Git: repo=vault-commander, branch=vw-codex-recent-writes, head=34fc1da
+
+</details>
+
+<details>
+<summary><strong>2026-11-24 17:05 - miniville</strong> <code>code-change</code> - Miniville v0.63-v0.66: Town Courts, Life Chapters, Power Grid Utilities, and Living 2D Map (swarm sprint)</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-24 17:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: Miniville v0.63-v0.66: Town Courts, Life Chapters, Power Grid Utilities, and Living 2D Map (swarm sprint)
+- Git: repo=miniville, branch=autodev, head=1cda25d
+
+</details>
+
+<details>
+<summary><strong>2026-11-24 16:56 - vault-commander</strong> <code>code-change</code> - Added vw recent-writes CLI command powered by vault-raggae AnythingIndex USN journal service and live NTFS USN journal query, with project/hotspot attribution and NEW vs MOD bre...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Argon
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-24 16:56 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added vw recent-writes CLI command powered by vault-raggae AnythingIndex USN journal service and live NTFS USN journal query, with project/hotspot attribution and NEW vs MOD breakdown
+- Git: repo=vault-commander, branch=main, head=043c1e2
+
+</details>
+
+<details>
+<summary><strong>2026-11-24 16:50 - vault-explorer</strong> <code>commands</code> - Committed and pushed subtitle HTTP 400 chunking fix and unit tests to vault-commander main</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-24 16:50 (TZ: Eastern Standard Time)
+  ```
+- Summary: Committed and pushed subtitle HTTP 400 chunking fix and unit tests to vault-commander main
+- Git: repo=vault-explorer, branch=main, head=eeb9e70
+
+</details>
+
+<details>
+<summary><strong>2026-11-24 16:47 - vault-explorer</strong> <code>verification</code> - Verified subtitle HTTP 400 chunking fix in vault-commander is still on disk, uncommitted/unpushed, and all checks pass</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 4 Neon (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-24 16:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified subtitle HTTP 400 chunking fix in vault-commander is still on disk, uncommitted/unpushed, and all checks pass
+- Git: repo=vault-explorer, branch=main, head=eeb9e70
+
+</details>
+
+<details>
+<summary><strong>2026-11-24 16:38 - vault-raggae</strong> <code>code-change,commands</code> - Review fixes on #143 (fetch lock, report guard, --limit counts retries) and #144 (album link to catalog edition, full view keeps chosen line copy, Play resumes, tooltips back on...</summary>
+
+- Kind: code-change,commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-24 16:38 (TZ: Eastern Standard Time)
+  ```
+- Summary: Review fixes on #143 (fetch lock, report guard, --limit counts retries) and #144 (album link to catalog edition, full view keeps chosen line copy, Play resumes, tooltips back on move). Merged #143-#146 (resolved version conflict on #145 keeping 0.44.8); gateway restarted 0.44.8. Handover notes in STATE/SESSIONS: popularity fetch and Celebrities shrink still running; Catalog app exe embeds ui/dist at build time so it needs a tauri build to show UI work since 0.44.3.
+- Git: repo=vault-raggae, branch=main, head=d45995a
+
+</details>
+
+<details>
+<summary><strong>2026-11-24 16:32 - vault-raggae</strong> <code>code-change,verification</code> - Popularity fetcher reads LISTENBRAINZ_CONTACT from .env (#143). PR #144 Lyrics page: covers/album/year, matched lines highlighted, full lyrics route+panel, page-level player, qu...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-music-sound-ends
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-24 16:32 (TZ: Eastern Standard Time)
+  ```
+- Summary: Popularity fetcher reads LISTENBRAINZ_CONTACT from .env (#143). PR #144 Lyrics page: covers/album/year, matched lines highlighted, full lyrics route+panel, page-level player, quiet tooltips; verified on a throwaway gateway 8761 (removed). PR #145 Music: end-window penalty 0.05 (measured on 5 queries) + play 5 s early. Popularity fetch 200/4614 calls; shrink 14.4k photos 37.8 GB.
+- Git: repo=vault-raggae, branch=vw-music-sound-ends, head=59ed22c
+
+</details>
+
+<details>
+<summary><strong>2026-11-24 16:21 - vault-raggae</strong> <code>code-change,commands</code> - Merged #139-#142; gateway restarted 0.44.6 (listens store registered). Researched LB API: popularity POST endpoints take 1000 MBIDs, 1 call/s, totals include MLHD (server code)....</summary>
+
+- Kind: code-change,commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-listenbrainz-popularity
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-24 16:21 (TZ: Eastern Standard Time)
+  ```
+- Summary: Merged #139-#142; gateway restarted 0.44.6 (listens store registered). Researched LB API: popularity POST endpoints take 1000 MBIDs, 1 call/s, totals include MLHD (server code). PR #143: listen_popularity fetches release-group listeners for the catalog's 4.67M releases (~3.5M groups, ~1h), full fetch running; listen_stats rebuild keeps popularity tables. LB stats re-run with per-user dedupe done. Shrink continuing (~10k photos, 28 GB).
+- Git: repo=vault-raggae, branch=vw-listenbrainz-popularity, head=54243dc
+
+</details>
+
+<details>
+<summary><strong>2026-11-24 16:03 - vault-raggae</strong> <code>code-change,commands</code> - Lyrics prune applied (27,710 links moved, 8,121 rematched). Moments roots set (D:\panopticam-*, G:\TubeLab, D:\VaultExplorer-Clips, F:); 893k CLAP/toy tags moved out then 868,77...</summary>
+
+- Kind: code-change,commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-catalog-films-person
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-24 16:03 (TZ: Eastern Standard Time)
+  ```
+- Summary: Lyrics prune applied (27,710 links moved, 8,121 rematched). Moments roots set (D:\panopticam-*, G:\TubeLab, D:\VaultExplorer-Clips, F:); 893k CLAP/toy tags moved out then 868,779 restored for F:; 24,546 stay out (streams). Review fixes pushed on #139 (LB one user per id, completeness, store registered, zstandard), #140 (Back via history, search leaves person page, directors apart, one view), #141 (slash roots, media paths, historical prompts), #142 (fetch owner check, resumable prune, orphan hits, dry run without MB); 22 threads resolved. LB fill rerunning. Popularity dataset research (LB popularity API, MLHD+, Discogs, Last.fm). Shrink at 7.4k photos / 20 GB.
+- Git: repo=vault-raggae, branch=vw-catalog-films-person, head=609b180
+
+</details>
+
+<details>
+<summary><strong>2026-11-24 15:36 - vault-raggae</strong> <code>code-change,commands</code> - Anything index moved to G: (installer). Celebrities reindex of 5 merged identities; shrink_gallery_photos --apply running (~90.5k photos). ListenBrainz stats fill -&gt; vw-listens....</summary>
+
+- Kind: code-change,commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-lyrics-owner
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-11-24 15:36 (TZ: Eastern Standard Time)
+  ```
+- Summary: Anything index moved to G: (installer). Celebrities reindex of 5 merged identities; shrink_gallery_photos --apply running (~90.5k photos). ListenBrainz stats fill -> vw-listens.db (PR #139). PRs #140 films/person pages, #141 Moments CLAP tags only on Panopticam roots (893k to strip, not applied), #142 lyrics owners (27,710 links to prune, not applied). Gateway restarted 0.44.5.
+- Git: repo=vault-raggae, branch=vw-lyrics-owner, head=1de8fe0
+
+</details>
+
+<details>
+<summary><strong>2026-11-24 14:30 - vault-raggae</strong> <code>code-change,commands,verification</code> - Merged 5 conflicting IMDb folders from greencloud/laptop into G:\Galleries\Celebrities (dupes skipped, conflicts renamed _2, remote copies removed). PR #137 (v0.44.4) Anything: ...</summary>
+
+- Kind: code-change,commands,verification
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: code
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-catalog-history
+  Tools used (this reply): Bash, PowerShell, gh, Claude_Browser
+  MCP servers accessed (this reply): none
+  Time: 2026-11-24 14:30 (TZ: Eastern Standard Time)
+  ```
+- Summary: Merged 5 conflicting IMDb folders from greencloud/laptop into G:\Galleries\Celebrities (dupes skipped, conflicts renamed _2, remote copies removed). PR #137 (v0.44.4) Anything: hourly saves only for volumes with new names, 6 h otherwise, save after start, installer -Index G:\Catalogs\anything. ColONEL-KFC PR #13: face_crops img_w/img_h, readers rescale, shrink_gallery_photos.py (dry run 90,528 photos over 1600 px, 233 GB). PR #138 (v0.44.5) catalog app navigation history + one view per item, verified in dev preview. NVIDIA C: writes traced to nvtopps\nct\nvlog.nvlgstg.
+- Commands:
+  - `merge_imdb.py`
+  - `cargo test -p raggae-files`
+  - `pytest tests/test_image_size.py`
+  - `shrink_gallery_photos.py dry run`
+- Files:
+  - `rust/raggae-files/src/follower.rs`
+  - `scripts/Install-Anything.ps1`
+  - `rust/raggae-catalog/ui/src/nav.ts`
+  - `ColONEL-KFC/shrink_gallery_photos.py`
+- Git: repo=vault-raggae, branch=vw-catalog-history, head=8128a40
+
+</details>
+
+<details>
+<summary><strong>2026-11-24 13:34 - vault-raggae</strong> <code>code-change,commands</code> - PR #136 (v0.44.3): Devin&#39;s 3 comments fixed (activity bar sides creep only once grown, OpenAPI note in README, STATE/SESSIONS notes), merged, gateway restarted on 0.44.3. Delete...</summary>
+
+- Kind: code-change,commands
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: code
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): Bash, PowerShell, gh
+  MCP servers accessed (this reply): none
+  Time: 2026-11-24 13:34 (TZ: Eastern Standard Time)
+  ```
+- Summary: PR #136 (v0.44.3): Devin's 3 comments fixed (activity bar sides creep only once grown, OpenAPI note in README, STATE/SESSIONS notes), merged, gateway restarted on 0.44.3. Deleted 5 gallery.db.bak-* (22-23 Nov) in G:\Galleries\Celebrities on operator's ask. Read-only checks: IMDb pullers idle-polling on 5 conflicting folders, Anything save path (whole dirty volume rewritten every 20 min), vw-books.db = 46.8M OpenLibrary works, BookBrainz dump on G:.
+- Commands:
+  - `gh pr merge 136 --merge`
+  - `scripts\Restart-Gateway.ps1`
+- Files:
+  - `rust/raggae-catalog/ui/src/ui.tsx`
+  - `rust/raggae-catalog/ui/src/app.css`
+  - `README.md`
+  - `docs/STATE.md`
+  - `docs/state/SESSIONS.md`
+- Git: repo=vault-raggae, branch=main, head=3451724
+
+</details>
+
+<details>
+<summary><strong>2026-11-24 10:47 - vault-raggae</strong> <code>code-change,verification</code> - Review rounds: PR #134 - new test traces the SQL the real title lookups send (plain before the index, INDEXED BY idx_catalog_names after); notes comment answered (they are in #1...</summary>
+
+- Kind: code-change,verification
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: local Windows 11)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): PowerShell, Bash, Edit, gh, Claude_Browser
+  MCP servers accessed (this reply): none
+  Time: 2026-11-24 10:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: Review rounds: PR #134 - new test traces the SQL the real title lookups send (plain before the index, INDEXED BY idx_catalog_names after); notes comment answered (they are in #135). PR #133 - counting:true slow-count placeholders never cached (Moments re-ask now reaches the gateway; checked in preview: counts shown after 5 s), activity bar delay starts only on idle->busy (shown at 179 ms). All threads replied and resolved.
+- Commands:
+  - `pytest tests/test_picture_search.py tests/test_catalog.py`
+  - `npx tsc --noEmit`
+- Files:
+  - `tests/test_picture_search.py`
+  - `rust/raggae-catalog/ui/src/api.ts`
+  - `rust/raggae-catalog/ui/src/ui.tsx`
+- Git: repo=vault-raggae, branch=main, head=5fb7848
+
+</details>
+
+<details>
+<summary><strong>2026-11-24 10:38 - vault-raggae</strong> <code>code-change,commands,documentation,verification</code> - Operator session: gateway restarted on main 0.44.0 (cast summary 10 ms, identities 36 ms, Tom Hanks page 144 ms). Built idx_catalog_names covering index on live vw-catalog.db vi...</summary>
+
+- Kind: code-change,commands,documentation,verification
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: local Windows 11)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): PowerShell, Bash, Edit, gh, Claude_Browser
+  MCP servers accessed (this reply): none
+  Time: 2026-11-24 10:38 (TZ: Eastern Standard Time)
+  ```
+- Summary: Operator session: gateway restarted on main 0.44.0 (cast summary 10 ms, identities 36 ms, Tom Hanks page 144 ms). Built idx_catalog_names covering index on live vw-catalog.db via app.catalog.ingest --source indexes (242 s, 24.7->25.7 GB); SQLite ignored it so lookups use INDEXED BY via db.names_index (PR #134 v0.44.2, titles named 0-4 ms, full suite 442 passed). PR #133 v0.44.1: catalog app 5-minute GET cache (cleared on writes, generation counter) and activity bar (counter of in-flight requests), checked in dev preview. Docs PR opened.
+- Commands:
+  - `scripts\Restart-Gateway.ps1`
+  - `python -m app.catalog.ingest --source indexes`
+  - `pytest -q`
+  - `gh pr create`
+- Files:
+  - `app/catalog/db.py`
+  - `app/cast/service.py`
+  - `app/picture_search.py`
+  - `rust/raggae-catalog/ui/src/api.ts`
+  - `rust/raggae-catalog/ui/src/ui.tsx`
+- Git: repo=vault-raggae, branch=main, head=5fb7848
+
+</details>
+
+<details>
+<summary><strong>2026-11-24 10:19 - vault-raggae</strong> <code>code-change,verification</code> - Review round on PR #131 (Devin, 4): Cast page falls back to one full read on a pre-0.44 gateway (no credits_offset); cold cast summary counted once under a lock (warm-up and req...</summary>
+
+- Kind: code-change,verification
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: local Windows 11)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): PowerShell, Bash, Edit, gh
+  MCP servers accessed (this reply): none
+  Time: 2026-11-24 10:19 (TZ: Eastern Standard Time)
+  ```
+- Summary: Review round on PR #131 (Devin, 4): Cast page falls back to one full read on a pre-0.44 gateway (no credits_offset); cold cast summary counted once under a lock (warm-up and request share it, new test); paging only while the open tab has credits to come; grouping cost measured 2-14 ms on the largest filmographies (no change). Replied and resolved all four threads. Cast + version tests 15 passed.
+- Commands:
+  - `pytest tests/test_cast_service.py tests/test_version.py`
+  - `npx tsc --noEmit`
+- Files:
+  - `app/cast/service.py`
+  - `tests/test_cast_service.py`
+  - `rust/raggae-catalog/ui/src/pages/Cast.tsx`
+- Git: repo=vault-raggae, branch=main, head=54be001
+
+</details>
+
+<details>
+<summary><strong>2026-11-24 10:14 - vault-raggae</strong> <code>code-change,commands,documentation,verification</code> - Operator session Tue 24 Nov: deleted the 219 testclient settings rows from the live audit.db (operator&#39;s ask; sqlite backup audit.db.bak-20261124-pre-testclient-cleanup; 1363 -&gt;...</summary>
+
+- Kind: code-change,commands,documentation,verification
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: local Windows 11)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): PowerShell, Bash, Edit, gh, Claude_Browser
+  MCP servers accessed (this reply): none
+  Time: 2026-11-24 10:14 (TZ: Eastern Standard Time)
+  ```
+- Summary: Operator session Tue 24 Nov: deleted the 219 testclient settings rows from the live audit.db (operator's ask; sqlite backup audit.db.bak-20261124-pre-testclient-cleanup; 1363 -> 1144). PR #131 (v0.44.0) gateway speed from the handoff: cast summary cached per store version on disk + warmed at start (4.4, 32 s -> instant), identities list page-first (5.9, 11.8 s -> 0.01 s), cast filmography paging with only the page named plus credits_by_kind, Cast page loads 60 at a time (4.2). Root cause found: uid/poster_url stored after raw_enrichment in catalog_items. Verified on live stores read-only and in the catalog app via a throwaway gateway on 127.0.0.1:8761 (scratch data, removed; temporary launch.json entry removed). Full suite 440 passed. Docs PR opened.
+- Commands:
+  - `DELETE FROM audit WHERE actor='testclient' (with backup)`
+  - `pytest -q`
+  - `uvicorn app.main:create_app --factory --port 8761 (temporary)`
+  - `gh pr create`
+- Files:
+  - `app/cast/service.py`
+  - `app/people.py`
+  - `app/serve.py`
+  - `app/main.py`
+  - `rust/raggae-catalog/ui/src/pages/Cast.tsx`
+- Git: repo=vault-raggae, branch=main, head=54be001
+
+</details>
+
+<details>
+<summary><strong>2026-11-24 09:45 - vault-raggae</strong> <code>code-change,commands,documentation,verification</code> - Operator session Tue 24 Nov: gateway restarted on main 0.43.0 (only SSH pullers active). PR #128 (handoff): 4 Devin findings fixed in the doc (cast paging in SQL, lyrics line se...</summary>
+
+- Kind: code-change,commands,documentation,verification
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: local Windows 11)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
+  Tools used (this reply): PowerShell, Bash, Edit, gh, Claude_Browser
+  MCP servers accessed (this reply): none
+  Time: 2026-11-24 09:45 (TZ: Eastern Standard Time)
+  ```
+- Summary: Operator session Tue 24 Nov: gateway restarted on main 0.43.0 (only SSH pullers active). PR #128 (handoff): 4 Devin findings fixed in the doc (cast paging in SQL, lyrics line selection, Moments action labels kept, SESSIONS entry), replied and resolved. PR #129: autouse conftest fixture gives every test its own audit.db; settings tests restored + isolation test; full suite 439 passed, live audit.db unchanged (1363 rows, 219 old test rows not removed). PR #130 (v0.43.1): catalog app quick wins 1.1 fixed top-bar order, 1.5 Side panel (shadow, slide-in, click-outside, scroll reset), 1.9 look and feel, 1.10 snapping slider, 1.13 big initials, Pictures hint, 5.3 performer cards; checked in the dev preview.
+- Commands:
+  - `scripts\Restart-Gateway.ps1`
+  - `pytest -q`
+  - `npx tsc --noEmit`
+  - `gh pr create`
+- Files:
+  - `tests/conftest.py`
+  - `tests/test_settings.py`
+  - `rust/raggae-catalog/ui/src/ui.tsx`
+  - `rust/raggae-catalog/ui/src/app.css`
+  - `docs/HANDOFF-20261124-CATALOG-APP.md`
+- Git: repo=vault-raggae, branch=main, head=b0c4bc8
+
+</details>
+
+<details>
+<summary><strong>2026-11-24 09:26 - vault-raggae</strong> <code>documentation</code> - Handoff for the operator&#39;s catalog-app work list: docs/HANDOFF-20261124-CATALOG-APP.md (grouped by shell, Browse, Pictures, Cast, People, Lyrics, Music, Moments, Edits; findings...</summary>
+
+- Kind: documentation
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-raggae-handoff-20261124
+  Tools used (this reply): Bash, PowerShell, Read, Write, Edit
+  MCP servers accessed (this reply): none
+  Time: 2026-11-24 09:26 (TZ: Eastern Standard Time)
+  ```
+- Summary: Handoff for the operator's catalog-app work list: docs/HANDOFF-20261124-CATALOG-APP.md (grouped by shell, Browse, Pictures, Cast, People, Lyrics, Music, Moments, Edits; findings, code pointers, approach, suggested order). Measured first-page sizes/times (10-122 KB; cast summary 32 s, identities 11.8 s, pictures 30-37 s) answering the cache-memory question (<2 MB for all first pages). Lyrics screenshot: B.Y.O.B. lyrics attached to other recordings (mapping bug). CLAP tags applied in moments/index.py and stream.py. Noted gateway still 0.42.0 after #126 merge. STATE points at it. PR #128.
+- Commands:
+  - `curl first-page timings`
+  - `gh pr create`
+- Files:
+  - `docs/HANDOFF-20261124-CATALOG-APP.md`
+  - `docs/STATE.md`
+- Git: repo=vault-raggae, branch=vw-raggae-handoff-20261124, head=0bffc64
+
+</details>
+
+<details>
+<summary><strong>2026-11-23 14:30 - vault-raggae</strong> <code>code-change,verification</code> - Review fixes on PR #126: year param back to the FTS leg (+-1/undated) without overwriting year_min/max; one 768-d query embedding reused for the ANN prefix; CrossEncoder.scores ...</summary>
 
 - Kind: code-change,verification
 - Actor: claude-code
@@ -1981,7 +3350,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-11-22 08:42 - shared-tube (formerly Prom-King/shared-tube, Prom-King/shared-tube + vaultwares-pipelines, Prom-King/shared-tube + vaultwares-api, Prom-King/shared-tube + vaultwares-mcp, Prom-King/shared-tube + vaultwares-docs, Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs, shared-tube + brume2, tube-sites, tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa, Prom-King Keep2Share &amp; ShareVerge Pipeline, Prom-King &amp; VaultWares API, Monitoring and Prom-King tube operations)</strong> <code>code-change</code> - Committed and deployed vaultwares-api (9b6de3e) and shared-tube v0.3.68 (89af949) to main, unblocked greencloud-vps build, and imported 41,791 strict corroborated vault-raggae s...</summary>
+<summary><strong>2026-11-22 08:42 - shared-tube</strong> <code>code-change</code> - Committed and deployed vaultwares-api (9b6de3e) and shared-tube v0.3.68 (89af949) to main, unblocked greencloud-vps build, and imported 41,791 strict corroborated vault-raggae s...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -2254,7 +3623,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-11-22 03:33 - vault-explorer (formerly vw-comet + vault-explorer, vault-explorer + vw-comet)</strong> <code>code-change</code> - Fix subtitle HTTP 400 on &gt;60min media by chunking WAV uploads in subtitles_asr.py and surfacing server HTTP error details</summary>
+<summary><strong>2026-11-22 03:33 - vault-explorer</strong> <code>code-change</code> - Fix subtitle HTTP 400 on &gt;60min media by chunking WAV uploads in subtitles_asr.py and surfacing server HTTP error details</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -5252,7 +6621,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-11-17 05:23 - vaultwares-api (formerly vaultwares-pipelines, vaultwares-api + shared-tube, vaultwares-webhooks, vaultwares-api)</strong> <code>code-change,verification</code> - Infra: automated the TLS certificate refresh on the API host (daily, host-local scripts, restricted access, checks and rollback); tested a no-change run and a stale-certificate ...</summary>
+<summary><strong>2026-11-17 05:23 - vaultwares-api</strong> <code>code-change,verification</code> - Infra: automated the TLS certificate refresh on the API host (daily, host-local scripts, restricted access, checks and rollback); tested a no-change run and a stale-certificate ...</summary>
 
 - Kind: code-change,verification
 - Actor: claude-code
@@ -6151,461 +7520,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-11-10 19:27 - ColONEL-KFC</strong> <code>verification</code> - Panopticam _pending --existing add finished: 1 created, 4453 added, 74 skipped, 87 failed (folders 3039-3126, contiguous; FileNotFoundError then missing pwsh.dll - transient Pow...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-11-10 19:27 (TZ: Eastern Standard Time)
-  ```
-- Summary: Panopticam _pending --existing add finished: 1 created, 4453 added, 74 skipped, 87 failed (folders 3039-3126, contiguous; FileNotFoundError then missing pwsh.dll - transient PowerShell 7 outage; pwsh present now, photos still in _pending). Report F:\amd\gallery\identity-folder-import-report.json.
-- Git: repo=vault-explorer, branch=main, head=4a90416
-
-</details>
-
-<details>
-<summary><strong>2026-11-10 14:35 - ColONEL-KFC</strong> <code>verification</code> - Background .dataset-imports import + archive run finished (exit 0, Tue, 10 Nov 2026 14:35); Panopticam _pending add-to-existing at 1903/4615.</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-11-10 14:35 (TZ: Eastern Standard Time)
-  ```
-- Summary: Background .dataset-imports import + archive run finished (exit 0, Tue, 10 Nov 2026 14:35); Panopticam _pending add-to-existing at 1903/4615.
-- Git: repo=vault-explorer, branch=main, head=4a90416
-
-</details>
-
-<details>
-<summary><strong>2026-11-10 10:55 - ColONEL-KFC, vault-raggae, vault-explorer, vault-commander, vaultwares-themes</strong> <code>code-change,commands</code> - Tue 10 Nov 2026: reindex (extract_and_register_folder_crops) now uses group photos via common_face (exemplars only when singles fall short). Merged ColONEL-KFC#9, vault-commande...</summary>
-
-- Kind: code-change,commands
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-11-10 10:55 (TZ: Eastern Standard Time)
-  ```
-- Summary: Tue 10 Nov 2026: reindex (extract_and_register_folder_crops) now uses group photos via common_face (exemplars only when singles fall short). Merged ColONEL-KFC#9, vault-commander#36, vault-explorer#70, vault-raggae#68 and #69 (retargeted to main), vault-explorer#71 (icon sync, auto-merged after CodeQL). All five repos on main; gateway restarted on main (tailnet + public 200), panel rebuilt. Background imports still running on main code.
-- Git: repo=vault-explorer, branch=main, head=4a90416
-
-</details>
-
-<details>
-<summary><strong>2026-11-10 10:36 - ColONEL-KFC, vault-explorer, vault-commander, vault-raggae</strong> <code>code-change,commands</code> - Tue 10 Nov 2026: vault-explorer#70 Gemini review fixed (RAGGAE_URL, async folders, listener leaks, batched deletes) plus months cover overflow and centered X. KFC#9: move_identi...</summary>
-
-- Kind: code-change,commands
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-raggae-relink-settle
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-11-10 10:36 (TZ: Eastern Standard Time)
-  ```
-- Summary: Tue 10 Nov 2026: vault-explorer#70 Gemini review fixed (RAGGAE_URL, async folders, listener leaks, batched deletes) plus months cover overflow and centered X. KFC#9: move_identity command, group-picture common-face fallback for identity creation, recalculate_centroid retired to reindex_gallery (no cap). commander#36: vw move-identity. Started --existing add on 4,615 Panopticam _pending folders (background); .dataset-imports import/archive still running.
-- Git: repo=vault-raggae, branch=vw-raggae-relink-settle, head=dcb7843
-
-</details>
-
-<details>
-<summary><strong>2026-11-10 09:47 - ColONEL-KFC, vault-raggae, vault-explorer, vault-commander, vaultwares-themes</strong> <code>code-change,commands</code> - Tue 10 Nov 2026: identity folder import + .dataset-imports archiver (python-zipper naming, .imported ledger) running live on G: and F:; identify-video writes face track into mai...</summary>
-
-- Kind: code-change,commands
-- Actor: claude-code
-- Agent Header:
-  ```text
-  Agent: claude-code (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-raggae-relink-settle
-  Tools used (this reply): Bash, PowerShell, Edit, Write
-  MCP servers accessed (this reply): none
-  Time: 2026-11-10 09:47 (TZ: Eastern Standard Time)
-  ```
-- Summary: Tue 10 Nov 2026: identity folder import + .dataset-imports archiver (python-zipper naming, .imported ledger) running live on G: and F:; identify-video writes face track into main sidecar (KFC#9, commander#36). Gallery relink: unknown0... merged into crystalclark and lolasin into lolasinn via KFC tools (backups, crops restored), 239 refusals settled (raggae#69). Photos: I: indexed, photo dates read for I:\FDrive\gallery, routes live; explorer Photos tab PR #70 proven; icons PR themes#24 fixed.
-- Commands:
-  - `face_organizer.folder_processor + imports_archiver --execute (background)`
-  - `remove_identity / recalculate_centroid`
-  - `app.photos exif --execute`
-- Files:
-  - `ColONEL-KFC/face_organizer/folder_processor.py`
-  - `ColONEL-KFC/face_organizer/imports_archiver.py`
-  - `vault-raggae/app/files/records/gallery.py`
-  - `vault-explorer/js/photos-library.js`
-- Git: repo=vault-raggae, branch=vw-raggae-relink-settle, head=3972c67
-
-</details>
-
-<details>
-<summary><strong>2026-11-10 07:11 - vault-explorer, vault-raggae</strong> <code>code-change,commands</code> - Tue 10 Nov 2026: vault-explorer#69 second Gemini round (retry tag load after failure incl. gateway success:false; null-safe proof) fixed and merged. vault-raggae: #65/#66 merged...</summary>
-
-- Kind: code-change,commands
-- Actor: claude-code
-- Agent Header:
-  ```text
-  Agent: claude-code (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: main
-  Tools used (this reply): Bash, PowerShell, Write
-  MCP servers accessed (this reply): none
-  Time: 2026-11-10 07:11 (TZ: Eastern Standard Time)
-  ```
-- Summary: Tue 10 Nov 2026: vault-explorer#69 second Gemini round (retry tag load after failure incl. gateway success:false; null-safe proof) fixed and merged. vault-raggae: #65/#66 merged by operator, checkout on main, panel rebuilt, gateway restarted. Operator rule: 81 date-only-titled scene records with no candidate duration within 10 s marked different via audited route; queue 1,303 open. Docs PR vault-raggae#67.
-- Commands:
-  - `gh pr merge 69 --merge`
-  - `python date_titles.py --execute`
-  - `scripts\Restart-Gateway.ps1`
-- Files:
-  - `vault-explorer/js/audio.js`
-  - `vault-explorer/tests/music_tab_proof.js`
-  - `vault-raggae/docs/STATE.md`
-- Git: repo=vault-raggae, branch=main, head=53bbdef
-
-</details>
-
-<details>
-<summary><strong>2026-11-10 06:09 - vault-raggae, vault-explorer</strong> <code>code-change,commands</code> - Tue 10 Nov 2026: vault-explorer#69 fixes Gemini&#39;s 5 review comments on #68 (loadMeta lock, NUMERIC_COLS, Repeat One play counting, main-thread yield, flaky proof). Scene review ...</summary>
-
-- Kind: code-change,commands
-- Actor: claude-code
-- Agent Header:
-  ```text
-  Agent: claude-code (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-raggae-music-meta
-  Tools used (this reply): Bash, PowerShell, Edit, Write
-  MCP servers accessed (this reply): none
-  Time: 2026-11-10 06:09 (TZ: Eastern Standard Time)
-  ```
-- Summary: Tue 10 Nov 2026: vault-explorer#69 fixes Gemini's 5 review comments on #68 (loadMeta lock, NUMERIC_COLS, Repeat One play counting, main-thread yield, flaky proof). Scene review bulk decisions via audited /v1/edit/review/scene: 434 merged (fingerprint/URL + 2+ fields), 100 BTS records marked different; BTS/interview/trailer guard; 1,391 left open (82 date-only titles, 76 interviews, 23 ties). Notes in STATE/SESSIONS on vault-raggae#66.
-- Commands:
-  - `python bulk_review.py --execute`
-  - `node tests/music_tab_proof.js`
-- Files:
-  - `vault-explorer/js/audio.js`
-  - `vault-explorer/js/audio-bar.js`
-  - `vault-explorer/src/ipc/music.ipc.js`
-  - `docs/STATE.md`
-- Git: repo=vault-raggae, branch=vw-raggae-music-meta, head=ef57bf6
-
-</details>
-
-<details>
-<summary><strong>2026-11-10 05:40 - vault-raggae, vault-explorer</strong> <code>code-change,verification</code> - Operator session Tue 10 Nov 2026: panel 504 fixed (gateway started before Tailscale; restarted, PR #65 waits for the tailnet address; also Review keeps up to 12 candidates, matc...</summary>
-
-- Kind: code-change,verification
-- Actor: claude-code
-- Agent Header:
-  ```text
-  Agent: claude-code (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-raggae-music-meta
-  Tools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser
-  MCP servers accessed (this reply): none
-  Time: 2026-11-10 05:40 (TZ: Eastern Standard Time)
-  ```
-- Summary: Operator session Tue 10 Nov 2026: panel 504 fixed (gateway started before Tailscale; restarted, PR #65 waits for the tailnet address; also Review keeps up to 12 candidates, matcher rerun, 66 'none' files reopened). Scene merge queue classified: 421 exact + 8 twins, 826 close clear winner, 690 unclear. Music: app.music.meta reads tags/titles/track numbers/artwork/colours into track_meta (run live, 1,375 songs), routes /v1/music/tracks and /v1/music/art (PR #66). vault-explorer#68: Music tab uses them, plays in sidecars, column picker, real spectrum (visualizer box no longer collapses), playlist covers; proven with an Electron e2e proof.
-- Commands:
-  - `python -m app.links scenes --execute`
-  - `python -m app.music.meta --execute --force`
-  - `scripts\Restart-Gateway.ps1`
-  - `node tests/music_tab_proof.js`
-- Files:
-  - `app/serve.py`
-  - `app/links.py`
-  - `app/music/meta.py`
-  - `app/main.py`
-  - `vault-explorer/js/audio.js`
-  - `vault-explorer/js/audio-bar.js`
-  - `vault-explorer/src/ipc/music.ipc.js`
-- Git: repo=vault-raggae, branch=vw-raggae-music-meta, head=08b7655
-
-</details>
-
-<details>
-<summary><strong>2026-11-09 23:59 - vault-raggae</strong> <code>code-change,verification</code> - Scheduled run Mon 09 Nov 2026: verified #63 live (gateway VRAM 1.7 GB reserved), lyrics embed finished (3,624,739 embedded+indexed), nightly embed and scenes sync exit 0. Found ...</summary>
-
-- Kind: code-change,verification
-- Actor: claude-code
-- Agent Header:
-  ```text
-  Agent: claude-code (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-raggae-sync-returns
-  Tools used (this reply): Bash, PowerShell, Edit
-  MCP servers accessed (this reply): none
-  Time: 2026-11-09 23:59 (TZ: Eastern Standard Time)
-  ```
-- Summary: Scheduled run Mon 09 Nov 2026: verified #63 live (gateway VRAM 1.7 GB reserved), lyrics embed finished (3,624,739 embedded+indexed), nightly embed and scenes sync exit 0. Found Media Sync left 382 linked G: files marked missing after they came back at their path under a new FRN; fixed sync.plan_moves (returns) + one-time --recheck-missing (run live: 406 rows restored). Wrote 1 new scene sidecar block. PR p-potvin/vault-raggae#64 (v0.20.5); STATE.md and SESSIONS.md updated.
-- Commands:
-  - `python app/files/records/sync.py --recheck-missing --execute`
-  - `python -m app.links sidecars --execute`
-- Files:
-  - `app/files/records/sync.py`
-  - `tests/test_media_sync_returns.py`
-  - `docs/STATE.md`
-  - `docs/state/SESSIONS.md`
-- Git: repo=vault-raggae, branch=vw-raggae-sync-returns, head=1d93352
-
-</details>
-
-<details>
-<summary><strong>2026-11-09 07:49 - vault-raggae</strong> <code>verification</code> - Lyrics embedding backfill finished: 3,624,739 lyrics embedded and indexed in vw-lyrics.lance (IVF-PQ, last trained on 3.0M, 0 unindexed). /v1/lyrics/search live: 155-409 ms.</summary>
-
-- Kind: verification
-- Actor: claude-code
-- Agent Header:
-  ```text
-  Agent: claude-code (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-raggae-embed-vram-cap
-  Tools used (this reply): Bash, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-11-09 07:49 (TZ: Eastern Standard Time)
-  ```
-- Summary: Lyrics embedding backfill finished: 3,624,739 lyrics embedded and indexed in vw-lyrics.lance (IVF-PQ, last trained on 3.0M, 0 unindexed). /v1/lyrics/search live: 155-409 ms.
-- Commands:
-  - `python -m app.music.catalog_lyrics embed`
-- Files:
-  - `G:\Catalogs\vw-lyrics.lance`
-- Git: repo=vault-raggae, branch=vw-raggae-embed-vram-cap, head=c832012
-
-</details>
-
-<details>
-<summary><strong>2026-11-09 03:59 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>verification</code> - Real-conditions automated test pass verifying gaze alignment module docstrings and stability</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-11-09 03:59 (TZ: Eastern Standard Time)
-  ```
-- Summary: Real-conditions automated test pass verifying gaze alignment module docstrings and stability
-- Git: repo=agent-ledger, branch=main, head=c172103c
-
-</details>
-
-<details>
-<summary><strong>2026-11-09 03:58 - agent-ledger</strong> <code>documentation</code> - Document empirical limitations of 2D gaze/RBF warping and roadmap for 3D FLAME/SPADE projection</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-11-09 03:58 (TZ: Eastern Standard Time)
-  ```
-- Summary: Document empirical limitations of 2D gaze/RBF warping and roadmap for 3D FLAME/SPADE projection
-- Git: repo=agent-ledger, branch=main, head=c172103c
-
-</details>
-
-<details>
-<summary><strong>2026-11-09 02:37 - agent-ledger</strong> <code>verification</code> - Real-conditions mathematical verification of iris centering convergence and thumbnail disk persistence</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-11-09 02:37 (TZ: Eastern Standard Time)
-  ```
-- Summary: Real-conditions mathematical verification of iris centering convergence and thumbnail disk persistence
-- Git: repo=agent-ledger, branch=main, head=c172103c
-
-</details>
-
-<details>
-<summary><strong>2026-11-09 02:36 - agent-ledger</strong> <code>code-change</code> - Research and implement lightweight mathematical eye gaze centering and smooth face pose alignment</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-11-09 02:36 (TZ: Eastern Standard Time)
-  ```
-- Summary: Research and implement lightweight mathematical eye gaze centering and smooth face pose alignment
-- Git: repo=agent-ledger, branch=main, head=c172103c
-
-</details>
-
-<details>
-<summary><strong>2026-11-09 02:05 - ColONEL-KFC</strong> <code>verification</code> - Verification &amp; proof reflection passed: 13/13 unit tests and 20/20 production disk thumbnails verified</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.6 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: vw-codex-face-thumb-upgrade
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-11-09 02:05 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verification & proof reflection passed: 13/13 unit tests and 20/20 production disk thumbnails verified
-- Git: repo=ColONEL-KFC, branch=vw-codex-face-thumb-upgrade, head=5c3cabd
-
-</details>
-
-<details>
-<summary><strong>2026-11-09 02:04 - ColONEL-KFC</strong> <code>code-change</code> - Added 12-quadrant compass padding analysis and adaptive face centering with cranial headroom protection; verified on 20 new identities in F:\amd\gallery</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.6 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: vw-codex-face-thumb-upgrade
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-11-09 02:04 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added 12-quadrant compass padding analysis and adaptive face centering with cranial headroom protection; verified on 20 new identities in F:\amd\gallery
-- Git: repo=ColONEL-KFC, branch=vw-codex-face-thumb-upgrade, head=5c3cabd
-
-</details>
-
-<details>
-<summary><strong>2026-11-08 23:34 - NeMo-Speech.cpp-upstream</strong> <code>verification</code> - Diagnosed parakeet-tdt RTFx regression (missing fused_max_q gate in rel_pos_attention.cpp), explained unbounded offline VRAM (pos_emb_max_len=5000 / 400s chunks without VAD segm...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude Opus 4.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\NeMo-Speech.cpp-upstream  Branch: vw-codex-upstream-sync
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-11-08 23:34 (TZ: Eastern Standard Time)
-  ```
-- Summary: Diagnosed parakeet-tdt RTFx regression (missing fused_max_q gate in rel_pos_attention.cpp), explained unbounded offline VRAM (pos_emb_max_len=5000 / 400s chunks without VAD segmentation), and reproduced French vs Quebecois bilingual gaps on unmodified NeMo-Speech.cpp 0.3.0 build
-- Git: repo=NeMo-Speech.cpp-upstream, branch=vw-codex-upstream-sync, head=536b17a
-
-</details>
-
-<details>
-<summary><strong>2026-11-08 22:30 - vault-raggae</strong> <code>code-change</code> - Merged PR #62 (rebased on #61, version conflict resolved). 3060 overflow traced to the gateway&#39;s torch caching allocator (reserved 14.4 GB vs 1.9 GB allocated, 3.3 GB spilled to...</summary>
-
-- Kind: code-change
-- Actor: claude-code
-- Agent Header:
-  ```text
-  Agent: claude-code (role: main)
-  Model: claude-opus-5-5
-  Thinking: low
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-raggae  Branch: vw-raggae-embed-vram-cap
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-11-08 22:30 (TZ: Eastern Standard Time)
-  ```
-- Summary: Merged PR #62 (rebased on #61, version conflict resolved). 3060 overflow traced to the gateway's torch caching allocator (reserved 14.4 GB vs 1.9 GB allocated, 3.3 GB spilled to shared memory), not nemo-speech (cuda:1, 93 MB on 3060). PR #63 (v0.20.4): EMBED_VRAM_CAP_MB 6144 + empty_cache past EMBED_CACHE_SLACK_MB 1536; pytest 315 passed; not deployed. STATE notes candidate stores to move to CLOPEUX-UBUNTU.
-- Commands:
-  - `gh pr merge 62 --merge`
-  - `curl 127.0.0.1:8750/health`
-  - `pytest -q`
-- Files:
-  - `app/embed.py`
-  - `app/config.py`
-  - `tests/test_embed_trim.py`
-  - `docs/STATE.md`
-- Git: repo=vault-raggae, branch=vw-raggae-embed-vram-cap, head=c832012
-
-</details>
-
-<details>
 <summary><strong>2026-06-02 00:06 - General Tasks</strong> <code>general</code> - Midnight project file sync: processed DAILY_RECAP 2026-05-30/31, updated vault-explorer/TASKS.md (Gemini PR note), agent-ledger/TODO.md (3 dashboard tasks), verified all project...</summary>
 
 - Kind: general
@@ -6635,7 +7549,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-01 18:10 - python-zipper (formerly python-scripts)</strong> <code>code-change</code> - Fixed playwright 5000ms timeouts on rip.linkvertise.lol by updating telethon_link_resolver.py&#39;s bypass mechanism to use the TRW API end-point securely without headful DOM parsin...</summary>
+<summary><strong>2026-06-01 18:10 - python-zipper</strong> <code>code-change</code> - Fixed playwright 5000ms timeouts on rip.linkvertise.lol by updating telethon_link_resolver.py&#39;s bypass mechanism to use the TRW API end-point securely without headful DOM parsin...</summary>
 
 - Kind: code-change
 - Actor: GitHub Copilot
@@ -6686,7 +7600,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-01 12:26 - agent-ledger</strong> <code>code-change</code> - Fixed two issues: (1) LED cards and Chart.js widgets showing -- on page load -- moved initCharts()+render() into window.addEventListener(&#39;load&#39;,...) with try-catch so CDN timing...</summary>
+<summary><strong>2026-06-01 12:26 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Fixed two issues: (1) LED cards and Chart.js widgets showing -- on page load -- moved initCharts()+render() into window.addEventListener(&#39;load&#39;,...) with try-catch so CDN timing...</summary>
 
 - Kind: code-change
 - Actor: claude-sonnet-4-6

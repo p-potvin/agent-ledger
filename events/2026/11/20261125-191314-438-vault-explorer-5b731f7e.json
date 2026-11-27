@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261125-191314-438-vault-explorer-5b731f7e",
+    "createdAt":  "2026-11-26T00:13:14.4387584Z",
+    "createdAtLocal":  "2026-11-25 19:13",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 4 Neon (High)\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-11-25 19:13 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 4 Neon (High)",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Updated HF translation prompt to forbid reverse translation; added same-language skip, server startup lock, and bounded memory flags in vault-commander; unified vault-explorer AI subtitles into src/ai-subtitles.js and js/player/ai-subtitles.js with serialized execution and removed the en clobber and hardcoded model; removed diarization from Start-NemoServer.ps1; converted and symlinked silero-v6.2.0.gguf; benchmarked OfflineRunner bucketing",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "5b731f7e155c31392589903550fc5a88fc3f170d482a98df882e9079b653209d",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "eeb9e70",
+                "hasChanges":  true
+            }
+}
